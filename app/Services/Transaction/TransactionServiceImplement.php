@@ -71,13 +71,14 @@ class TransactionServiceImplement extends Service implements TransactionService
     public function doAdopt(array $data): bool
     {
         $trID = Uuid::uuid4()->toString();
+        $orderID = $this->genrateOrderCode('adopt');
         $now = date('Y-m-d');
         $getOffset = ($data['total'] / $this->basicPrice) * $this->basicOffset;
         $getAvailableTree = $this->treeRepository->getAvailableTreeFromOffset($getOffset);
 
         $this->data['transaction'] = [
             'id' => $trID,
-            'order_code' => $this->genrateOrderCode('adopt'),
+            'order_code' => $orderID,
             'user_id' => $this->user->id,
             'date' => $now,
             'tree_type_id' => $data['product_id'],
