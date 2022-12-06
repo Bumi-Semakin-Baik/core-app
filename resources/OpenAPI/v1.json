@@ -120,14 +120,16 @@
                                 "type": "object",
                                 "properties": {
                                     "user": {
-                                        "type": "string",
-                                        "example": "08123456789"
+                                        "type": "string"
                                     },
                                     "password": {
-                                        "type": "string",
-                                        "example": "123456"
+                                        "type": "string"
                                     }
                                 }
+                            },
+                            "example": {
+                                "user": "test@bumibaik.com",
+                                "password": "12345678"
                             }
                         }
                     }
@@ -272,26 +274,28 @@
                                 "type": "object",
                                 "properties": {
                                     "name": {
-                                        "type": "string",
-                                        "example": "08123456789"
+                                        "type": "string"
                                     },
                                     "email": {
-                                        "type": "string",
-                                        "example": "123456"
+                                        "type": "string"
                                     },
                                     "telp": {
-                                        "type": "string",
-                                        "example": "123456"
+                                        "type": "string"
                                     },
                                     "password": {
-                                        "type": "string",
-                                        "example": "123456"
+                                        "type": "string"
                                     },
                                     "password_confirm": {
-                                        "type": "string",
-                                        "example": "123456"
+                                        "type": "string"
                                     }
                                 }
+                            },
+                            "example": {
+                                "name": "Test Bumi Baik",
+                                "email": "test@bumibaik.com",
+                                "telp": "082123456789",
+                                "password": "12345678",
+                                "password_confirm": "12345678"
                             }
                         }
                     }
@@ -1603,25 +1607,20 @@
                                                         "id": {
                                                             "type": "string"
                                                         },
+                                                        "code": {
+                                                            "type": "string"
+                                                        },
+                                                        "date": {
+                                                            "type": "string"
+                                                        },
                                                         "total": {
                                                             "type": "integer"
-                                                        }
-                                                    }
-                                                },
-                                                "user": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "id": {
-                                                            "type": "integer"
                                                         },
-                                                        "name": {
+                                                        "status": {
                                                             "type": "string"
                                                         },
-                                                        "email": {
-                                                            "type": "string"
-                                                        },
-                                                        "phone": {
-                                                            "type": "string"
+                                                        "total_offset": {
+                                                            "type": "number"
                                                         }
                                                     }
                                                 }
@@ -1630,22 +1629,18 @@
                                     }
                                 },
                                 "example": {
-                                    "message": "Transaction successfully created",
+                                    "message": "Data successfully created",
                                     "data": {
-                                        "token": "66e4fa55-fdac-4ef9-91b5-733b97d1b862",
-                                        "redirect_url": "https://app.sandbox.midtrans.com/snap/v2/vtweb/66e4fa55-fdac-4ef9-91b5-733b97d1b862",
+                                        "token": "e6d6e7e6-821a-457f-ab24-1a2d95cdcb78",
                                         "transaction": {
-                                            "id": "123456789",
-                                            "tree_id": 1,
-                                            "qty": 2,
-                                            "total": 100000
+                                            "id": "d02b5bce-71cd-43ec-9ad7-51e6731ae8a5",
+                                            "code": "ADOPT-20221206192834-13-7416",
+                                            "date": "2022-12-06",
+                                            "total": 15000,
+                                            "status": "request",
+                                            "total_offset": 75
                                         },
-                                        "user": {
-                                            "id": 1,
-                                            "name": "Nama",
-                                            "email": "example@mail.com",
-                                            "phone": "628123456789"
-                                        }
+                                        "redirect_url": "https://app.sandbox.midtrans.com/snap/v2/vtweb/e6d6e7e6-821a-457f-ab24-1a2d95cdcb78"
                                     }
                                 }
                             }

@@ -15,10 +15,16 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Requests\GetTransactionRequest;
 use App\Http\Requests\TransactionAdoptRequest;
 use App\Http\Requests\UseVoucherRequest;
+use App\Services\Transaction\TransactionService;
 use Midtrans\Config as MidtransConfig;
 
 class TransactionController extends APIBaseController
 {
+    protected $transactionSvc;
+    public function __construct(TransactionService $service)
+    {
+        $this->transactionSvc = $service;
+    }
     private function get_token_snap($param)
     {
         MidtransConfig::$serverKey = env("MIDTRANS_SERVER_KEY");
@@ -100,43 +106,40 @@ class TransactionController extends APIBaseController
         ]);
     }
 
-    public function create_adopt(TransactionAdoptRequest $request)
+    public function adopt(TransactionAdoptRequest $request)
     {
-        $basic_price = 200000;
-        $basic_offset = 1000;
-        $transaction_id = Uuid::uuid4()->toString();
-
-        $transaction = [
-            'id' => $transaction_id,
-            'order_code' => $this->genrate_order_code('adopt'),
-            'user_id' => $this->user->id,
-            'date' => date('Y-m-d'),
-            'tree_type_id' => $request->product_id,
+        $data = [
+            'product_id' => $request->product_id,
+            'product_name' => $request->product_name,
             'total' => $request->total,
-            'status' => 'request'
         ];
 
-        $data_offset = [
-            'user_id' => $this->user->id,
-            'transaction_id' => $transaction['id'],
-            'offset_date' => $transaction['date'],
-            'total_offset' => ($transaction['total'] / $basic_price) * $basic_offset
-        ];
+        $do = $this->transactionSvc->doAdopt($data);
+        if (!$do) {
+            return response()->json([
+                'message' => ResponseMessage::ERROR_SERVER
+            ], 500);
+        }
 
-        $param_midtrans = [
-            'transaction_details' => array(
-                'order_id' => $transaction_id,
-                'gross_amount' => $request->total,
-            ),
-            'customer_details' => array(
-                'first_name' => $this->user->name,
-                'last_name' => '',
-                'email' => $this->user->email,
-                'phone' => $this->user->phone,
-            ),
+        $respond = [
+            'token' => $this->transactionSvc->data['token'],
+            'transaction' => [
+                'id' => $this->transactionSvc->data['transaction']['id'],
+                'code' => $this->transactionSvc->data['transaction']['order_code'],
+                'date' => $this->transactionSvc->data['transaction']['date'],
+                'total' => $this->transactionSvc->data['transaction']['grand_total'],
+                'status' => $this->transactionSvc->data['transaction']['status'],
+                'total_offset' => $this->transactionSvc->data['user_carbon_offset']['total_offset'],
+            ],
         ];
+        if (config('app.env') != 'production') {
+            $respond['redirect_url'] = "https://app.sandbox.midtrans.com/snap/v2/vtweb/" . $respond['token'];
+        }
 
-        $token = $this->get_token_snap($param_midtrans);
+        return response()->json([
+            'message' => ResponseMessage::SUCCESS_CREATE,
+            'data' => $respond,
+        ]);
     }
 
     /**

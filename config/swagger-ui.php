@@ -40,7 +40,7 @@ return [
     |
     */
 
-    'file' => resource_path('swagger/openapi.json'),
+    'file' => resource_path('OpenAPI/v1.json'),
 
     /*
     |--------------------------------------------------------------------------
@@ -53,7 +53,7 @@ return [
     |
     */
 
-    'modify_file' => true,
+    'modify_file' => false,
 
     /*
     |--------------------------------------------------------------------------

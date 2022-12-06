@@ -28,7 +28,7 @@ class UserController extends Controller
             'password' => $request->password
         ];
 
-        if (!$token = auth('api')->attempt($credentials)) {
+        if (!$token = auth('api')->setTTL(43200)->attempt($credentials)) {
             // check with phone
             $credentials = [
                 'telp' => Formatter::IDTel(PhoneNumber::make($request->user, ['ID'])),
@@ -82,7 +82,7 @@ class UserController extends Controller
             'password' => $request->password
         ];
 
-        $token = auth('api')->attempt($credentials);
+        $token = auth('api')->setTTL(43200)->attempt($credentials);
 
         // remove gender, birth_date, address, email_verified_at, created_at, updated_at
         unset($user->gender);

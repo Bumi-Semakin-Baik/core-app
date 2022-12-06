@@ -14,10 +14,8 @@ class TransactionAdoptRequest extends FormRequest
     public function rules()
     {
         return [
-            [
-                'product_id' => ['required'],
-                'total' => ['required'],
-            ]
+            'product_id' => 'required',
+            'total' => 'required',
         ];
     }
 

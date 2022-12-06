@@ -4,9 +4,9 @@ namespace App\Http\Controllers\API;
 
 use App\Constants\ResponseMessage;
 use App\Models\UserTree;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Tree;
+use App\Models\Voucher;
 
 class TreeController extends Controller
 {

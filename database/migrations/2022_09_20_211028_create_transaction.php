@@ -27,9 +27,9 @@ class CreateTransaction extends Migration
             $table->string('voucher_code')->nullable();
             $table->string('voucher_value')->nullable();
             $table->float('grand_total');
-            $table->string('payment_method');
+            $table->string('payment_method')->nullable();
             $table->text('payment_detail')->nullable();
-            $table->enum('status', ['payment_pending', 'payment_verified', 'completed', 'canceled']);
+            $table->string('status', 20)->index();
             $table->timestamps();
         });
     }
