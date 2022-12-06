@@ -169,6 +169,9 @@
                                                         },
                                                         "telp": {
                                                             "type": "string"
+                                                        },
+                                                        "type": {
+                                                            "type": "string"
                                                         }
                                                     }
                                                 }
@@ -176,16 +179,37 @@
                                         }
                                     }
                                 },
-                                "example": {
-                                    "message": "Login success",
-                                    "data": {
-                                        "access_token": "5504f54a8bf1",
-                                        "refresh_token": "5504f54a8bf1",
-                                        "user": {
-                                            "id": 1,
-                                            "name": "John Doe",
-                                            "email": "john@gmail.com",
-                                            "telp": "628123456789"
+                                "examples": {
+                                    "Individual": {
+                                        "value": {
+                                            "message": "Login success",
+                                            "data": {
+                                                "access_token": "5504f54a8bf1",
+                                                "refresh_token": "5504f54a8bf1",
+                                                "user": {
+                                                    "id": 1,
+                                                    "name": "John Doe",
+                                                    "email": "john@gmail.com",
+                                                    "telp": "628123456789",
+                                                    "type": "individual"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "Corporate": {
+                                        "value": {
+                                            "message": "Login success",
+                                            "data": {
+                                                "access_token": "5504f54a8bf1",
+                                                "refresh_token": "5504f54a8bf1",
+                                                "user": {
+                                                    "id": 1,
+                                                    "name": "John Doe",
+                                                    "email": "john@gmail.com",
+                                                    "telp": "628123456789",
+                                                    "type": "corporate"
+                                                }
+                                            }
                                         }
                                     }
                                 }
