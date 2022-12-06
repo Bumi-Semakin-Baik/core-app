@@ -26,7 +26,7 @@ return [
 
     'middleware' => [
         'web',
-        EnsureUserIsAuthorized::class,
+        // EnsureUserIsAuthorized::class,
     ],
 
     /*
