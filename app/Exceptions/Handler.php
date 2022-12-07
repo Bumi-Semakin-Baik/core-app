@@ -71,14 +71,14 @@ class Handler extends ExceptionHandler
             }
         });
 
-        $this->renderable(function (JWTException $e, $request) {
-            if ($request->is('api/*')) {
-                return Response::json([
-                    'code' => 'AUTH-TNP',
-                    'message' => 'Token not parsed'
-                ], 401);
-            }
-        });
+        // $this->renderable(function (JWTException $e, $request) {
+        //     if ($request->is('api/*')) {
+        //         return Response::json([
+        //             'code' => 'AUTH-TNP',
+        //             'message' => 'Token not parsed'
+        //         ], 401);
+        //     }
+        // });
 
         // error not found
         $this->renderable(function (NotFoundHttpException $e, $request) {
