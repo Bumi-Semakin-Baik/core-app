@@ -1580,6 +1580,103 @@
                 }
             }
         },
+        "/trees/scan/{code}": {
+            "get": {
+                "description": "Get Tree Detail",
+                "tags": ["Trees"],
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "description": "Tree Code",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Data successfully retrieved"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "code": {
+                                                    "type": "string",
+                                                    "example": "A1"
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "Nama"
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "example": "Deskripsi"
+                                                },
+                                                "location_name": {
+                                                    "type": "string",
+                                                    "example": "Lokasi"
+                                                },
+                                                "planting_date": {
+                                                    "type": "string",
+                                                    "example": "2021-01-01"
+                                                },
+                                                "location": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "latitude": {
+                                                            "type": "string",
+                                                            "example": "-6.123456"
+                                                        },
+                                                        "longitude": {
+                                                            "type": "string",
+                                                            "example": "106.123456"
+                                                        }
+                                                    }
+                                                },
+                                                "image": {
+                                                    "type": "string",
+                                                    "example": "https://image.com"
+                                                },
+                                                "created_at": {
+                                                    "type": "string",
+                                                    "example": "2021-01-01"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/unauthorized"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/internalServerError"
+                    }
+                }
+            }
+        },
         "/transactions/adopt": {
             "post": {
                 "description": "Adopt Tree",

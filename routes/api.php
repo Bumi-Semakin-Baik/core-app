@@ -114,6 +114,7 @@ Route::controller(TreeController::class)
         function () {
             Route::get('/', 'get_tree_user');
             Route::get('/{id}', 'get_detail_tree');
+            Route::get('/scan/{code}', 'getDetailTreeFromCode');
         }
     );
 

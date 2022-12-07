@@ -39,6 +39,34 @@ class TreeController extends Controller
     }
 
     /**
+     * Get Detail Tree
+     */
+    public function getDetailTreeFromCode($code)
+    {
+        $tree = Tree::where('code', $code)->firstOrFail();
+
+        $data = [
+            'id' => $tree->id,
+            'code' => $tree->code,
+            'name' => $tree->type->name,
+            'description' => $tree->type->description,
+            'location_name' => $tree->type->partner->name,
+            'planting_date' => date('Y-m-d', strtotime($tree->planting_date)),
+            'location' => [
+                'latitude' => $tree->latitude,
+                'longitude' => $tree->longitude,
+            ],
+            'images' => explode(',', $tree->image),
+            'created_at' => date('Y-m-d H:i:s', strtotime($tree->created_at)),
+        ];
+
+        return response()->json([
+            "message" => ResponseMessage::SUCCESS_RETRIEVE,
+            "data" => $data
+        ]);
+    }
+
+    /**
      * Get User Tree
      */
     public function get_tree_user()
