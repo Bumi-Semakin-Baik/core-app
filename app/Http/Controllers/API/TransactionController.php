@@ -10,7 +10,7 @@ use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Models\UserCarbonOffset;
 use App\Constants\ResponseMessage;
-use App\Http\Controllers\api\APIBaseController;
+use App\Http\Controllers\API\APIBaseController;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\GetTransactionRequest;
 use App\Http\Requests\TransactionAdoptRequest;
