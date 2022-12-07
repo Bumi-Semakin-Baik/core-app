@@ -120,7 +120,7 @@ class TransactionServiceImplement extends Service implements TransactionService
 
         $this->data['token'] = $this->midtrans->getToken([
             'transaction_details' => [
-                'order_id' => $trID,
+                'order_id' => $orderID,
                 'gross_amount' => $data['total']
             ],
             'customer_details' => [
