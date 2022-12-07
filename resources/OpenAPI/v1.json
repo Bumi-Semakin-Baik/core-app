@@ -170,6 +170,9 @@
                                                         "telp": {
                                                             "type": "string"
                                                         },
+                                                        "photo": {
+                                                            "type": "string"
+                                                        },
                                                         "type": {
                                                             "type": "string"
                                                         }
@@ -191,6 +194,7 @@
                                                     "name": "John Doe",
                                                     "email": "john@gmail.com",
                                                     "telp": "628123456789",
+                                                    "photo": null,
                                                     "type": "individual"
                                                 }
                                             }
