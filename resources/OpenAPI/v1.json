@@ -215,6 +215,7 @@
                                                     "name": "John Doe",
                                                     "email": "john@gmail.com",
                                                     "telp": "628123456789",
+                                                    "photo": null,
                                                     "type": "corporate"
                                                 }
                                             }
