@@ -84,6 +84,7 @@ class UserController extends Controller
 
         $token = auth('api')->setTTL(43200)->attempt($credentials);
 
+        $user = auth('api')->user();
         // remove gender, birth_date, address, email_verified_at, created_at, updated_at
         unset($user->gender);
         unset($user->birth_date);
