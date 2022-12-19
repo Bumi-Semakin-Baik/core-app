@@ -20,7 +20,7 @@ class TreeRepositoryImplement extends Eloquent implements TreeRepository
     {
         $this->model = $model;
     }
-
+ 
     public function getAvailableTreeFromOffset(float $offset): array
     {
         $userTrees = [];
