@@ -8,6 +8,7 @@ use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\CarbonController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\TransactionController;
+use App\Http\Controllers\API_Admin\TreeController as API_AdminTreeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -138,3 +139,16 @@ Route::middleware('auth.jwt')
             Route::post('/redeem_code', 'use_voucher');
         }
     );
+
+/** 
+ * ADMIN TREES ROUTES
+ */
+
+ Route::controller(API_AdminTreeController::class)
+    ->prefix('admin/trees')
+    ->group(
+        function () {
+            Route::post('/create', 'create_tree');
+        }
+    );
+
