@@ -148,6 +148,7 @@ Route::middleware('auth.jwt')
     ->prefix('admin/trees')
     ->group(
         function () {
+            Route::post('/upload_image', 'upload_image_tree');
             Route::post('/create', 'create_tree');
         }
     );

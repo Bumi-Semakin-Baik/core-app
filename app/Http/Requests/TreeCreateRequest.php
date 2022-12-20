@@ -30,7 +30,7 @@ class TreeCreateRequest extends FormRequest
                 'unique:trees,code'
             ],
             'description' => [
-                'required'
+                'nullable'
             ],
             'planting_date' => [
                 'required',
@@ -46,7 +46,9 @@ class TreeCreateRequest extends FormRequest
             'latitude' => [
                 'required'
             ],
-            ''
+            'production' => [
+                'nullable'
+            ]
         ];
     }
 
@@ -57,7 +59,6 @@ class TreeCreateRequest extends FormRequest
             'tree_type.exists'       => 'Tipe pohon tidak terdaftar',
             'code.required'          => 'Kode pohon wajib diisi', 
             'code.unique'            => 'Kode pohon telah terdaftar',
-            'description.required'   => 'Deskripsi wajib diisi',
             'planting_date.required' => 'Tanggal penanaman wajib diisi',
             'planting_date.date'     => 'Tanggal penanaman wajib format tanggal',
             'image.required'         => 'Gambar pohon wajib diisipohon',
