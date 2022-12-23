@@ -43,7 +43,7 @@ class TreeTypeController extends Controller
         $limit  = $req->input('limit');
         $search = !empty($req->input('search')) ? $req->input('search') : "";
 
-        $treeTypes = TreeType::paginate($limit, ['*'], 'page', $page);
+        $treeTypes = TreeType::where('name', 'like', '%'.$search.'%')->paginate($limit, ['*'], 'page', $page);
         $treeTypeDatas = $treeTypes->map(
             function ($treeType){
                 return [
@@ -60,8 +60,9 @@ class TreeTypeController extends Controller
 
         if($treeTypeDatas == null){
             return response()->json([
-                'message' => ResponseMessage::ERROR_RETRIEVE
-            ], 200);
+                'message' => ResponseMessage::SUCCESS_RETRIEVE,
+                'data'    => []
+            ], 204);
         }else{
             return response()->json([
                 'message'  => ResponseMessage::SUCCESS_RETRIEVE,
@@ -81,9 +82,21 @@ class TreeTypeController extends Controller
 
         if($treeType == null){
             return response()->json([
-                'message' => ResponseMessage::ERROR_RETRIEVE
-            ], 200);
+                'message' => ResponseMessage::SUCCESS_RETRIEVE,
+                'data'    => []
+            ], 204);
         }else{
+            unset(
+                $treeType->partner->email,
+                $treeType->partner->phone,
+                $treeType->partner->address,
+                $treeType->partner->photo,
+                $treeType->partner->latitude,
+                $treeType->partner->longitude,
+                $treeType->partner->is_active,
+                $treeType->partner->is_verified,
+            );
+
             return response()->json([
                 'message'  => ResponseMessage::SUCCESS_RETRIEVE,
                 'data'     => $treeType
