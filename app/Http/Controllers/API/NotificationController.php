@@ -10,7 +10,7 @@ class NotificationController extends Controller
 {
     public function payment(Request $request)
     {
-        Log::info("callback midtrans payment", $request);
         $request = $request->toArray();
+        Log::info("callback midtrans payment", $request);
     }
 }
