@@ -4,6 +4,9 @@ namespace App\Constants;
 
 class PaymentStatus
 {
+    // Waiting
+    public const REQUEST = 'request';
+
     // Done Status
     public const SUCCESS = 'success';
 

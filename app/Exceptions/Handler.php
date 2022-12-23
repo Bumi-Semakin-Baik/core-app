@@ -14,6 +14,7 @@ use Tymon\JWTAuth\Exceptions\TokenExpiredException;
 use Tymon\JWTAuth\Exceptions\TokenInvalidException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
@@ -98,6 +99,7 @@ class Handler extends ExceptionHandler
         // set globaly error query exeption
         $this->renderable(function (QueryException $e, $request) {
             if ($request->is('api/*')) {
+                Log::error($e->getMessage());
                 // get env value
                 $env = env('APP_ENV');
 
@@ -106,7 +108,6 @@ class Handler extends ExceptionHandler
                         'message' => $e->getMessage(),
                     ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
                 }
-
                 return response()->json([
                     'message' => 'Something went wrong',
                 ], 500);

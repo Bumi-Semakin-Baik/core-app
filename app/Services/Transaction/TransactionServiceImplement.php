@@ -2,6 +2,8 @@
 
 namespace App\Services\Transaction;
 
+use App\Constants\PaymentStatus;
+use App\Helpers\Converter;
 use LaravelEasyRepository\Service;
 use App\Repositories\Transaction\TransactionRepository;
 use App\Repositories\Tree\TreeRepository;
@@ -65,7 +67,7 @@ class TransactionServiceImplement extends Service implements TransactionService
                 $code .= "ADOPT";
         }
 
-        return $code .= "-" . date('YmdHis') . '-' . $user_id . '-' . rand(1000, 9999);
+        return $code .= "-" . date('YmdHis') . '-' . $user_id . '-' . rand(100000, 999999);
     }
 
     public function doAdopt(array $data): bool
@@ -84,7 +86,7 @@ class TransactionServiceImplement extends Service implements TransactionService
             'tree_type_id' => $data['product_id'],
             'total' => $data['total'],
             'grand_total' => $data['total'],
-            'status' => 'request'
+            'status' => PaymentStatus::REQUEST
         ];
 
         $this->data['user_carbon_offset'] = [
@@ -137,5 +139,39 @@ class TransactionServiceImplement extends Service implements TransactionService
     public function doPlanting(array $data): bool
     {
         return false;
+    }
+
+    public function callbackPayment(array $data): bool
+    {
+        $orderID = $data['order_id'];
+        $tr = $this->mainRepository->findByOrderID($orderID);
+
+        $paymentFails = [PaymentStatus::DENY, PaymentStatus::EXPIRE, PaymentStatus::CANCEL];
+        $updateTransaction = [
+            'payment_type' => $data['payment_type'],
+            'payment_detail' => json_encode($data),
+            'status' => Converter::paymentStatusMidtransToInternal($data['transaction_status'])
+        ];
+
+        DB::beginTransaction();
+        // check if payment fail
+        if (in_array($data['transaction_status'], $paymentFails)) {
+            if (!$this->userTreeRepository->deleteByTransactionID($tr->id)) {
+                DB::rollBack();
+                return false;
+            }
+            if (!$this->userCarbonOffsetRepository->deleteByTransactionID($tr->id)) {
+                DB::rollBack();
+                return false;
+            }
+        }
+
+        if (!$this->mainRepository->update($tr->id, $updateTransaction)) {
+            DB::rollBack();
+            return false;
+        }
+
+        DB::commit();
+        return true;
     }
 }

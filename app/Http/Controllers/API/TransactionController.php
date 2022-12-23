@@ -25,37 +25,6 @@ class TransactionController extends APIBaseController
     {
         $this->transactionSvc = $service;
     }
-    private function get_token_snap($param)
-    {
-        MidtransConfig::$serverKey = env("MIDTRANS_SERVER_KEY");
-        MidtransConfig::$is3ds = true;
-        MidtransConfig::$isSanitized = true;
-        if (env("APP_ENV") == 'production') {
-            MidtransConfig::$isProduction == true;
-        }
-
-        return \Midtrans\Snap::getSnapToken($param);
-    }
-
-    private function genrate_order_code($type)
-    {
-        $user_id = auth('api')->user()->id;
-
-        $code = "";
-
-        switch ($type) {
-            case 'adopt':
-                $code .= "ADOPT";
-                break;
-            case 'planting':
-                $code .= "PLANT";
-                break;
-            default:
-                $code .= "ADOPT";
-        }
-
-        return $code .= "-" . date('YmdHis') . '-' . $user_id . '-' . rand(1000, 9999);
-    }
 
     public function index(GetTransactionRequest $request)
     {

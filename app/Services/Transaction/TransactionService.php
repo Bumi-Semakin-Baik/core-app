@@ -24,4 +24,12 @@ interface TransactionService extends BaseService
      * @return boolean
      */
     public function doPlanting(array $data): bool;
+
+    /**
+     * handle callback from payment
+     *
+     * @param array $data
+     * @return boolean
+     */
+    public function callbackPayment(array $data): bool;
 }

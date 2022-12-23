@@ -9,6 +9,7 @@ namespace App\Constants;
 class ResponseMessage
 {
     // 2xx
+    public const SUCCESS = 'succesfully';
     public const SUCCESS_LOGIN = "Login success";
     public const SUCCESS_REGISTER = "Registrasi success";
     public const SUCCESS_LOGOUT = "Logout success";
