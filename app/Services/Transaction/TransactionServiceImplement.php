@@ -148,7 +148,7 @@ class TransactionServiceImplement extends Service implements TransactionService
 
         $paymentFails = [PaymentStatus::DENY, PaymentStatus::EXPIRE, PaymentStatus::CANCEL];
         $updateTransaction = [
-            'payment_type' => $data['payment_type'],
+            'payment_method' => $data['payment_type'],
             'payment_detail' => json_encode($data),
             'status' => Converter::paymentStatusMidtransToInternal($data['transaction_status'])
         ];
