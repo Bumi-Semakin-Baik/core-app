@@ -22,6 +22,6 @@ class TransactionRepositoryImplement extends Eloquent implements TransactionRepo
 
     public function findByOrderID(string $orderID): object
     {
-        return $this->model->where('order_id', $orderID)->first();
+        return $this->model->where('order_code', $orderID)->first();
     }
 }
