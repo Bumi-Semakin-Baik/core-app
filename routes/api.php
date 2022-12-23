@@ -9,6 +9,7 @@ use App\Http\Controllers\API\CarbonController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\TransactionController;
 use App\Http\Controllers\API_Admin\TreeController as API_AdminTreeController;
+use App\Http\Controllers\API_Admin\TreeTypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -149,7 +150,18 @@ Route::middleware('auth.jwt')
     ->group(
         function () {
             Route::post('/upload_image', 'upload_image_tree');
-            Route::post('/create', 'create_tree');
+            Route::post('/', 'create_tree');
+        }
+    );
+
+Route::controller(TreeTypeController::class)
+    ->prefix('admin/tree_types')
+    ->group(
+        function () {
+            Route::post('/', 'create_tree_type');
+            Route::put('/', 'update_tree_type');
+            Route::get('/', 'get_tree_type');
+            Route::get('/{id}', 'get_tree_type_by_id');
         }
     );
 
