@@ -11,14 +11,11 @@ class Formatter
     }
 
     /**
-     * Reformat phone number to 62xxxxxxxxxx
+     * Format tel with indonesian code
+     *
+     * @param [type] $value
+     * @return void
      */
-    // public static function IDTel($value)
-    // {
-
-    // }
-
-
     public static function IDTel($value)
     {
         $value = str_replace(" ", "", $value);

@@ -12,7 +12,7 @@ class Snap
         Config::$serverKey = env('MIDTRANS_SERVER_KEY');
         Config::$is3ds = true;
         Config::$isSanitized = true;
-        Config::$overrideNotifUrl = url('api/transaction/notification');
+        Config::$overrideNotifUrl = url('api/notifications/payment');
         if (env("APP_ENV") == 'production') {
             Config::$isProduction = true;
         }

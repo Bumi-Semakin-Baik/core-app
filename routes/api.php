@@ -6,6 +6,7 @@ use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\API\TreeController;
 use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\CarbonController;
+use App\Http\Controllers\API\NotificationController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\TransactionController;
 use App\Http\Controllers\API_Admin\TreeController as API_AdminTreeController;
@@ -141,11 +142,19 @@ Route::middleware('auth.jwt')
         }
     );
 
+/**
+ * Notification
+ */
+Route::prefix('notifications')
+    ->controller(NotificationController::class)
+    ->group(function () {
+        Route::post("payment", 'payment');
+    });
+
 /** 
  * ADMIN TREES ROUTES
  */
-
- Route::controller(API_AdminTreeController::class)
+Route::controller(API_AdminTreeController::class)
     ->prefix('admin/trees')
     ->group(
         function () {
@@ -164,4 +173,3 @@ Route::controller(TreeTypeController::class)
             Route::get('/{id}', 'get_tree_type_by_id');
         }
     );
-
