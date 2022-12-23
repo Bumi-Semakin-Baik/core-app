@@ -9,11 +9,12 @@ class Snap
 {
     public function __construct()
     {
-        Config::$serverKey = env("MIDTRANS_SERVER_KEY");
+        Config::$serverKey = env('MIDTRANS_SERVER_KEY');
         Config::$is3ds = true;
         Config::$isSanitized = true;
+        Config::$overrideNotifUrl = url('api/transaction/notification');
         if (env("APP_ENV") == 'production') {
-            Config::$isProduction == true;
+            Config::$isProduction = true;
         }
     }
 
