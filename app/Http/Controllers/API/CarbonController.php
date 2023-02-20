@@ -121,7 +121,7 @@ class CarbonController extends Controller
         $newTrees = [];
         foreach ($trees as $key => $tree) {
             if (@$tree->tree) {
-                $newTrees[] = [
+                $newTrees[$tree->tree->code] = [
                     'code' => $tree->tree->code,
                     'latitude' => $tree->tree->latitude,
                     'longitude' => $tree->tree->longitude,
