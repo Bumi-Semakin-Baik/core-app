@@ -16,6 +16,8 @@ class TreeType extends Model
         'name',
         'description',
         'sequestration',
+        'is_adopted',
+        'project_id',
     ];
 
     protected $with = ['partner'];
@@ -24,7 +26,9 @@ class TreeType extends Model
         'id',
         'name',
         'description',
-        'partner'
+        'partner',
+        'is_adopted',
+        'project_id',
     ];
 
     public function partner()

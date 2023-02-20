@@ -19,6 +19,7 @@ class ProductController extends Controller
     {
         $product = TreeType::select(['tree_types.id', 'partner_id', 'name', 'sequestration', DB::raw('GROUP_CONCAT(image) as image')])
             ->join('trees', 'trees.type_id', '=', 'tree_types.id')
+            ->where('tree_types.is_adopted', '1')
             ->groupBy('tree_types.id')
             ->get();
 
