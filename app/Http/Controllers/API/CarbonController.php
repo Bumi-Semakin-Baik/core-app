@@ -121,9 +121,9 @@ class CarbonController extends Controller
         $newTrees = [];
         foreach ($trees as $key => $tree) {
             $newTrees[] = [
-                'code' => $tree->tree->code,
-                'latitude' => $tree->tree->latitude,
-                'longitude' => $tree->tree->longitude,
+                'code' => $tree->trees->code,
+                'latitude' => $tree->trees->latitude,
+                'longitude' => $tree->trees->longitude,
             ];
         }
 
@@ -134,6 +134,7 @@ class CarbonController extends Controller
                     'user_id' => @$carbon->user_id,
                     'emision' => @$carbon->result,
                     'offset' => is_null($offset->total) ? (float) 0.00 : $offset->total,
+                    'offset_percentage' => is_null($offset->total) ? (float) 0.00  : round(($offset->total / @$carbon->result) * 100, 2),
                     'last_calculate' => @$carbon->measurement_date,
                 ],
                 'trees' => $newTrees,
