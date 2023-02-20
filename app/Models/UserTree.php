@@ -37,7 +37,7 @@ class UserTree extends Model
 
     public function trees()
     {
-        return $this->belongsTo(Tree::class);
+        return $this->belongsTo(Tree::class, 'tree_id', 'id');
     }
 
     public static function adopt($user_offset)
