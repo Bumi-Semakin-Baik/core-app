@@ -19,7 +19,7 @@ class UserTree extends Model
         'user_tree_sequestration',
     ];
 
-    protected $with = ['user', 'trees'];
+    protected $with = ['user', 'tree'];
 
     protected $visible = [
         'id',
@@ -35,7 +35,7 @@ class UserTree extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function trees()
+    public function tree()
     {
         return $this->belongsTo(Tree::class, 'tree_id', 'id');
     }

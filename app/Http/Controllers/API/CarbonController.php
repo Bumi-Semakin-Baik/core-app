@@ -116,7 +116,7 @@ class CarbonController extends Controller
 
         $carbon = UserCalculate::where('user_id', $user_id)->orderBy('measurement_date', 'desc')->first();
         $offset = UserCarbonOffset::select(DB::raw('SUM(total_offset) as total'))->where('user_id', $user_id)->where('offset_date', '>=', $oneYearAgo)->orderBy('offset_date', 'desc')->first();
-        $trees = UserTree::where('user_id', $user_id)->where('date_adopted', '>=', $oneYearAgo)->orderBy('date_adopted', 'desc')->get();
+        $trees = UserTree::where('user_id', $user_id)->where('date_adopted', '>=', $oneYearAgo)->orderBy('date_adopted', 'desc')->with('tree')->get();
 
         print_r($trees);
         $newTrees = [];
