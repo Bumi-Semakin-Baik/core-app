@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\API_Admin;
+namespace App\Http\Controllers\APICockpit;
 
 use App\Constants\ResponseMessage;
 use App\Http\Controllers\Controller;
@@ -12,19 +12,21 @@ use Illuminate\Support\Facades\Storage;
 
 class TreeController extends Controller
 {
-    public function upload_image_tree(TreeUpImageRequest $req){
+    public function upload_image_tree(TreeUpImageRequest $req)
+    {
         $img = $req->file('img')->store('trees');
 
         $res['img_url']     = Storage::url($img);
-        $res['longitude']   = ''; 
-        $res['latitude']    = ''; 
-        
+        $res['longitude']   = '';
+        $res['latitude']    = '';
+
         return response()->json([
             'message' => ResponseMessage::SUCCESS_CREATE,
             'data'    => $res
         ], 201);
     }
-    public function create_tree(TreeCreateRequest $req){
+    public function create_tree(TreeCreateRequest $req)
+    {
         Tree::create([
             'type_id'       => $req->input('tree_type'),
             'code'          => $req->input('code'),
@@ -35,7 +37,7 @@ class TreeController extends Controller
             'latitude'      => $req->input('latitude'),
             'production'    => $req->input('production')
         ]);
-        
+
         return response()->json([
             'message'   => ResponseMessage::SUCCESS_CREATE
         ], 201);

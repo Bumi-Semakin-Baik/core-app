@@ -35,4 +35,9 @@ class TreeType extends Model
     {
         return $this->belongsTo(Partner::class, 'partner_id');
     }
+
+    public function project()
+    {
+        return $this->belongsTo(Partner::class, 'project_id');
+    }
 }

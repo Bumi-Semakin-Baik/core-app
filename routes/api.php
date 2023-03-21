@@ -8,9 +8,8 @@ use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\CarbonController;
 use App\Http\Controllers\API\NotificationController;
 use App\Http\Controllers\API\ProductController;
+use App\Http\Controllers\API\ProjectController;
 use App\Http\Controllers\API\TransactionController;
-use App\Http\Controllers\API_Admin\TreeController as API_AdminTreeController;
-use App\Http\Controllers\API_Admin\TreeTypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,6 +75,19 @@ Route::controller(CarbonController::class)
             Route::get('/calculator/type', 'get_item_calculator');
             Route::post('/calculator', 'count_carbon_offset');
             Route::get('/', 'carbon_detail');
+        }
+    );
+
+/**
+ * PROJECTS ROUTES
+ */
+Route::controller(ProjectController::class)
+    ->middleware('auth.jwt')
+    ->prefix('projects')
+    ->group(
+        function () {
+            Route::get('/', 'getProjectsUser');
+            Route::get('/{id}', 'getDetailProject');
         }
     );
 
@@ -150,26 +162,3 @@ Route::prefix('notifications')
     ->group(function () {
         Route::post("payment", 'payment');
     });
-
-/** 
- * ADMIN TREES ROUTES
- */
-Route::controller(API_AdminTreeController::class)
-    ->prefix('admin/trees')
-    ->group(
-        function () {
-            Route::post('/upload_image', 'upload_image_tree');
-            Route::post('/', 'create_tree');
-        }
-    );
-
-Route::controller(TreeTypeController::class)
-    ->prefix('admin/tree_types')
-    ->group(
-        function () {
-            Route::post('/', 'create_tree_type');
-            Route::put('/', 'update_tree_type');
-            Route::get('/', 'get_tree_type');
-            Route::get('/{id}', 'get_tree_type_by_id');
-        }
-    );

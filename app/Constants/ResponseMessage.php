@@ -17,6 +17,7 @@ class ResponseMessage
     public const SUCCESS_CREATE = 'Data successfully created';
     public const SUCCESS_UPDATE = 'Data successfully updated';
     public const SUCCESS_DELETE = 'Data successfully deleted';
+    public const SUCCESS_NO_CONTENT = 'Data not found';
 
     // 4xx
     public const ERROR_VALIDATION = 'Validation error';

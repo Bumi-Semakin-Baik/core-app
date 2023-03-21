@@ -16,9 +16,11 @@ class Tree extends Model
     protected $fillable = [
         'type_id',
         'code',
+        'plant_number',
         'description',
         'planting_date',
         'image',
+        'condition',
         'latitude',
         'longitude',
     ];
@@ -29,9 +31,11 @@ class Tree extends Model
         'id',
         'type_id',
         'code',
+        'plant_number',
         'description',
         'planting_date',
         'image',
+        'condition',
         'latitude',
         'longitude',
     ];

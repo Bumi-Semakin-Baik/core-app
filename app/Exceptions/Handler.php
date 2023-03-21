@@ -86,8 +86,9 @@ class Handler extends ExceptionHandler
             if ($request->is('api/*')) {
                 if ($e->getPrevious() instanceof ModelNotFoundException) {
                     return response()->json([
-                        'message' => ResponseMessage::ERROR_NOT_FOUND,
-                    ], JsonResponse::HTTP_NOT_FOUND);
+                        'code' => JsonResponse::HTTP_NO_CONTENT,
+                        'message' => ResponseMessage::SUCCESS_NO_CONTENT,
+                    ], JsonResponse::HTTP_OK);
                 }
                 return response()->json([
                     'status' => 404,

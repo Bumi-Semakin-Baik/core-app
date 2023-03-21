@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\API_Admin;
+namespace App\Http\Controllers\APICockpit;
 
 use App\Constants\ResponseMessage;
 use App\Http\Controllers\Controller;
@@ -12,7 +12,8 @@ use Illuminate\Http\Request;
 
 class TreeTypeController extends Controller
 {
-    public function create_tree_type(TreeTypeCreateRequest $req){
+    public function create_tree_type(TreeTypeCreateRequest $req)
+    {
         TreeType::create([
             'partner_id'    => $req->input('partner_id'),
             'name'          => $req->input('name'),
@@ -25,7 +26,8 @@ class TreeTypeController extends Controller
         ], 201);
     }
 
-    public function update_tree_type(TreeTypeUpdateRequest $req){
+    public function update_tree_type(TreeTypeUpdateRequest $req)
+    {
         $treeType = TreeType::find($req->input('id'));
         $treeType->partner_id       = $req->input('partner_id');
         $treeType->name             = $req->input('name');
@@ -37,15 +39,16 @@ class TreeTypeController extends Controller
             'message' => ResponseMessage::SUCCESS_UPDATE
         ]);
     }
-    
-    public function get_tree_type(TreeTypeGetRequest $req){
+
+    public function get_tree_type(TreeTypeGetRequest $req)
+    {
         $page   = $req->input('page');
         $limit  = $req->input('limit');
         $search = !empty($req->input('search')) ? $req->input('search') : "";
 
-        $treeTypes = TreeType::where('name', 'like', '%'.$search.'%')->paginate($limit, ['*'], 'page', $page);
+        $treeTypes = TreeType::where('name', 'like', '%' . $search . '%')->paginate($limit, ['*'], 'page', $page);
         $treeTypeDatas = $treeTypes->map(
-            function ($treeType){
+            function ($treeType) {
                 return [
                     'id'            => $treeType->id,
                     'name'          => $treeType->name,
@@ -58,12 +61,12 @@ class TreeTypeController extends Controller
             }
         );
 
-        if($treeTypeDatas == null){
+        if ($treeTypeDatas == null) {
             return response()->json([
                 'message' => ResponseMessage::SUCCESS_RETRIEVE,
                 'data'    => []
             ], 204);
-        }else{
+        } else {
             return response()->json([
                 'message'  => ResponseMessage::SUCCESS_RETRIEVE,
                 'data'     => $treeTypeDatas,
@@ -76,16 +79,17 @@ class TreeTypeController extends Controller
             ], 200);
         }
     }
-    
-    public function get_tree_type_by_id($id){
+
+    public function get_tree_type_by_id($id)
+    {
         $treeType = TreeType::find($id);
 
-        if($treeType == null){
+        if ($treeType == null) {
             return response()->json([
                 'message' => ResponseMessage::SUCCESS_RETRIEVE,
                 'data'    => []
             ], 204);
-        }else{
+        } else {
             unset(
                 $treeType->partner->email,
                 $treeType->partner->phone,
@@ -103,5 +107,4 @@ class TreeTypeController extends Controller
             ], 200);
         }
     }
-
 }
