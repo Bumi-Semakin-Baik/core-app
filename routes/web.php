@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\QrController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,6 @@ Route::get('/haloo', function () {
     print_r($c);
     echo "haloo";
 });
+
+Route::get('/qrcode', [QrController::class, 'index']);
+Route::get('/qrcode-convert', [QrController::class, 'convert']);
