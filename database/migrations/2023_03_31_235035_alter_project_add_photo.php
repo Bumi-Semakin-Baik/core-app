@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->text('address')->after("description")->nullable()->comment("alamat project ditanam");
+            $table->text('photo')->after('address')->nullable()->comment('foto banner project ukuran square');
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropColumns('address');
+        Schema::dropColumns('photo');
     }
 };

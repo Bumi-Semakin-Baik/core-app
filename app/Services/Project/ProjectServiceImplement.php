@@ -29,6 +29,7 @@ class ProjectServiceImplement extends Service implements ProjectService
         'id' => $p->id,
         'name' => $p->name,
         'description' => $p->description,
+        'photo' => $p->photo,
         'partner_id' => $p->partner->id,
         'partner_name' => $p->partner->name,
         'planting_date' => date("Y-m-d", strtotime($p->planting_date)),
@@ -49,6 +50,7 @@ class ProjectServiceImplement extends Service implements ProjectService
       'partner_name' => $project->partner->name,
       'planting_date' => date("Y-m-d", strtotime($project->planting_date)),
       'address' => $project->address,
+      'photo' => $project->photo,
       'tree_total' => $project->tree_total,
     ];
   }

@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\NewsArticle;
+use App\Models\Partner;
 use App\Models\Tree;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,8 +17,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(10)->create();
-        Tree::factory(20)->create();
+        User::factory(15)->create();
+        Tree::factory(15)->create();
         NewsArticle::factory(20)->create();
     }
 }
