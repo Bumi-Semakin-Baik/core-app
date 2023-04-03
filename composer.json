@@ -18,6 +18,7 @@
         "nextapps/laravel-swagger-ui": "^0.6.0",
         "propaganistas/laravel-phone": "^4.4",
         "ramsey/uuid": "^4.6",
+        "simplesoftwareio/simple-qrcode": "^1.0.3",
         "tymon/jwt-auth": "^1.0",
         "yaza/laravel-repository-service": "^3.2"
     },
