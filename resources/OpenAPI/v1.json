@@ -784,7 +784,7 @@
         "/projects/{id}": {
             "get": {
                 "description": "Get detail projects user",
-                "tags": ["Projects"],
+                "tags": ["Projects", "Admin"],
                 "security": [
                     {
                         "bearerAuth": []

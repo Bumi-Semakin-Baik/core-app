@@ -18,10 +18,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/haloo', function () {
-    $c = 3 > 7;
-    print_r($c);
-    echo "haloo";
+Route::get('/cockpit/login', function () {
+    $data = [
+        'title' => 'login'
+    ];
+    return view('cockpit/auth/login', $data);
+});
+
+Route::get('/cockpit', function () {
+    $data = [
+        'title' => 'dashboard'
+    ];
+    return view('cockpit/dashboard', $data);
 });
 
 Route::get('/qrcode', [QrController::class, 'index']);

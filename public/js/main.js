@@ -1,11 +1,36 @@
-/* global Chart, coreui */
+$body = $(".loading");
 
-/**
- * --------------------------------------------------------------------------
- * CoreUI Boostrap Admin Template (v4.0.2): main.js
- * Licensed under MIT (https://coreui.io/license)
- * --------------------------------------------------------------------------
- */
+$(document).on({
+  ajaxStart: function () { $body.addClass("show"); },
+  ajaxStop: function () { $body.removeClass("show"); }
+});
+
+sidebarTopbar = localStorage.getItem('sidebar_topbar');
+if (sidebarTopbar == null) {
+  requestAjax("GET", "/api-cockpit/setting", null, function (json) {
+    localStorage.setItem('sidebar_topbar', JSON.stringify(json.data));
+  })
+}
+
+loadTopbar();
+
+function loadTopbar() {
+  $container = $('#topbar-container')
+  $container.html('');
+
+  topbarJSON = JSON.parse(sidebarTopbar)
+  Object.keys(topbarJSON).forEach(element => {
+    template = `<li class="nav-item"><a class="nav-link" href="${baseUrl}/cockpit/${element}">${element.ucwords()}</a></li>`;
+    $container.append(template);
+  });
+}
+
+function loadSidebar(topbar, callback) {
+  sidebar = []
+  sidebarJSON = JSON.parse(sidebarTopbar)
+  callback(sidebarJSON[topbar]);
+}
+
 // Disable the on-canvas tooltip
 Chart.defaults.pointHitDetectionRadius = 1;
 Chart.defaults.plugins.tooltip.enabled = false;

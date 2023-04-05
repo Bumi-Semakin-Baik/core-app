@@ -1,0 +1,65 @@
+{
+    "dashboard": [
+        {
+            "path": "dashboard",
+            "title": "dashboard",
+            "icon": "#cil-speedometer",
+            "submenu": []
+        },
+        {
+            "path": "dashboard/user",
+            "title": "user",
+            "icon": "#cil-user",
+            "submenu": []
+        },
+        {
+            "path": "dashboard/transaction",
+            "title": "transaksi",
+            "icon": "#cil-cart",
+            "submenu": []
+        }
+    ],
+    "website": [
+        {
+            "path": "website/content-categories",
+            "title": "kategori konten",
+            "icon": "#cil-cil-hamburger-menu",
+            "submenu": []
+        },
+        {
+            "path": "website/news-article",
+            "title": "berita & artikel",
+            "icon": "#cil-newspaper",
+            "submenu": []
+        }
+    ],
+    "setting": [
+        {
+            "path": "setting/user-cockpit",
+            "title": "user cockpit",
+            "icon": "#cil-user",
+            "submenu": []
+        },
+        {
+            "path": "setting/product",
+            "title": "produk",
+            "icon": "#cil-gumtree",
+            "submenu": [
+                {
+                    "path": "setting/product/tree-types",
+                    "title": "jenis pohon"
+                },
+                {
+                    "path": "setting/product/tree",
+                    "title": "pohon"
+                }
+            ]
+        },
+        {
+            "path": "setting/project",
+            "title": "proyek tanam korporasi",
+            "icon": "#cil-3d",
+            "submenu": []
+        }
+    ]
+}
