@@ -196,6 +196,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
     ],
 
     /*
@@ -210,6 +211,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'QrCode' => SimpleSoftwareIO\QrCode\Facade::class,
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 

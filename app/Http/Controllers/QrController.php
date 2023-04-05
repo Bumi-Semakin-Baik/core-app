@@ -13,10 +13,10 @@ use Imagick;
 
 class QrController extends Controller{
     public function index(){
-        for($x = 2901; $x <= 4000; $x++){
+        for($x = 2901; $x <= 3001; $x++){
             $treeName = 'BB2023KTG'.sprintf("%04d", $x);
             $image = QrCode::format('png')->size(500)->generate($treeName);
-            $output_file = '/img/qr-code/'.$treeName.'.png';
+            $output_file = '/img/qr-code/PT Indofood/'.$treeName.'.png';
             Storage::disk('local')->put($output_file, $image);
             // $pdf = new Fpdi();
             // $pdf->AddPage();
@@ -28,7 +28,7 @@ class QrController extends Controller{
             // $pdf->AddFont("Poppins", '', 'poppins.php');
             // $pdf->SetFont("Poppins", '', 13);
             // $pdf->SetTextColor(0, 0, 0);
-            
+
             // $pdf->Image('../storage/app/img/qr-code/'.$treeName.'.png', 157, 0.5, 15);
             // $pdf->Text(113, 13, $treeName);
             // $pdf->Output('4501-5000/'.$treeName.'.pdf', 'F');
@@ -42,7 +42,7 @@ class QrController extends Controller{
             $saveImagePath = public_path('SOLINI_1-5000/1-500/BB2023SOL'.$x.'.png');
             $newImg->writeImages($saveImagePath, true);
         }
-  
+
         // return response()->file($saveImagePath);
         dd("Berhasil");
     }

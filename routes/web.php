@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\QrController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/haloo', function () {
     $c = 3 > 7;
@@ -26,3 +28,15 @@ Route::get('/haloo', function () {
 
 Route::get('/qrcode', [QrController::class, 'index']);
 Route::get('/qrcode-convert', [QrController::class, 'convert']);
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// });
+Route::prefix('dashboard')
+    ->controller(DashboardController::class)
+    ->group(function (){
+        Route::get('/','index');
+    });
+ Route::controller(LandingController::class)
+    ->group(function (){
+        Route::get('/','index');
+    });
