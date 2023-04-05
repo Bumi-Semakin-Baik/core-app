@@ -29,6 +29,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // swagger
+        $this->app->register(\L5Swagger\L5SwaggerServiceProvider::class);
+
         // service
         $this->app->bind(TransactionService::class, TransactionServiceImplement::class);
         $this->app->bind(ProjectService::class, ProjectServiceImplement::class);
