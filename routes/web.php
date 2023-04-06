@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\QrController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,11 @@ Route::get('/qrcode-convert', [QrController::class, 'convert']);
 // });
 Route::prefix('dashboard')
     ->controller(DashboardController::class)
+    ->group(function (){
+        Route::get('/','index');
+    });
+Route::prefix('newsletter')
+    ->controller(NewsController::class)
     ->group(function (){
         Route::get('/','index');
     });

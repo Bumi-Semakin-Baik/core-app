@@ -84,7 +84,7 @@
                                             <div class="inner-header">
                                                 <div class="logo-header">
                                                     <a href="index.html" title="">
-                                                        <img src="icon/logo-dark.png" alt="images">
+                                                        <img src="{{ asset('landing/icon/logo-dark.png') }}" alt="images">
                                                     </a>
                                                 </div>
                                                 <!-- /logo -->
@@ -269,7 +269,7 @@
                                                 data-responsive_offset="on">
                                                 <img class="img-slide wow jackInTheBox" data-wow-delay="2500ms"
                                                     data-wow-duration="3s"
-                                                    src="images/home/young-woman-with-their-garden-crops.png"
+                                                    src="{{ asset('landing/images/home/young-woman-with-their-garden-crops.png') }}"
                                                     alt="images">
                                             </div>
                                         </li>
@@ -347,7 +347,7 @@
                                                 data-responsive_offset="on">
                                                 <img class="img-slide wow jackInTheBox" data-wow-delay="2500ms"
                                                     data-wow-duration="3s"
-                                                    src="images/home/young-woman-with-their-garden-crops.png"
+                                                    src="{{ asset('landing/images/home/young-woman-with-their-garden-crops.png') }}"
                                                     alt="images">
                                             </div>
                                         </li>
@@ -457,8 +457,8 @@
                     <div class="col-lg-6">
                         <div class="about-post center bd-radius-50-image">
                             <img class="main-post-about"
-                                src="images/home/the-girl-in-the-glasses.jpg" alt="images">
-                            <img class="circel-inside" src="images/home/circle-about.png" alt="images">
+                                src="{{ asset('landing/images/home/the-girl-in-the-glasses.jpg') }}" alt="images">
+                            <img class="circel-inside" src="{{ asset('landing/images/home/circle-about.png') }}" alt="images">
                             <div class="about-count-box themesflat-counter">
                                 <div class="box">
                                     <div class="inner-about-count-box">
@@ -506,7 +506,7 @@
                                     </div>
                                 </div>
                                 <div class="image-desc">
-                                    <img class="image" src="images/home/box-flowers-green-garden.jpg" alt="images">
+                                    <img class="image" src="{{ asset('landing/images/home/box-flowers-green-garden.jpg') }}" alt="images">
                                 </div>
                             </div>
                             <div class="button hover-up">
@@ -659,7 +659,7 @@
                                             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="images/team/staff1.png" alt="images">
+                                    <img src="{{ asset('landing/images/team/staff1.png') }}" alt="images">
                                 </div>
                                 <div class="info-staff link-style4">
                                     <h3 class="section-heading-rubik-size20"> Doris Jordan </h3>
@@ -678,7 +678,7 @@
                                             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="images/team/staff2.png" alt="images">
+                                    <img src="{{ asset('landing/images/team/staff2.png') }}" alt="images">
                                 </div>
                                 <div class="info-staff link-style4">
                                     <h3 class="section-heading-rubik-size20"> Johnny Ramirez </h3>
@@ -697,7 +697,7 @@
                                             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="images/team/staff3.png" alt="images">
+                                    <img src="{{ asset('landing/images/team/staff3.png') }}" alt="images">
                                 </div>
                                 <div class="info-staff link-style4">
                                     <h3 class="section-heading-rubik-size20"> Diana Wagner </h3>
@@ -718,7 +718,7 @@
                     <div class="item-four-column">
                         <div class="list-box-profolio wow fadeInUp">
                             <div class="image-profolio bd-radius-8-image">
-                                <img src="images/profolio/home1-item1.jpg" alt="images">
+                                <img src="{{ asset('landing/images/profolio/home1-item1.jpg') }}" alt="images">
                                 <div class="profolio-show">
                                     <div class="profolio-info">
                                         <div class="info">
@@ -739,7 +739,7 @@
                     <div class="item-four-column">
                         <div class="list-box-profolio wow fadeInDown">
                             <div class="image-profolio bd-radius-8-image">
-                                <img src="images/profolio/home1-item2.jpg" alt="images">
+                                <img src="{{ asset('landing/images/profolio/home1-item2.jpg') }}" alt="images">
                                 <div class="profolio-show active">
                                     <div class="profolio-info">
                                         <div class="info">
@@ -760,7 +760,7 @@
                     <div class="item-four-column">
                         <div class="list-box-profolio wow fadeInUp">
                             <div class="image-profolio bd-radius-8-image">
-                                <img src="images/profolio/home1-item3.jpg" alt="images">
+                                <img src="{{ asset('landing/images/profolio/home1-item3.jpg') }}" alt="images">
                                 <div class="profolio-show">
                                     <div class="profolio-info">
                                         <div class="info">
@@ -781,7 +781,7 @@
                     <div class="item-four-column">
                         <div class="list-box-profolio wow fadeInDown">
                             <div class="image-profolio bd-radius-8-image">
-                                <img src="images/profolio/home1-item4.jpg" alt="images">
+                                <img src="{{ asset('landing/images/profolio/home1-item4.jpg') }}" alt="images">
                                 <div class="profolio-show">
                                     <div class="profolio-info">
                                         <div class="info">
@@ -828,7 +828,7 @@
                                     <div class="box-item">
                                         <div class="box-item-overlay"></div>
                                         <div class="staff-img">
-                                            <img src="images/team/staff-box1.jpg" alt="images">
+                                            <img src="{{ asset('landing/images/team/staff-box1.jpg') }}" alt="images">
                                         </div>
                                         <p class="section-desc mg-bottom-15"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Duis at est id leo luctus gravida a in ipsum. </p>
@@ -844,7 +844,7 @@
                                 <div class="box-item">
                                     <div class="box-item-overlay active"></div>
                                     <div class="staff-img">
-                                        <img src="images/team/staff-box2.jpg" alt="images">
+                                        <img src="{{ asset('landing/images/team/staff-box2.jpg') }}" alt="images">
                                     </div>
                                     <p class="section-desc mg-bottom-15"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                                         at est id leo luctus gravida a in ipsum. </p>
@@ -860,7 +860,7 @@
                                 <div class="box-item">
                                     <div class="box-item-overlay"></div>
                                     <div class="staff-img">
-                                        <img src="images/team/staff-box3.jpg" alt="images">
+                                        <img src="{{ asset('landing/images/team/staff-box3.jpg') }}" alt="images">
                                     </div>
                                     <p class="section-desc mg-bottom-15"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                                         at est id leo luctus gravida a in ipsum. </p>
@@ -886,7 +886,7 @@
                         <div class="row">
                             <div class="content-left">
                                 <div class="tag-logo">
-                                    <img src="icon/logo-dark.png" alt="images">
+                                    <img src="{{ asset('landing/icon/logo-dark.png') }}" alt="images">
                                 </div>
                             </div>
                         </div>
@@ -1257,7 +1257,7 @@
                         <div class="top-footer wow fadeInDown">
                             <div class="top-footer-left">
                                 <div class="logo-footer">
-                                    <a href="index.html"><img src="icon/logo-light.png" alt="images"></a>
+                                    <a href="index.html"><img src="{{ asset('landing/icon/logo-dark.png') }}" alt="images"></a>
                                 </div>
                             </div>
                             <div class="top-footer-right">
