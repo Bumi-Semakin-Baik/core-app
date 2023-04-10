@@ -58,10 +58,10 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="html/project-card.html" class="nk-menu-link"><span class="nk-menu-text">Account</span></a>
+                                            <a href="{{ url('company/accounts') }}" class="nk-menu-link"><span class="nk-menu-text">Account</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="html/project-list.html" class="nk-menu-link"><span class="nk-menu-text">Project List</span></a>
+                                            <a href="{{ url('company/projects') }}" class="nk-menu-link"><span class="nk-menu-text">Project List</span></a>
                                         </li>
                                     </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->
@@ -71,7 +71,7 @@
                                         <span class="nk-menu-text">Newsletter</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
-                                <li class="nk-menu-heading">
+                                {{-- <li class="nk-menu-heading">
                                     <h6 class="overline-title text-primary-alt">Applications</h6>
                                 </li><!-- .nk-menu-heading -->
                                 <li class="nk-menu-item has-sub">
@@ -559,7 +559,7 @@
                                         <span class="nk-menu-icon"><em class="icon ni ni-tag-alt-fill"></em></span>
                                         <span class="nk-menu-text">Email Template</span>
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul><!-- .nk-menu -->
                         </div><!-- .nk-sidebar-menu -->
                     </div><!-- .nk-sidebar-content -->
