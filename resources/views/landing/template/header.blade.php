@@ -8,7 +8,7 @@
     <!-- Basic Page Needs -->
     <meta charset="UTF-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Gettree - Garden & Landscaping</title>
+    <title>BumiBaik</title>
 
     <meta name="author" content="themesflat.com">
     <!-- Mobile Specific Metas -->
@@ -29,7 +29,7 @@
     <!-- Favicon and touch icons  -->
     <link href="{{ asset('landing/icon/Favicon.png') }}" rel="apple-touch-icon-precomposed">
     <link href="{{ asset('landing/icon/Favicon.png') }}" rel="apple-touch-icon-precomposed">
-    <link href="{{ asset('landing/icon/Favicon.png') }}" rel="shortcut icon">
+    <link href="{{ asset('landing/images/home/bumibaik.jpg') }}" rel="shortcut icon">
 
     <!-- anime -->
     <link rel="stylesheet" href="{{ asset('landing/stylesheet/animate.css') }}">

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\QrController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
@@ -39,4 +40,9 @@ Route::prefix('dashboard')
  Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');
+    });
+    Route::controller(AboutController::class)
+    ->group(function (){
+        Route::get('/about','index');
+       
     });

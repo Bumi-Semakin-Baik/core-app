@@ -47,7 +47,7 @@
                                             <div class="inner-header">
                                                 <div class="logo-header">
                                                     <a href="index.html" title="">
-                                                        <img src="{{ asset ('landing/icon/logo-dark.png')}}" alt="images">
+                                                        <img src="{{asset('landing/images/home/logo-dark.png')}}"  alt="images">
                                                     </a>
                                                 </div>
                                                 <!-- /logo -->
@@ -74,7 +74,7 @@
                                                         <li class="menu-item-has-children">
                                                             <a href="about.html" title="">About</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="about.html" title="">About Us</a></li>
+                                                                <li><a href="{{ url('/about') }}" title="">About Us</a></li>
                                                                 <li><a href="team.html" title="">Team</a></li>
                                                                 <li><a href="faq.html" title="">Faq</a></li>
                                                             </ul>
