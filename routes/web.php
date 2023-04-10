@@ -4,8 +4,8 @@ use App\Http\Controllers\QrController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LandingController;
-use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\CompanyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,6 +57,12 @@ Route::prefix('company')
         Route::get('/account','account');
         Route::get('/project','project');
     });
+Route::prefix('company')
+        ->controller(CompanyController::class)
+        ->group(function (){
+            Route::get('/accounts','getAccount');
+            Route::get('/projects','getProject');
+        });
  Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');

@@ -84,7 +84,7 @@
                                             <div class="inner-header">
                                                 <div class="logo-header">
                                                     <a href="index.html" title="">
-                                                        <img src="{{ asset('landing/icon/logo-dark.png') }}" alt="images">
+                                                        <img src="{{ asset('images/logo-dark.png') }}" alt="images">
                                                     </a>
                                                 </div>
                                                 <!-- /logo -->

@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
-    //
-    public function account(){
-        return view('admin.company.account.index');
+    public function getAccount(){
+        return view('admin.company.account');
     }
-    public function project(){
-        return view('admin.company.project.index');
+    public function getProject(){
+        return view('admin.company.project');
     }
 }
