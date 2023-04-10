@@ -1013,5 +1013,8 @@
         </div>
     </div><!-- .card-preview -->
 </div> <!-- nk-block -->
+</div>
+</div>
+</div>
 
 @include('admin.template.footer')

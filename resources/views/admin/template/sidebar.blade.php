@@ -46,7 +46,7 @@
                                     </a>
                                 </li><!-- .nk-menu-item -->
                                 <li class="nk-menu-item">
-                                    <a href="html/index-sales.html" class="nk-menu-link">
+                                    <a href="{{ url('/partner')}}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-activity-round-fill"></em></span>
                                         <span class="nk-menu-text">Partnership</span>
                                     </a>

@@ -4,6 +4,7 @@ use App\Http\Controllers\QrController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +43,19 @@ Route::prefix('newsletter')
     ->controller(NewsController::class)
     ->group(function (){
         Route::get('/','index');
+    });
+
+Route::prefix('partner')
+    ->controller(PartnerController::class)
+    ->group(function (){
+        Route::get('/','index');
+    });
+
+Route::prefix('company')
+    ->controller(CompanyController::class)
+    ->group(function (){
+        Route::get('/account','account');
+        Route::get('/project','project');
     });
 Route::prefix('company')
         ->controller(CompanyController::class)
