@@ -44,6 +44,7 @@ Route::prefix('newsletter')
     ->controller(NewsController::class)
     ->group(function (){
         Route::get('/','index');
+        Route::get('/add','add');
     });
 
 Route::prefix('partner')
@@ -52,12 +53,6 @@ Route::prefix('partner')
         Route::get('/','index');
     });
 
-Route::prefix('company')
-    ->controller(CompanyController::class)
-    ->group(function (){
-        Route::get('/account','account');
-        Route::get('/project','project');
-    });
 Route::prefix('company')
         ->controller(CompanyController::class)
         ->group(function (){
@@ -68,8 +63,8 @@ Route::prefix('company')
     ->group(function (){
         Route::get('/','index');
     });
-    Route::controller(AboutController::class)
+Route::controller(AboutController::class)
     ->group(function (){
         Route::get('/about','index');
-       
+
     });
