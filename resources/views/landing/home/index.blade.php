@@ -47,7 +47,7 @@
                                             <div class="inner-header">
                                                 <div class="logo-header">
                                                     <a href="index.html" title="">
-                                                        <img src="{{asset('landing/images/home/logo-dark.png')}}"  alt="images">
+                                                        <img src="{{ asset('images/logo-dark.png') }}" alt="images">
                                                     </a>
                                                 </div>
                                                 <!-- /logo -->
@@ -463,7 +463,7 @@
                                     </div>
                                 </div>
                                 <div class="image-desc">
-                                    <img class="image" src="images/home/box-flowers-green-garden.jpg" alt="images">
+                                    <img class="image" src="{{ asset('landing/images/home/box-flowers-green-garden.jpg') }}" alt="images">
                                 </div>
                             </div>
                             <div class="button hover-up">
@@ -616,7 +616,7 @@
                                             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="images/team/staff1.png" alt="images">
+                                    <img src="{{ asset('landing/images/team/staff1.png') }}" alt="images">
                                 </div>
                                 <div class="info-staff link-style4">
                                     <h3 class="section-heading-rubik-size20"> Doris Jordan </h3>
@@ -635,7 +635,7 @@
                                             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="images/team/staff2.png" alt="images">
+                                    <img src="{{ asset('landing/images/team/staff2.png') }}" alt="images">
                                 </div>
                                 <div class="info-staff link-style4">
                                     <h3 class="section-heading-rubik-size20"> Johnny Ramirez </h3>
@@ -654,7 +654,7 @@
                                             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="images/team/staff3.png" alt="images">
+                                    <img src="{{ asset('landing/images/team/staff3.png') }}" alt="images">
                                 </div>
                                 <div class="info-staff link-style4">
                                     <h3 class="section-heading-rubik-size20"> Diana Wagner </h3>
@@ -675,7 +675,7 @@
                     <div class="item-four-column">
                         <div class="list-box-profolio wow fadeInUp">
                             <div class="image-profolio bd-radius-8-image">
-                                <img src="images/profolio/home1-item1.jpg" alt="images">
+                                <img src="{{ asset('landing/images/profolio/home1-item1.jpg') }}" alt="images">
                                 <div class="profolio-show">
                                     <div class="profolio-info">
                                         <div class="info">
@@ -696,7 +696,7 @@
                     <div class="item-four-column">
                         <div class="list-box-profolio wow fadeInDown">
                             <div class="image-profolio bd-radius-8-image">
-                                <img src="images/profolio/home1-item2.jpg" alt="images">
+                                <img src="{{ asset('landing/images/profolio/home1-item2.jpg') }}" alt="images">
                                 <div class="profolio-show active">
                                     <div class="profolio-info">
                                         <div class="info">
@@ -717,7 +717,7 @@
                     <div class="item-four-column">
                         <div class="list-box-profolio wow fadeInUp">
                             <div class="image-profolio bd-radius-8-image">
-                                <img src="images/profolio/home1-item3.jpg" alt="images">
+                                <img src="{{ asset('landing/images/profolio/home1-item3.jpg') }}" alt="images">
                                 <div class="profolio-show">
                                     <div class="profolio-info">
                                         <div class="info">
@@ -738,7 +738,7 @@
                     <div class="item-four-column">
                         <div class="list-box-profolio wow fadeInDown">
                             <div class="image-profolio bd-radius-8-image">
-                                <img src="images/profolio/home1-item4.jpg" alt="images">
+                                <img src="{{ asset('landing/images/profolio/home1-item4.jpg') }}" alt="images">
                                 <div class="profolio-show">
                                     <div class="profolio-info">
                                         <div class="info">
@@ -785,7 +785,7 @@
                                     <div class="box-item">
                                         <div class="box-item-overlay"></div>
                                         <div class="staff-img">
-                                            <img src="images/team/staff-box1.jpg" alt="images">
+                                            <img src="{{ asset('landing/images/team/staff-box1.jpg') }}" alt="images">
                                         </div>
                                         <p class="section-desc mg-bottom-15"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Duis at est id leo luctus gravida a in ipsum. </p>
@@ -801,7 +801,7 @@
                                 <div class="box-item">
                                     <div class="box-item-overlay active"></div>
                                     <div class="staff-img">
-                                        <img src="images/team/staff-box2.jpg" alt="images">
+                                        <img src="{{ asset('landing/images/team/staff-box2.jpg') }}" alt="images">
                                     </div>
                                     <p class="section-desc mg-bottom-15"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                                         at est id leo luctus gravida a in ipsum. </p>
@@ -817,7 +817,7 @@
                                 <div class="box-item">
                                     <div class="box-item-overlay"></div>
                                     <div class="staff-img">
-                                        <img src="images/team/staff-box3.jpg" alt="images">
+                                        <img src="{{ asset('landing/images/team/staff-box3.jpg') }}" alt="images">
                                     </div>
                                     <p class="section-desc mg-bottom-15"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                                         at est id leo luctus gravida a in ipsum. </p>
@@ -843,7 +843,7 @@
                         <div class="row">
                             <div class="content-left">
                                 <div class="tag-logo">
-                                    <img src="icon/logo-dark.png" alt="images">
+                                    <img src="{{ asset('landing/icon/logo-dark.png') }}" alt="images">
                                 </div>
                             </div>
                         </div>

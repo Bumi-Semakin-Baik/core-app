@@ -13,7 +13,7 @@ use Imagick;
 
 class QrController extends Controller{
     public function index(){
-        for($x = 2901; $x <= 3001; $x++){
+        for($x = 1; $x <= 10; $x++){
             $treeName = 'BB2023KTG'.sprintf("%04d", $x);
             $image = QrCode::format('png')->size(500)->generate($treeName);
             $output_file = '/img/qr-code/PT Indofood/'.$treeName.'.png';
