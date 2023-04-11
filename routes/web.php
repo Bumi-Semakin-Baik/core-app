@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\QrController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LandingController;
@@ -66,4 +67,9 @@ Route::prefix('company')
  Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');
+    });
+    Route::controller(AboutController::class)
+    ->group(function (){
+        Route::get('/about','index');
+       
     });

@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<!--<![endif]-->
-
-<head>
-    <!-- Basic Page Needs -->
-    <meta charset="UTF-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Gettree - Garden & Landscaping</title>
-
-    <meta name="author" content="themesflat.com">
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- Boostrap style -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('landing/stylesheet/bootstrap.css') }}">
-
-    <!-- Theme style -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('landing/stylesheet/style.css') }}">
-
-    <!-- Reponsive -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('landing/stylesheet/responsive.css') }}">
-
-    <!-- icoomon font -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('landing/stylesheet/icomoon.css') }}">
-
-    <!-- Favicon and touch icons  -->
-    <link href="{{ asset('landing/icon/Favicon.png') }}" rel="apple-touch-icon-precomposed">
-    <link href="{{ asset('landing/icon/Favicon.png') }}" rel="apple-touch-icon-precomposed">
-    <link href="{{ asset('landing/icon/Favicon.png') }}" rel="shortcut icon">
-
-    <!-- anime -->
-    <link rel="stylesheet" href="{{ asset('landing/stylesheet/animate.css') }}">
-
-</head>
-
+@include('landing.template.header')
 <body>
     <div class="boxed blog">
 
@@ -55,8 +18,8 @@
                                 <div class="top-header1">
                                     <div class="top-header-inner">
                                         <div class="top-bar-left">
-                                            <span class="top-location">2072 Pinnickinick Street, WA 98370</span>
-                                            <span class="top-mail">info@website.com</span>
+                                            <span class="top-location">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu, Kauman), Malang</span>
+                                            <span class="top-mail">bumibaik.com</span>
                                         </div>
                                         <div class="top-bar-right">
                                             <ul class="widgets-nav-social">
@@ -111,7 +74,7 @@
                                                         <li class="menu-item-has-children">
                                                             <a href="about.html" title="">About</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="about.html" title="">About Us</a></li>
+                                                                <li><a href="{{ url('/about') }}" title="">About Us</a></li>
                                                                 <li><a href="team.html" title="">Team</a></li>
                                                                 <li><a href="faq.html" title="">Faq</a></li>
                                                             </ul>
@@ -172,7 +135,7 @@
                                                                 class="fa fa-shopping-cart"></i></a>
                                                     </div>
                                                     <div class="button">
-                                                        <a href="contact.html" class="btn">Get A Quote</a>
+                                                        <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app&hl=id" class="btn">Download</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -231,8 +194,8 @@
                                                 data-start="700" data-splitin="none" data-splitout="none"
                                                 data-responsive_offset="on">
                                                 <div class="title-box">
-                                                    <h2 class="title-slider text-pri2-color">Planting a garden is<br>
-                                                        similar to believe in<br> tomorrow</h2>
+                                                    <h2 class="title-slider text-pri2-color">Zero emission<br>
+                                                    day bersama<br>bumibaik</h2>
                                                 </div>
                                             </div>
 
@@ -268,8 +231,8 @@
                                                 data-start="800" data-splitin="none" data-splitout="none"
                                                 data-responsive_offset="on">
                                                 <img class="img-slide wow jackInTheBox" data-wow-delay="2500ms"
-                                                    data-wow-duration="3s"
-                                                    src="{{ asset('landing/images/home/young-woman-with-their-garden-crops.png') }}"
+                                                    data-wow-duration="3s" width ="full"
+                                                    src="{{ asset ('landing/images/home/bumibaik1.jpg')}}"
                                                     alt="images">
                                             </div>
                                         </li>
@@ -347,7 +310,7 @@
                                                 data-responsive_offset="on">
                                                 <img class="img-slide wow jackInTheBox" data-wow-delay="2500ms"
                                                     data-wow-duration="3s"
-                                                    src="{{ asset('landing/images/home/young-woman-with-their-garden-crops.png') }}"
+                                                    src="{{asset ('landing/images/home/bumibaik1.jpg')}}" 
                                                     alt="images">
                                             </div>
                                         </li>
@@ -366,6 +329,12 @@
         <!-- /.page-title -->
 
         <!-- features -->
+        <br>
+        <div class="section-title-box">
+                            <h4 class="section-subtitle">TREE FOR LIFE</h4>
+                            <h2 class="section-title">Pohon Termonitor<br></h2>
+                        </div>
+                        <br>
         <section class="flat-features">
             <div class="container-fluid">
                 <div class="row">
@@ -456,20 +425,8 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="about-post center bd-radius-50-image">
-                            <img class="main-post-about"
-                                src="{{ asset('landing/images/home/the-girl-in-the-glasses.jpg') }}" alt="images">
-                            <img class="circel-inside" src="{{ asset('landing/images/home/circle-about.png') }}" alt="images">
-                            <div class="about-count-box themesflat-counter">
-                                <div class="box">
-                                    <div class="inner-about-count-box">
-                                        <span class="number-count number" data-speed="1500" data-to="20"
-                                            data-inviewport="yes">20</span>
-                                        <div class="caption-number-count">
-                                            Years Of experience
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <img class="img-fluid"
+                                src="{{asset ('landing/images/home/bumibaik.jpg')}} " alt="images">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -526,7 +483,7 @@
                     <div class="col-md-12">
                         <div class="section-title-box">
                             <h4 class="section-subtitle">WHAT WE DO</h4>
-                            <h2 class="section-title">What You Can Do<br> with Gettree</h2>
+                            <h2 class="section-title">Program Kami</h2>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -1249,185 +1206,4 @@
         </section>
         <!-- /blog -->
 
-        <!-- footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="top-footer wow fadeInDown">
-                            <div class="top-footer-left">
-                                <div class="logo-footer">
-                                    <a href="index.html"><img src="{{ asset('landing/icon/logo-dark.png') }}" alt="images"></a>
-                                </div>
-                            </div>
-                            <div class="top-footer-right">
-                                <div class="footer-contact-info">
-                                    <div class="footer-info-item">
-                                        <div class="location">
-                                            <div class="icon-location"></div>
-                                            <div class="content-location">
-                                                <div class="heading-16px-rubik">66 broklyant, new York India 3269 road.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="footer-info-item">
-                                        <div class="phone-call">
-                                            <div class="icon-phone-call"></div>
-                                            <div class="content-phone-call">
-                                                <div class="heading-16px-rubik">012 345 678 9101</div>
-                                                <div class="heading-16px-rubik">012 345 678 9101</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="footer-info-items">
-                                        <div class="email">
-                                            <div class="icon-email"></div>
-                                            <div class="content-email">
-                                                <div class="heading-16px-rubik">yourmail.@gmail.com</div>
-                                                <div class="heading-16px-rubik">yourgmail.@gmail.com</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="list-footer wow fadeInUp">
-                            <div class="footer-item">
-                                <div class="widgets-about padding-top-listfooter">
-                                    <p class="heading-jost-20px">
-                                        About Us
-                                    </p>
-                                    <p class="text-decs">
-                                        Lorem Ipsum simply dummy text available in market the printing text, MORE...
-                                    </p>
-                                    <ul class="widgets-nav-social">
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="footer-item">
-                                <div class="widgets-menu-1 padding-top-listfooter">
-                                    <p class="heading-jost-20px">
-                                        Explore
-                                    </p>
-                                    <ul class="list-menu-1 text-decs link-style4">
-                                        <li><a href="services.html">Brangding Design</a> </li>
-                                        <li><a href="services.html">Ui/ux Designing</a> </li>
-                                        <li><a href="services.html">Maek Elements</a> </li>
-                                        <li><a href="services.html">Graphics Design</a> </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="footer-item padding-top-listfooter">
-                                <div class="widgets-menu-2">
-                                    <p class="heading-jost-20px">
-                                        Recent Post
-                                    </p>
-                                    <ul class="list-menu-2 text-decs link-style4">
-                                        <li>
-                                            <h3 class="heading-menu2"><a href="blog-detail.html">Bigg Ideas Of Business branding
-                                                    Info.</a></h3>
-                                            <span class="post-date"><span class="entry-date">December 7,
-                                                    2021</span></span>
-                                        </li>
-                                        <li>
-                                            <h3 class="heading-menu2"><a href="blog-detail.html">Bigg Ideas Business branding Info.</a>
-                                            </h3>
-                                            <span class="post-date"><span class="entry-date">December 7,
-                                                    2021</span></span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="footer-item padding-top-listfooter">
-                                <div class="widgets-subcribes">
-                                    <p class="heading-jost-20px">
-                                        Newslatter
-                                    </p>
-                                    <p class="text-decs">
-                                        Lorem Ipsum is simply dummy text of in market the printing typesetting.
-                                    </p>
-                                    <div class="widgets-input-subcribes">
-                                        <form method="post" class="form-subcribe">
-                                            <input type="email" name="email" class="widgets-text-input"
-                                                placeholder="Email Address" required>
-                                            <button type="submit" class="fa fa-envelope"></button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="copyright link-style4">
-                                <p class="copyright-text">
-                                    copyright 2021 by themesflat
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- / footer -->
-
-        <!-- btn go top -->
-        <div class="button-go-top">
-            <a href="#" title="" class="go-top">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-        <!-- / btn go top -->
-    </div>
-    <!-- /.boxed -->
-
-    <!-- Javascript -->
-    <script type="text/javascript" src="{{ asset('landing/javascript/jquery.min.js') }}"></script>
-    <script src="{{ asset('landing/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('landing/javascript/bootstrap.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('landing/javascript/owl.carousel.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('landing/javascript/jquery-validate.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('landing/javascript/jquery.easing.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('landing/javascript/jquery.cookie.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('landing/javascript/waypoints.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('landing/javascript/countto.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('landing/javascript/wow.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('landing/javascript/main.js') }}"></script>
-    <!-- /javascript -->
-
-    <!-- slider -->
-    <script src="{{ asset('landing/rev-slider/js/jquery.themepunch.revolution.min.js') }}"></script>
-    <script src="{{ asset('landing/rev-slider/js/jquery.themepunch.tools.min.js') }}"></script>
-    <script src="{{ asset('landing/javascript/rev-slider.js') }}"></script>
-
-    <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
-    <script src="{{ asset('landing/rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js') }}"></script>
-    <script src="{{ asset('landing/rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js') }}"></script>
-    <script src="{{ asset('landing/rev-slider/js/extensions/extensionsrevolution.extension.kenburn.min.js') }}"></script>
-    <script src="{{ asset('landing/rev-slider/js/extensions/extensionsrevolution.extension.layeranimation.min.js') }}"></script>
-    <script src="{{ asset('landing/rev-slider/js/extensions/extensionsrevolution.extension.migration.min.js') }}"></script>
-    <script src="{{ asset('landing/rev-slider/js/extensions/extensionsrevolution.extension.navigation.min.js') }}"></script>
-    <script src="{{ asset('landing/rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js') }}"></script>
-    <script src="{{ asset('landing/rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js') }}"></script>
-    <script src="{{ asset('landing/rev-slider/js/extensions/extensionsrevolution.extension.video.min.js') }}"></script>
-
-</body>
-
-</html>
+        @include('landing.template.footer')
