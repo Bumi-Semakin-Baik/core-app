@@ -31,7 +31,7 @@
                                                             </div>
                                                         </li>
                                                         <li class="nk-block-tools-opt d-none d-sm-block">
-                                                            <a href="#" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add Project</span></a>
+                                                            <a href="{{ url('/newsletter/add') }}" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add Project</span></a>
                                                         </li>
                                                         <li class="nk-block-tools-opt d-block d-sm-none">
                                                             <a href="#" class="btn btn-icon btn-primary"><em class="icon ni ni-plus"></em></a>
@@ -61,7 +61,7 @@
                                                                 <div class="dropdown-menu dropdown-menu-end">
                                                                     <ul class="link-list-opt no-bdr">
                                                                         <li><a href="html/apps-kanban.html"><em class="icon ni ni-eye"></em><span>View News</span></a></li>
-                                                                        <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit News</span></a></li>
+                                                                        <li><a href="{{ url('/newsletter/edit') }}"><em class="icon ni ni-edit"></em><span>Edit News</span></a></li>
                                                                         <li><a href="#"  data-bs-toggle="modal" data-bs-target="#modalZoom"><em class="icon ni ni-check-round-cut"></em><span>Delete News</span></a></li>
                                                                     </ul>
                                                                 </div>
@@ -105,7 +105,7 @@
                                                                 <div class="dropdown-menu dropdown-menu-end">
                                                                     <ul class="link-list-opt no-bdr">
                                                                         <li><a href="html/apps-kanban.html"><em class="icon ni ni-eye"></em><span>View News</span></a></li>
-                                                                        <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit News</span></a></li>
+                                                                        <li><a href="{{ url('/newsletter/edit') }}"><em class="icon ni ni-edit"></em><span>Edit News</span></a></li>
                                                                         <li><a href="#"  data-bs-toggle="modal" data-bs-target="#modalZoom"><em class="icon ni ni-check-round-cut"></em><span>Delete News</span></a></li>
                                                                     </ul>
                                                                 </div>
@@ -149,7 +149,7 @@
                                                                 <div class="dropdown-menu dropdown-menu-end">
                                                                     <ul class="link-list-opt no-bdr">
                                                                         <li><a href="html/apps-kanban.html"><em class="icon ni ni-eye"></em><span>View News</span></a></li>
-                                                                        <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit News</span></a></li>
+                                                                        <li><a href="{{ url('/newsletter/edit') }}"><em class="icon ni ni-edit"></em><span>Edit News</span></a></li>
                                                                         <li><a href="#"  data-bs-toggle="modal" data-bs-target="#modalZoom"><em class="icon ni ni-check-round-cut"></em><span>Delete News</span></a></li>
                                                                     </ul>
                                                                 </div>
@@ -199,7 +199,7 @@
                                                                 <div class="dropdown-menu dropdown-menu-end">
                                                                     <ul class="link-list-opt no-bdr">
                                                                         <li><a href="html/apps-kanban.html"><em class="icon ni ni-eye"></em><span>View News</span></a></li>
-                                                                        <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit News</span></a></li>
+                                                                        <li><a href="{{ url('/newsletter/edit') }}"><em class="icon ni ni-edit"></em><span>Edit News</span></a></li>
                                                                         <li><a href="#"  data-bs-toggle="modal" data-bs-target="#modalZoom"><em class="icon ni ni-check-round-cut"></em><span>Delete News</span></a></li>
                                                                     </ul>
                                                                 </div>
@@ -243,7 +243,7 @@
                                                                 <div class="dropdown-menu dropdown-menu-end">
                                                                     <ul class="link-list-opt no-bdr">
                                                                         <li><a href="html/apps-kanban.html"><em class="icon ni ni-eye"></em><span>View News</span></a></li>
-                                                                        <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit News</span></a></li>
+                                                                        <li><a href="{{ url('/newsletter/edit') }}"><em class="icon ni ni-edit"></em><span>Edit News</span></a></li>
                                                                         <li><a href="#"  data-bs-toggle="modal" data-bs-target="#modalZoom"><em class="icon ni ni-check-round-cut"></em><span>Delete News</span></a></li>
                                                                     </ul>
                                                                 </div>

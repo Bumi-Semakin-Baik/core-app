@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class CompanyController extends Controller
 {
     public function getAccount(){
-        return view('admin.company.account');
+        return view('admin.company.account.index');
     }
     public function getProject(){
-        return view('admin.company.project');
+        return view('admin.company.project.index');
     }
 }
