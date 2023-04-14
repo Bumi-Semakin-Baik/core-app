@@ -53,12 +53,6 @@ Route::prefix('partner')
     });
 
 Route::prefix('company')
-    ->controller(CompanyController::class)
-    ->group(function (){
-        Route::get('/account','account');
-        Route::get('/project','project');
-    });
-Route::prefix('company')
         ->controller(CompanyController::class)
         ->group(function (){
             Route::get('/accounts','getAccount');
@@ -71,5 +65,5 @@ Route::prefix('company')
     Route::controller(AboutController::class)
     ->group(function (){
         Route::get('/about','index');
-       
+
     });
