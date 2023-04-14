@@ -148,7 +148,7 @@
                         </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-lg btn-primary">Tambahkan Berita</button>
+                            <button type="submit" class="btn btn-lg btn-primary">Simpan</button>
                         </div>
                     </div>
                 </div>

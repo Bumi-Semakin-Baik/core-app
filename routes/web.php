@@ -7,6 +7,8 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,18 +35,22 @@ Route::get('/haloo', function () {
 Route::get('/qrcode', [QrController::class, 'index']);
 Route::get('/qrcode-convert', [QrController::class, 'convert']);
 // Route::get('/dashboard', function () {
-//     return view('dashboard');
-// });
+    //     return view('dashboard');
+    // });
+
+Route::get('', [UserController::class, 'index']);
+
+
+Route::controller(AuthController::class)
+    ->group(function (){
+            Route::get('/login','viewLogin');
+            Route::get('/register','viewRegister');
+        });
+
 Route::prefix('dashboard')
     ->controller(DashboardController::class)
     ->group(function (){
         Route::get('/','index');
-    });
-Route::prefix('newsletter')
-    ->controller(NewsController::class)
-    ->group(function (){
-        Route::get('/','index');
-        Route::get('/add','add');
     });
 
 Route::prefix('partner')
@@ -54,17 +60,24 @@ Route::prefix('partner')
     });
 
 Route::prefix('company')
-        ->controller(CompanyController::class)
-        ->group(function (){
-            Route::get('/accounts','getAccount');
-            Route::get('/projects','getProject');
-        });
- Route::controller(LandingController::class)
+    ->controller(CompanyController::class)
+    ->group(function (){
+        Route::get('/accounts','getAccount');
+        Route::get('/projects','getProject');
+    });
+Route::prefix('newsletter')
+    ->controller(NewsController::class)
+    ->group(function (){
+        Route::get('/','index');
+        Route::get('/add','add');
+        Route::get('/edit','edit');
+    });
+Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');
     });
+
 Route::controller(AboutController::class)
     ->group(function (){
         Route::get('/about','index');
-
     });
