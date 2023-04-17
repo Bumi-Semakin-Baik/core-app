@@ -8,7 +8,6 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,12 +37,10 @@ Route::get('/qrcode-convert', [QrController::class, 'convert']);
     //     return view('dashboard');
     // });
 
-Route::get('', [UserController::class, 'index']);
-
-
 Route::controller(AuthController::class)
     ->group(function (){
             Route::get('/login','viewLogin');
+            Route::post('/login', 'login')->name('login.action');
             Route::get('/register','viewRegister');
         });
 

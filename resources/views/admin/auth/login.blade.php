@@ -47,14 +47,13 @@
                                             <label class="form-label" for="default-01">Email or Username</label>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <input type="text" class="form-control form-control-lg" id="default-01" placeholder="Enter your email address or username">
-                                            <input class="form-control" type="username" name="username" value="{{ old('username') }}" />
+                                            <input type="text" class="form-control form-control-lg" id="default-01" placeholder="Enter your email address or username" type="username" name="username" value="{{ old('username') }}" />
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="password">Password</label>
-                                            <input class="form-control" type="password" name="password" />
+                                            {{-- <input class="form-control" type="password" name="password" /> --}}
                                             <a class="link link-primary link-sm" href="html/pages/auths/auth-reset-v2.html">Forgot Password?</a>
                                         </div>
                                         <div class="form-control-wrap">
@@ -62,7 +61,7 @@
                                                 <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                             </a>
-                                            <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your passcode">
+                                            <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Enter your passcode">
                                         </div>
                                     </div>
                                     <div class="form-group">
