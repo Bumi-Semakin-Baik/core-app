@@ -63,14 +63,9 @@
                                             <div class="nav-wrap">
                                                 <nav id="mainnav" class="mainnav">
                                                     <ul class="menu">
-                                                        <li class="current-menu-item menu-item-has-children">
-                                                            <a href="index.html" title="">Home</a>
-                                                            <ul class="sub-menu">
-                                                                <li class="current-item"><a href="index.html" title="">Home 01</a></li>
-                                                                <li><a href="home-2.html" title="">Home 02</a></li>
-                                                            </ul>
-                                                            <!-- /.sub-menu -->
-                                                        </li>
+                                                    <li>
+                                                        <a href="index.html" title="">Home</a>
+                                                    </li>
                                                         <li class="menu-item-has-children">
                                                             <a href="about.html" title="">About</a>
                                                             <ul class="sub-menu">
@@ -230,7 +225,7 @@
                                                 data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
                                                 data-start="800" data-splitin="none" data-splitout="none"
                                                 data-responsive_offset="on">
-                                                <img class="img-slide wow jackInTheBox" data-wow-delay="2500ms"
+                                                <img class="img-fluid" data-wow-delay="2500ms"
                                                     data-wow-duration="3s" width ="full"
                                                     src="{{ asset ('landing/images/home/bumibaik1.jpg')}}"
                                                     alt="images">
