@@ -10,10 +10,10 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
-    <title>Register | DashLite Admin Template</title>
+    <title>Registration | DashLite Admin Template</title>
     <!-- StyleSheets  -->
-    <link rel="stylesheet" href="{{ asset('css/dashlite.css') }}">
-    <link id="skin-default" rel="stylesheet" href="{{ asset('css/theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/dashlite.css') }}">
+    <link id="skin-default" rel="stylesheet" href="{{ asset('admin/css/theme.css') }}">
 </head>
 
 <body class="nk-body bg-white npc-default pg-auth">
@@ -24,57 +24,83 @@
             <div class="nk-wrap nk-wrap-nosidebar">
                 <!-- content @s -->
                 <div class="nk-content ">
-                    <div class="nk-block nk-block-middle nk-auth-body wide-xs">
-                        <div class="brand-logo pb-4 text-center">
-                            <a href="html/index.html" class="logo-link">
-                                <img class="logo-light logo-img logo-img-lg" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                                <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
-                            </a>
-                        </div>
-                        <div class="card">
-                            <div class="card-inner card-inner-lg">
+                    <div class="nk-split nk-split-page nk-split-md">
+                        <div class="nk-split-content nk-block-area nk-block-area-column nk-auth-container bg-white w-lg-45">
+                            <div class="nk-block nk-block-middle nk-auth-body">
+                                <div class="brand-logo pb-5">
+                                    <a href="html/index.html" class="logo-link">
+                                        <img class="logo-light logo-img logo-img-lg" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
+                                        <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                                    </a>
+                                </div>
                                 <div class="nk-block-head">
                                     <div class="nk-block-head-content">
-                                        <h4 class="nk-block-title">Register</h4>
+                                        <h5 class="nk-block-title">Register</h5>
                                         <div class="nk-block-des">
                                             <p>Create New Dashlite Account</p>
                                         </div>
                                     </div>
-                                </div>
-                                <form action="html/pages/auths/auth-success-v2.html">
+                                </div><!-- .nk-block-head -->
+                                <form method="POST" action="{{ route('register') }}">
+                                    @csrf
                                     <div class="form-group">
                                         <label class="form-label" for="name">Name</label>
                                         <div class="form-control-wrap">
-                                            <input type="text" class="form-control form-control-lg" id="name" placeholder="Enter your name">
+                                            <input type="text" class="form-control form-control-lg @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" id="name" placeholder="Enter your name" autofocus>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="form-label" for="email">Email or Username</label>
+                                        <label class="form-label" for="email">Email</label>
                                         <div class="form-control-wrap">
-                                            <input type="text" class="form-control form-control-lg" id="email" placeholder="Enter your email address or username">
+                                            <input type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" id="email" placeholder="Enter your email address or username" name="email" value="{{ old('email') }}" required autocomplete="email">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="form-label" for="password">Passcode</label>
+                                        <label class="form-label" for="password">Password</label>
                                         <div class="form-control-wrap">
-                                            <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                            <a tabindex="-1" href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
                                                 <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                             </a>
-                                            <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your passcode">
+                                            <input type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" id="password" placeholder="Enter your passcode" name="password" required autocomplete="new-password">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="custom-control custom-control-xs custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="checkbox">
-                                            <label class="custom-control-label" for="checkbox">I agree to Dashlite <a href="#">Privacy Policy</a> &amp; <a href="#"> Terms.</a></label>
+                                        <label class="form-label" for="password">Confirm Password</label>
+                                        <div class="form-control-wrap">
+                                            <a tabindex="-1" href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                                <em class="passcode-icon icon-show icon ni ni-eye"></em>
+                                                <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
+                                            </a>
+                                            <input type="password" class="form-control form-control-lg" id="password-confirm" placeholder="Confirm your password" name="password_confirmation" required autocomplete="new-password">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <button class="btn btn-lg btn-primary btn-block">Register</button>
+                                        <label class="form-label" for="password">Telp</label>
+                                        <div class="form-control-wrap">
+                                            <input type="text" class="form-control form-control-lg @error('telp') is-invalid @enderror" id="telp" placeholder="Enter your phone number" name="telp" required autocomplete="telp">
+                                        </div>
                                     </div>
-                                </form>
-                                <div class="form-note-s2 text-center pt-4"> Already have an account? <a href="{{ url('/login') }}"><strong>Sign in instead</strong></a>
+                                    <div class="form-group">
+                                        <label class="form-label" for="password">Account Type</label>
+
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input type="radio" class="form-check-input" id="radio1" name="type" value="individual" checked>Individual
+                                                <label class="form-check-label" for="radio1"></label>
+                                              </div>
+                                              <div class="form-check">
+                                                <input type="radio" class="form-check-input" id="radio2" name="type" value="corporate">Corporate
+                                                <label class="form-check-label" for="radio2"></label>
+                                              </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+                                    </div>
+                                </form><!-- form -->
+                                <div class="form-note-s2 pt-4"> Already have an account ? <a href="html/pages/auths/auth-login-v3.html"><strong>Sign in instead</strong></a>
                                 </div>
                                 <div class="text-center pt-4 pb-3">
                                     <h6 class="overline-title overline-title-sap"><span>OR</span></h6>
@@ -83,14 +109,10 @@
                                     <li class="nav-item"><a class="nav-link" href="#">Facebook</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#">Google</a></li>
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nk-footer nk-auth-footer-full">
-                        <div class="container wide-lg">
-                            <div class="row g-3">
-                                <div class="col-lg-6 order-lg-last">
-                                    <ul class="nav nav-sm justify-content-center justify-content-lg-end">
+                            </div><!-- .nk-block -->
+                            <div class="nk-block nk-auth-footer">
+                                <div class="nk-block-between">
+                                    <ul class="nav nav-sm">
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Terms & Condition</a>
                                         </li>
@@ -101,7 +123,7 @@
                                             <a class="nav-link" href="#">Help</a>
                                         </li>
                                         <li class="nav-item dropup">
-                                            <a class="dropdown-toggle dropdown-indicator has-indicator nav-link" data-bs-toggle="dropdown" data-offset="0,10"><span>English</span></a>
+                                            <a class="dropdown-toggle dropdown-indicator has-indicator nav-link" data-bs-toggle="dropdown" data-offset="0,10"><small>English</small></a>
                                             <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
                                                 <ul class="language-list">
                                                     <li>
@@ -131,16 +153,15 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                    </ul>
+                                    </ul><!-- nav -->
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="nk-block-content text-center text-lg-left">
-                                        <p class="text-soft">&copy; 2023 CryptoLite. All Rights Reserved.</p>
-                                    </div>
+                                <div class="mt-3">
+                                    <p>&copy; 2023 DashLite. All Rights Reserved.</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </div><!-- nk-block -->
+                        </div><!-- nk-split-content -->
+                        <div class="nk-split-content nk-split-stretch bg-abstract"></div><!-- nk-split-content -->
+                    </div><!-- nk-split -->
                 </div>
                 <!-- wrap @e -->
             </div>

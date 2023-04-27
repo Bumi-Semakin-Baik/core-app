@@ -7,9 +7,10 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,11 +42,10 @@ Route::get('/qrcode-convert', [QrController::class, 'convert']);
 Route::get('', [UserController::class, 'index']);
 
 
-Route::controller(AuthController::class)
-    ->group(function (){
-            Route::get('/login','viewLogin');
-            Route::get('/register','viewRegister');
-        });
+// Route::controller(RegisterController::class)
+//     ->group(function (){
+//         Route::get('/register','viewRegister');
+//         });
 
 Route::prefix('dashboard')
     ->controller(DashboardController::class)
@@ -82,3 +82,10 @@ Route::controller(AboutController::class)
         Route::get('/about','index');
 
     });
+
+Auth::routes();
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+

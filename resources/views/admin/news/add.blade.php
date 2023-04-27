@@ -15,6 +15,15 @@
         <div class="card-inner">
             <form action="#" class="form-validate">
                 <div class="row g-gs">
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-label" for="fv-subject">Judul</label>
+                            <div class="form-control-wrap">
+                                <input type="text" class="form-control" id="fv-subject" name="fv-subject" required>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="form-label" for="fv-full-name">Penulis</label>
@@ -25,18 +34,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-label" for="fv-email">Catatan Tambahan</label>
-                            <div class="form-control-wrap">
-                                <div class="form-icon form-icon-right">
-                                    <em class="icon ni ni-mail"></em>
-                                </div>
-                                <input type="text" class="form-control" id="fv-email" name="fv-email">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label" for="fv-phone">Deskripsi Singkat</label>
+                            <label class="form-label" for="fv-phone">Slug</label>
                             <div class="form-control-wrap">
                                 <div class="input-group">
                                         {{-- <div class="input-group-prepend">
@@ -47,54 +45,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label" for="fv-phone">Kategori</label>
-                            <div class="form-control-wrap">
-                                <ul class="custom-control-group">
-                                    <li>
-                                        <div class="custom-control custom-radio custom-control-pro no-control">
-                                            <input type="radio" class="custom-control-input" name="fv-sex" id="sex-male" required>
-                                            <label class="custom-control-label" for="sex-male">Pariwisata</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-radio custom-control-pro no-control">
-                                            <input type="radio" class="custom-control-input" name="fv-sex" id="sex-female" required>
-                                            <label class="custom-control-label" for="sex-female">Kuliner</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="custom-control custom-radio custom-control-pro no-control">
-                                            <input type="radio" class="custom-control-input" name="fv-sex" id="sex-other" required>
-                                            <label class="custom-control-label" for="sex-other">Others</label>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label" for="fv-subject">Subjek</label>
-                            <div class="form-control-wrap">
-                                <input type="text" class="form-control" id="fv-subject" name="fv-subject" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label" for="fv-topics">Topik</label>
-                            <div class="form-control-wrap ">
-                                <select class="form-control form-select" id="fv-topics" name="fv-topics" data-placeholder="Select a option" required>
-                                    <option label="Pilih Topik" value=""></option>
-                                    <option value="fv-gq">General Question</option>
-                                    <option value="fv-tq">Tachnical Question</option>
-                                    <option value="fv-ab">Account &amp; Billing</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+
                     {{-- <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-label" for="fv-message">Message</label>
@@ -118,31 +69,6 @@
                                     <div class="quill-basic">
                                         <label>Masukkan Teks</label>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label class="form-label">Communication</label>
-                                    <ul class="custom-control-group g-3 align-center">
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="fv-com" id="fv-com-email" required>
-                                                <label class="custom-control-label" for="fv-com-email">Email</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="fv-com" id="fv-com-sms" required>
-                                                <label class="custom-control-label" for="fv-com-sms">SMS</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="fv-com" id="fv-com-phone" required>
-                                                <label class="custom-control-label" for="fv-com-phone">Phone</label>
-                                            </div>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>

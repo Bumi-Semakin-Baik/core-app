@@ -24,55 +24,64 @@
             <div class="nk-wrap nk-wrap-nosidebar">
                 <!-- content @s -->
                 <div class="nk-content ">
-                    <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
-                        <div class="brand-logo pb-4 text-center">
-                            <a href="html/index.html" class="logo-link">
-                                <img class="logo-light logo-img logo-img-lg" src="{{ asset('images/logo-dark.png') }}" srcset="{{ asset('images/logo2x.png') }} 2x" alt="logo">
-                                <img class="logo-dark logo-img logo-img-lg" src="{{ asset('images/logo-dark.png') }}" srcset="{{ asset('images/logo-dark2x.png') }} 2x" alt="logo-dark">
-                            </a>
-                        </div>
-                        <div class="card">
-                            <div class="card-inner card-inner-lg">
+                    <div class="nk-split nk-split-page nk-split-md">
+                        <div class="nk-split-content nk-block-area nk-block-area-column nk-auth-container bg-white">
+                            <div class="nk-block nk-block-middle nk-auth-body">
+                                <div class="brand-logo pb-5">
+                                    <a href="html/index.html" class="logo-link">
+                                        <img class="logo-light logo-img logo-img-lg" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
+                                        <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                                    </a>
+                                </div>
                                 <div class="nk-block-head">
                                     <div class="nk-block-head-content">
-                                        <h4 class="nk-block-title">Sign-In</h4>
+                                        <h5 class="nk-block-title">Sign-In</h5>
                                         <div class="nk-block-des">
-                                            <p>Access the Dashlite panel using your email and passcode.</p>
+                                            <p>Access the DashLite panel using your email and passcode.</p>
                                         </div>
                                     </div>
-                                </div>
-                                <form action="{{ route('login.action') }}" method="POST">
+                                </div><!-- .nk-block-head -->
+                                <form method="POST" action="{{ route('login') }}">
+                                    @csrf
                                     <div class="form-group">
                                         <div class="form-label-group">
-                                            <label class="form-label" for="default-01">Email or Username</label>
+                                            <label class="form-label" for="email">{{ __('Email Address') }}</label>
+                                            <a class="link link-primary link-sm" tabindex="-1" href="#">Need Help?</a>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <input type="text" class="form-control form-control-lg" id="default-01" placeholder="Enter your email address or username">
-                                            <input class="form-control" type="username" name="username" value="{{ old('username') }}" />
+                                            <input type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" id="email" placeholder="Enter your email address or username" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
-                                    </div>
+                                    </div><!-- .form-group -->
                                     <div class="form-group">
                                         <div class="form-label-group">
-                                            <label class="form-label" for="password">Password</label>
-                                            <input class="form-control" type="password" name="password" />
-                                            <a class="link link-primary link-sm" href="html/pages/auths/auth-reset-v2.html">Forgot Password?</a>
+                                            <label class="form-label" for="password">{{ __('Password') }}</label>
+                                            <a class="link link-primary link-sm" tabindex="-1" href="html/pages/auths/auth-reset-v3.html">Forgot Code?</a>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                            <a tabindex="-1" href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
                                                 <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                             </a>
-                                            <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your passcode">
+                                            <input type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" id="password" placeholder="Enter your passcode"  name="password" required autocomplete="current-password">
+                                            @error('password')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
-                                    </div>
+                                    </div><!-- .form-group -->
                                     <div class="form-group">
-                                        <li class="nk-block-tools-opt d-none d-sm-block">
-                                            <a href="{{ url('/dashboard') }}" class="btn btn-lg btn-primary btn-block"><span>Sign in</span></a>
-                                        </li>
-                                        {{-- <button class="btn btn-lg btn-primary btn-block" >Sign in</button> --}}
+                                        <button class="btn btn-lg btn-primary btn-block" type ="submit">
+                                        {{ __('Login') }}
+                                        </button>
                                     </div>
-                                </form>
-                                <div class="form-note-s2 text-center pt-4"> New on our platform? <a href="{{ url('/register') }}">Create an account</a>
+                                </form><!-- form -->
+                                <div class="form-note-s2 pt-4"> New on our platform? <a href="html/pages/auths/auth-register-v3.html">Create an account</a>
                                 </div>
                                 <div class="text-center pt-4 pb-3">
                                     <h6 class="overline-title overline-title-sap"><span>OR</span></h6>
@@ -81,14 +90,13 @@
                                     <li class="nav-item"><a class="nav-link" href="#">Facebook</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#">Google</a></li>
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nk-footer nk-auth-footer-full">
-                        <div class="container wide-lg">
-                            <div class="row g-3">
-                                <div class="col-lg-6 order-lg-last">
-                                    <ul class="nav nav-sm justify-content-center justify-content-lg-end">
+                                <div class="text-center mt-5">
+                                    <span class="fw-500">I don't have an account? <a href="#">Try 15 days free</a></span>
+                                </div>
+                            </div><!-- .nk-block -->
+                            <div class="nk-block nk-auth-footer">
+                                <div class="nk-block-between">
+                                    <ul class="nav nav-sm">
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Terms & Condition</a>
                                         </li>
@@ -99,7 +107,7 @@
                                             <a class="nav-link" href="#">Help</a>
                                         </li>
                                         <li class="nav-item dropup">
-                                            <a class="dropdown-toggle dropdown-indicator has-indicator nav-link" data-bs-toggle="dropdown" data-offset="0,10"><span>English</span></a>
+                                            <a class="dropdown-toggle dropdown-indicator has-indicator nav-link" data-bs-toggle="dropdown" data-offset="0,10"><small>English</small></a>
                                             <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
                                                 <ul class="language-list">
                                                     <li>
@@ -129,16 +137,15 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                    </ul>
+                                    </ul><!-- .nav -->
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="nk-block-content text-center text-lg-left">
-                                        <p class="text-soft">&copy; 2023 Dashlite. All Rights Reserved.</p>
-                                    </div>
+                                <div class="mt-3">
+                                    <p>&copy; 2023 DashLite. All Rights Reserved.</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </div><!-- .nk-block -->
+                        </div><!-- .nk-split-content -->
+                        <div class="nk-split-content nk-split-stretch bg-abstract"></div><!-- .nk-split-content -->
+                    </div><!-- .nk-split -->
                 </div>
                 <!-- wrap @e -->
             </div>
@@ -148,8 +155,8 @@
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
-    <script src="{{ asset('admin/js/bundle.js') }}"></script>
-    <script src="{{ asset('admin/js/scripts.js') }}"></script>
+    <script src="./assets/js/bundle.js?ver=3.1.3"></script>
+    <script src="./assets/js/scripts.js?ver=3.1.3"></script>
     <!-- select region modal -->
     <div class="modal fade" tabindex="-1" role="dialog" id="region">
         <div class="modal-dialog modal-lg" role="document">
