@@ -7,6 +7,7 @@
     <meta name="author" content="Softnio">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
@@ -41,13 +42,22 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form action="{{ route('login.action') }}" method="POST">
+                                @if(session('success'))
+                                <p class="alert alert-success">{{ session('success') }}</p>
+                                @endif
+                                @if($errors->any())
+                                @foreach($errors->all() as $err)
+                                <p class="alert alert-danger">{{ $err }}</p>
+                                @endforeach
+                                @endif
+                                <form action="{{ route('login') }}" method="POST">
+                                    @csrf
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="default-01">Email or Username</label>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <input type="text" class="form-control form-control-lg" id="default-01" placeholder="Enter your email address or username" type="username" name="username" value="{{ old('username') }}" />
+                                            <input type="text" class="form-control form-control-lg" id="default-01" placeholder="Enter your email address or username" type="email" name="email" value="{{ old('email') }}" />
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -61,14 +71,14 @@
                                                 <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                             </a>
-                                            <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Enter your passcode">
+                                            <input type="password" class="form-control form-control-lg" id="default-01" name="password" placeholder="Enter your passcode" value="{{ old('password') }}" />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <li class="nk-block-tools-opt d-none d-sm-block">
+                                        {{-- <li class="nk-block-tools-opt d-none d-sm-block">
                                             <a href="{{ url('/dashboard') }}" class="btn btn-lg btn-primary btn-block"><span>Sign in</span></a>
-                                        </li>
-                                        {{-- <button class="btn btn-lg btn-primary btn-block" >Sign in</button> --}}
+                                        </li> --}}
+                                        <button type="submit" class="btn btn-lg btn-primary btn-block" value="Login">Sign in</button>
                                     </div>
                                 </form>
                                 <div class="form-note-s2 text-center pt-4"> New on our platform? <a href="{{ url('/register') }}">Create an account</a>

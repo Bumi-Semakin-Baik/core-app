@@ -37,12 +37,13 @@ Route::get('/qrcode-convert', [QrController::class, 'convert']);
     //     return view('dashboard');
     // });
 
-Route::controller(AuthController::class)
-    ->group(function (){
-            Route::get('/login','viewLogin');
-            Route::post('/login', 'login')->name('login.action');
-            Route::get('/register','viewRegister');
-        });
+// Route::controller(AuthController::class)
+//     ->group(function (){
+//             Route::get('/login','viewLogin');
+//             Route::post('/login', 'login')->name('login');
+//             // Route::get('/register','viewRegister');
+//             // Route::post('/register','register')->name('register');
+//         });
 
 Route::prefix('dashboard')
     ->controller(DashboardController::class)
@@ -78,3 +79,15 @@ Route::controller(AboutController::class)
     ->group(function (){
         Route::get('/about','index');
     });
+
+// Route::post('/logout', function () {
+//         auth()->logout();
+//         request()->session()->invalidate();
+//         request()->session()->regenerateToken();
+
+//         return redirect('/');
+//     })->name('logout');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

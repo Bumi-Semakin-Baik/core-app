@@ -62,29 +62,53 @@ class AuthController extends Controller
     // }
     public function login(Request $request)
     {
-        $request->validate([
-            'email' => 'required|string|email',
-            'password' => 'required|string',
+        // $request->validate([
+        //     'email' => 'required|string|email',
+        //     'password' => 'required|string',
+        // ]);
+        // $credentials = $request->only('email', 'password');
+
+        // $token = Auth::attempt($credentials);
+        // if (!$token) {
+        //     // return response()->json([
+        //     //     'status' => 'error',
+        //     //     'message' => 'Unauthorized',
+        //     // ], 401);
+        //     return back()->withErrors([
+        //         'password' => 'Wrong Username or Password'
+        //     ]);
+        // }
+        // $user = Auth::user();
+        // return response()->json([
+        //         'status' => 'success',
+        //         'user' => $user,
+        //         'authorization' => [
+        //             'token' => $token,
+        //             'type' => 'bearer',
+        //         ]
+        //     ]);
+        $credentials = $request->validate([
+            'email' => 'required', 'string', 'email',
+            'password' => 'required', 'string',
         ]);
-        $credentials = $request->only('email', 'password');
 
-        $token = Auth::attempt($credentials);
-        if (!$token) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Unauthorized',
-            ], 401);
-        }
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            // Authentication passed...
+            return redirect()->intended('dashboard');
+        };
 
-        $user = Auth::user();
-        return response()->json([
-                'status' => 'success',
-                'user' => $user,
-                'authorization' => [
-                    'token' => $token,
-                    'type' => 'bearer',
-                ]
-            ]);
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
 
     }
+
+    // public function logout(Request $request)
+    // {
+    //     Auth::logout();
+    //     $request->session()->invalidate();
+    //     $request->session()->regenerateToken();
+    //     return redirect('/');
+    // }
 }

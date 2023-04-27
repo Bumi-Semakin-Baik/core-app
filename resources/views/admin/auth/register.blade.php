@@ -71,7 +71,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <button class="btn btn-lg btn-primary btn-block">Register</button>
+                                        <button type="submit" class="btn btn-lg btn-primary btn-block">Register</button>
                                     </div>
                                 </form>
                                 <div class="form-note-s2 text-center pt-4"> Already have an account? <a href="{{ url('/login') }}"><strong>Sign in instead</strong></a>
