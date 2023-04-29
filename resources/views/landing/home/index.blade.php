@@ -83,14 +83,7 @@
                                                             </ul>
                                                             <!-- /.sub-menu -->
                                                         </li>
-                                                        <li class="menu-item-has-children">
-                                                            <a href="case-study.html" title="">Case</a>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="case-study.html" title="">Case Study</a></li>
-                                                                <li><a href="case-details.html" title="">Case Details</a></li>
-                                                            </ul>
-                                                            <!-- /.sub-menu -->
-                                                        </li>
+                                    
                                                         <li class="menu-item-has-children">
                                                             <a href="blog.html" title="">Blog</a>
                                                             <ul class="sub-menu">
@@ -107,28 +100,6 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3">
-                                            <div class="site-header-right">
-                                                <div class="header-inner">
-                                                    <div class="search flat-show-search">
-                                                        <div class="show-search">
-                                                            <a href="#"><i class="fa fa-search"></i></a>
-                                                        </div>
-                                                        <div class="top-search widgets-input">
-                                                            <form action="get" id="searchform-all"
-                                                                class="header-search search-form">
-                                                                <div class="input-group">
-                                                                    <input type="search" id="s"
-                                                                        class="search-field"
-                                                                        placeholder="Search here" aria-label="Search" />
-                                                                        <button class="search-submit" type="submit" title="Search"></button>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                    <div class="cart">
-                                                        <a href="#" class="cart-btn"><i
-                                                                class="fa fa-shopping-cart"></i></a>
-                                                    </div>
                                                     <div class="button">
                                                         <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app&hl=id" class="btn">Download</a>
                                                     </div>
@@ -266,8 +237,8 @@
                                                 data-start="700" data-splitin="none" data-splitout="none"
                                                 data-responsive_offset="on">
                                                 <div class="title-box">
-                                                    <h2 class="title-slider text-pri2-color">Grow your healt
-                                                        <br> grow a garden
+                                                    <h2 class="title-slider text-pri2-color">Kurangi Emisi 
+                                                        <br> Karbon Bersama <br>  BumiBaik
                                                     </h2>
                                                 </div>
                                             </div>
@@ -329,23 +300,22 @@
                             <h4 class="section-subtitle">TREE FOR LIFE</h4>
                             <h2 class="section-title">Pohon Termonitor<br></h2>
                         </div>
-                        <br>
+                        <br><br>
         <section class="flat-features">
             <div class="container-fluid">
                 <div class="row">
                     <div class="item-four-column">
                         <div class="inner-features hover-up wow fadeInUp">
                             <div class="features-box">
-                                <span class="tf-icon icon-farming"></span>
+                                
                                 <div class="content-features">
                                     <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">
-                                            Landscaping
-                                        </h3>
+                                        <h2 class="section-title">
+                                            65,58M
+                                        </h2>
                                     </a>
                                     <p class="section-desc">
-                                        Lorem ipsum dolor sit amet, conset etur sadipscing elitr, sed diam noket numy
-                                        eirmod tempor
+                                        Pohon termonitor
                                     </p>
                                 </div>
                             </div>
@@ -354,16 +324,15 @@
                     <div class=" item-four-column">
                         <div class="inner-features hover-up wow fadeInUp">
                             <div class="features-box">
-                                <span class="tf-icon icon-hand-gloves"></span>
+                               
                                 <div class="content-features">
                                     <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">
-                                            Pruning plants
-                                        </h3>
+                                        <h2 class="section-title">
+                                            633,6K
+                                        </h2>
                                     </a>
                                     <p class="section-desc">
-                                        Lorem ipsum dolor sit amet, conset etur sadipscing elitr, sed diam noket numy
-                                        eirmod tempor
+                                        Pohon Tertanam
                                     </p>
                                 </div>
                             </div>
@@ -372,16 +341,15 @@
                     <div class=" item-four-column">
                         <div class="inner-features hover-up wow fadeInUp">
                             <div class="features-box">
-                                <span class="tf-icon icon-fruit-box"></span>
+                                
                                 <div class="content-features">
                                     <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">
-                                            Lawn Maintenance
-                                        </h3>
+                                        <h2 class="section-title">
+                                            51,7K
+                                        </h2>
                                     </a>
                                     <p class="section-desc">
-                                        Lorem ipsum dolor sit amet, conset etur sadipscing elitr, sed diam noket numy
-                                        eirmod tempor
+                                        Sahabat Alam
                                     </p>
                                 </div>
                             </div>
@@ -390,16 +358,15 @@
                     <div class=" item-four-column">
                         <div class="inner-features hover-up wow fadeInUp">
                             <div class="features-box">
-                                <span class="tf-icon icon-seed"></span>
+                               
                                 <div class="content-features">
                                     <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">
-                                            Irrigation & Drainage
+                                        <h3 class="section-title">
+                                            6,2K
                                         </h3>
                                     </a>
                                     <p class="section-desc">
-                                        Lorem ipsum dolor sit amet, conset etur sadipscing elitr, sed diam noket numy
-                                        eirmod tempor
+                                        Kampanye Alam
                                     </p>
                                 </div>
                             </div>
@@ -407,6 +374,7 @@
                     </div>
                 </div>
             </div>
+            <br>
         </section>
         <!-- /features -->
 
@@ -428,10 +396,8 @@
                         <div class="about-content">
                             <div class="about-content-title wow fadeInUp">
                                 <div class="section-subtitle">ABOUT US</div>
-                                <div class="section-title">The Best Choice For your Business.</div>
-                                <div class="section-desc">Lorem Ipsum is simply dummy text of free available market
-                                    typesetting industry has been the industry's standard dummy text ever. Lorem Ipsum
-                                    is simply dummy text of free available </div>
+                                <div class="section-title">Kurangi Emisi Karbon Bersama BumiBaik</div>
+                                <div class="section-desc">BumiBaik membantu setiap orang menghitung emisi karbon, menanam, dan mengadopsi pohon secara sukarela untuk menyerap emisi karbon sehingga karbon yang dihasilkan dan karbon yang diserap oleh pohon (Carbon Neutral) menjadi seimbang. BumiBaik memberikan informasi dan edukasi tentang dampak emisi karbon terhadap lingkungan dan isu perubahan iklim </div>
                             </div>
                             <div id="about-box" class="about-desc-box">
                                 <div class="about-desc">
@@ -479,10 +445,57 @@
                         <div class="section-title-box">
                             <h4 class="section-subtitle">WHAT WE DO</h4>
                             <h2 class="section-title">Program Kami</h2>
+                            <br>
+                            <h4 class="section-heading-jost-size20 item-1">Memfasilitasi pengurangan emisi karbon dan penanaman pohon untuk Bumi semakin baik</h4>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="themesflat-spacer clearfix" data-desktop="67" data-mobile="60" data-smobile="60">
+                        </div>
+                    </div>
+                    
+                    <div class="item-four-column">
+                        <div class="our-services-box hover-up-style2 mg-bottom30 wow fadeInDown">
+                            <div class="our-services-overlay"></div>
+                            <span class="tf-icon icon-size icon-icon-farming-layer"><span class="path1"></span><span
+                                    class="path2"></span><span class="path3"></span><span class="path4"></span><span
+                                    class="path5"></span></span>
+                            <div class="content-features">
+                                <a href="service-details.html">
+                                    <h3 class="section-heading-jost-size22">
+                                        Perhitungan Karbon</h3>
+                                </a>
+                                <p class="section-desc">
+                                Hitung jejak dan pemakaian karbonmu dengan BumiBaik
+                                </p>
+                                <div class="link2 link-style2">
+                                    <a href="service-details.html" class="read-more">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-four-column">
+                        <div class="our-services-box hover-up-style2 mg-bottom30 wow fadeInDown">
+                            <div class="our-services-overlay"></div>
+                            <span class="tf-icon icon-size icon-icon-farming-layer"><span class="path1"></span><span
+                                    class="path2"></span><span class="path3"></span><span class="path4"></span><span
+                                    class="path5"></span></span>
+                            <div class="content-features">
+                                <a href="service-details.html">
+                                    <h3 class="section-heading-jost-size22">
+                                    Monitoring Pohon</h3>
+                                </a>
+                                <p class="section-desc">
+                                Pantau pohon yang kamu tanam dengan BumiBaik
+                                </p>
+                                <div class="link2 link-style2">
+                                    <a href="service-details.html" class="read-more">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -495,11 +508,10 @@
                             <div class="content-features">
                                 <a href="service-details.html">
                                     <h3 class="section-heading-jost-size22">
-                                        Landscaping</h3>
+                                    Kolaborasi Penyelesaian Isu</h3>
                                 </a>
                                 <p class="section-desc">
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor invidunt ut labore et dolore magna aliquyam erat,
+                                Bersama menyelesaikan isu perubahan iklim dengan BumiBaik
                                 </p>
                                 <div class="link2 link-style2">
                                     <a href="service-details.html" class="read-more">
@@ -509,28 +521,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-four-column">
-                        <div class="our-services-box mg-bottom30 wow fadeInUp">
-                            <div class="our-services-overlay active"></div>
-                            <span class="tf-icon icon-size3 icon-Group-7527"><span class="path1"></span><span
-                                    class="path2"></span><span class="path3"></span></span>
-                            <div class="content-features link-style3">
-                                <a href="service-details.html">
-                                    <h3 class="section-heading-jost-size22">
-                                        Pruning plants</h3>
-                                </a>
-                                <p class="section-desc white">
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor invidunt ut labore et dolore magna aliquyam erat,
-                                </p>
-                                <div class="link2 link-style3">
-                                    <a href="service-details.html" class="read-more">
-                                        Read More
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="item-four-column">
                         <div class="our-services-box hover-up-style2 wow fadeInLeft">
                             <div class="our-services-overlay"></div>
@@ -540,34 +531,10 @@
                             <div class="content-features">
                                 <a href="service-details.html">
                                     <h3 class="section-heading-jost-size22">
-                                        Irrigation & Drainage</h3>
+                                        Adopt Tree</h3>
                                 </a>
                                 <p class="section-desc">
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor invidunt ut labore et dolore magna aliquyam erat,
-                                </p>
-                                <div class="link2 link-style2">
-                                    <a href="service-details.html" class="read-more">
-                                        Read More
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-four-column">
-                        <div class="our-services-box hover-up-style2 wow fadeInRight">
-                            <div class="our-services-overlay"></div>
-                            <span class="tf-icon icon-size4 icon-Group-7528"><span class="path1"></span><span
-                                    class="path2"></span><span class="path3"></span></span>
-                            <div class="content-features">
-                                <a href="service-details.html">
-                                    <h3 class="section-heading-jost-size22">
-                                        Garden Maintenance
-                                    </h3>
-                                </a>
-                                <p class="section-desc">
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor invidunt ut labore et dolore magna aliquyam erat,
+                                Adopsi pohon untuk kurangi emisi karbon bersama BumiBaik
                                 </p>
                                 <div class="link2 link-style2">
                                     <a href="service-details.html" class="read-more">
@@ -583,533 +550,7 @@
         <!-- / Our service -->
 
         <!-- Our team -->
-        <section class="flat-team">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title-box">
-                            <h4 class="section-subtitle white wow fadeInUp">MEET OUR TEAM</h4>
-                            <h2 class="section-title white wow fadeInUp">Our Creative Team</h2>
-                        </div>
-                        <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="60" data-smobile="60">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- list team -->
-            <div class="container">
-                <div class="row">
-                    <div class="list-team">
-                        <div class="item-three-column">
-                            <div class="team-box wow fadeInUp">
-                                <div class="image-staff">
-                                    <div class="backround-overlay"></div>
-                                    <div class="list-icon-hidden">
-                                        <ul class="widgets-nav-social link-style3">
-                                            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <img src="{{ asset('landing/images/team/staff1.png') }}" alt="images">
-                                </div>
-                                <div class="info-staff link-style4">
-                                    <h3 class="section-heading-rubik-size20"> Doris Jordan </h3>
-                                    <p class="section-desc-2 white"> Design Expert </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-three-column">
-                            <div class="team-box wow fadeInUp">
-                                <div class="image-staff">
-                                    <div class="backround-overlay"></div>
-                                    <div class="list-icon-hidden">
-                                        <ul class="widgets-nav-social link-style3">
-                                            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <img src="{{ asset('landing/images/team/staff2.png') }}" alt="images">
-                                </div>
-                                <div class="info-staff link-style4">
-                                    <h3 class="section-heading-rubik-size20"> Johnny Ramirez </h3>
-                                    <p class="section-desc-2 white"> Design Expert </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-three-column">
-                            <div class="team-box wow fadeInUp">
-                                <div class="image-staff">
-                                    <div class="backround-overlay"></div>
-                                    <div class="list-icon-hidden">
-                                        <ul class="widgets-nav-social link-style3">
-                                            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <img src="{{ asset('landing/images/team/staff3.png') }}" alt="images">
-                                </div>
-                                <div class="info-staff link-style4">
-                                    <h3 class="section-heading-rubik-size20"> Diana Wagner </h3>
-                                    <p class="section-desc-2 white"> Design Expert </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /Our team -->
-
-        <!-- our-profolio -->
-        <section class="flat-profolio">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="item-four-column">
-                        <div class="list-box-profolio wow fadeInUp">
-                            <div class="image-profolio bd-radius-8-image">
-                                <img src="{{ asset('landing/images/profolio/home1-item1.jpg') }}" alt="images">
-                                <div class="profolio-show">
-                                    <div class="profolio-info">
-                                        <div class="info">
-                                            <a href="case-details.html">
-                                                <h3 class="section-heading-jost-size20">
-                                                    Finished Work</h3>
-                                            </a>
-                                            <p class="desc-box">Dummy text of free available</p>
-                                        </div>
-                                        <div class="button-next">
-                                            <a class="profolio-btn" href="case-details.html"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-four-column">
-                        <div class="list-box-profolio wow fadeInDown">
-                            <div class="image-profolio bd-radius-8-image">
-                                <img src="{{ asset('landing/images/profolio/home1-item2.jpg') }}" alt="images">
-                                <div class="profolio-show active">
-                                    <div class="profolio-info">
-                                        <div class="info">
-                                            <a href="case-details.html">
-                                                <h3 class="section-heading-jost-size20">
-                                                    Finished Work</h3>
-                                            </a>
-                                            <p class="desc-box">Dummy text of free available</p>
-                                        </div>
-                                        <div class="button-next">
-                                            <a class="profolio-btn" href="case-details.html"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-four-column">
-                        <div class="list-box-profolio wow fadeInUp">
-                            <div class="image-profolio bd-radius-8-image">
-                                <img src="{{ asset('landing/images/profolio/home1-item3.jpg') }}" alt="images">
-                                <div class="profolio-show">
-                                    <div class="profolio-info">
-                                        <div class="info">
-                                            <a href="case-details.html">
-                                                <h3 class="section-heading-jost-size20">
-                                                    Finished Work</h3>
-                                            </a>
-                                            <p class="desc-box">Dummy text of free available</p>
-                                        </div>
-                                        <div class="button-next">
-                                            <a class="profolio-btn" href="case-details.html"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-four-column">
-                        <div class="list-box-profolio wow fadeInDown">
-                            <div class="image-profolio bd-radius-8-image">
-                                <img src="{{ asset('landing/images/profolio/home1-item4.jpg') }}" alt="images">
-                                <div class="profolio-show">
-                                    <div class="profolio-info">
-                                        <div class="info">
-                                            <a href="case-details.html">
-                                                <h3 class="section-heading-jost-size20">
-                                                    Finished Work</h3>
-                                            </a>
-                                            <p class="desc-box">Dummy text of free available</p>
-                                        </div>
-                                        <div class="button-next">
-                                            <a class="profolio-btn" href="case-details.html"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <!-- /our profolio -->
-
-        <!-- Testimonials -->
-        <section class="flat-testimonials">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="themesflat-spacer clearfix" data-desktop="119" data-mobile="60" data-smobile="0">
-                        </div>
-                        <div class="section-title-box">
-                            <h4 class="section-subtitle wow fadeInUp">CLIENT TESTIMONIALS</h4>
-                            <h2 class="section-title">What our clients say </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="owl-carousel owl-theme wow fadeInUp">
-                            <div class="item">
-                                <div class="list-testimonials">
-                                    <div class="box-item">
-                                        <div class="box-item-overlay"></div>
-                                        <div class="staff-img">
-                                            <img src="{{ asset('landing/images/team/staff-box1.jpg') }}" alt="images">
-                                        </div>
-                                        <p class="section-desc mg-bottom-15"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            Duis at est id leo luctus gravida a in ipsum. </p>
-                                        <h4 class="section-desc-heading">Eugene Freeman</h4>
-                                        <p class="section-desc des-2"> Tincidunt </p>
-                                        <div class="icon-box">
-                                            <a class="icon-inner-box"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-testimonials">
-                                <div class="box-item">
-                                    <div class="box-item-overlay active"></div>
-                                    <div class="staff-img">
-                                        <img src="{{ asset('landing/images/team/staff-box2.jpg') }}" alt="images">
-                                    </div>
-                                    <p class="section-desc mg-bottom-15"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                                        at est id leo luctus gravida a in ipsum. </p>
-                                    <h4 class="section-desc-heading">Kelly Coleman</h4>
-                                    <p class="section-desc des-2">Nulla nec</p>
-                                    <div class="icon-box">
-                                        <a class="icon-inner-box"></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="list-testimonials">
-                                <div class="box-item">
-                                    <div class="box-item-overlay"></div>
-                                    <div class="staff-img">
-                                        <img src="{{ asset('landing/images/team/staff-box3.jpg') }}" alt="images">
-                                    </div>
-                                    <p class="section-desc mg-bottom-15"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                                        at est id leo luctus gravida a in ipsum. </p>
-                                    <h4 class="section-desc-heading">Philip Mendez</h4>
-                                    <p class="section-desc des-2">Consectetur</p>
-                                    <div class="icon-box">
-                                        <a class="icon-inner-box"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /Testimonials -->
-
-        <!-- About 2nd -->
-        <section class="flat-about-2nd">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="content-left">
-                                <div class="tag-logo">
-                                    <img src="{{ asset('landing/icon/logo-dark.png') }}" alt="images">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="content-right link-style3">
-                            <h4 class="section-subtitle white wow fadeInUp">ABOUT US</h4>
-                            <h3 class="section-title white wow fadeInUp">We Have The Perfect soluion For You</h3>
-                            <p class="section-desc white wow fadeInUp">Lorem Ipsum is simply dummy text of free
-                                available in market the typesetting industry has been the industry's standard dummy text
-                                ever. Lorem Ipsum is simply dummy text of free available in market the printing</p>
-                            <div class="box">
-                                <div class="about-box wow fadeInLeft">
-                                    <div class="about-box01">
-                                        <div class="icon-box01">
-                                            <span class="section-heading-jost-size20 icon">01</span>
-                                        </div>
-                                        <div class="content-box01">
-                                            <a href="services.html" class="section-heading-jost-size20 fw-600">Counter In Work.</a>
-                                            <p class="section-desc white">Lorem Ipsum is</p>
-                                        </div>
-                                    </div>
-                                    <div class="about-box-list">
-                                        <ul class="list-box">
-                                            <li> <a href="service-details.html"> available in market the printing</a></li>
-                                            <li> <a href="service-details.html"> Lorem Ipsum simply dummy </a></li>
-                                            <li> <a href="service-details.html"> market the printing </a> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="about-box wow fadeInRight">
-                                    <div class="about-box02">
-                                        <div class="icon-box02">
-                                            <span class="section-heading-jost-size20 icon">02</span>
-                                        </div>
-                                        <div class="content-box02">
-                                            <a href="services.html" class="section-heading-jost-size20 fw-600">Counter In Work.</a>
-                                            <p class="section-desc white">Lorem Ipsum is</p>
-                                        </div>
-                                    </div>
-                                    <div class="about-box-list2">
-                                        <ul class="list-box">
-                                            <li> <a href="service-details.html"> market the printing typesetting</a></li>
-                                            <li> <a href="service-details.html"> available in market the printing</a></li>
-                                            <li> <a href="service-details.html"> Lorem Ipsum simply free</a> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- subcribe -->
-            <div class="subcribe-about wow fadeInUp">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="subcribe-box">
-                                <div class="inner-subcribe-box">
-                                    <div class="col-md-5">
-                                        <h2 class="heading-subcribe">
-                                            Get notified about the event! Subscribe today
-                                        </h2>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <form method="post" class="form-subcribe">
-                                            <input type="email" name="email" class="input-subcribe"
-                                                placeholder="Email Address" required>
-                                            <button type="submit" class="btn-subcribe">Subsrcibe</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="60" data-smobile="60"></div>
-            </div>
-        </section>
-        <!-- /About 2nd -->
-
-        <!-- Work process -->
-        <section class="flat-work-process">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="themesflat-spacer clearfix" data-desktop="90" data-mobile="60" data-smobile="60">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="section-title-box">
-                            <h4 class="section-subtitle wow fadeInUp">WORK PROCESS</h4>
-                            <h2 class="section-title wow fadeInUp">We Complete Every<br> Step Carefully</h2>
-                        </div>
-                        <div class="themesflat-spacer clearfix" data-desktop="65" data-mobile="60" data-smobile="60">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="features-box wow fadeInUp">
-                            <div class="icon-wp-box">
-                                <span class="tf-icon-wp icon-farming"></span>
-                                <div class="icon-box link-style3">
-                                    <span class="section-heading-jost-size20 icon">01</span>
-                                </div>
-                            </div>
-                            <div class="content-features">
-                                    <h3 class="section-heading-jost-size20 text-pri2-color">
-                                        Set Design Target
-                                    </h3>
-                                <p class="section-desc">
-                                    Lorem Ipsum is simply dummy text of free available market typesetting industry has
-                                    been the
-                                </p>
-                            </div>
-                        </div>
-                        <div class="features-box wow fadeInUp">
-                            <div class="icon-wp-box">
-                                <span class="tf-icon-wp icon-seed"></span>
-                                <div class="icon-box link-style3">
-                                    <span class="section-heading-jost-size20 icon">03</span>
-                                </div>
-                            </div>
-                            <div class="content-features cf-3">
-                                    <h3 class="section-heading-jost-size20 text-pri2-color">
-                                        Genaret Uniq Idea
-                                    </h3>
-                                <p class="section-desc">
-                                    Lorem Ipsum is simply dummy text of free available market typesetting industry has
-                                    been the
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="features-box wow fadeInUp">
-                            <div class="icon-wp-box size-icon">
-                                <span class="tf-icon-wp2 icon-seeding1"></span>
-                                <div class="icon-box2 link-style3">
-                                    <span class="section-heading-jost-size20 icon">02</span>
-                                </div>
-                            </div>
-                            <div class="content-features cf-2 text-pri2-color">
-                                    <h3 class="section-heading-jost-size20">
-                                        Friendly Service
-                                    </h3>
-                                <p class="section-desc">
-                                    Lorem Ipsum is simply dummy text of free available market typesetting industry has
-                                    been the
-                                </p>
-                            </div>
-                        </div>
-                        <div class="features-box wow fadeInUp">
-                            <div class="icon-wp-box size-icon2">
-                                <span class="tf-icon-wp4 icon-greenhouse1"></span>
-                                <div class="icon-box3 link-style3">
-                                    <span class="section-heading-jost-size20 icon">04</span>
-                                </div>
-                            </div>
-                            <div class="content-features cf-4">
-                                    <h3 class="section-heading-jost-size20 text-pri2-color">
-                                        Finished Work
-                                    </h3>
-                                <p class="section-desc">
-                                    Lorem Ipsum is simply dummy text of free available market typesetting industry has
-                                    been the
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-12">
-                        <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="60" data-smobile="0">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /Work process -->
-
-        <!-- Contact -->
-        <section class="flat-contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 wow fadeInUp">
-                        <div class="contact-left">
-                            <h3 class="section-subtitle">GET IN TOUCH</h3>
-                            <h2 class="section-title">We want to share our locationto find us easily.</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-8 wow fadeInUp">
-                        <div class="contact-right">
-                            <form method="post" class="form-contact-right" id="contactform"
-                                action="./contact/contact-process.php" accept-charset="utf-8"
-                                novalidate="novalidate">
-                                <div class="input-row">
-                                    <div class="input-name">
-                                        <label for="name" class="heading-features">Name (required)</label>
-                                        <input id="name" name="name" class="input-contact" type="text"
-                                            placeholder="Full Name" required>
-                                    </div>
-                                    <div class="input-phone">
-                                        <label for="phone" class="heading-features">Phone (optional)</label>
-                                        <input id="phone" name="phone" class="input-contact" type="text"
-                                            placeholder="Phone Number" required>
-                                    </div>
-
-                                </div>
-                                <div class="input-row">
-                                    <div class="input-email">
-                                        <label id="email" class="heading-features">Email address (required)</label>
-                                        <input type="email" name="email" class="input-contact"
-                                            placeholder="Email Address" required>
-                                    </div>
-                                    <div class="input-services">
-                                        <label for="services" class="heading-features">Services (required)</label>
-                                        <select class="input-contact input-select" name="services" id="services">
-                                            <option value="0">Choose services</option>
-                                            <option value="1">Gettree</option>
-                                            <option value="2">Gettree</option>
-                                            <option value="3">Gettree</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="input-message">
-                                    <label for="message" class="heading-features">Your message*</label>
-                                    <textarea name="message" class="input-contact-message" id="message"
-                                        placeholder="Your Message"></textarea>
-                                </div>
-                                <div class="button">
-                                    <button type="submit" class=" btn btn-left">Send message</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="contact-address wow fadeInLeft link-style3">
-                            <div class="address-box box-1">
-                                <span class="contact-location address-icon icon-map"></span>
-                                <div class="info">
-                                        <h3 class="section-heading-jost-size20">
-                                            Our Address</h3>
-                                    <p class="desc-box">2 St, Loskia sripur, amukara.</p>
-                                </div>
-                            </div>
-                            <div class="address-box box-2">
-                                <span class="contact-phone address-icon icon-phone"></span>
-                                <div class="info">
-                                        <h3 class="section-heading-jost-size20">
-                                            Our Phone</h3>
-                                    <p class="desc-box">000 2324 39493</p>
-                                </div>
-                            </div>
-                            <div class="address-box box-3">
-                                <span class="contact-mail address-icon icon-mail"></span>
-                                <div class="info">
-                                        <h3 class="section-heading-jost-size20">
-                                            Our Email</h3>
-                                    <p class="desc-box">name@website.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
         <!-- /Contact -->
 
         <!-- blog -->
@@ -1149,15 +590,14 @@
                                     <div class="blog-item background2 hover-up-style2">
                                         <div class="item-overlay"></div>
                                         <div class="item-box box-2">
-                                            <div class="content-info "><a href="blog.html" class="folder folder-2">
-                                                    Gardening Ideas
-                                                </a></div>
+                                            
                                             <div class="link-style6">
                                                 <div class="content-info margin-top"><a href="blog-detail.html" class="user">
                                                         By Admin
                                                     </a></div>
                                                 <a href="blog-detail.html" class="section-heading-jost-size20">
-                                                    Quisque suscipit ipsum est, eu venenatis leo
+                                                myECO dan BumiBaik Tunjukkan Aksi Nyata Lestarikan Lingkungan Lewat Adopsi 10 Ton Karbon
+
                                                 </a>
                                             </div>
                                             <hr class="line-blog-item">
@@ -1179,7 +619,9 @@
                                                         By Admin
                                                     </a></div>
                                                 <a href="blog-detail.html" class="section-heading-jost-size20">
-                                                    Maecenas interdum lorem eleifend orci aliquam
+                                                Cempaka Foundation Luncurkan Program Konservasi Hutan Dan Daerah Tangkapan Air Di Lereng Gunung Penanggungan, Pasuruan
+
+
                                                 </a>
                                             </div>
                                             <hr class="line-blog-item">
