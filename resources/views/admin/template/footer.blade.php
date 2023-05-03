@@ -176,6 +176,9 @@
     <script src="{{ asset('admin/js/bundle.js') }}"></script>
     <script src="{{ asset('admin/js/scripts.js') }}"></script>
     <script src="{{ asset('admin/js/charts/chart-ecommerce.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('admin/css/editors/quill.css') }}">
+    <script src="{{ asset('admin/js/libs/editors/quill.js') }}"></script>
+    <script src="{{ asset('admin/js/editors.js') }}"></script>
 </body>
 
 </html>

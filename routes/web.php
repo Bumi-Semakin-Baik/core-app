@@ -7,7 +7,10 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,15 +36,19 @@ Route::get('/haloo', function () {
 Route::get('/qrcode', [QrController::class, 'index']);
 Route::get('/qrcode-convert', [QrController::class, 'convert']);
 // Route::get('/dashboard', function () {
-//     return view('dashboard');
-// });
+    //     return view('dashboard');
+    // });
+
+Route::get('', [UserController::class, 'index']);
+
+
+// Route::controller(RegisterController::class)
+//     ->group(function (){
+//         Route::get('/register','viewRegister');
+//         });
+
 Route::prefix('dashboard')
     ->controller(DashboardController::class)
-    ->group(function (){
-        Route::get('/','index');
-    });
-Route::prefix('newsletter')
-    ->controller(NewsController::class)
     ->group(function (){
         Route::get('/','index');
     });
@@ -55,21 +62,30 @@ Route::prefix('partner')
 Route::prefix('company')
     ->controller(CompanyController::class)
     ->group(function (){
-        Route::get('/account','account');
-        Route::get('/project','project');
+        Route::get('/accounts','getAccount');
+        Route::get('/projects','getProject');
     });
-Route::prefix('company')
-        ->controller(CompanyController::class)
-        ->group(function (){
-            Route::get('/accounts','getAccount');
-            Route::get('/projects','getProject');
-        });
- Route::controller(LandingController::class)
+Route::prefix('newsletter')
+    ->controller(NewsController::class)
+    ->group(function (){
+        Route::get('/','index');
+        Route::get('/add','add');
+        Route::get('/edit','edit');
+    });
+Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');
     });
-    Route::controller(AboutController::class)
+
+Route::controller(AboutController::class)
     ->group(function (){
         Route::get('/about','index');
-       
+
     });
+
+Auth::routes();
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+

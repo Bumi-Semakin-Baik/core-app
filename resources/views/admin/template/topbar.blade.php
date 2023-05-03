@@ -295,7 +295,21 @@
                                             </div>
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
-                                                    <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                                    <li><a href="{{ url('logout') }}"
+                                                        class="dropdown-item" href="{{ route('logout') }}"
+                                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                                        <em class="icon ni ni-signout"></em><span>{{ __('Logout') }}</span></a></li>
+
+                                                        {{-- <a class="dropdown-item" href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault();
+                                                                    document.getElementById('logout-form').submit();">
+                                                        {{ __('Logout') }}
+                                                    </a> --}}
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                        @csrf
+                                                </form>
+
                                                 </ul>
                                             </div>
                                         </div>
