@@ -7,6 +7,7 @@
     <meta name="author" content="Softnio">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
@@ -81,7 +82,7 @@
                                         </button>
                                     </div>
                                 </form><!-- form -->
-                                <div class="form-note-s2 pt-4"> New on our platform? <a href="html/pages/auths/auth-register-v3.html">Create an account</a>
+                                <div class="form-note-s2 pt-4"> New on our platform? <a href="{{url('register')}}">Create an account</a>
                                 </div>
                                 <div class="text-center pt-4 pb-3">
                                     <h6 class="overline-title overline-title-sap"><span>OR</span></h6>
