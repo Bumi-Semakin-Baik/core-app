@@ -123,14 +123,14 @@
     <div class="page-title-home1">
         <div class="container-fluid">
             <div class="row">
-                <div class="inner-title-home1">
+                <div class="inner-title">
                     <!-- /.page-title -->
                     <div class="flat-slider clearfix">
                         <div class="rev_slider_wrapper fullwidthbanner-container">
                             <div id="rev-slider2" class="rev_slider fullwidthabanner">
                                 <ul>
                                     <!-- Slide 1 -->
-                                    <li data-transition="random" style="background: #fff !important">
+                                    <li data-transition="random">
                                         <!-- Main Image -->
                                         <!-- Layers -->
                                         <div class="tp-caption tp-resizeme text-one"
@@ -180,10 +180,7 @@
                                             data-responsive_offset="on">
                                             <div class="button-box">
                                                 <div class="button res-btn-slider">
-                                                    <a href="contact.html" class="btn btn-left">Get A Quote</a>
-                                                </div>
-                                                <div class="button">
-                                                    <a href="service-details.html" class="btn">Read More</a>
+                                                    <a href="contact.html" class="btn btn-left">Download App</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -199,13 +196,13 @@
                                             data-start="800" data-splitin="none" data-splitout="none"
                                             data-responsive_offset="on">
                                             <img class="img-fluid" data-wow-delay="2500ms" data-wow-duration="2s"
-                                                width="full" src="{{ asset('landing/images/home/bumibaik1.jpg') }}"
+                                                width="full" src="{{ asset('landing/images/home/woman1.png') }}"
                                                 alt="images">
                                         </div>
                                     </li>
                                     <!-- /End Slide 1 -->
                                     <!-- Slide 1 -->
-                                    <li data-transition="random" style="background: #fff !important">
+                                    <li data-transition="random">
                                         <!-- Main Image -->
                                         <!-- Layers -->
                                         <div class="tp-caption tp-resizeme text-one"
@@ -256,10 +253,7 @@
                                             data-responsive_offset="on">
                                             <div class="button-box">
                                                 <div class="button res-btn-slider">
-                                                    <a href="contact.html" class="btn btn-left">Get A Quote</a>
-                                                </div>
-                                                <div class="button">
-                                                    <a href="service-details.html" class="btn">Read More</a>
+                                                    <a href="contact.html" class="btn btn-left">Download App</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -276,7 +270,7 @@
                                             data-responsive_offset="on">
                                             <img class="img-slide wow jackInTheBox" data-wow-delay="2500ms"
                                                 data-wow-duration="2s"
-                                                src="{{ asset('landing/images/home/bumibaik1.jpg') }}" alt="images">
+                                                src="{{ asset('landing/images/home/woman2.png') }}" alt="images">
                                         </div>
                                     </li>
                                     <!-- /End Slide 1 -->
