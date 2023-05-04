@@ -18,18 +18,6 @@
                                                 <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em class="icon ni ni-menu-alt-r"></em></a>
                                                 <div class="toggle-expand-content" data-content="pageMenu">
                                                     <ul class="nk-block-tools g-3">
-                                                        <li>
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-white btn-dim btn-outline-light" data-bs-toggle="dropdown"><em class="d-none d-sm-inline icon ni ni-filter-alt"></em><span>Filtered By</span><em class="dd-indc icon ni ni-chevron-right"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><span>Open</span></a></li>
-                                                                        <li><a href="#"><span>Closed</span></a></li>
-                                                                        <li><a href="#"><span>Onhold</span></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </li>
                                                         <li class="nk-block-tools-opt d-none d-sm-block">
                                                             <a href="{{ url('/newsletter/add') }}" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add Project</span></a>
                                                         </li>
@@ -44,6 +32,7 @@
                                 </div><!-- .nk-block-head -->
 
                                 <div class="card card-preview">
+<<<<<<< HEAD
                                             <table class="table table-tranx">
                                                 <thead>
                                                     <tr class="tb-tnx-head">
@@ -236,6 +225,89 @@
                                             </table>
                                         </div>
 
+=======
+                                    <div class="card-inner">
+                                        <table class="datatable-init nowrap nk-tb-list is-separate" data-auto-responsive="false">
+                                            <thead>
+                                                <tr class="nk-tb-item nk-tb-head">
+                                                    <th class="nk-tb-col nk-tb-col-check">
+                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                            <input type="checkbox" class="custom-control-input" id="puid">
+                                                            <label class="custom-control-label" for="puid"></label>
+                                                        </div>
+                                                    </th>
+                                                    <th class="nk-tb-col tb-col-sm"><span>Title</span></th>
+                                                    <th class="nk-tb-col"><span>Slug</span></th>
+                                                    <th class="nk-tb-col"><span>Content</span></th>
+                                                    <th class="nk-tb-col"><span>Author</span></th>
+                                                    <th class="nk-tb-col nk-tb-col-tools">
+                                                        <ul class="nk-tb-actions gx-1 my-n1">
+                                                            <li class="me-n1">
+                                                                <div class="dropdown">
+                                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                                        <ul class="link-list-opt no-bdr">
+                                                                            <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit Selected</span></a></li>
+                                                                            <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Selected</span></a></li>
+                                                                            <li><a href="#"><em class="icon ni ni-bar-c"></em><span>Update Stock</span></a></li>
+                                                                            <li><a href="#"><em class="icon ni ni-invest"></em><span>Update Price</span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </th>
+                                                </tr><!-- .nk-tb-item -->
+                                            </thead>
+                                            <tbody>
+                                                <tr class="nk-tb-item">
+                                                    <td class="nk-tb-col nk-tb-col-check">
+                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                            <input type="checkbox" class="custom-control-input" id="puid1">
+                                                            <label class="custom-control-label" for="puid1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="nk-tb-col tb-col-sm">
+                                                        <span class="tb-product">
+                                                            <img src="./images/product/a.png" alt="" class="thumb">
+                                                            <span class="title">Pink Fitness Tracker</span>
+                                                        </span>
+                                                    </td>
+                                                    <td class="nk-tb-col">
+                                                        <span class="tb-sub">UY3749</span>
+                                                    </td>
+                                                    <td class="nk-tb-col">
+                                                        <span class="tb-lead">$ 99.49</span>
+                                                    </td>
+                                                    <td class="nk-tb-col">
+                                                        <span class="tb-sub">49</span>
+                                                    </td>
+                                                    <td class="nk-tb-col nk-tb-col-tools">
+                                                        <ul class="nk-tb-actions gx-1 my-n1">
+                                                            <li class="me-n1">
+                                                                <div class="dropdown">
+                                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                                        <ul class="link-list-opt no-bdr">
+                                                                            <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit Product</span></a></li>
+                                                                            <li><a href="#"><em class="icon ni ni-eye"></em><span>View Product</span></a></li>
+                                                                            <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Product Orders</span></a></li>
+                                                                            <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Product</span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr><!-- .nk-tb-item -->
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                </div>
+
+>>>>>>> 6246c31f88e3e5d59f5d75872250e8e75167aff6
 @include('admin.template.footer')
 
 <div class="modal fade zoom" tabindex="-1" id="modalZoom">
