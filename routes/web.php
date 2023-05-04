@@ -7,8 +7,11 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,12 +40,12 @@ Route::get('/qrcode-convert', [QrController::class, 'convert']);
     //     return view('dashboard');
     // });
 
-// Route::controller(AuthController::class)
+Route::get('', [UserController::class, 'index']);
+
+
+// Route::controller(RegisterController::class)
 //     ->group(function (){
-//             Route::get('/login','viewLogin');
-//             Route::post('/login', 'login')->name('login');
-//             // Route::get('/register','viewRegister');
-//             // Route::post('/register','register')->name('register');
+//         Route::get('/register','viewRegister');
 //         });
 
 Route::prefix('dashboard')
@@ -66,9 +69,10 @@ Route::prefix('company')
 Route::prefix('newsletter')
     ->controller(NewsController::class)
     ->group(function (){
-        Route::get('/','index');
+        Route::get('/','index')->name('news');
         Route::get('/add','add');
         Route::get('/edit','edit');
+        Route::post('/store', 'store')->name('store.news');
     });
 Route::controller(LandingController::class)
     ->group(function (){
@@ -78,16 +82,14 @@ Route::controller(LandingController::class)
 Route::controller(AboutController::class)
     ->group(function (){
         Route::get('/about','index');
+
     });
-
-// Route::post('/logout', function () {
-//         auth()->logout();
-//         request()->session()->invalidate();
-//         request()->session()->regenerateToken();
-
-//         return redirect('/');
-//     })->name('logout');
 
 Auth::routes();
 
+Route::get('/confirm-password', function () {
+    return view('login');
+    })->middleware('auth');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
