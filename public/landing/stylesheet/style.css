@@ -1465,7 +1465,6 @@ button.btn.btn-outline-primary {
     margin-left: 4px;
 }
 
-
 /* Page Title 
 -------------------------------------------------------------------------------------------*/
 
@@ -1473,8 +1472,7 @@ button.btn.btn-outline-primary {
     position: relative;
     height: 1000px;
     background-size: cover;
-    background-color: #fff;
-    /* background-image: url(../images/home/background-slider.jpg); */
+    background-image: url(../images/home/background-slider.jpg);
     background-repeat: no-repeat;
     background-position: center;
 }
