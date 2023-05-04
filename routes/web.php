@@ -7,6 +7,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\DonationController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -64,6 +65,14 @@ Route::prefix('company')
     ->group(function (){
         Route::get('/accounts','getAccount');
         Route::get('/projects','getProject');
+    });
+
+Route::prefix('donation')
+    ->controller(DonationController::class)
+    ->group(function (){
+        Route::get('/manage','getManage');
+        Route::get('/add','add');
+        Route::post('/store', 'store')->name('store.donation');
     });
 Route::prefix('newsletter')
     ->controller(NewsController::class)
