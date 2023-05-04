@@ -35,7 +35,9 @@ public function store(Request $request)
         if($request->file('image')){
             $validatedData['image'] = $request->file('image')->store('images', 'public');
         }
+
         $image = $request->file('image')->store('image', 'public');
+        
         NewsArticle::create([
             'title' =>$request->input('title'),
             'slug' =>$request->input('slug'),
