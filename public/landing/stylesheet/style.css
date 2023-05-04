@@ -1319,14 +1319,19 @@ button.btn.btn-outline-primary {
 -----------------------------------------------------------------------------------*/
 
 .nav-wrap {
-    padding-right: 5%;
+    padding-right: 10%;
     line-height: 100px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #mainnav .menu>li {
     display: inline-block;
     position: relative;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 #mainnav .menu>li>a{
@@ -1466,7 +1471,7 @@ button.btn.btn-outline-primary {
 
 .inner-title {
     position: relative;
-    height: 300px;
+    height: 1000px;
     background-size: cover;
     background-image: url(../images/home/background-slider.jpg);
     background-repeat: no-repeat;

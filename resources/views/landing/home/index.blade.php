@@ -103,6 +103,9 @@
                                                         <li>
                                                             <a href="contact.html" title="">Contact</a>
                                                         </li>
+                                                        <li>
+                                                            <a href="contact.html" title="">Donate</a>
+                                                        </li>
                                                     </ul>
                                                 </nav>
                                             </div>
@@ -195,7 +198,7 @@
                                             data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
                                             data-start="800" data-splitin="none" data-splitout="none"
                                             data-responsive_offset="on">
-                                            <img class="img-fluid" data-wow-delay="2500ms" data-wow-duration="2s"
+                                            <img class="img-slide wow jackInTheBox" data-wow-delay="2500ms" data-wow-duration="2s"
                                                 width="full" src="{{ asset('landing/images/home/woman1.png') }}"
                                                 alt="images">
                                         </div>
@@ -548,6 +551,105 @@
     </section>
     <!-- / Our service -->
 
+<section class="flat-case-study">
+    <div class="section-title-box">
+        <div class="section-subtitle">BumiBaik Activity</div>
+            <div class="section-title">Dokumentasi Aktivitas BumiBaik</div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="themesflat-spacer clearfix" data-desktop="120" data-mobile="60" data-smobile="60"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="list-box-profolio wow fadeInDown">
+                            <div class="image-profolio bd-radius-8-image">
+                                <img src="{{ asset('landing/images/activity/Meet.jpg') }}" alt="images">
+                                <div class="profolio-show active">
+                                    <div class="profolio-info">
+                                        <div class="info">
+                                            <a href="case-details.html">
+                                                <h3 class="section-heading-jost-size20">
+                                                    Finished Work</h3>
+                                            </a>
+                                            <p class="desc-box">Dummy text of free available</p>
+                                        </div>
+                                        <div class="button-next">
+                                            <a class="profolio-btn" href="case-details.html"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="themesflat-spacer clearfix" data-desktop="30" data-mobile="30" data-smobile="30"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="list-box-profolio wow fadeInDown">
+                            <div class="image-profolio bd-radius-8-image">
+                                <img src="{{ asset('landing/images/activity/Myeco.jpg') }}" alt="images">
+                                <div class="profolio-show active">
+                                    <div class="profolio-info">
+                                        <div class="info">
+                                            <a href="case-details.html">
+                                                <h3 class="section-heading-jost-size20">
+                                                    Finished Work</h3>
+                                            </a>
+                                            <p class="desc-box">Dummy text of free available</p>
+                                        </div>
+                                        <div class="button-next">
+                                            <a class="profolio-btn" href="case-details.html"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="themesflat-spacer clearfix" data-desktop="30" data-mobile="30" data-smobile="30"></div>
+                    </div>
+                    </section>
+                    <!-- <div class="col-md-6">
+                        <div class="list-box-profolio wow fadeInUp">
+                            <div class="image-profolio">
+                                <img src="images/case-study/plant-tree.jpg" alt="images">
+                                <div class="profolio-show">
+                                    <div class="profolio-info">
+                                        <div class="info">
+                                            <a href="case-details.html">
+                                                <h3 class="section-heading-jost-size20">
+                                                    Finished Work</h3>
+                                            </a>
+                                            <p class="desc-box">Dummy text of free available</p>
+                                        </div>
+                                        <div class="button-next">
+                                            <a class="profolio-btn" href="case-details.html"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="themesflat-spacer clearfix" data-desktop="30" data-mobile="30" data-smobile="30"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="list-box-profolio wow fadeInUp">
+                            <div class="image-profolio">
+                                <img src="images/case-study/plant-tree2.jpg" alt="images">
+                                <div class="profolio-show">
+                                    <div class="profolio-info">
+                                        <div class="info">
+                                            <a href="case-details.html">
+                                                <h3 class="section-heading-jost-size20">
+                                                    Finished Work</h3>
+                                            </a>
+                                            <p class="desc-box">Dummy text of free available</p>
+                                        </div>
+                                        <div class="button-next">
+                                            <a class="profolio-btn" href="case-details.html"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="themesflat-spacer clearfix" data-desktop="30" data-mobile="30" data-smobile="30"></div>
+                    </div> -->
     <!-- Our team -->
 
     <!-- /Contact -->
