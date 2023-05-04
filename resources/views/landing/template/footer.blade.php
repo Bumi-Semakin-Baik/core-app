@@ -5,8 +5,8 @@
                     <div class="col-md-12">
                         <div class="top-footer wow fadeInDown">
                             <div class="top-footer-left">
-                                <div class="logo-footer">
-                                    <a href="index.html"><img src="icon/logo-light.png" alt="images"></a>
+                                <div class="logo">
+                                    <a href="index.html"><img src="{{ asset('landing/images/home/bumibaik.jpg') }}" alt="images"></a>
                                 </div>
                             </div>
                             <div class="top-footer-right">
