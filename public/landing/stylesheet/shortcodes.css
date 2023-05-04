@@ -167,7 +167,7 @@
 .page-title-home1,
 .page-title-home2 {
     position: relative;
-    background-image: url(../images/home/imgheader.jpg);
+    background-image: url(../images/home/background-slider.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -180,7 +180,7 @@
 }
 .page-title-home2 {
     height: 755px;
-    background-image: url(../images/home/box-flowers-green-garden-background.jpg);
+    background-image: url(../images/home/background-slider.jpg);
 }
 .page-title-home1 .sub-title {
     letter-spacing: 4px !important;

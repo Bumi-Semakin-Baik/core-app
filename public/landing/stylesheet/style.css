@@ -65,6 +65,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     font-style: inherit;
     vertical-align: baseline;
     margin: 0;
+    margin-left: 0px;
     padding: 0;
     border: 0;
     outline: 0;
@@ -773,6 +774,8 @@ a:focus {
 .btn2 {
     font-weight: 500;
     font-size: 18px;
+    margin-top: 18px;
+    margin-left: 30px;
     padding: 16px 36px 16px 36px;
     border-radius: 12px;
     -webkit-transition: all 0.3s ease-in-out;
@@ -824,10 +827,10 @@ a:focus {
 .section-desc-2,
 .section-desc-heading {
     font-family: 'Rubik', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 30px;
-    color: var(--primary-color2);
+    color: var(--primary-color);
 }
 
 .section-subtitle {
@@ -1316,7 +1319,7 @@ button.btn.btn-outline-primary {
 -----------------------------------------------------------------------------------*/
 
 .nav-wrap {
-    padding-right: 2%;
+    padding-right: 5%;
     line-height: 100px;
     text-align: center;
 }
@@ -1465,7 +1468,8 @@ button.btn.btn-outline-primary {
     position: relative;
     height: 300px;
     background-size: cover;
-    background-image: url(../images/home/box-flowers-green-garden-background.jpg);
+    background-color: #fff;
+    /* background-image: url(../images/home/background-slider.jpg); */
     background-repeat: no-repeat;
     background-position: center;
 }

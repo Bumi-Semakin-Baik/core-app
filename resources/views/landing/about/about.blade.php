@@ -59,12 +59,8 @@
                             <div class="nav-wrap">
                                 <nav id="mainnav" class="mainnav">
                                     <ul class="menu">
-                                        <li class="menu-item-has-children">
+                                        <li>
                                             <a href="index.html" title="">Home</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="index.html" title="">Home 01</a></li>
-                                                <li><a href="home-2.html" title="">Home 02</a></li>
-                                            </ul>
                                             <!-- /.sub-menu -->
                                         </li>
                                         <li class="current-menu-item menu-item-has-children">
