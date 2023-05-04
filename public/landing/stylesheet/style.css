@@ -1473,7 +1473,8 @@ button.btn.btn-outline-primary {
     position: relative;
     height: 1000px;
     background-size: cover;
-    background-image: url(../images/home/background-slider.jpg);
+    background-color: #fff;
+    /* background-image: url(../images/home/background-slider.jpg); */
     background-repeat: no-repeat;
     background-position: center;
 }

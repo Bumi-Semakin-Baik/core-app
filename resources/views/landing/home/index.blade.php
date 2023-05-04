@@ -126,7 +126,7 @@
     <div class="page-title-home1">
         <div class="container-fluid">
             <div class="row">
-                <div class="inner-title">
+                <div class="inner-title" >
                     <!-- /.page-title -->
                     <div class="flat-slider clearfix">
                         <div class="rev_slider_wrapper fullwidthbanner-container">
@@ -300,69 +300,49 @@
     <section class="flat-features">
         <div class="container-fluid">
             <div class="row">
-                <div class="item-four-column">
+                <div class="item-three-column">
                     <div class="inner-features hover-up wow fadeInUp">
                         <div class="features-box">
-
-                            <div class="content-features text-center">
+                            <div class="content-features">
                                 <a href="service-details.html">
-                                    <h2 class="section-title">
-                                        65,58M
+                                    <h2 class="section-title text-center">
+                                        18.174
                                     </h2>
                                 </a>
-                                <p class="section-desc">
+                                <p class="section-desc text-center">
                                     Pohon termonitor
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class=" item-four-column">
+                <div class="item-three-column">
                     <div class="inner-features hover-up wow fadeInUp">
                         <div class="features-box">
-
-                            <div class="content-features text-center">
+                            <div class="content-features">
                                 <a href="service-details.html">
-                                    <h2 class="section-title">
-                                        633,6K
+                                    <h2 class="section-title text-center">
+                                        15
                                     </h2>
                                 </a>
-                                <p class="section-desc">
-                                    Pohon Tertanam
+                                <p class="section-desc text-center">
+                                    Mitra Perusahaan
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class=" item-four-column">
+                <div class="item-three-column">
                     <div class="inner-features hover-up wow fadeInUp">
                         <div class="features-box">
-
-                            <div class="content-features text-center">
+                            <div class="content-features">
                                 <a href="service-details.html">
-                                    <h2 class="section-title">
-                                        51,7K
+                                    <h2 class="section-title text-center">
+                                        5
                                     </h2>
                                 </a>
-                                <p class="section-desc">
-                                    Sahabat Alam
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class=" item-four-column">
-                    <div class="inner-features hover-up wow fadeInUp">
-                        <div class="features-box">
-
-                            <div class="content-features text-center">
-                                <a href="service-details.html">
-                                    <h3 class="section-title">
-                                        6,2K
-                                    </h3>
-                                </a>
-                                <p class="section-desc">
-                                    Kampanye Alam
+                                <p class="section-desc text-center">
+                                    Program Alam
                                 </p>
                             </div>
                         </div>
@@ -544,6 +524,79 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Our service -->
+    <!-- Our services -->
+    <section class="flat-services" style="background: #fff !important">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title-box">
+                        <h4 class="section-subtitle">WHAT WE DO</h4>
+                        <h2 class="section-title">Mitra Kami</h2>
+                        <br>
+                        {{-- <h4 class="section-heading-jost-size20 item-1">Memfasilitasi pengurangan emisi karbon dan penanaman pohon untuk Bumi semakin baik</h4> --}}
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="themesflat-spacer clearfix" data-desktop="67" data-mobile="60" data-smobile="60">
+                    </div>
+                </div>
+                <div class="row mb-3" style="margin-bottom: 10px;">
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT Cargill.png') }}" width="150px" alt="">
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT. AIR BERSIH JATIM (PERSERODA).jpeg') }}" width="150px" alt="">
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT. BELIRANG KALISARI.jpeg') }}" width="150px" alt="">
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT. CS2 POLA SEHAT.png') }}" width="150px" alt="">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT. DAEWOONG INFION.png') }}" width="150px" alt="">
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT. GALIC BINA MADA.jpg') }}" width="150px" alt="">
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT. HM SAMPOERNA Tbk.jpeg') }}" width="150px" alt="">
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT. INDONESIA POWER - GRATI POMU.jpg') }}" width="150px" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT. INFION.jpg') }}" width="150px" alt="">
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT. KARYA SUTARINDO.png') }}" width="150px" alt="">
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT. MyEco Teknologi Nusantara.png') }}" width="150px" alt="">
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="{{ asset('landing/images/perusahaan/PT. PANVERTA CAKRAKENCANA.png') }}" width="150px" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-4">
+                        <img src="{{ asset('landing/images/perusahaan/PT. TIRTAMAS LESTARI.jpg') }}" width="150px" alt="">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="{{ asset('landing/images/perusahaan/PT. ULTRA PRIMA ABADI.png') }}" width="150px" alt="">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="{{ asset('landing/images/perusahaan/puskom_bei-20201120_111307.png') }}" width="150px" alt="">
                     </div>
                 </div>
             </div>
