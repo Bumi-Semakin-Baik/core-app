@@ -21,20 +21,14 @@
                                         <div class="top-bar-left">
                                             <span class="top-location">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu,
                                                 Kauman), Malang</span>
-                                            <span class="top-mail">bumibaik.com</span>
+                                            <span class="top-mail">semakinbaikbumi@gmail.com</span>
                                         </div>
                                         <div class="top-bar-right">
                                             <ul class="widgets-nav-social">
-                                                <li><a href="#"><i class="fa fa-facebook"
+                                            <li><a href="https://wa.me/6282130075758"><i class="fa fa-whatsapp"
                                                             aria-hidden="true"></i></a>
                                                 </li>
-                                                <li><a href="#"><i class="fa fa-twitter"
-                                                            aria-hidden="true"></i></a>
-                                                </li>
-                                                <li><a href="#"><i class="fa fa-google-plus"
-                                                            aria-hidden="true"></i></a>
-                                                </li>
-                                                <li><a href="#"><i class="fa fa-instagram"
+                                                <li><a href="https://www.instagram.com/bumi.baik/"><i class="fa fa-instagram"
                                                             aria-hidden="true"></i></a>
                                                 </li>
                                             </ul>
@@ -74,37 +68,24 @@
                                                             <ul class="sub-menu">
                                                                 <li><a href="{{ url('/about') }}" title="">About
                                                                         Us</a></li>
-                                                                <li><a href="team.html" title="">Team</a></li>
-                                                                <li><a href="faq.html" title="">Faq</a></li>
                                                             </ul>
                                                             <!-- /.sub-menu -->
                                                         </li>
-                                                        <li class="menu-item-has-children">
+                                                        <li>
                                                             <a href="services.html" title="">Services</a>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="services.html" title="">Services</a>
-                                                                </li>
-                                                                <li><a href="service-details.html"
-                                                                        title="">Service Details</a></li>
-                                                            </ul>
+
                                                             <!-- /.sub-menu -->
                                                         </li>
 
-                                                        <li class="menu-item-has-children">
+                                                        <li>
                                                             <a href="blog.html" title="">Blog</a>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="blog.html" title="">Blog Standard</a>
-                                                                </li>
-                                                                <li><a href="blog-detail.html" title="">Blog
-                                                                        Detail</a></li>
-                                                            </ul>
                                                             <!-- /.sub-menu -->
                                                         </li>
                                                         <li>
                                                             <a href="contact.html" title="">Contact</a>
                                                         </li>
                                                         <li>
-                                                            <a href="contact.html" title="">Donate</a>
+                                                            <a href="{{ url('/donate') }}" title="">Donate</a>
                                                         </li>
                                                     </ul>
                                                 </nav>
@@ -148,7 +129,7 @@
                                             data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
                                             data-start="700" data-splitin="none" data-splitout="none"
                                             data-responsive_offset="on">
-                                            <h3 class="sub-title">MARKETS & RESOURCES</h3>
+                                            <!-- <h3 class="sub-title">MARKETS & RESOURCES</h3> -->
                                         </div>
 
                                         <div class="tp-caption tp-resizeme text-two"
@@ -220,7 +201,7 @@
                                             data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
                                             data-start="700" data-splitin="none" data-splitout="none"
                                             data-responsive_offset="on">
-                                            <h3 class="sub-title">MARKETS & RESOURCES</h3>
+                                            <!-- <h3 class="sub-title">MARKETS & RESOURCES</h3> -->
                                         </div>
 
                                         <div class="tp-caption tp-resizeme text-two"
@@ -378,7 +359,7 @@
                                 BumiBaik memberikan informasi dan edukasi tentang dampak emisi karbon terhadap
                                 lingkungan dan isu perubahan iklim </div>
                         </div>
-                        <div id="about-box" class="about-desc-box">
+                        <!-- <div id="about-box" class="about-desc-box">
                             <div class="about-desc">
                                 <div class="about-box-nd1 wow fadeInLeft">
                                     <span class="tf-icon icon-Group-660"></span>
@@ -414,20 +395,21 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
     <!-- /about -->
 
     <!-- Our services -->
-    <section class="flat-services" style="background: #fff !important">
+    <section class="flat-services" style="background-image: url('../landing/images/home/daun2.jpg') !important">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title-box">
+                        <div class="inner-header">
                         <h4 class="section-subtitle">WHAT WE DO</h4>
                         <h2 class="section-title">Program Kami</h2>
                         <br>
-                        <h4 class="section-heading-jost-size20 item-1">Memfasilitasi pengurangan emisi karbon dan
+                        <h4 class="section-subtitle">Memfasilitasi pengurangan emisi karbon dan
                             penanaman pohon untuk Bumi semakin baik</h4>
                     </div>
                 </div>
@@ -536,7 +518,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title-box">
-                        <h4 class="section-subtitle">WHAT WE DO</h4>
+                        <!-- <h4 class="section-subtitle">WHAT WE DO</h4> -->
                         <h2 class="section-title">Mitra Kami</h2>
                         <br>
                         {{-- <h4 class="section-heading-jost-size20 item-1">Memfasilitasi pengurangan emisi karbon dan penanaman pohon untuk Bumi semakin baik</h4> --}}
@@ -602,6 +584,7 @@
             </div>
         </div>
     </section>
+    <br><br>
     <!-- / Our service -->
 
 <section class="flat-case-study">
@@ -619,18 +602,18 @@
                             <div class="image-profolio bd-radius-8-image">
                                 <img src="{{ asset('landing/images/activity/Meet.jpg') }}" alt="images">
                                 <div class="profolio-show active">
-                                    <div class="profolio-info">
-                                        <div class="info">
-                                            <a href="case-details.html">
+                                    <!-- <div class="profolio-info">
+                                        <div class="info"> -->
+                                            <!-- <a href="case-details.html">
                                                 <h3 class="section-heading-jost-size20">
                                                     Finished Work</h3>
                                             </a>
-                                            <p class="desc-box">Dummy text of free available</p>
-                                        </div>
-                                        <div class="button-next">
+                                            <p class="desc-box">Dummy text of free available</p> -->
+                                        <!-- </div> -->
+                                        <!-- <div class="button-next">
                                             <a class="profolio-btn" href="case-details.html"></a>
-                                        </div>
-                                    </div>
+                                        </div> -->
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
@@ -641,7 +624,7 @@
                             <div class="image-profolio bd-radius-8-image">
                                 <img src="{{ asset('landing/images/activity/Myeco.jpg') }}" alt="images">
                                 <div class="profolio-show active">
-                                    <div class="profolio-info">
+                                    <!-- <div class="profolio-info">
                                         <div class="info">
                                             <a href="case-details.html">
                                                 <h3 class="section-heading-jost-size20">
@@ -652,7 +635,7 @@
                                         <div class="button-next">
                                             <a class="profolio-btn" href="case-details.html"></a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
