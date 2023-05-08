@@ -156,6 +156,9 @@
                             <div class="features-box">
                                 <span class="tf-icon icon-fruit-box"></span>
                                 <div class="content-features">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Landscaping</h3>
                                     </a>
@@ -175,6 +178,9 @@
                             <div class="features-box">
                                 <span class="tf-icon icon2 icon-hanging-bot"></span>
                                 <div class="content-features">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                    </div>
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Pruning plants</h3>
                                     </a>
@@ -194,6 +200,9 @@
                             <div class="features-box">
                                 <span class="tf-icon icon3 icon-spray"></span>
                                 <div class="content-features">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                    </div>
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Lawn Maintenance</h3>
                                     </a>
@@ -213,6 +222,9 @@
                             <div class="features-box">
                                 <span class="tf-icon icon-fruit-box"></span>
                                 <div class="content-features">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40%</div>
+                                    </div>
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Landscaping</h3>
                                     </a>
@@ -232,6 +244,9 @@
                             <div class="features-box">
                                 <span class="tf-icon icon2 icon-hanging-bot"></span>
                                 <div class="content-features">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">15%</div>
+                                    </div>
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Pruning plants</h3>
                                     </a>
@@ -251,6 +266,9 @@
                             <div class="features-box">
                                 <span class="tf-icon icon3 icon-spray"></span>
                                 <div class="content-features">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                    </div>
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Lawn Maintenance</h3>
                                     </a>

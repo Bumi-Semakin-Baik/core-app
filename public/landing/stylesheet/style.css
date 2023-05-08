@@ -1467,6 +1467,10 @@ button.btn.btn-outline-primary {
 
 /* Page Title 
 -------------------------------------------------------------------------------------------*/
+.progress {
+    width: 212px;
+  }
+
 
 .inner-title {
     position: relative;
