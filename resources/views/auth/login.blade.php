@@ -82,11 +82,7 @@
                                         </button>
                                     </div>
                                 </form><!-- form -->
-<<<<<<< HEAD
-                                <div class="form-note-s2 pt-4"> New on our platform? <a href="{{ url('register') }}">Create an account</a>
-=======
                                 <div class="form-note-s2 pt-4"> New on our platform? <a href="{{url('register')}}">Create an account</a>
->>>>>>> 6246c31f88e3e5d59f5d75872250e8e75167aff6
                                 </div>
                                 <div class="text-center pt-4 pb-3">
                                     <h6 class="overline-title overline-title-sap"><span>OR</span></h6>
