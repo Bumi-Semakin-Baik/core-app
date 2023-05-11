@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\QrController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\DonateController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LandingController;
@@ -84,6 +85,12 @@ Route::controller(AboutController::class)
         Route::get('/about','index');
 
     });
+Route::controller(DonateController::class)
+    ->group(function (){
+        Route::get('/donate','index');
+
+    });
+
 
 Auth::routes();
 

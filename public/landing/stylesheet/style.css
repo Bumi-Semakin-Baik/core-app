@@ -1467,6 +1467,10 @@ button.btn.btn-outline-primary {
 
 /* Page Title 
 -------------------------------------------------------------------------------------------*/
+.progress {
+    width: 212px;
+  }
+
 
 .inner-title {
     position: relative;
@@ -2457,7 +2461,7 @@ article.post .content-post .more-link a:hover {
     position: relative;
     height: auto;
     background-color: var(--primary-color2);
-    background-image: url(../images/mask-back-ground/Mask-group-6.png);
+    background-image: url(../images/home/sincerely.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
