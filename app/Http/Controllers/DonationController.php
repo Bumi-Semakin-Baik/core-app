@@ -8,7 +8,9 @@ use App\Models\Donation;
 class DonationController extends Controller
 {
     public function getManage(){
-        return view('admin.donation.manage.index');
+        return view('admin.donation.manage.index',[
+            'donations' => Donation::get('*')
+        ]);
     }
     public function add(){
         return view ('admin.donation.manage.add');
@@ -23,9 +25,25 @@ class DonationController extends Controller
             'due_date' => 'required',
         ]);
 
-        Donation::create($validatedData);
+        if($request->file('image')){
+            $validatedData['image'] = $request->file('image')->store('donation-images','public');
+        }
+        $image = $request->file('image')->store('donation-images','public');
 
-        return redirect('dashboard/manage');
+        Donation::create([
+            'title' => $request->input('title'),
+            'image' => $image,
+            'description' =>$request->input('description'),
+            'target' => $request->input('target'),
+            'due_date' => $request->input('due_date')
+        ]);
+
+        return redirect('donation/manage')->with('success', 'Donation successfully added');
+    }
+
+    public function destroy(Donation $donation){
+        Donation::destroy($donation->id);
+        return redirect('donation/manage')->with('success', 'Donation successfully deleted');
     }
 
 }

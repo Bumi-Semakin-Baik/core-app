@@ -73,6 +73,7 @@ Route::prefix('donation')
         Route::get('/manage','getManage');
         Route::get('/add','add');
         Route::post('/store', 'store')->name('store.donation');
+        // Route::delete('/destroy', 'destroy')->name('destroy.donation');
     });
 Route::prefix('newsletter')
     ->controller(NewsController::class)

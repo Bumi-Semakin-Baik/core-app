@@ -51,6 +51,7 @@
                                                 </tr><!-- .nk-tb-item -->
                                             </thead>
                                             <tbody>
+                                                @foreach ( $donations as $donation )
                                                 <tr class="nk-tb-item">
                                                     <td class="nk-tb-col nk-tb-col-check">
                                                         <div class="custom-control custom-control-sm custom-checkbox notext">
@@ -59,25 +60,25 @@
                                                         </div>
                                                     </td>
                                                     <td class="nk-tb-col">
-                                                        <span class="tb-lead">1</span>
+                                                        <span class="tb-lead">{{$donation->id}}</span>
                                                     </td>
                                                     <td class="nk-tb-col tb-col-sm">
                                                         <span class="tb-product">
-                                                            <img src="./images/product/a.png" alt="" class="thumb">
+                                                            <img src="{{ asset('storage/'. $donation->image)}}" alt="{{ asset('storage/'. $donation->image)}} }}" class="thumb">
                                                             <div class="user-info">
-                                                                <span class="tb-lead">Penanaman 1000 pohon <span class="dot dot-success d-md-none ms-1"></span></span>
-                                                                <span>Deskripsi</span>
+                                                                <span class="tb-lead">{{$donation->title}} <span class="dot dot-success d-md-none ms-1"></span></span>
+                                                                <span>{{$donation->description}}</span>
                                                             </div>
                                                         </span>
                                                     </td>
                                                     <td class="nk-tb-col">
-                                                        <span class="tb-lead">Rp. 0 / Rp. 1.000.000</span>
+                                                        <span class="tb-lead">Rp. {{$donation->collected}} / Rp. {{$donation->target}}</span>
                                                     </td>
                                                     <td class="nk-tb-col">
-                                                        <span class="tb-sub">30/05/2023</span>
+                                                        <span class="tb-sub">{{ $donation->due_date}}</span>
                                                     </td>
                                                     <td class="nk-tb-col">
-                                                        <span class="tb-status text-success">Published</span>
+                                                        <span class="tb-status text-success">{{$donation->is_published}}</span>
                                                     </td>
                                                     <td class="nk-tb-col nk-tb-col-tools">
                                                         <ul class="nk-tb-actions gx-1 my-n1">
@@ -86,10 +87,15 @@
                                                                     <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
                                                                         <ul class="link-list-opt no-bdr">
-                                                                            <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit Product</span></a></li>
-                                                                            <li><a href="#"><em class="icon ni ni-eye"></em><span>View Product</span></a></li>
-                                                                            <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Product Orders</span></a></li>
-                                                                            <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Product</span></a></li>
+                                                                            <li><a href="#"><em class="icon ni ni-eye"></em><span>View Donation</span></a></li>
+                                                                            <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit Donation</span></a></li>
+                                                                            {{-- <li>
+                                                                            <form action="{{ route('destroy.donation',$donation->id) }}"" method="post">
+                                                                            @csrf
+                                                                            @method('delete')
+                                                                            <button onclick="return confirm('Are you sure you want to delete this donation?')"><em class="icon ni ni-trash"></em><span>Remove Donation</span></button>
+                                                                            </form>
+                                                                            </li> --}}
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -97,6 +103,7 @@
                                                         </ul>
                                                     </td>
                                                 </tr><!-- .nk-tb-item -->
+                                                @endforeach
 
                                         </tbody>
                                     </table>

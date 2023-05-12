@@ -13,7 +13,7 @@
     </div>
     <div class="card">
         <div class="card-inner">
-            <form action="{{ route('store.donation')}}" class="form-validate" method="POST">
+            <form action="{{ route('store.donation')}}" class="form-validate" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row g-gs">
 
@@ -87,7 +87,7 @@
                         </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-lg btn-primary">Tambahkan Donasi</button>
+                            <button type="submit" class="btn btn-lg btn-primary">Add new donation</button>
                         </div>
                     </div>
                 </div>
