@@ -76,11 +76,29 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="form-label" for="password">Telp</label>
+                                        <label class="form-label" for="telp">Telp</label>
                                         <div class="form-control-wrap">
                                             <input type="text" class="form-control form-control-lg @error('telp') is-invalid @enderror" id="telp" placeholder="Enter your phone number" name="telp" required autocomplete="telp">
                                         </div>
                                     </div>
+                                    
+
+                                        <div class="form-group">
+                                            <label class="form-label" for="password">Account Type</label>
+
+                                            <div class="col-md-6">
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="radio1" name="type" value="individual" checked>Individual
+                                                    <label class="form-check-label" for="radio1"></label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="radio2" name="type" value="corporate">Corporate
+                                                    <label class="form-check-label" for="radio2"></label>
+                                                  </div>
+                                            </div>
+                                        </div>
+
+
 
 
                                     <div class="form-group">
