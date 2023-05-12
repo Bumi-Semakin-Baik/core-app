@@ -49,6 +49,23 @@ class LoginController extends Controller
         // $this->middleware('guest:admin')->only('login');
     }
 
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+        $credentials = $request->only('email', 'password');
+
+        $login = Auth::attempt($credentials);
+        if (!$login) {
+            return view('auth.login');
+        }
+
+        $user = Auth::user();
+        return view('admin.dashboard.index');
+
+    }
 
     public function logout(Request $request)
     {
