@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -49,6 +50,24 @@ class LoginController extends Controller
         // $this->middleware('guest:admin')->only('login');
     }
 
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+        $credentials = $request->only('email', 'password');
+
+        $login = Auth::attempt($credentials);
+        if (!$login) {
+            return Redirect::back()
+            ->withErrors($credentials);
+        }
+
+        $user = Auth::user();
+        return view('admin.dashboard.index');
+
+    }
 
     public function logout(Request $request)
     {

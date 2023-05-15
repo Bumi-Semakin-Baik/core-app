@@ -81,7 +81,7 @@
                                             <a href="{{ url('donation/manage') }}" class="nk-menu-link"><span class="nk-menu-text">Manage</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="{{ url('company/projects') }}" class="nk-menu-link"><span class="nk-menu-text">Transactions</span></a>
+                                            <a href="{{ url('donation/transactions') }}" class="nk-menu-link"><span class="nk-menu-text">Transactions</span></a>
                                         </li>
                                     </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->

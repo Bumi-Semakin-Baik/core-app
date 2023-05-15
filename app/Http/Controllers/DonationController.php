@@ -7,6 +7,9 @@ use App\Models\Donation;
 
 class DonationController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+}
     public function getManage(){
         return view('admin.donation.manage.index',[
             'donations' => Donation::get('*')

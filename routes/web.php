@@ -82,8 +82,10 @@ Route::prefix('newsletter')
     ->group(function (){
         Route::get('/','index')->name('news');
         Route::get('/add','add');
-        Route::get('/edit','edit');
+        Route::get('/edit','edit')->name('edit.news');
+        Route::put('/edit/{id}','update')->name('update.news');
         Route::post('/store', 'store')->name('store.news');
+        Route::delete('/{id}','destroy')->name('delete.news');
     });
 Route::controller(LandingController::class)
     ->group(function (){
