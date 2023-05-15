@@ -65,7 +65,7 @@ class LoginController extends Controller
         }
 
         $user = Auth::user();
-        return view('admin.dashboard.index');
+        return redirect('dashboard');
 
     }
 
