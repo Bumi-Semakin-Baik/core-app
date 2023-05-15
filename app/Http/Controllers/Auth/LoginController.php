@@ -37,7 +37,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    // protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -65,7 +65,8 @@ class LoginController extends Controller
         }
 
         $user = Auth::user();
-        return view('admin.dashboard.index');
+        return redirect('dashboard');
+        
 
     }
 

@@ -46,14 +46,18 @@
                                 <label class="custom-control-label" for="uid"></label>
                             </div>
                         </th>
-                        <th class="nk-tb-col"><span class="sub-text">User</span></th>
-                        <th class="nk-tb-col tb-col-mb"><span class="sub-text">Balance</span></th>
+
+                        <th class="nk-tb-col"><span class="sub-text">Name</span></th>
                         <th class="nk-tb-col tb-col-md"><span class="sub-text">Phone</span></th>
-                        <th class="nk-tb-col tb-col-lg"><span class="sub-text">Verified</span></th>
-                        <th class="nk-tb-col tb-col-lg"><span class="sub-text">Last Login</span></th>
-                        <th class="nk-tb-col tb-col-md"><span class="sub-text">Status</span></th>
+                        <th class="nk-tb-col tb-col-lg"><span class="sub-text">Address</span></th>
+                        <th class="nk-tb-col tb-col-lg"><span class="sub-text">Photo</span></th>
+                        <th class="nk-tb-col tb-col-lg"><span class="sub-text">Latitude</span></th>
+                        <th class="nk-tb-col tb-col-lg"><span class="sub-text">Longitude</span></th>
+                        <th class="nk-tb-col tb-col-lg"><span class="sub-text">Active Status</span></th>
+                        <th class="nk-tb-col tb-col-lg"><span class="sub-text">Verification</span></th>
                         <th class="nk-tb-col nk-tb-col-tools text-end">
                         </th>
+                        
                     </tr>
                 </thead>
                 <tbody>

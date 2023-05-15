@@ -65,7 +65,12 @@ Route::prefix('partner')
 Route::prefix('company')
     ->controller(CompanyController::class)
     ->group(function (){
-        Route::get('/accounts','getAccount');
+        Route::get('/accounts','getAccount')->name('company');
+        Route::get('/accounts/add','add')->name('add.company');
+        Route::post('/accounts/store','store')->name('store.company');
+        Route::get('/accounts/edit/{id}','edit')->name('edit.company');
+        Route::put('/accounts/edit/{id}','update')->name('update.company');
+        Route::delete('/accounts/{id}','destroy')->name('delete.company');
         Route::get('/projects','getProject');
     });
 
@@ -82,7 +87,7 @@ Route::prefix('newsletter')
     ->group(function (){
         Route::get('/','index')->name('news');
         Route::get('/add','add');
-        Route::get('/edit','edit')->name('edit.news');
+        Route::get('/edit/{id}','edit')->name('edit.news');
         Route::put('/edit/{id}','update')->name('update.news');
         Route::post('/store', 'store')->name('store.news');
         Route::delete('/{id}','destroy')->name('delete.news');
