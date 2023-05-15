@@ -9,6 +9,7 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\UKMController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
@@ -82,10 +83,21 @@ Route::prefix('newsletter')
     ->group(function (){
         Route::get('/','index')->name('news');
         Route::get('/add','add');
-        Route::get('/edit','edit')->name('edit.news');
+        Route::get('/edit/{id}','edit')->name('edit.news');
         Route::put('/edit/{id}','update')->name('update.news');
         Route::post('/store', 'store')->name('store.news');
         Route::delete('/{id}','destroy')->name('delete.news');
+    });
+Route::prefix('ukm')
+    ->controller(UKMController::class)
+    ->group(function (){
+        Route::get('/','index')->name('ukm');
+        Route::get('/add','add');
+        Route::post('/store', 'store')->name('store.ukm');
+        Route::delete('/{id}','destroy')->name('delete.ukm');
+        Route::get('/edit/{id}','edit')->name('edit.ukm');
+        Route::put('/edit/{id}','update')->name('update.ukm');
+
     });
 Route::controller(LandingController::class)
     ->group(function (){
@@ -110,5 +122,5 @@ Route::get('/confirm-password', function () {
     return view('login');
     })->middleware('auth');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
 
