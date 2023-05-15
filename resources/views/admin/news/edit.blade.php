@@ -13,15 +13,15 @@
     </div>
     <div class="card">
         <div class="card-inner">
-            <form action="{{ route('store.news') }}" method="POST" enctype="multipart/form-data" class="form-validate">
+            <form action="{{ route('update.news', $news->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
             @csrf
+            @method('PUT')
                 <div class="row g-gs">
                 <div class="col-md-12">
-
                     <div class="form-group">
                         <label class="form-label" for="fv-subject">Judul</label>
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control" id="fv-subject" name="title" required>
+                                <input type="text" class="form-control" id="fv-subject" name="title" value="{{ $news->title }}" required>
                             </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                     <div class="form-group">
                         <label class="form-label" for="fv-full-name">Penulis</label>
                         <div class="form-control-wrap">
-                            <input type="text" class="form-control" id="fv-full-name" name="author" required>
+                            <input type="text" class="form-control" id="fv-full-name" name="author" value="{{ $news->author }}" required>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         <label class="form-label" for="fv-phone">Slug</label>
                         <div class="form-control-wrap">
                             <div class="input-group">
-                                <input type="text" class="form-control" name="slug" required>
+                                <input type="text" class="form-control" name="slug" value="{{ $news->slug }}" required>
                             </div>
                         </div>
                     </div>
@@ -51,8 +51,8 @@
                                     <div class="form-control-wrap">
                                         <div class="form-file">
                                             <div class="form-group">
-                                                <label class="form-file-label" for="customFile">Choose file</label>
-                                                <input type="file" class="form-file-input" id="customFile" name="image">
+                                                <label class="form-file-label" for="customFile">{{ $news->image }}</label>
+                                                <input type="file" class="form-file-input" id="customFile" name="image" >
                                             </div>
                                         </div>
                                     </div>
@@ -61,15 +61,12 @@
                             <label class="form-label" for="fv-phone">Berita</label>
                             <div class="card">
                                 <div class="card-inner">
-                                    <!-- Create the editor container -->
-                                    {{-- <div class="quill-basic"> --}}
-                                        {{-- <label>Masukkan Teks</label> --}}
-                                        <label for="">Masukkan Teks</label>
-                                        <textarea type="text" class="form-control" cols="30" rows="10" name="content" required></textarea>
-                                    {{-- </div> --}}
+                                    <input id="body" type="hidden" name="content" value="{{ $news->content }}">
+                                    <trix-editor input="body"></trix-editor>
                                 </div>
                             </div>
                     </div>
+
                     <div class="col-md-12">
                                 <button type="submit" class="btn btn-lg btn-primary"> Update Berita </button>
                             </form>

@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -59,7 +60,8 @@ class LoginController extends Controller
 
         $login = Auth::attempt($credentials);
         if (!$login) {
-            return view('auth.login');
+            return Redirect::back()
+            ->withErrors($credentials);
         }
 
         $user = Auth::user();

@@ -18,19 +18,22 @@ class NewsController extends Controller
 
     public function index(){
         return view ('admin.news.index', [
-            'news' => NewsArticle::get('*')
+            'news' => NewsArticle::get('*'),
         ]);
 }
     public function add(){
         return view ('admin.news.add');
 }
-    public function edit(){
-    return view ('admin.news.edit');
+    public function edit($id){
+        $data = NewsArticle::whereId($id)->first();
+        // dd($data);
+        return view ('admin.news.edit',[
+            'news' => $data,
+        ]);
 }
 public function store(Request $request)
     {
         // dd($request->all());
-        $validatedData['id'] = Auth::user()->id;
         $validatedData = $request->validate([
             'title' => 'required',
             'slug' => 'required',
@@ -57,15 +60,10 @@ public function store(Request $request)
         ->with('success', 'News succesfully added');
     }
 
-    public function check($id)
-    {
-        $user = User::find($id);
-        return view('admin.news.index', compact('name'));
-
-    }
 
     public function update(Request $request, $id)
     {
+        // dd($request->all());
         $validatedData = $request->validate([
             'title' => 'required',
             'slug' => 'required',
@@ -74,16 +72,27 @@ public function store(Request $request)
             'author' => 'required',
         ]);
 
-        $user = User::find($id);
-        $user->title = $request->get('title');
-        $user->slug = $request->get('slug');
-        $user->title = $request->get('content');
-        $user->slug = $request->get('image');
-        $user->title = $request->get('author');
-        $user->save();
+        $test = NewsArticle::where('id', $id)
+        ->update($validatedData);
+
 
         return redirect()->route('news')
-                  ->with('success', 'updated successfully');
+        ->with('success', 'Data Berhasil diupdate');
 
     }
+    public function destroy($id)
+    {
+
+        $data = NewsArticle::where('id', $id)->first();
+        // dd($product);
+        if ($data == null) {
+            return redirect()->route('news');
+        }
+
+        $data->delete();
+
+        return redirect()->route('news');
+    }
+
+
 }
