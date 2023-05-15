@@ -13,68 +13,67 @@
     </div>
     <div class="card">
         <div class="card-inner">
-            <form action="#" class="form-validate">
+            <form action="{{ route('store.news') }}" method="POST" enctype="multipart/form-data" class="form-validate">
+            @csrf
                 <div class="row g-gs">
+                <div class="col-md-12">
 
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label class="form-label" for="fv-subject">Judul</label>
+                    <div class="form-group">
+                        <label class="form-label" for="fv-subject">Judul</label>
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control" id="fv-subject" name="fv-subject" required>
+                                <input type="text" class="form-control" id="fv-subject" name="title" required>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="fv-full-name">Penulis</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="fv-full-name" name="author" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="fv-phone">Slug</label>
+                        <div class="form-control-wrap">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="slug" required>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label" for="fv-full-name">Penulis</label>
-                            <div class="form-control-wrap">
-                                <input type="text" class="form-control" id="fv-full-name" name="fv-full-name" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label" for="fv-phone">Slug</label>
-                            <div class="form-control-wrap">
-                                <div class="input-group">
-                                        {{-- <div class="input-group-prepend">
-                                            <span class="input-group-text" id="fv-phone">+62</span>
-                                        </div> --}}
-                                    <input type="text" class="form-control" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
 
-                    {{-- <div class="col-md-12">
-                        <div class="form-group">
-                            <label class="form-label" for="fv-message">Message</label>
-                            <div class="form-control-wrap">
-                                <textarea class="form-control form-control-sm" id="fv-message" name="fv-message" placeholder="Write your message" required></textarea>
-                            </div>
-                        </div>
-                    </div> --}}
                     <div class="nk-block nk-block-lg">
                         <div class="nk-block-head">
                             <div class="nk-block-head-content">
-                                <label class="form-label" for="fv-phone">Berita</label>
-                                {{-- <h4 class="title nk-block-title">News</h4> --}}
-                                {{-- <div class="nk-block-des">
-                                    <p>A basic demostration of quilljs rich text editor.</p>
-                                </div> --}}
+                                <label class="form-label">Unggah Gambar</label>
+                                    <div class="form-control-wrap">
+                                        <div class="form-file">
+                                            <div class="form-group">
+                                                <label class="form-file-label" for="customFile">Choose file</label>
+                                                <input type="file" class="form-file-input" id="customFile" name="image">
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
+                        </div>
+                            <label class="form-label" for="fv-phone">Berita</label>
                             <div class="card">
                                 <div class="card-inner">
                                     <!-- Create the editor container -->
-                                    <div class="quill-basic">
-                                        <label>Masukkan Teks</label>
-                                    </div>
+                                    {{-- <div class="quill-basic"> --}}
+                                        {{-- <label>Masukkan Teks</label> --}}
+                                        {{-- <textarea type="text" class="form-control" cols="30" rows="10" name="content" required></textarea> --}}
+                                        {{-- </div> --}}
+                                    <input id="body" value="Editor content goes here" type="hidden" name="body">
+                                    <trix-editor input="body"></trix-editor>
                                 </div>
                             </div>
-                        </div>
+                    </div>
                     <div class="col-md-12">
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-lg btn-primary">Tambahkan Berita</button>
+                                <button type="submit" class="btn btn-lg btn-primary"> Tambahkan Berita </button>
+                            </form>
                         </div>
                     </div>
                 </div>

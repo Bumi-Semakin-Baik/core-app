@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\QrController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\DonateController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LandingController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -78,9 +80,12 @@ Route::prefix('donation')
 Route::prefix('newsletter')
     ->controller(NewsController::class)
     ->group(function (){
-        Route::get('/','index');
+        Route::get('/','index')->name('news');
         Route::get('/add','add');
-        Route::get('/edit','edit');
+        Route::get('/edit','edit')->name('edit.news');
+        Route::put('/edit/{id}','update')->name('update.news');
+        Route::post('/store', 'store')->name('store.news');
+        Route::delete('/{id}','destroy')->name('delete.news');
     });
 Route::controller(LandingController::class)
     ->group(function (){
@@ -92,10 +97,18 @@ Route::controller(AboutController::class)
         Route::get('/about','index');
 
     });
+Route::controller(DonateController::class)
+    ->group(function (){
+        Route::get('/donate','index');
+
+    });
+
 
 Auth::routes();
 
+Route::get('/confirm-password', function () {
+    return view('login');
+    })->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 

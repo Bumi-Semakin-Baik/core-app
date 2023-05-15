@@ -35,6 +35,7 @@
                                     <div class="card-inner">
                                         <table class="datatable-init nowrap nk-tb-list is-separate" data-auto-responsive="false">
                                             <thead>
+
                                                 <tr class="nk-tb-item nk-tb-head">
                                                     <th class="nk-tb-col nk-tb-col-check">
                                                         <div class="custom-control custom-control-sm custom-checkbox notext">
@@ -64,8 +65,11 @@
                                                         </ul>
                                                     </th>
                                                 </tr><!-- .nk-tb-item -->
+
                                             </thead>
+
                                             <tbody>
+                                                @foreach ($news as $news)
                                                 <tr class="nk-tb-item">
                                                     <td class="nk-tb-col nk-tb-col-check">
                                                         <div class="custom-control custom-control-sm custom-checkbox notext">
@@ -75,18 +79,18 @@
                                                     </td>
                                                     <td class="nk-tb-col tb-col-sm">
                                                         <span class="tb-product">
-                                                            <img src="./images/product/a.png" alt="" class="thumb">
-                                                            <span class="title">Pink Fitness Tracker</span>
+                                                            <img src="{{ Storage::url('app/public/images') }}.$news" alt="" class="thumb">
+                                                            <span class="title">{{ $news->title }}</span>
                                                         </span>
                                                     </td>
                                                     <td class="nk-tb-col">
-                                                        <span class="tb-sub">UY3749</span>
+                                                        <span class="tb-sub">{{ $news->slug }}</span>
                                                     </td>
                                                     <td class="nk-tb-col">
-                                                        <span class="tb-lead">$ 99.49</span>
+                                                        <span class="tb-lead">{{ $news->content }}</span>
                                                     </td>
                                                     <td class="nk-tb-col">
-                                                        <span class="tb-sub">49</span>
+                                                        <span class="tb-sub">{{ $news->author }}</span>
                                                     </td>
                                                     <td class="nk-tb-col nk-tb-col-tools">
                                                         <ul class="nk-tb-actions gx-1 my-n1">
@@ -95,10 +99,16 @@
                                                                     <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
                                                                         <ul class="link-list-opt no-bdr">
-                                                                            <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit Product</span></a></li>
+                                                                            <li><a href="{{ url('newsletter/edit', $news->id) }}"><em class="icon ni ni-edit"></em><span>Edit Product</span></a></li>
                                                                             <li><a href="#"><em class="icon ni ni-eye"></em><span>View Product</span></a></li>
                                                                             <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Product Orders</span></a></li>
-                                                                            <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Product</span></a></li>
+                                                                            <form action="{{ route('delete.news', $news->id) }}" method="POST">
+                                                                            @csrf
+                                                                            @method('DELETE')
+                                                                            {{-- <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Product</span></a></li> --}}
+                                                                            {{-- <input type="submit" class="btn btn-danger" placeholder="Remove Product"/> --}}
+                                                                            <button type="submit" class="btn btn-danger">Remove Product</button>
+                                                                        </form>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -106,8 +116,9 @@
                                                         </ul>
                                                     </td>
                                                 </tr><!-- .nk-tb-item -->
-
+                                                @endforeach
                                         </tbody>
+
                                     </table>
 
                                 </div>

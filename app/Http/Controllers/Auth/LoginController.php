@@ -3,9 +3,17 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use JWTAuth;
+use Validator;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -39,6 +47,26 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        // $this->middleware('guest:admin')->only('login');
+    }
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+        $credentials = $request->only('email', 'password');
+
+        $login = Auth::attempt($credentials);
+        if (!$login) {
+            return Redirect::back()
+            ->withErrors($credentials);
+        }
+
+        $user = Auth::user();
+        return view('admin.dashboard.index');
+
     }
 
     public function logout(Request $request)
@@ -49,6 +77,6 @@ class LoginController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect('/login');
+        return redirect('login');
     }
 }

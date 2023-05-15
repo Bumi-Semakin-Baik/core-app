@@ -10,6 +10,7 @@ use App\Http\Controllers\API\NotificationController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\ProjectController;
 use App\Http\Controllers\API\TransactionController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,15 @@ Route::get('/health', function () {
  * AUTH ROUTES
  */
 Route::controller(UserController::class)
+    ->prefix('auth')
+    ->group(
+        function () {
+            Route::post('/login', 'login');
+            Route::post('/register', 'register');
+        }
+    );
+
+Route::controller(LoginController::class)
     ->prefix('auth')
     ->group(
         function () {
@@ -116,6 +126,7 @@ Route::controller(NewsController::class)
         function () {
             Route::get('/', 'index');
             Route::get('/{id}', 'detail');
+            Route::post('/store', 'store');
         }
     );
 
