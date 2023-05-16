@@ -72,6 +72,7 @@ public function store(Request $request)
             'author' => 'required',
             'is_publish' => 'nullable|boolean: 0, 1, true, false'
         ]);
+    //    dd($validatedData);
 
         $test = NewsArticle::where('id', $id)
         ->update($validatedData);

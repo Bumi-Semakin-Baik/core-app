@@ -69,11 +69,11 @@
                     <label class="form-label" for="is_publish"></label>
                                             <div class="col-md-6">
                                                 <div class="form-check">
-                                                    <input type="radio" class="form-check-input" id="radio1" name="type" value="1" >Publish
+                                                    <input type="radio" class="form-check-input" id="radio1" name="is_publish" value="1" >Publish
                                                     <label class="form-check-label" for="radio1"></label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input type="radio" class="form-check-input" id="radio2" name="type" value="0">Unpublish
+                                                    <input type="radio" class="form-check-input" id="radio2" name="is_publish" value="0">Unpublish
                                                     <label class="form-check-label" for="radio2"></label>
                                                   </div>
                                             </div>

@@ -77,8 +77,8 @@ class CompanyController extends Controller
             'photo' =>'nullable',
             'latitude' => 'required',
             'longitude' => 'required',
-            'is_active' => 'required|boolean:0,1,true,false',
-            'is_verified' => 'required|boolean:0,1,true,false',
+            'is_active' => 'nullable|boolean:0,1,true,false',
+            'is_verified' => 'nullable|boolean:0,1,true,false',
         ]);
 
         $test = Partner::where('id', $id)
