@@ -67,8 +67,6 @@ class LoginController extends Controller
         $user = Auth::user();
         return redirect('dashboard');
 
-        return redirect('dashboard');
-
     }
 
     public function logout(Request $request)
