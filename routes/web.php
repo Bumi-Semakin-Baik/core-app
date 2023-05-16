@@ -66,7 +66,12 @@ Route::prefix('partner')
 Route::prefix('company')
     ->controller(CompanyController::class)
     ->group(function (){
-        Route::get('/accounts','getAccount');
+        Route::get('/accounts','getAccount')->name('company');
+        Route::get('/accounts/add','add')->name('add.company');
+        Route::post('/accounts/store','store')->name('store.company');
+        Route::get('/accounts/edit/{id}','edit')->name('edit.company');
+        Route::put('/accounts/edit/{id}','update')->name('update.company');
+        Route::delete('/accounts/{id}','destroy')->name('delete.company');
         Route::get('/projects','getProject');
     });
 

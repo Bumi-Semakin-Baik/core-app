@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use DB;
 use App\Models\NewsArticle;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -40,6 +40,7 @@ public function store(Request $request)
             'content' => 'nullable',
             'image' => 'nullable',
             'author' => 'required',
+            'is_publish' => 'nullable|boolean:0,1,true,false'
         ]);
 
         if($request->file('image')){
@@ -47,19 +48,18 @@ public function store(Request $request)
         }
 
         $image = $request->file('image')->store('images', 'public');
-        $content = $request->input('body');
 
         NewsArticle::create([
             'title' =>$request->input('title'),
             'slug' =>$request->input('slug'),
-            'content' => $content,
+            'content' =>$request->input('body'),
             'image' =>$image,
             'author' =>$request->input('author'),
+            'is_publish' => $request->input('type'),
         ]);
         return redirect()->route('news')
         ->with('success', 'News succesfully added');
     }
-
 
     public function update(Request $request, $id)
     {
@@ -70,7 +70,9 @@ public function store(Request $request)
             'content' => 'required',
             'image' => 'nullable',
             'author' => 'required',
+            'is_publish' => 'nullable|boolean: 0, 1, true, false'
         ]);
+    //    dd($validatedData);
 
         $test = NewsArticle::where('id', $id)
         ->update($validatedData);

@@ -66,6 +66,17 @@
                                 </div>
                             </div>
                     </div>
+                    <label class="form-label" for="is_publish"></label>
+                                            <div class="col-md-6">
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="radio1" name="is_publish" value="1" >Publish
+                                                    <label class="form-check-label" for="radio1"></label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="radio2" name="is_publish" value="0">Unpublish
+                                                    <label class="form-check-label" for="radio2"></label>
+                                                  </div>
+                                            </div>
 
                     <div class="col-md-12">
                                 <button type="submit" class="btn btn-lg btn-primary"> Update Berita </button>
