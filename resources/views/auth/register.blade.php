@@ -76,31 +76,36 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="form-label" for="password">Telp</label>
+                                        <label class="form-label" for="telp">Telp</label>
                                         <div class="form-control-wrap">
                                             <input type="text" class="form-control form-control-lg @error('telp') is-invalid @enderror" id="telp" placeholder="Enter your phone number" name="telp" required autocomplete="telp">
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="form-label" for="password">Account Type</label>
+                                    
 
-                                        <div class="col-md-6">
-                                            <div class="form-check">
-                                                <input type="radio" class="form-check-input" id="radio1" name="type" value="individual" checked>Individual
-                                                <label class="form-check-label" for="radio1"></label>
-                                              </div>
-                                              <div class="form-check">
-                                                <input type="radio" class="form-check-input" id="radio2" name="type" value="corporate">Corporate
-                                                <label class="form-check-label" for="radio2"></label>
-                                              </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="password">Account Type</label>
+
+                                            <div class="col-md-6">
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="radio1" name="type" value="individual" checked>Individual
+                                                    <label class="form-check-label" for="radio1"></label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="radio2" name="type" value="corporate">Corporate
+                                                    <label class="form-check-label" for="radio2"></label>
+                                                  </div>
+                                            </div>
                                         </div>
-                                    </div>
+
+
+
 
                                     <div class="form-group">
                                         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
                                     </div>
                                 </form><!-- form -->
-                                <div class="form-note-s2 pt-4"> Already have an account ? <a href="html/pages/auths/auth-login-v3.html"><strong>Sign in instead</strong></a>
+                                <div class="form-note-s2 pt-4"> Already have an account ? <a href="{{ url('login') }}"><strong>Sign in instead</strong></a>
                                 </div>
                                 <div class="text-center pt-4 pb-3">
                                     <h6 class="overline-title overline-title-sap"><span>OR</span></h6>

@@ -14,13 +14,13 @@
                                     <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
                                 </a>
                             </div><!-- .nk-header-brand -->
-                            <div class="nk-header-search ms-3 ms-xl-0">
+                            {{-- <div class="nk-header-search ms-3 ms-xl-0">
                                 <em class="icon ni ni-search"></em>
                                 <input type="text" class="form-control border-transparent form-focus-none" placeholder="Search anything">
-                            </div><!-- .nk-header-news -->
+                            </div><!-- .nk-header-news --> --}}
                             <div class="nk-header-tools">
                                 <ul class="nk-quick-nav">
-                                    <li class="dropdown language-dropdown d-none d-sm-block me-n1">
+                                    {{-- <li class="dropdown language-dropdown d-none d-sm-block me-n1">
                                         <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-bs-toggle="dropdown">
                                             <div class="quick-icon border border-light">
                                                 <img class="icon" src="./images/flags/english-sq.png" alt="">
@@ -54,8 +54,8 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </li><!-- .dropdown -->
-                                    <li class="dropdown chats-dropdown hide-mb-xs">
+                                    </li><!-- .dropdown --> --}}
+                                    {{-- <li class="dropdown chats-dropdown hide-mb-xs">
                                         <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-bs-toggle="dropdown">
                                             <div class="icon-status icon-status-na"><em class="icon ni ni-comments"></em></div>
                                         </a>
@@ -188,8 +188,8 @@
                                                 <a href="html/apps-chats.html">View All</a>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li class="dropdown notification-dropdown">
+                                    </li> --}}
+                                    {{-- <li class="dropdown notification-dropdown">
                                         <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-bs-toggle="dropdown">
                                             <div class="icon-status icon-status-info"><em class="icon ni ni-bell"></em></div>
                                         </a>
@@ -260,7 +260,7 @@
                                                 <a href="#">View All</a>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li> --}}
                                     <li class="dropdown user-dropdown">
                                         <a href="#" class="dropdown-toggle me-n1" data-bs-toggle="dropdown">
                                             <div class="user-toggle">

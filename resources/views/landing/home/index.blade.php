@@ -25,10 +25,10 @@
                                         </div>
                                         <div class="top-bar-right">
                                             <ul class="widgets-nav-social">
-                                            <li><a href="https://wa.me/6282130075758"><i class="fa fa-whatsapp"
+                                            <li><a href="https://wa.me/6282130075758" target="_blank" ><i class="fa fa-whatsapp"
                                                             aria-hidden="true"></i></a>
                                                 </li>
-                                                <li><a href="https://www.instagram.com/bumi.baik/"><i class="fa fa-instagram"
+                                                <li><a href="https://www.instagram.com/bumi.baik/" target="_blank"><i class="fa fa-instagram"
                                                             aria-hidden="true"></i></a>
                                                 </li>
                                             </ul>
@@ -147,7 +147,7 @@
                                             data-responsive_offset="on">
                                             <div class="title-box">
                                                 <h2 class="title-slider text-pri2-color">Zero emission<br>
-                                                    day bersama<br>bumibaik</h2>
+                                                    day bersama<br>BumiBaik</h2>
                                             </div>
                                         </div>
 
@@ -164,7 +164,7 @@
                                             data-responsive_offset="on">
                                             <div class="button-box">
                                                 <div class="button res-btn-slider">
-                                                    <a href="contact.html" class="btn btn-left">Download App</a>
+                                                    <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app" target="_blank" class="btn btn-left">Download App</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -237,7 +237,7 @@
                                             data-responsive_offset="on">
                                             <div class="button-box">
                                                 <div class="button res-btn-slider">
-                                                    <a href="contact.html" class="btn btn-left">Download App</a>
+                                                    <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app" target="_blank" class="btn btn-left">Download App</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -406,7 +406,6 @@
                 <div class="col-md-12">
                     <div class="section-title-box">
                         <div class="inner-header">
-                        <h4 class="section-subtitle">WHAT WE DO</h4>
                         <h2 class="section-title">Program Kami</h2>
                         <br>
                         <h4 class="section-subtitle">Memfasilitasi pengurangan emisi karbon dan
@@ -425,7 +424,7 @@
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span></span>
                         <div class="content-features">
-                            <a href="service-details.html">
+                            <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app" target="_blank">
                                 <h3 class="section-heading-jost-size22">
                                     Perhitungan Karbon</h3>
                             </a>
@@ -433,7 +432,7 @@
                                 Hitung jejak dan pemakaian karbonmu dengan BumiBaik
                             </p>
                             <div class="link2 link-style2">
-                                <a href="service-details.html" class="read-more">
+                                <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app" target="_blank" class="read-more">
                                     Read More
                                 </a>
                             </div>
@@ -447,7 +446,7 @@
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span></span>
                         <div class="content-features">
-                            <a href="service-details.html">
+                            <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app" target="_blank">
                                 <h3 class="section-heading-jost-size22">
                                     Monitoring Pohon</h3>
                             </a>
@@ -455,7 +454,7 @@
                                 Pantau pohon yang kamu tanam dengan BumiBaik
                             </p>
                             <div class="link2 link-style2">
-                                <a href="service-details.html" class="read-more">
+                                <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app" target="_blank" class="read-more">
                                     Read More
                                 </a>
                             </div>
@@ -470,7 +469,7 @@
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span></span>
                         <div class="content-features">
-                            <a href="service-details.html">
+                            <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app" target="_blank">
                                 <h3 class="section-heading-jost-size22">
                                     Kolaborasi Penyelesaian Isu</h3>
                             </a>
@@ -478,7 +477,7 @@
                                 Bersama menyelesaikan isu perubahan iklim dengan BumiBaik
                             </p>
                             <div class="link2 link-style2">
-                                <a href="service-details.html" class="read-more">
+                                <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app" target="_blank" class="read-more">
                                     Read More
                                 </a>
                             </div>
@@ -493,7 +492,7 @@
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span><span class="path6"></span></span>
                         <div class="content-features">
-                            <a href="service-details.html">
+                            <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app" target="_blank">
                                 <h3 class="section-heading-jost-size22">
                                     Adopt Tree</h3>
                             </a>
@@ -501,7 +500,7 @@
                                 Adopsi pohon untuk kurangi emisi karbon bersama BumiBaik
                             </p>
                             <div class="link2 link-style2">
-                                <a href="service-details.html" class="read-more">
+                                <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app" target="_blank" class="read-more">
                                     Read More
                                 </a>
                             </div>
@@ -518,10 +517,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title-box">
-                        <!-- <h4 class="section-subtitle">WHAT WE DO</h4> -->
                         <h2 class="section-title">Mitra Kami</h2>
                         <br>
-                        {{-- <h4 class="section-heading-jost-size20 item-1">Memfasilitasi pengurangan emisi karbon dan penanaman pohon untuk Bumi semakin baik</h4> --}}
                     </div>
                 </div>
                 <div class="col-md-12">

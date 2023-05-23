@@ -18,6 +18,7 @@
 </head>
 
 <body class="nk-body bg-white npc-default pg-auth">
+
     <div class="nk-app-root">
         <!-- main @s -->
         <div class="nk-main ">
@@ -33,6 +34,16 @@
                                         <img class="logo-light logo-img logo-img-lg" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
                                         <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
                                     </a>
+                                    @if ($errors->any())
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                @endif
                                 </div>
                                 <div class="nk-block-head">
                                     <div class="nk-block-head-content">
@@ -81,6 +92,7 @@
                                         {{ __('Login') }}
                                         </button>
                                     </div>
+
                                 </form><!-- form -->
                                 <div class="form-note-s2 pt-4"> New on our platform? <a href="{{url('register')}}">Create an account</a>
                                 </div>
@@ -156,8 +168,8 @@
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
-    <script src="./assets/js/bundle.js?ver=3.1.3"></script>
-    <script src="./assets/js/scripts.js?ver=3.1.3"></script>
+    <script src="{{ asset('admin/js/bundle.js') }}"></script>
+    <script src="{{ asset('admin/js/scripts.js') }}"></script>
     <!-- select region modal -->
     <div class="modal fade" tabindex="-1" role="dialog" id="region">
         <div class="modal-dialog modal-lg" role="document">

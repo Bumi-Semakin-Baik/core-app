@@ -18,6 +18,7 @@ class NewsArticle extends Model
         'content',
         'image',
         'author',
+        'is_publish'
     ];
 
     protected $visible = [

@@ -9,10 +9,10 @@ class SettingController extends Controller
 {
     private array $content;
 
-    public function __construct()
-    {
-        $this->content = (array) json_decode(file_get_contents(resource_path('header-sidebar.json')));
-    }
+    // public function __construct()
+    // {
+    //     $this->content = (array) json_decode(file_get_contents(resource_path('header-sidebar.json')));
+    // }
 
     public function index()
     {
