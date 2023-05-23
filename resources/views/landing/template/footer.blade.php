@@ -54,7 +54,7 @@
                                         About Us
                                     </p>
                                     <p class="text-decs">
-                                        Lorem Ipsum simply dummy text available in market the printing text, MORE...
+                                    BumiBaik membantu setiap orang menghitung emisi karbon, menanam, dan mengadopsi pohon MORE...
                                     </p>
                                     <ul class="widgets-nav-social">
                                         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

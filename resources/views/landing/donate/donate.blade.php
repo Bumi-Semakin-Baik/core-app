@@ -124,10 +124,10 @@
                     <div class="inner-title">
                         <div class="overlay-image"></div>
                         <div class="banner-title">
-                            <div class="page-title-heading">
+                            <div class="section-title">
                                 Donate
                             </div>
-                            <div class="page-title-content link-style6">
+                            <div class="section-subtitle">
                                 <span><a class="home" href="index.html">Home</a></span><span class="page-title-content-inner">Donate</span>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Read More</a>
+                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>

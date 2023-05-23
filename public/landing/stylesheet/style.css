@@ -1491,7 +1491,7 @@ button.btn.btn-outline-primary {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--primary-color2);
+    /* background-color: var(--primary-color2); */
     opacity: 0.7;
 }
 
