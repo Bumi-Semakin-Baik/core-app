@@ -732,8 +732,7 @@
                                                     By Admin
                                                 </a></div>
                                             <a href="blog-detail.html" class="section-heading-jost-size20">
-                                                myECO dan BumiBaik Tunjukkan Aksi Nyata Lestarikan Lingkungan Lewat
-                                                Adopsi 10 Ton Karbon
+                                               Aksi nyata MyEco dan BumiBaik
 
                                             </a>
                                         </div>
@@ -757,8 +756,7 @@
                                                     By Admin
                                                 </a></div>
                                             <a href="{{ url('/artikel') }}" class="section-heading-jost-size20">
-                                                Cempaka Foundation Luncurkan Program Konservasi Hutan Dan Daerah
-                                                Tangkapan Air Di Lereng Gunung Penanggungan, Pasuruan
+                                                Program Cempaka Fondation di Kab. Pasuruan
                                             </a>
                                         </div>
                                         <hr class="line-blog-item">
