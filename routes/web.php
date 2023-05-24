@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\QrController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\DonateController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
@@ -119,8 +120,11 @@ Route::controller(DonateController::class)
         Route::get('/donate','index');
 
     });
-
-
+Route::controller(ArtikelController::class)
+    ->group(function (){
+        Route::get('/artikel','index');
+    });
+    
 Auth::routes();
 
 Route::get('/confirm-password', function () {

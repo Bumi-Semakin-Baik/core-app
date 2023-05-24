@@ -619,7 +619,7 @@
                     <div class="col-md-6">
                         <div class="list-box-profolio wow fadeInDown">
                             <div class="image-profolio bd-radius-8-image">
-                                <img src="{{ asset('landing/images/activity/Myeco.jpg') }}" alt="images">
+                                <img src="{{ asset('landing/images/activity/Myeco.JPG') }}" alt="images">
                                 <div class="profolio-show active">
                                     <!-- <div class="profolio-info">
                                         <div class="info">
@@ -702,9 +702,9 @@
                                 <div class="blog-item hover-up-style2">
                                     <div class="item-overlay"></div>
                                     <div class="item-box link">
-                                        <div class="content-info"><a href="blog.html" class="folder">
+                                        <!-- <div class="content-info"><a href="blog.html" class="folder">
                                                 Home Gardening
-                                            </a></div>
+                                            </a></div> -->
                                         <div class="link-style6">
                                             <div class="content-info margin-top"><a href="blog-detail.html"
                                                     class="user">
@@ -732,8 +732,7 @@
                                                     By Admin
                                                 </a></div>
                                             <a href="blog-detail.html" class="section-heading-jost-size20">
-                                                myECO dan BumiBaik Tunjukkan Aksi Nyata Lestarikan Lingkungan Lewat
-                                                Adopsi 10 Ton Karbon
+                                               Aksi nyata MyEco dan BumiBaik
 
                                             </a>
                                         </div>
@@ -748,19 +747,16 @@
                                 <div class="blog-item background3 hover-up-style2">
                                     <div class="item-overlay"></div>
                                     <div class="item-box box-3">
-                                        <div class="content-info"><a href="blog.html" class="folder folder-3">
+                                        <!-- <div class="content-info"><a href="blog.html" class="folder folder-3">
                                                 Gardening Ideas
-                                            </a></div>
+                                            </a></div> -->
                                         <div class="link-style6">
                                             <div class="content-info margin-top"><a href="blog-detail.html"
                                                     class="user">
                                                     By Admin
                                                 </a></div>
-                                            <a href="blog-detail.html" class="section-heading-jost-size20">
-                                                Cempaka Foundation Luncurkan Program Konservasi Hutan Dan Daerah
-                                                Tangkapan Air Di Lereng Gunung Penanggungan, Pasuruan
-
-
+                                            <a href="{{ url('/artikel') }}" class="section-heading-jost-size20">
+                                                Program Cempaka Fondation di Kab. Pasuruan
                                             </a>
                                         </div>
                                         <hr class="line-blog-item">
