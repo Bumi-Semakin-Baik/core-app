@@ -698,6 +698,9 @@
                 <div class="col-md-12">
                     <div class="slide-blog-content">
                         <div class="owl-carousel owl-theme">
+                            @foreach ($card_news as $card)
+
+
                             <div class="item wow fadeInUp">
                                 <div class="blog-item hover-up-style2">
                                     <div class="item-overlay"></div>
@@ -708,10 +711,10 @@
                                         <div class="link-style6">
                                             <div class="content-info margin-top"><a href="blog-detail.html"
                                                     class="user">
-                                                    By Admin
+                                                    {{ $card->author }}
                                                 </a></div>
                                             <a href="blog-detail.html" class="section-heading-jost-size20">
-                                                Mauris neque nisiibus non elementum
+                                                {{ $card->title }}
                                             </a>
                                         </div>
                                         <hr class="line-blog-item">
@@ -721,6 +724,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                             <div class="item wow fadeInUp">
                                 <div class="blog-item background2 hover-up-style2">
                                     <div class="item-overlay"></div>
