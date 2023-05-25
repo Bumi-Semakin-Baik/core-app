@@ -10,7 +10,6 @@ use App\Http\Controllers\API\NotificationController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\ProjectController;
 use App\Http\Controllers\API\TransactionController;
-use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,14 +41,6 @@ Route::controller(UserController::class)
         }
     );
 
-Route::controller(LoginController::class)
-    ->prefix('auth')
-    ->group(
-        function () {
-            Route::post('/login', 'login');
-            Route::post('/register', 'register');
-        }
-    );
 Route::controller(UserController::class)
     ->middleware('auth.jwt')
     ->prefix('auth')
