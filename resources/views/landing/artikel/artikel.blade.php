@@ -61,10 +61,10 @@
                                                 <nav id="mainnav" class="mainnav">
                                                     <ul class="menu">
                                                         <li>
-                                                            <a href="index.html" title="">Home</a>
+                                                            <a href="{{ url('/') }}" title="">Home</a>
                                                         </li>
                                                         <li class="menu-item-has-children">
-                                                            <a href="about.html" title="">About</a>
+                                                            <a href="#" title="">About</a>
                                                             <ul class="sub-menu">
                                                                 <li><a href="{{ url('/about') }}" title="">About
                                                                         Us</a></li>
@@ -73,29 +73,29 @@
                                                             </ul>
                                                             <!-- /.sub-menu -->
                                                         </li>
-                                                        <li class="menu-item-has-children">
-                                                            <a href="services.html" title="">Services</a>
-                                                            <ul class="sub-menu">
+                                                        <li class="#">
+                                                            <a href="#" title="">Services</a>
+                                                            <!-- <ul class="sub-menu">
                                                                 <li><a href="services.html" title="">Services</a>
                                                                 </li>
                                                                 <li><a href="service-details.html"
                                                                         title="">Service Details</a></li>
-                                                            </ul>
+                                                            </ul> -->
                                                             <!-- /.sub-menu -->
                                                         </li>
 
-                                                        <li class="menu-item-has-children">
-                                                            <a href="blog.html" title="">Blog</a>
-                                                            <ul class="sub-menu">
+                                                        <!-- <li class="#">
+                                                            <a href="blog.html" title="">Blog</a> -->
+                                                            <!-- <ul class="sub-menu">
                                                                 <li><a href="blog.html" title="">Blog Standard</a>
                                                                 </li>
                                                                 <li><a href="blog-detail.html" title="">Blog
                                                                         Detail</a></li>
-                                                            </ul>
+                                                            </ul> -->
                                                             <!-- /.sub-menu -->
-                                                        </li>
+                                                        <!-- </li> -->
                                                         <li>
-                                                            <a href="contact.html" title="">Contact</a>
+                                                            <a href="#" title="">Contact</a>
                                                         </li>
                                                         <li>
                                                             <a href="{{ url('/donate') }}" title="">Donate</a>
@@ -124,15 +124,14 @@
                     <div class="inner-title">
                         <div class="overlay-image"></div>
                         <div class="banner-title">
-                            <div class="page-title-heading">
+                            <div class="section-title">
                                 Blog Details
                             </div>
-                            <div class="page-title-content link-style6">
+                            <div class="section-subtitle">
                                 <span><a class="home" href="index.html">Home</a></span><span class="page-title-content-inner">Blog Details</span>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
             </div>
@@ -159,11 +158,11 @@
 									BY ADMIN
 								</a><a href="#" class="date">
 									28 JANUARY, 2020
-								</a></span>
+							 	</a></span>
                                     <div class="heading-content-box">
                                         <a href="blog-detail.html">
                                         Cempaka Foundation Luncurkan Program Konservasi Hutan Dan Daerah Tangkapan Air Di Lereng Gunung Penanggungan, Pasuruan
-
+ 
 								</a></div>
 
 

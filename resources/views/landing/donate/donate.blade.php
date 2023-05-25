@@ -61,41 +61,41 @@
                                                 <nav id="mainnav" class="mainnav">
                                                     <ul class="menu">
                                                         <li>
-                                                            <a href="index.html" title="">Home</a>
+                                                            <a href="{{ url('/') }}" title="">Home</a>
                                                         </li>
                                                         <li class="menu-item-has-children">
                                                             <a href="about.html" title="">About</a>
                                                             <ul class="sub-menu">
                                                                 <li><a href="{{ url('/about') }}" title="">About
                                                                         Us</a></li>
-                                                                <li><a href="team.html" title="">Team</a></li>
-                                                                <li><a href="faq.html" title="">Faq</a></li>
+                                                                <!-- <li><a href="team.html" title="">Team</a></li>
+                                                                <li><a href="faq.html" title="">Faq</a></li> -->
                                                             </ul>
                                                             <!-- /.sub-menu -->
                                                         </li>
-                                                        <li class="menu-item-has-children">
-                                                            <a href="services.html" title="">Services</a>
-                                                            <ul class="sub-menu">
+                                                        <li class="#">
+                                                            <a href="#" title="">Services</a>
+                                                            <!-- <ul class="sub-menu">
                                                                 <li><a href="services.html" title="">Services</a>
                                                                 </li>
                                                                 <li><a href="service-details.html"
                                                                         title="">Service Details</a></li>
-                                                            </ul>
+                                                            </ul> -->
                                                             <!-- /.sub-menu -->
                                                         </li>
 
-                                                        <li class="menu-item-has-children">
+                                                        <!-- <li class="#">
                                                             <a href="blog.html" title="">Blog</a>
                                                             <ul class="sub-menu">
                                                                 <li><a href="blog.html" title="">Blog Standard</a>
                                                                 </li>
                                                                 <li><a href="blog-detail.html" title="">Blog
-                                                                        Detail</a></li>
-                                                            </ul>
-                                                            <!-- /.sub-menu -->
-                                                        </li>
+                                                                        Detail</a></li> -->
+                                                            <!-- </ul>  -->
+                                                             <!-- /.sub-menu -->
+                                                        <!-- </li> -->
                                                         <li>
-                                                            <a href="contact.html" title="">Contact</a>
+                                                            <a href="#" title="">Contact</a>
                                                         </li>
                                                         <li>
                                                             <a href="{{ url('/donate') }}" title="">Donate</a>
@@ -105,7 +105,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- header right -->
+                                     <!-- header right -->
                                 </div>
                             </div>
 
@@ -258,7 +258,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="item-three-column mg-bottom-60 wow fadeInRight">
+                    <div class="item-three-column mg-bottom-60 wow fadeInRight"> 
                         <article class="flat-WCU-box grow-up-hover">
                             <div class="WCU-image">
                                 <img class="grow-up-hover" src="images/why-choose-us/artical-post-3.jpg" alt="images">

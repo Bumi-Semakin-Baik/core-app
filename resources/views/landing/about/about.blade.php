@@ -2,6 +2,7 @@
 
 <body>
     <div class="boxed blog">
+
         <!-- Preloader -->
         <div class="preloader">
             <div class="clear-loading loading-effect-2">
@@ -9,138 +10,111 @@
             </div>
         </div>
 
-        <!-- top header -->
-        <div class="top-header">
-            <div class="container-fluid">
+        <div class="flat-header-box">
+            <div class="container">
                 <div class="row">
-                    <div class="col md-4">
-                        <div class="top-bar-left">
-                            <p class="top-location">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu, Kauman), Malang</p>
+                    <div class="col-md-12">
+                        <div class="container">
+                            <div class="row">
+                                <div class="top-header1">
+                                    <div class="top-header-inner">
+                                        <div class="top-bar-left">
+                                            <span class="top-location">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu,
+                                                Kauman), Malang</span>
+                                            <span class="top-mail">semakinbaikbumi@gmail.com </span>
+                                        </div>
+                                        <div class="top-bar-right">
+                                            <ul class="widgets-nav-social">
+                                                <li><a href="#"><i class="fa fa-whatsapp"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fa fa-instagram"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col md-8">
-                        <div class="top-bar-right link-style3">
-                            <a href="#" class="top-mail">bumibaik.com</a>
-                            <ul class="widgets-nav-social">
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
+
+                        <!-- header -->
+                        <header id="header" class="header bg-color">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="header-wrap-home1">
+                                        <div class="col-md-3 ">
+                                            <div class="inner-header">
+                                                <img src="{{ asset('landing/images/home/bumibaik.jpg') }}"
+                                                    width="100px" alt="images">
+                                                <!-- /logo -->
+
+                                                <div class="btn-menu">
+                                                    <span></span>
+                                                </div>
+                                                <!-- /mobile menu button -->
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-9 text-center">
+                                            <div class="nav-wrap">
+                                                <nav id="mainnav" class="mainnav">
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <a href="{{ url('/') }}" title="">Home</a>
+                                                        </li>
+                                                        <li class="menu-item-has-children">
+                                                            <a href="about.html" title="">About</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="{{ url('/about') }}" title="">About
+                                                                        Us</a></li>
+                                                               
+                                                            </ul>
+                                                            <!-- /.sub-menu -->
+                                                        </li>
+                                                        <li class="#">
+                                                            <a href="services.html" title="">Services</a>
+                                                            <!-- <ul class="sub-menu">
+                                                                <li><a href="services.html" title="">Services</a>
+                                                                </li>
+                                                                <li><a href="service-details.html"
+                                                                        title="">Service Details</a></li>
+                                                            </ul> -->
+                                                            <!-- /.sub-menu -->
+                                                        </li>
+
+                                                        <!-- <li class="#">
+                                                            <a href="blog.html" title="">Blog</a> -->
+                                                            <!-- <ul class="sub-menu">
+                                                                <li><a href="blog.html" title="">Blog Standard</a>
+                                                                </li>
+                                                                <li><a href="blog-detail.html" title="">Blog
+                                                                        Detail</a></li>
+                                                            </ul> -->
+                                                            <!-- /.sub-menu -->
+                                                        <!-- </li> -->
+                                                        <li>
+                                                            <a href="contact.html" title="">Contact</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="{{ url('/donate') }}" title="">Donate</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- header right -->
+                                </div>
+                            </div>
+
+                        </header>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /.top -->
-
-        <!-- header -->
-        <header id="header" class="header header-style2 bg-color">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="header-wrap">
-                        <div class="col-md-3">
-                            <div class="inner-header">
-                                <div class="logo-header">
-                                    <a href="index.html" title="">
-                                        <img src="icon/logo-dark.png" alt="images" />
-                                    </a>
-                                </div>
-                                <!-- /#logo -->
-                                <div class="btn-menu">
-                                    <span></span>
-                                </div>
-                                <!-- //mobile menu button -->
-                            </div>
-
-                        </div>
-                        <!-- /.col-md-3 -->
-                        <div class="col-md-6">
-                            <div class="nav-wrap">
-                                <nav id="mainnav" class="mainnav">
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="index.html" title="">Home</a>
-                                            <!-- /.sub-menu -->
-                                        </li>
-                                        <li class="current-menu-item menu-item-has-children">
-                                            <a href="about.html" title="">About</a>
-                                            <ul class="sub-menu">
-                                                <li class="current-item"><a href="about.html" title="">About Us</a></li>
-                                                <li><a href="team.html" title="">Team</a></li>
-                                                <li><a href="faq.html" title="">Faq</a></li>
-                                            </ul>
-                                            <!-- /.sub-menu -->
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="services.html" title="">Services</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="services.html" title="">Services</a></li>
-                                                <li><a href="service-details.html" title="">Service Details</a></li>
-                                            </ul>
-                                            <!-- /.sub-menu -->
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="case-study.html" title="">Case</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="case-study.html" title="">Case Study</a></li>
-                                                <li><a href="case-details.html" title="">Case Details</a></li>
-                                            </ul>
-                                            <!-- /.sub-menu -->
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="blog.html" title="">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html" title="">Blog Standard</a></li>
-                                                <li><a href="blog-detail.html" title="">Blog Detail</a></li>
-                                            </ul>
-                                            <!-- /.sub-menu -->
-                                        </li>
-                                        <li>
-                                            <a href="contact.html" title="">Contact</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="site-header-right">
-                                <div class="header-inner">
-                                    <div class="search flat-show-search">
-                                        <div class="show-search">
-                                            <a href="#"><i class="fa fa-search"></i></a>
-                                        </div>
-                                        <div class="top-search widgets-input">
-                                            <form action="get" id="searchform-all"
-                                                class="header-search search-form">
-                                                <div class="input-group">
-                                                    <input type="search" id="s"
-                                                        class="search-field"
-                                                        placeholder="Search here" aria-label="Search" />
-                                                        <button class="search-submit" type="submit" title="Search"></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="cart">
-                                        <a href="#" class="cart-btn"><i
-                                                class="fa fa-shopping-cart"></i></a>
-                                    </div>
-                                    <div class="button">
-                                        <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app&hl=id" class="btn">Download</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- header right -->
-                        </div>
-                    </div>
-                    <!-- /.header-wrap -->
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container -->
-        </header>
-        <!-- /header -->
+    </div>
+    </div>
 
         <!-- page title -->
         <div class="page-title">
@@ -149,10 +123,10 @@
                     <div class="inner-title">
                         <div class="overlay-image"></div>
                         <div class="banner-title">
-                            <div class="page-title-heading">
+                            <div class="section-title">
                                 About Us
                             </div>
-                            <div class="page-title-content link-style6">
+                            <div class="section-subtitle">
                                 <span><a class="home" href="index.html">Home</a></span><span class="page-title-content-inner">About Us</span>
                             </div>
                         </div>
@@ -166,68 +140,37 @@
 
         <!-- about -->
         <section class="flat-about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="themesflat-spacer clearfix" data-desktop="117" data-mobile="60" data-smobile="60"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="themesflat-spacer clearfix" data-desktop="121" data-mobile="60" data-smobile="60">
                     </div>
-                    <div class="col-lg-6">
-                        <div class="about-post center bd-radius-50-image">
-                            <img class="main-post-about" src="images/home/the-girl-in-the-glasses.jpg" alt="images">
-                            <img class="circel-inside" src="{{asset ('landing/images/home/bumibaik.jpg')}}" alt="images">
-                            
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-post center bd-radius-50-image">
+                        <img class="img-fluid" src="{{ asset('landing/images/home/bumibaik.jpg') }} " alt="images">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <div class="about-content-title wow fadeInUp">
+                            <div class="section-subtitle">ABOUT US</div>
+                            <div class="section-title">Kurangi Emisi Karbon Bersama BumiBaik</div>
+                            <div class="section-desc">BumiBaik membantu setiap orang menghitung emisi karbon, menanam,
+                                dan mengadopsi pohon secara sukarela untuk menyerap emisi karbon sehingga karbon yang
+                                dihasilkan dan karbon yang diserap oleh pohon (Carbon Neutral) menjadi seimbang.
+                                BumiBaik memberikan info rmasi dan edukasi tentang dampak emisi karbon terhadap
+                                lingkungan dan isu perubahan iklim </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-content">
-                            <div class="about-content-title wow fadeInUp">
-                                <div class="section-subtitle">ABOUT US</div>
-                                <div class="section-title">The Best Choice For your Business.</div>
-                                <div class="section-desc">Lorem Ipsum is simply dummy text of free available market typesetting industry has been the industry's standard dummy text ever. Lorem Ipsum is simply dummy text of free available </div>
-                            </div>
-                            <div id="about-box" class="about-desc-box">
-                                <div class="about-desc">
-                                    <div class="about-box-nd1 wow fadeInLeft">
-                                        <span class="tf-icon icon-Group-660"></span>
-                                        <div class="inner-box">
-                                            <a href="#">
-                                                <h3 class="section-heading-jost-size20 item-1">
-                                                    Best Ui Designer</h3>
-                                            </a>
-                                            <p class="section-desc">Lorem Ipsum is simply</p>
-                                        </div>
-                                    </div>
-                                    <div class="about-box-nd1 wow fadeInLeft">
-                                        <span class="tf-icon icon-Group-661"></span>
-                                        <div class="inner-box">
-                                            <a href="#">
-                                                <h3 class="section-heading-jost-size20 item-2">
-                                                    Counter In Work.</h3>
-                                            </a>
-                                            <p class="section-desc">
-                                                Lorem Ipsum is simply</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="image-desc">
-                                    <img class="image" src="images/home/box-flowers-green-garden.jpg" alt="images">
-                                </div>
-                            </div>
-                            <div class="button hover-up">
-                                <a href="contact.html" class="btn2">Get A Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="themesflat-spacer clearfix" data-desktop="134" data-mobile="60" data-smobile="60"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
         <!-- /about -->
 
         <!-- about home2 -->
-        <section class="flat-about-home2">
+        <!-- <section class="flat-about-home2">
             <div class="container-fluid">
                 <div class="row">
                     <div class="image-about-home2">
@@ -283,11 +226,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- /about home2 -->
 
         <!-- Work process -->
-        <section class="flat-work-process">
+        <!-- <section class="flat-work-process">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -379,11 +322,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- /Work process -->
 
         <!-- counter-->
-        <section class="flat-counter">
+        <!-- <section class="flat-counter">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -420,11 +363,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- /conter -->
 
         <!-- flat-testimonials-home2 -->
-        <section class="flat-testimonials-home2">
+        <!-- <section class="flat-testimonials-home2">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
@@ -518,7 +461,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- flat-testimonials-home2 -->
 
         @include('landing.template.footer')
