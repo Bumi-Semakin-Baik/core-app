@@ -116,7 +116,7 @@
         </div>
     </div>
     </div>
-
+-
         <!-- page title -->
         <div class="page-title">
             <div class="container-fluid">
@@ -151,7 +151,7 @@
                     <div class="item-three-column mg-bottom-60 wow fadeInLeft">
                         <article class="flat-WCU-box grow-up-hover">
                             <div class="WCU-image">
-                                <img class="grow-up-hover" src="images/why-choose-us/artical-post-1.jpg" alt="images">
+                                <img class="grow-up-hover" src="{{ asset('landing/images/perusahaan/PT Cargill.png') }}" alt="images">
                             </div>
                             <div class="features-box">
                                 <span class="tf-icon icon-fruit-box"></span>
@@ -173,7 +173,7 @@
                     <div class="item-three-column mg-bottom-60 wow fadeInUp">
                         <article class="flat-WCU-box grow-up-hover">
                             <div class="WCU-image">
-                                <img class="grow-up-hover" src="images/why-choose-us/artical-post-2.jpg" alt="images">
+                                <img class="grow-up-hover" src="{{ asset('landing/images/perusahaan/PT. BELIRANG KALISARI.jpeg') }}" alt="images">
                             </div>
                             <div class="features-box">
                                 <span class="tf-icon icon2 icon-hanging-bot"></span>
@@ -188,14 +188,14 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Read More</a>
+                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>
                     <div class="item-three-column mg-bottom-60 wow fadeInRight">
                         <article class="flat-WCU-box grow-up-hover">
                             <div class="WCU-image">
-                                <img class="grow-up-hover" src="images/why-choose-us/artical-post-3.jpg" alt="images">
+                                <img class="grow-up-hover" src="{{ asset('landing/images/perusahaan/PT. INFION.jpg') }}" alt="images">
                             </div>
                             <div class="features-box">
                                 <span class="tf-icon icon3 icon-spray"></span>
@@ -210,14 +210,14 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Read More</a>
+                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>
                     <div class="item-three-column mg-bottom-60 wow fadeInLeft">
                         <article class="flat-WCU-box grow-up-hover">
                             <div class="WCU-image">
-                                <img class="grow-up-hover" src="images/why-choose-us/artical-post-1.jpg" alt="images">
+                                <img class="grow-up-hover" src="{{ asset('landing/images/perusahaan/PT. GALIC BINA MADA.jpg') }}" alt="images">
                             </div>
                             <div class="features-box">
                                 <span class="tf-icon icon-fruit-box"></span>
@@ -232,14 +232,14 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Read More</a>
+                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>
                     <div class="item-three-column mg-bottom-60 wow fadeInUp">
                         <article class="flat-WCU-box grow-up-hover">
                             <div class="WCU-image">
-                                <img class="grow-up-hover" src="images/why-choose-us/artical-post-2.jpg" alt="images">
+                                <img class="grow-up-hover" src="{{ asset('landing/images/perusahaan/PT. HM SAMPOERNA Tbk.jpeg') }}" alt="images">
                             </div>
                             <div class="features-box">
                                 <span class="tf-icon icon2 icon-hanging-bot"></span>
@@ -254,14 +254,14 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Read More</a>
+                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>
                     <div class="item-three-column mg-bottom-60 wow fadeInRight"> 
                         <article class="flat-WCU-box grow-up-hover">
                             <div class="WCU-image">
-                                <img class="grow-up-hover" src="images/why-choose-us/artical-post-3.jpg" alt="images">
+                                <img class="grow-up-hover" src="{{ asset('landing/images/perusahaan/PT. KARYA SUTARINDO.png') }}" alt="images">
                             </div>
                             <div class="features-box">
                                 <span class="tf-icon icon3 icon-spray"></span>
@@ -276,7 +276,7 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Read More</a>
+                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>

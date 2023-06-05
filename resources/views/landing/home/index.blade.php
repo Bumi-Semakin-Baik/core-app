@@ -67,7 +67,7 @@
                                                             <a href="#" title="">About</a>
                                                             <ul class="sub-menu">
                                                                 <li><a href="{{ url('/about') }}" title="">About
-                                                                        Us</a></li>
+                                                                        Us</a></li> 
                                                             </ul>
                                                             <!-- /.sub-menu -->
                                                         </li>

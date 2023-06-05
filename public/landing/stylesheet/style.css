@@ -2003,6 +2003,7 @@ article.post .content-post .more-link a {
 
 article.post .content-post .more-link a:hover {
     background-color: #18ba60;
+    background-image: url(../images/home/background-slider.jpg);
 }
 
 
@@ -3129,6 +3130,10 @@ article.post .content-post .more-link a:hover {
     width: 50%;
     height: 50%;
     border-bottom-color: transparent;
+}
+
+.WCU-image {
+    width: auto;
 }
 
 @-webkit-keyframes effect-2 {
