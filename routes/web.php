@@ -75,7 +75,7 @@ Route::prefix('company')
         Route::delete('/accounts/{id}','destroy')->name('delete.company');
         Route::get('/projects','getProject');
     });
-
+ 
 Route::prefix('donation')
     ->controller(DonationController::class)
     ->group(function (){
