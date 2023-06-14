@@ -18,6 +18,7 @@ class NewsController extends Controller
         $news = NewsArticle::select(['id', 'title', 'slug', 'image', 'created_at'])->get();
         foreach ($news as $key => $value) {
             $news[$key]->views = 1;
+            $news[$key]->image = asset("storage/" . $value->image);
         }
 
         return response()->json([
