@@ -61,7 +61,7 @@
                                                 <nav id="mainnav" class="mainnav">
                                                     <ul class="menu">
                                                         <li>
-                                                            <a href="index.html" title="">Home</a>
+                                                            <a href="{{ url('/') }}" title="">Home</a>
                                                         </li>
                                                         <li class="menu-item-has-children">
                                                             <a href="about.html" title="">About</a>
@@ -704,16 +704,18 @@
                             <div class="item wow fadeInUp">
                                 <div class="blog-item hover-up-style2">
                                     <div class="item-overlay"></div>
+
                                     <div class="item-box link">
                                         <!-- <div class="content-info"><a href="blog.html" class="folder">
                                                 Home Gardening
                                             </a></div> -->
                                         <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
+                                            {{-- <img src="{{ Storage::url($card->image) }}" style="width:100%;height:100%;object-fit:contain;" alt=""> --}}
+                                            <div class="content-info margin-top"><a href="{{route('detail.news', $card->id)}}"
                                                     class="user">
                                                     {{ $card->author }}
                                                 </a></div>
-                                            <a href="blog-detail.html" class="section-heading-jost-size20">
+                                            <a href="{{route('detail.news', $card->id)}}" class="section-heading-jost-size20">
                                                 {{ $card->title }}
                                             </a>
                                         </div>

@@ -12,7 +12,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\UKMController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -64,6 +64,13 @@ Route::prefix('partner')
         Route::get('/','index');
     });
 
+Route::prefix('auth')
+    ->controller(LoginController::class)
+    ->group(function (){
+        Route::get('/login','index');
+        Route::get('/register','showRegister');
+    });
+
 Route::prefix('company')
     ->controller(CompanyController::class)
     ->group(function (){
@@ -108,6 +115,7 @@ Route::prefix('ukm')
 Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');
+        Route::get('/{id}', 'detailNews')->name('detail.news');
     });
 
 Route::controller(AboutController::class)
@@ -124,7 +132,7 @@ Route::controller(ArtikelController::class)
     ->group(function (){
         Route::get('/artikel','index');
     });
-    
+
 Auth::routes();
 
 Route::get('/confirm-password', function () {
