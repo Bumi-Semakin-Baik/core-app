@@ -83,7 +83,10 @@
                                                             </ul> -->
                                                             <!-- /.sub-menu -->
                                                         </li>
-
+                                                            
+                                                        <li class="#">
+                                                            <a href="blog.html" title="">Blog</a>
+                                                        </li>
                                                         <!-- <li class="#">
                                                             <a href="blog.html" title="">Blog</a> -->
                                                             <!-- <ul class="sub-menu">

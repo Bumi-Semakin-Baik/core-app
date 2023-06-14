@@ -73,7 +73,7 @@
                                                             <!-- /.sub-menu -->
                                                         </li>
                                                         <li class="#">
-                                                            <a href="services.html" title="">Services</a>
+                                                            <a href="#" title="">Services</a>
                                                             <!-- <ul class="sub-menu">
                                                                 <li><a href="services.html" title="">Services</a>
                                                                 </li>
@@ -82,7 +82,10 @@
                                                             </ul> -->
                                                             <!-- /.sub-menu -->
                                                         </li>
-
+                                                        
+                                                        <li class="#">
+                                                            <a href="#" title="">Blog</a>
+                                                        </li>
                                                         <!-- <li class="#">
                                                             <a href="blog.html" title="">Blog</a> -->
                                                             <!-- <ul class="sub-menu">

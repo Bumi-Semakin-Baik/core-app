@@ -21,14 +21,14 @@
                                         <div class="top-bar-left">
                                             <span class="top-location">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu,
                                                 Kauman), Malang</span>
-                                            <span class="top-mail">semakinbaikbumi@gmail.com </span>
+                                            <span class="top-mail">semakinbaikbumi@gmail.com</span>
                                         </div>
                                         <div class="top-bar-right">
                                             <ul class="widgets-nav-social">
-                                                <li><a href="#"><i class="fa fa-whatsapp"
+                                            <li><a href="https://wa.me/6282130075758" target="_blank" ><i class="fa fa-whatsapp"
                                                             aria-hidden="true"></i></a>
                                                 </li>
-                                                <li><a href="#"><i class="fa fa-instagram"
+                                                <li><a href="https://www.instagram.com/bumi.baik/" target="_blank"><i class="fa fa-instagram"
                                                             aria-hidden="true"></i></a>
                                                 </li>
                                             </ul>
@@ -64,36 +64,27 @@
                                                             <a href="{{ url('/') }}" title="">Home</a>
                                                         </li>
                                                         <li class="menu-item-has-children">
-                                                            <a href="about.html" title="">About</a>
+                                                            <a href="#" title="">About</a>
                                                             <ul class="sub-menu">
                                                                 <li><a href="{{ url('/about') }}" title="">About
-                                                                        Us</a></li>
-                                                                <!-- <li><a href="team.html" title="">Team</a></li>
-                                                                <li><a href="faq.html" title="">Faq</a></li> -->
+                                                                        Us</a></li> 
                                                             </ul>
                                                             <!-- /.sub-menu -->
                                                         </li>
                                                         <li class="#">
                                                             <a href="#" title="">Services</a>
-                                                            <!-- <ul class="sub-menu">
-                                                                <li><a href="services.html" title="">Services</a>
-                                                                </li>
-                                                                <li><a href="service-details.html"
-                                                                        title="">Service Details</a></li>
-                                                            </ul> -->
+
                                                             <!-- /.sub-menu -->
                                                         </li>
 
-                                                        <!-- <li class="#">
-                                                            <a href="blog.html" title="">Blog</a>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="blog.html" title="">Blog Standard</a>
-                                                                </li>
-                                                                <li><a href="blog-detail.html" title="">Blog
-                                                                        Detail</a></li> -->
-                                                            <!-- </ul>  -->
-                                                             <!-- /.sub-menu -->
-                                                        <!-- </li> -->
+                                                        <li class="#">
+                                                            <a href="#news" title="">Blog</a>
+                                                        </li>
+
+                                                        <!-- <li>
+                                                            <a href="{{ url('/artikel') }}" title="">Blog</a>
+                                                            /.sub-menu
+                                                        </li> -->
                                                         <li>
                                                             <a href="#" title="">Contact</a>
                                                         </li>
@@ -105,7 +96,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                     <!-- header right -->
+                                    <!-- header right -->
                                 </div>
                             </div>
 

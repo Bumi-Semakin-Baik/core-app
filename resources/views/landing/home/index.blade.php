@@ -77,6 +77,10 @@
                                                             <!-- /.sub-menu -->
                                                         </li>
 
+                                                        <li class="#">
+                                                            <a href="#news" title="">Blog</a>
+                                                        </li>
+
                                                         <!-- <li>
                                                             <a href="{{ url('/artikel') }}" title="">Blog</a>
                                                             /.sub-menu
@@ -692,7 +696,7 @@
         <div class="container">
             <div class="row">
                 <div class="section-title-box">
-                    <h4 class="section-subtitle  wow fadeInUp">LATEST NEWS</h4>
+                    <h4 class="section-subtitle  wow fadeInUp" id="news">LATEST NEWS</h4>
                     <h2 class="section-title  wow fadeInUp">Our Insights & Articles</h2>
                 </div>
                 <div class="col-md-12">

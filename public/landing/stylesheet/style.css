@@ -1330,8 +1330,8 @@ button.btn.btn-outline-primary {
 #mainnav .menu>li {
     display: inline-block;
     position: relative;
-    margin-left: 38px;
-    margin-right: 38px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 #mainnav .menu>li>a{
@@ -1473,6 +1473,7 @@ button.btn.btn-outline-primary {
 
 
 .inner-title {
+    /* margin-bottom: 100px; */
     position: relative;
     height: 1000px;
     background-size: cover;
