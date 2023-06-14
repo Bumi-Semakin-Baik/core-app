@@ -158,7 +158,7 @@
                                 </div>
                                 <div class="content mg-top-15">
                                     <span class="content-info"><a href="#" class="user">
-									{{ $news->author }}
+									<!-- {{ $news->author }} -->
 								</a><a href="#" class="date">
 									28 JANUARY, 2020
 							 	</a></span>
