@@ -44,7 +44,7 @@ public function store(Request $request)
         ]);
 
         if($request->file('image')){
-            $validatedData['image'] = $request->file('image')->store('images', 'public');
+            $validatedData['image'] = $request->file('image')->store('images/newsletter', 'public');
         }
 
         $image = $request->file('image')->store('images', 'public');
