@@ -19,7 +19,7 @@
                                                 <div class="toggle-expand-content" data-content="pageMenu">
                                                     <ul class="nk-block-tools g-3">
                                                         <li class="nk-block-tools-opt d-none d-sm-block">
-                                                            <a href="{{ url('/newsletter/add') }}" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add Project</span></a>
+                                                            <a href="{{ url('/newsletter/add') }}" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add News</span></a>
                                                         </li>
                                                         <li class="nk-block-tools-opt d-block d-sm-none">
                                                             <a href="#" class="btn btn-icon btn-primary"><em class="icon ni ni-plus"></em></a>
@@ -79,15 +79,15 @@
                                                     </td>
                                                     <td class="nk-tb-col tb-col-sm">
                                                         <span class="tb-product">
-                                                            <img src="{{ Storage::url('app/public/images') }}.$news" alt="" class="thumb">
+                                                            <img src="{{ asset("storage/".$news->image) }}" alt="" class="thumb">
                                                             <span class="title">{{ $news->title }}</span>
                                                         </span>
                                                     </td>
                                                     <td class="nk-tb-col">
                                                         <span class="tb-sub">{{ $news->slug }}</span>
                                                     </td>
-                                                    <td class="nk-tb-col">
-                                                        <span class="tb-lead">{{ $news->content }}</span>
+                                                    <td class="nk-tb-col" style="word-break: break-all">
+                                                        {{ Str::limit($news->content, 20) }}
                                                     </td>
                                                     <td class="nk-tb-col">
                                                         <span class="tb-sub">{{ $news->author }}</span>

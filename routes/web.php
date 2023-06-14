@@ -115,7 +115,7 @@ Route::prefix('ukm')
 Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');
-        Route::get('/{id}', 'detailNews')->name('detail.news');
+        Route::get('/news/{id}', 'detailNews')->name('detail.news');
     });
 
 Route::controller(AboutController::class)

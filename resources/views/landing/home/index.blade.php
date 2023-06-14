@@ -725,57 +725,13 @@
                                         </div>
                                         <hr class="line-blog-item">
                                         <h4 class="sub-title">
-                                            28 JANUARY, 2020
+                                            {{ $card->created_at->format('d/m/y') }}
                                         </h4>
                                     </div>
                                 </div>
                             </div>
                             @endforeach
-                            <div class="item wow fadeInUp">
-                                <div class="blog-item background2 hover-up-style2">
-                                    <div class="item-overlay"></div>
-                                    <div class="item-box box-2">
 
-                                        <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
-                                                    class="user">
-                                                    By Admin
-                                                </a></div>
-                                            <a href="blog-detail.html" class="section-heading-jost-size20">
-                                               Aksi nyata MyEco dan BumiBaik
-
-                                            </a>
-                                        </div>
-                                        <hr class="line-blog-item">
-                                        <h4 class="sub-title">
-                                            28 JANUARY, 2020
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item wow fadeInUp">
-                                <div class="blog-item background3 hover-up-style2">
-                                    <div class="item-overlay"></div>
-                                    <div class="item-box box-3">
-                                        <!-- <div class="content-info"><a href="blog.html" class="folder folder-3">
-                                                Gardening Ideas
-                                            </a></div> -->
-                                        <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
-                                                    class="user">
-                                                    By Admin
-                                                </a></div>
-                                            <a href="{{ url('/artikel') }}" class="section-heading-jost-size20">
-                                                Program Cempaka Fondation di Kab. Pasuruan
-                                            </a>
-                                        </div>
-                                        <hr class="line-blog-item">
-                                        <h4 class="sub-title">
-                                            28 JANUARY, 2020
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
