@@ -119,7 +119,7 @@
         </div>
     </div>
     </div>
-  
+
   <!-- page title -->
   <div class="page-title">
             <div class="container-fluid">
@@ -158,24 +158,21 @@
                                 </div>
                                 <div class="content mg-top-15">
                                     <span class="content-info"><a href="#" class="user">
-									BY ADMIN
+									{{ $news->author }}
 								</a><a href="#" class="date">
 									28 JANUARY, 2020
 							 	</a></span>
                                     <div class="heading-content-box">
                                         <a href="blog-detail.html">
                                         Cempaka Foundation Luncurkan Program Konservasi Hutan Dan Daerah Tangkapan Air Di Lereng Gunung Penanggungan, Pasuruan
- 
+
 								</a></div>
 
 
                                     <p class="desc-content-box text-decs">
-                                    Setelah sukses dengan Program Konservasi Hutan dan Daerah Tangkapan Air (KHDTA) di kawasan hutan lereng Gunung Bromo dan Gunung Arjuno-Weliran, Cempaka Foundation kini meluncurkan program KHDTA di Kawasan Hutan Lereng Gunung Penanggungan, Pasuruan tepatnya di Desa Wonosunyo pada Selasa, 31 Januari 2023. Kegiatan yang mengusung tema “Menjaga Hutan Menjaga Kehidupan” ini direncanakan menanam dan merawat 2600 pohon untuk menjaga kelestarian hutan dan mata air yang  bermanfaat bagi masyarakat sekitar.
-
-                                    Untuk menyukseskan program ini, Cempaka Foundation berkolaborasi dengan beberapa perusahaan, seperti PT Tirtamas Lestari, myECO Teknologi Nusantara, PT Akasha Wira International Tbk, PT Belirang Kalisari, dan PT CS2 Pola Sehat. Tidak hanya itu, Cempaka Foundation juga mengajak Dinas Lingkungan Hidup Kabupaten Pasuruan, Dinas Kehutanan Provinsi Jawa Timur, dan masyarakat Desa Wonosunyo untuk turut serta dalam kegiatan konservasi ini. Komunitas Gunung Wangi, Forum DAS Kabupaten Pasuruan, dan perangkat desa setempat juga turut hadir dalam kegiatan ini.
-
+                                   {!! $news->content  !!}
                                     </p>
-                                   
+
                                     <p class="desc-content-box text-decs">
                                     Pada  aktivitas konservasi ini, sebanyak 2600 bibit pohon akan ditanam di 4 daerah berbeda. Desa Wonosunyo akan ditanami 400 bibit pohon, 300 dari PT Tirtamas Lestari dan 100 dari PT Belirang Kalisari. Sedangkan di Kawasan Hutan Puthuk Elang, Desa Jatiarjo diberikan jatah 1000 bibit pohon dari PT Akasha Wira International Tbk. 1000 bibit lainnya yang diberi oleh PT CS2 Pola Sehat akan ditanam di Kawasan Hutan Lindung Blok Curah Tangkil, Desa Dayurejo. Lalu 200 bibit terakhir dari myECO Teknologi Nusantara akan ditanam di Kawasan Hutan Blok Sukmojati Desa Dayurejo.
 

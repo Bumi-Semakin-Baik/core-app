@@ -50,6 +50,14 @@ class LoginController extends Controller
         // $this->middleware('guest:admin')->only('login');
     }
 
+    public function index(){
+        return view('auth.login');
+    }
+
+    public function showRegister(){
+        return view('auth.register');
+    }
+
     public function login(Request $request)
     {
         $request->validate([
@@ -77,6 +85,6 @@ class LoginController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect('login');
+        return redirect('auth/login');
     }
 }

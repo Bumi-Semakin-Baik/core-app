@@ -105,7 +105,7 @@
                                         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
                                     </div>
                                 </form><!-- form -->
-                                <div class="form-note-s2 pt-4"> Already have an account ? <a href="{{ url('login') }}"><strong>Sign in instead</strong></a>
+                                <div class="form-note-s2 pt-4"> Already have an account ? <a href="{{ url('auth/login') }}"><strong>Sign in instead</strong></a>
                                 </div>
                                 <div class="text-center pt-4 pb-3">
                                     <h6 class="overline-title overline-title-sap"><span>OR</span></h6>
