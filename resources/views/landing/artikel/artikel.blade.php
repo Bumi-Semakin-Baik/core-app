@@ -85,7 +85,7 @@
                                                         </li>
 
                                                         <li class="menu-item-has-children">
-                                                            <a href="blog.html" title="">Blog</a>
+                                                            <a href="{{ route('get.blog') }}" title="">Blog</a>
                                                             <ul class="sub-menu">
                                                                 <li><a href="blog.html" title="">Blog Standard</a>
                                                                 </li>

@@ -78,7 +78,7 @@
                                                         </li>
 
                                                         <li>
-                                                            <a href="blog.html" title="">Blog</a>
+                                                            <a href="{{ route('get.blog') }}" title="">Blog</a>
                                                             <!-- /.sub-menu -->
                                                         </li>
                                                         <li>
@@ -707,14 +707,15 @@
 
                                     <div class="item-box link">
                                         <!-- <div class="content-info"><a href="blog.html" class="folder">
-                                                Home Gardening
-                                            </a></div> -->
+                                            Home Gardening
+                                        </a></div> -->
                                         <div class="link-style6">
-                                            {{-- <img src="{{ Storage::url($card->image) }}" style="width:100%;height:100%;object-fit:contain;" alt=""> --}}
-                                            <div class="content-info margin-top"><a href="{{route('detail.news', $card->id)}}"
-                                                    class="user">
+                                            <img src="{{ Storage::url($card->image) }}" style="object-fit:contain;" alt="">
+                                            <div class="content-info margin-top">
+                                                <a href="{{route('detail.news', $card->id)}}" class="user">
                                                     {{ $card->author }}
-                                                </a></div>
+                                                </a>
+                                            </div>
                                             <a href="{{route('detail.news', $card->id)}}" class="section-heading-jost-size20">
                                                 {{ $card->title }}
                                             </a>

@@ -116,6 +116,8 @@ Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');
         Route::get('/news/{id}', 'detailNews')->name('detail.news');
+        Route::get('/blog','getBlog')->name('get.blog');
+        Route::get('/blog/{id}','detailNews')->name('detail.blog');
     });
 
 Route::controller(AboutController::class)
