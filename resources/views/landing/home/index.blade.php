@@ -703,24 +703,30 @@
 
                             <div class="item wow fadeInUp">
                                 <div class="blog-item hover-up-style2">
-                                    <div class="item-overlay"></div>
+                                    <img src="{{ Storage::url($card->image) }}" alt="" style="height:50%;width:100%;">
+                                    <div class="item-overlay">
+
+                                    </div>
 
                                     <div class="item-box link">
                                         <!-- <div class="content-info"><a href="blog.html" class="folder">
                                             Home Gardening
                                         </a></div> -->
                                         <div class="link-style6">
-                                            <img src="{{ Storage::url($card->image) }}" style="object-fit:contain;" alt="">
-                                            <div class="content-info margin-top">
+                                            {{-- <div class="img-wrapper" style="height:150px;width:100%;">
+                                            </div> --}}
+                                            <div class="content-info" style="margin-top:50px;">
                                                 <a href="{{route('detail.news', $card->id)}}" class="user">
                                                     {{ $card->author }}
+
                                                 </a>
                                             </div>
                                             <a href="{{route('detail.news', $card->id)}}" class="section-heading-jost-size20">
-                                                {{ $card->title }}
+                                                {{-- {{ $card->title }} --}}
+                                                {{ Str::limit($card->title, 25) }}
                                             </a>
                                         </div>
-                                        <hr class="line-blog-item">
+                                        <hr class="" style="width: 100%;">
                                         <h4 class="sub-title">
                                             {{ $card->created_at->format('d/m/y') }}
                                         </h4>

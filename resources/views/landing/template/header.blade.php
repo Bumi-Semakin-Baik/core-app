@@ -34,4 +34,6 @@
     <!-- anime -->
     <link rel="stylesheet" href="{{ asset('landing/stylesheet/animate.css') }}">
 
+
+
 </head>
