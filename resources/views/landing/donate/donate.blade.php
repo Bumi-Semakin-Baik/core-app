@@ -153,7 +153,7 @@
                             <div class="WCU-image">
                                 <img class="grow-up-hover" src="{{ asset('asset/donate1.jpg') }}" alt="images">
                             </div>
-                            <div style="padding-left: 10px;">
+                            <div style="padding-left: 18px;">
                                 <div class="content-features">
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
@@ -187,7 +187,7 @@
                             <div class="WCU-image">
                                 <img class="grow-up-hover" src="{{ asset('asset/donate3.jpg') }}" alt="images">
                             </div>
-                            <div style="padding-left: 10px;">
+                            <div style="padding-left: 18px;">
                                 <div class="content-features">
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Paneling for Planting #3</h3>
@@ -221,7 +221,7 @@
                             <div class="WCU-image">
                                 <img class="grow-up-hover" src="{{ asset('asset/donate1.jpg') }}" alt="images">
                             </div>
-                            <div style="padding-left: 10px;">
+                            <div style="padding-left: 18px;">
                                 <div class="content-features">
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Sedekah Pohon untuk Bumi 2023</h3>
@@ -255,7 +255,7 @@
                             <div class="WCU-image">
                                 <img class="grow-up-hover" src="{{ asset('asset/donate3.jpg') }}" alt="images">
                             </div>
-                            <div style="padding-left: 10px;">
+                            <div style="padding-left: 18px;">
                                 <div class="content-features">
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
@@ -289,7 +289,7 @@
                             <div class="WCU-image">
                                 <img class="grow-up-hover" src="{{ asset('asset/donate1.jpg') }}" alt="images">
                             </div>
-                            <div style="padding-left: 10px;">
+                            <div style="padding-left: 18px;">
                                 <div class="content-features">
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
@@ -323,7 +323,7 @@
                             <div class="WCU-image">
                                 <img class="grow-up-hover" src="{{ asset('asset/donate3.jpg') }}" alt="images">
                             </div>
-                            <div style="padding-left: 10px;">
+                            <div style="padding-left: 18px;">
                                 <div class="content-features">
                                     <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>

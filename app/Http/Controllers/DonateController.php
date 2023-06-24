@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
 class DonateController extends Controller
 {
      //
-     public function index(){
+    public function index(){
         return view ('landing.donate.donate');
+    }
+    
+    public function detail(){
+        return view ('landing.donate.donate-detail');
     }
 }
