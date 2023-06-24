@@ -61,7 +61,7 @@
                                                 <nav id="mainnav" class="mainnav">
                                                     <ul class="menu">
                                                         <li>
-                                                            <a href="index.html" title="">Home</a>
+                                                            <a href="{{ url('') }}" title="">Home</a>
                                                         </li>
                                                         <li class="menu-item-has-children">
                                                             <a href="about.html" title="">About</a>
@@ -72,17 +72,17 @@
                                                             <!-- /.sub-menu -->
                                                         </li>
                                                         <li>
-                                                            <a href="services.html" title="">Services</a>
+                                                            <a href="#" title="">Services</a>
 
                                                             <!-- /.sub-menu -->
                                                         </li>
 
                                                         <li>
-                                                            <a href="blog.html" title="">Blog</a>
+                                                            <a href="#" title="">Blog</a>
                                                             <!-- /.sub-menu -->
                                                         </li>
                                                         <li>
-                                                            <a href="contact.html" title="">Contact</a>
+                                                            <a href="#" title="">Contact</a>
                                                         </li>
                                                         <li>
                                                             <a href="{{ url('/donate') }}" title="">Donate</a>

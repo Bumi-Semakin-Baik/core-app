@@ -61,7 +61,7 @@
                                                 <nav id="mainnav" class="mainnav">
                                                     <ul class="menu">
                                                         <li>
-                                                            <a href="index.html" title="">Home</a>
+                                                            <a href="{{ url('') }}" title="">Home</a>
                                                         </li>
                                                         <li class="menu-item-has-children">
                                                             <a href="about.html" title="">About</a>
@@ -74,22 +74,22 @@
                                                             <!-- /.sub-menu -->
                                                         </li>
                                                         <li class="menu-item-has-children">
-                                                            <a href="services.html" title="">Services</a>
+                                                            <a href="{{ url('') }}" title="">Services</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="services.html" title="">Services</a>
+                                                                <li><a href="{{ url('') }}" title="">Services</a>
                                                                 </li>
-                                                                <li><a href="service-details.html"
+                                                                <li><a href="{{ url('') }}"
                                                                         title="">Service Details</a></li>
                                                             </ul>
                                                             <!-- /.sub-menu -->
                                                         </li>
 
                                                         <li class="menu-item-has-children">
-                                                            <a href="blog.html" title="">Blog</a>
+                                                            <a href="{{ url('') }}" title="">Blog</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="blog.html" title="">Blog Standard</a>
+                                                                <li><a href="{{ url('') }}" title="">Blog Standard</a>
                                                                 </li>
-                                                                <li><a href="blog-detail.html" title="">Blog
+                                                                <li><a href="{{ url('') }}" title="">Blog
                                                                         Detail</a></li>
                                                             </ul>
                                                             <!-- /.sub-menu -->
