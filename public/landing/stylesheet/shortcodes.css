@@ -1296,11 +1296,11 @@ textarea {
 
 /* why choose us 
 ---------------------------------------*/
-.flat-why-choose-us {
+/* .flat-why-choose-us {
     background-image: url(../images/mask-back-ground/Leaf-WCU.png);
     background-position: 108% 38%;
     background-repeat: no-repeat;
-}
+} */
 .flat-why-choose-us .flat-WCU-box {
     position: relative;
     border-radius: 8px;
