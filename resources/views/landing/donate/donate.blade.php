@@ -178,7 +178,7 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>
@@ -212,7 +212,7 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>
@@ -246,7 +246,7 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>
@@ -280,7 +280,7 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>
@@ -314,7 +314,7 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>
@@ -348,7 +348,7 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="service-details.html" class="read-more btn-read-more">Donasi</a>
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>

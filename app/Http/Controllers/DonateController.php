@@ -11,7 +11,11 @@ class DonateController extends Controller
         return view ('landing.donate.donate');
     }
     
-    public function detail(){
+    public function detail($id){
         return view ('landing.donate.donate-detail');
+    }
+
+    public function payment($id){
+        return view ('landing.donate.donate-payment');
     }
 }

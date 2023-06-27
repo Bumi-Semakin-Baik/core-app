@@ -119,6 +119,7 @@ Route::controller(DonateController::class)
     ->group(function (){
         Route::get('/donate','index');
         Route::get('/donate/{id}', 'detail');
+        Route::get('/donate-payment/{id}', 'payment');
     });
 Route::controller(ArtikelController::class)
     ->group(function (){
