@@ -76,10 +76,11 @@
                                                         <li class="menu-item-has-children">
                                                             <a href="{{ url('') }}" title="">Services</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="{{ url('') }}" title="">Services</a>
-                                                                </li>
                                                                 <li><a href="{{ url('') }}"
-                                                                        title="">Service Details</a></li>
+                                                                        title="">Services</a>
+                                                                </li>
+                                                                <li><a href="{{ url('') }}" title="">Service
+                                                                        Details</a></li>
                                                             </ul>
                                                             <!-- /.sub-menu -->
                                                         </li>
@@ -87,7 +88,8 @@
                                                         <li class="menu-item-has-children">
                                                             <a href="{{ url('') }}" title="">Blog</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="{{ url('') }}" title="">Blog Standard</a>
+                                                                <li><a href="{{ url('') }}" title="">Blog
+                                                                        Standard</a>
                                                                 </li>
                                                                 <li><a href="blog-detail.html" title="">Blog
                                                                         Detail</a></li>
@@ -126,7 +128,8 @@
                             Service Details
                         </div>
                         <div class="page-title-content link-style6">
-                            <span><a class="home" href="index.html">Home</a></span><span class="page-title-content-inner">Donate</span>
+                            <span><a class="home" href="index.html">Home</a></span><span
+                                class="page-title-content-inner">Donate</span>
                         </div>
                     </div>
                 </div>
@@ -152,43 +155,52 @@
                         <div class="col-md-12">
                             <div class="widget-contact-services-details mg-bottom-25">
                                 <div class="sidebar-title mg-bottom-25">
-                                    <h2 class="section-heading-jost-size28 text-pri2-color">Nominal Donasi</h2>
+                                    <h2 class="section-heading-jost-size28 text-pri2-color">Pembayaran</h2>
+                                </div>
+                                <div class="">
+                                    <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Nominal
+                                        Donasi <span style="color: red;">*</span></h3>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">Rp</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username"
+                                        aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="widget-contact-services-details">
                                 <div class="sidebar-title">
-                                    <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">Metode Pembayaran</h2>
+                                    <h2 class="section-heading-jost-size28 text-pri2-color"
+                                        style="margin-bottom: 2rem;">Data Diri</h2>
                                 </div>
                             </div>
-                            
-                        </div>
-                        <div class="col-md-12">
-                            <div class="widget-contact-services-details">
-                                <div class="sidebar-title">
-                                    <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">Data Diri</h2>
-                                </div>
-                            </div>
-                            
+
                         </div>
                     </div>
-                    
-                    <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="30" data-smobile="30"></div>
+
+                    <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="30" data-smobile="30">
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="col-md-12">
                         <div class="widget-contact-services-details">
                             <div class="sidebar-title">
-                                <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">Total Pembayaran</h2>
-                                <div class="text-center" style="color: #235;font-size: 25px;" class="text-center"><strong>Rp250,000,000</strong></div>
-                                <div class="text-center" style="margin-top: 2rem;margin-bottom: 2rem;"><a class="button-services" href="#">Donasi</a></div>
+                                <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">
+                                    Total Pembayaran</h2>
+                                <div class="text-center" style="color: #235;font-size: 25px;" class="text-center">
+                                    <strong>Rp250,000,000</strong></div>
+                                <div class="text-center" style="margin-top: 2rem;margin-bottom: 2rem;"><a
+                                        class="button-services" href="#">Donasi</a></div>
                             </div>
                         </div>
-                        </div>
+                    </div>
                 </div>
                 <div class="col-md-12">
-                    <div class="themesflat-spacer clearfix" data-desktop="172" data-mobile="100" data-smobile="60"></div>
+                    <div class="themesflat-spacer clearfix" data-desktop="172" data-mobile="100" data-smobile="60">
+                    </div>
                 </div>
             </div>
         </div>
