@@ -146,7 +146,7 @@
                     <div class="col-md-12">
                         <div class="themesflat-spacer clearfix" data-desktop="166" data-mobile="0" data-smobile="0"></div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="post-wrap">
                             <div class="content-blog-detail">
                                 <div class="image-box">
@@ -282,100 +282,7 @@
                     </div>
                     <!-- /.col-md-8 -->
 
-                    <div class="col-md-4">
-                        <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="60" data-smobile="60"></div>
-                        <div class="side-bar">
-                            <div class="widgets-search">
-                                <h3 class="widgets-side-bar-title">
-                                    Search
-                                </h3>
-                                <div class="widgets-input">
-                                    <form method="get" role="search" class="search-form">
-                                        <input type="search" class="search-field" placeholder="Search here" value="" name="s" title="Search for">
-                                        <button class="search-submit" type="submit" title="Search"></button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="widgets-category">
-                                <h3 class="widgets-side-bar-title">
-                                    Category
-                                </h3>
-                                <ul class="list-category">
-                                    <li><a href="#">Tempor lorem interdum</a></li>
-                                    <li><a href="#">Auctor mattis lacus </a></li>
-                                    <li><a href="#">Dolor proin </a></li>
-                                    <li><a href="#">Pharetra amet </a></li>
-                                    <li><a href="#">Nullam dolor gravida </a> </li>
-                                </ul>
-                            </div>
-                            <div class="widget widget_lastest">
-                                <h2 class="widgets-side-bar-title"><span>Recent News</span></h2>
-                                <ul class="lastest-posts data-effect clearfix">
-                                    <li class="clearfix">
-                                        <div class="thumb data-effect-item has-effect-icon">
-                                            <img src="images/blog/medium-shot-woman-holding-plant-pot.jpg" alt="Image">
-                                            <div class="elm-link">
-                                                <a href="page-blog-single.html" class="icon-2"></a>
-                                            </div>
-                                        </div>
-                                        <div class="text">
-                                            <h3><a href="#" class="title-thumb">Integer at faucibus urna. Nullam condimentum</a></h3>
-                                            <a href="#" class="date">15 October</a>
-                                        </div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <div class="thumb data-effect-item has-effect-icon">
-                                            <img src="images/blog/close-up-picture-hand-holding-wo.jpg" alt="Image">
-                                            <div class="elm-link">
-                                                <a href="page-blog-single.html" class="icon-2"></a>
-                                            </div>
-                                        </div>
-                                        <div class="text">
-                                            <h3><a href="#" class="title-thumb">Nunc scelerisque tincidunt estibulum</a></h3>
-                                            <a href="#" class="date">15 October</a>
-                                        </div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <div class="thumb data-effect-item has-effect-icon">
-                                            <img src="images/blog/planting-flowers-thumb.jpg" alt="Image">
-                                            <div class="elm-link">
-                                                <a href="page-blog-single.html" class="icon-2"></a>
-                                            </div>
-                                        </div>
-                                        <div class="text">
-                                            <h3><a href="#" class="title-thumb">Cras eu elit congue, plac erat duicidunt nisl</a></h3>
-                                            <a href="#" class="date">15 October</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- /.widget_lastest -->
-                            <div class="widgets-contact-info">
-                                <div class="contact-info-img">
-                                    <img src="images/blog/young-beautiful-florist-watering-flowers.jpg" alt="image">
-                                </div>
-                                <div class="contact-info-box">
-                                    <div class="contact-info-content">
-                                        <div class="call-us">
-                                            <div class="icon-call-us"></div>
-                                            <div class="content-call-us">
-                                                <div class="heading-16px-rubik">Call Us</div>
-                                                <div class="heading-16px-rubik">360-779-22289</div>
-                                            </div>
-                                        </div>
-                                        <div class="our-mail">
-                                            <div class="icon-our-mail"></div>
-                                            <div class="content-our-mail">
-                                                <div class="heading-16px-rubik">Our Mail</div>
-                                                <div class="heading-16px-rubik">yourname@mail.com</div>
-                                            </div>
-                                        </div>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- /.col-md-4 -->
                     <div class="col-md-12">
                         <div class="themesflat-spacer clearfix" data-desktop="193" data-mobile="60" data-smobile="60"></div>

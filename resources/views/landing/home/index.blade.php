@@ -703,7 +703,7 @@
 
                             <div class="item wow fadeInUp">
                                 <div class="blog-item hover-up-style2">
-                                    <img src="{{ Storage::url($card->image) }}" alt="" style="height:50%;width:100%;">
+                                    <img src="{{ Storage::url($card->image) }}" alt="" style="height:100%;width:100%;">
                                     <div class="item-overlay">
 
                                     </div>
@@ -715,7 +715,7 @@
                                         <div class="link-style6">
                                             {{-- <div class="img-wrapper" style="height:150px;width:100%;">
                                             </div> --}}
-                                            <div class="content-info" style="margin-top:50px;">
+                                            <div class="content-info" style="margin-top:-175px;">
                                                 <a href="{{route('detail.news', $card->id)}}" class="user">
                                                     {{ $card->author }}
 
