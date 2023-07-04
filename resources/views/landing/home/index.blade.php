@@ -698,74 +698,42 @@
                 <div class="col-md-12">
                     <div class="slide-blog-content">
                         <div class="owl-carousel owl-theme">
+                            @foreach ($card_news as $card)
+
+
                             <div class="item wow fadeInUp">
                                 <div class="blog-item hover-up-style2">
-                                    <div class="item-overlay"></div>
+                                    <img src="{{ Storage::url($card->image) }}" alt="" style="height:100%;width:100%;">
+                                    <div class="item-overlay">
+
+                                    </div>
+
                                     <div class="item-box link">
                                         <!-- <div class="content-info"><a href="blog.html" class="folder">
-                                                Home Gardening
-                                            </a></div> -->
+                                            Home Gardening
+                                        </a></div> -->
                                         <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
-                                                    class="user">
-                                                    By Admin
-                                                </a></div>
-                                            <a href="blog-detail.html" class="section-heading-jost-size20">
-                                                Mauris neque nisiibus non elementum
-                                            </a>
-                                        </div>
-                                        <hr class="line-blog-item">
-                                        <h4 class="sub-title">
-                                            28 JANUARY, 2020
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item wow fadeInUp">
-                                <div class="blog-item background2 hover-up-style2">
-                                    <div class="item-overlay"></div>
-                                    <div class="item-box box-2">
+                                            {{-- <div class="img-wrapper" style="height:150px;width:100%;">
+                                            </div> --}}
+                                            <div class="content-info" style="margin-top:-175px;">
+                                                <a href="{{route('detail.news', $card->id)}}" class="user">
+                                                    {{ $card->author }}
 
-                                        <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
-                                                    class="user">
-                                                    By Admin
-                                                </a></div>
-                                            <a href="blog-detail.html" class="section-heading-jost-size20">
-                                               Aksi nyata MyEco dan BumiBaik
-
+                                                </a>
+                                            </div>
+                                            <a href="{{route('detail.news', $card->id)}}" class="section-heading-jost-size20">
+                                                {{-- {{ $card->title }} --}}
+                                                {{ Str::limit($card->title, 25) }}
                                             </a>
                                         </div>
-                                        <hr class="line-blog-item">
+                                        <hr class="" style="width: 100%;">
                                         <h4 class="sub-title">
-                                            28 JANUARY, 2020
+                                            {{ $card->created_at->format('d/m/y') }}
                                         </h4>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item wow fadeInUp">
-                                <div class="blog-item background3 hover-up-style2">
-                                    <div class="item-overlay"></div>
-                                    <div class="item-box box-3">
-                                        <!-- <div class="content-info"><a href="blog.html" class="folder folder-3">
-                                                Gardening Ideas
-                                            </a></div> -->
-                                        <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
-                                                    class="user">
-                                                    By Admin
-                                                </a></div>
-                                            <a href="{{ url('/artikel') }}" class="section-heading-jost-size20">
-                                                Program Cempaka Fondation di Kab. Pasuruan
-                                            </a>
-                                        </div>
-                                        <hr class="line-blog-item">
-                                        <h4 class="sub-title">
-                                            28 JANUARY, 2020
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
