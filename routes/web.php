@@ -11,6 +11,7 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\UKMController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
@@ -75,7 +76,7 @@ Route::prefix('company')
         Route::delete('/accounts/{id}','destroy')->name('delete.company');
         Route::get('/projects','getProject');
     });
- 
+
 Route::prefix('donation')
     ->controller(DonationController::class)
     ->group(function (){
@@ -105,6 +106,18 @@ Route::prefix('ukm')
         Route::put('/edit/{id}','update')->name('update.ukm');
 
     });
+
+Route::prefix('location')
+    ->controller(LocationController::class)
+    ->group(function (){
+        Route::get('/','index')->name('location');
+        Route::get('/add','add');
+        Route::post('/store', 'store')->name('store.location');
+        Route::delete('/{id}','destroy')->name('delete.location');
+        Route::get('/edit/{id}','edit')->name('edit.location');
+        Route::put('/edit/{id}','update')->name('update.location');
+
+    });
 Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');
@@ -125,7 +138,7 @@ Route::controller(ArtikelController::class)
     ->group(function (){
         Route::get('/artikel','index');
     });
-    
+
 Auth::routes();
 
 Route::get('/confirm-password', function () {
