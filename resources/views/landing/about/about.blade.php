@@ -2,6 +2,7 @@
 
 <body>
     <div class="boxed blog">
+
         <!-- Preloader -->
         <div class="preloader">
             <div class="clear-loading loading-effect-2">
@@ -9,138 +10,99 @@
             </div>
         </div>
 
-        <!-- top header -->
-        <div class="top-header">
-            <div class="container-fluid">
+        <div class="flat-header-box">
+            <div class="container">
                 <div class="row">
-                    <div class="col md-4">
-                        <div class="top-bar-left">
-                            <p class="top-location">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu, Kauman), Malang</p>
+                    <div class="col-md-12">
+                        <div class="container">
+                            <div class="row">
+                                <div class="top-header1">
+                                    <div class="top-header-inner">
+                                        <div class="top-bar-left">
+                                            <span class="top-location">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu,
+                                                Kauman), Malang</span>
+                                            <span class="top-mail">semakinbaikbumi@gmail.com</span>
+                                        </div>
+                                        <div class="top-bar-right">
+                                            <ul class="widgets-nav-social">
+                                            <li><a href="https://wa.me/6282130075758" target="_blank" ><i class="fa fa-whatsapp"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                                <li><a href="https://www.instagram.com/bumi.baik/" target="_blank"><i class="fa fa-instagram"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col md-8">
-                        <div class="top-bar-right link-style3">
-                            <a href="#" class="top-mail">bumibaik.com</a>
-                            <ul class="widgets-nav-social">
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
+
+                        <!-- header -->
+                        <header id="header" class="header bg-color">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="header-wrap-home1">
+                                        <div class="col-md-3 ">
+                                            <div class="inner-header">
+                                                <img src="{{ asset('landing/images/home/bumibaik.jpg') }}"
+                                                    width="100px" alt="images">
+                                                <!-- /logo -->
+
+                                                <div class="btn-menu">
+                                                    <span></span>
+                                                </div>
+                                                <!-- /mobile menu button -->
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-9 text-center">
+                                            <div class="nav-wrap">
+                                                <nav id="mainnav" class="mainnav">
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <a href="{{ url('') }}" title="">Home</a>
+                                                        </li>
+                                                        <li class="menu-item-has-children">
+                                                            <a href="about.html" title="">About</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="{{ url('/about') }}" title="">About
+                                                                        Us</a></li>
+                                                            </ul>
+                                                            <!-- /.sub-menu -->
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="">Services</a>
+
+                                                            <!-- /.sub-menu -->
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="#" title="">Blog</a>
+                                                            <!-- /.sub-menu -->
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="">Contact</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="{{ url('/donate') }}" title="">Donate</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- header right -->
+                                </div>
+                            </div>
+
+                        </header>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /.top -->
-
-        <!-- header -->
-        <header id="header" class="header header-style2 bg-color">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="header-wrap">
-                        <div class="col-md-3">
-                            <div class="inner-header">
-                                <div class="logo-header">
-                                    <a href="index.html" title="">
-                                        <img src="icon/logo-dark.png" alt="images" />
-                                    </a>
-                                </div>
-                                <!-- /#logo -->
-                                <div class="btn-menu">
-                                    <span></span>
-                                </div>
-                                <!-- //mobile menu button -->
-                            </div>
-
-                        </div>
-                        <!-- /.col-md-3 -->
-                        <div class="col-md-6">
-                            <div class="nav-wrap">
-                                <nav id="mainnav" class="mainnav">
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="index.html" title="">Home</a>
-                                            <!-- /.sub-menu -->
-                                        </li>
-                                        <li class="current-menu-item menu-item-has-children">
-                                            <a href="about.html" title="">About</a>
-                                            <ul class="sub-menu">
-                                                <li class="current-item"><a href="about.html" title="">About Us</a></li>
-                                                <li><a href="team.html" title="">Team</a></li>
-                                                <li><a href="faq.html" title="">Faq</a></li>
-                                            </ul>
-                                            <!-- /.sub-menu -->
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="services.html" title="">Services</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="services.html" title="">Services</a></li>
-                                                <li><a href="service-details.html" title="">Service Details</a></li>
-                                            </ul>
-                                            <!-- /.sub-menu -->
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="case-study.html" title="">Case</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="case-study.html" title="">Case Study</a></li>
-                                                <li><a href="case-details.html" title="">Case Details</a></li>
-                                            </ul>
-                                            <!-- /.sub-menu -->
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="blog.html" title="">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html" title="">Blog Standard</a></li>
-                                                <li><a href="blog-detail.html" title="">Blog Detail</a></li>
-                                            </ul>
-                                            <!-- /.sub-menu -->
-                                        </li>
-                                        <li>
-                                            <a href="contact.html" title="">Contact</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="site-header-right">
-                                <div class="header-inner">
-                                    <div class="search flat-show-search">
-                                        <div class="show-search">
-                                            <a href="#"><i class="fa fa-search"></i></a>
-                                        </div>
-                                        <div class="top-search widgets-input">
-                                            <form action="get" id="searchform-all"
-                                                class="header-search search-form">
-                                                <div class="input-group">
-                                                    <input type="search" id="s"
-                                                        class="search-field"
-                                                        placeholder="Search here" aria-label="Search" />
-                                                        <button class="search-submit" type="submit" title="Search"></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="cart">
-                                        <a href="#" class="cart-btn"><i
-                                                class="fa fa-shopping-cart"></i></a>
-                                    </div>
-                                    <div class="button">
-                                        <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app&hl=id" class="btn">Download</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- header right -->
-                        </div>
-                    </div>
-                    <!-- /.header-wrap -->
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container -->
-        </header>
-        <!-- /header -->
+    </div>
+    </div>
 
         <!-- page title -->
         <div class="page-title">

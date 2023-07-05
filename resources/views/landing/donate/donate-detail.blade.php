@@ -163,7 +163,7 @@
                                     <li><span class="">UKM Tani:</span><span class="info-contact-us">Linko Bunt</span></li>
                                     <li><span class="">Lokasi:</span><span class="info-contact-us">Kabupaten Pasuruan</span></li>
                                     <li><span class="">Jenis Pohon:</span><span class="info-contact-us">Kelapa, Alpukat, Apel</span></li>
-                                    <li><span class="">Lokasi:</span><span class="info-contact-us">Kabupaten Pasuruan</span></li>
+                                    <!-- <li><span class="">Lokasi:</span><span class="info-contact-us">Kabupaten Pasuruan</span></li> -->
                                     <li><span class="">Batas Donasi:</span><span class="info-contact-us">2 Oktober 2023</span></li>
                                     <li><span class="">Penanaman:</span><span class="info-contact-us">2 Desember 2023</span></li>
                                 </ul>

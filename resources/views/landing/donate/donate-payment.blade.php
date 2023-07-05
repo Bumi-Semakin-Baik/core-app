@@ -152,7 +152,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-10">
                             <div class="widget-contact-services-details mg-bottom-25">
                                 <div class="sidebar-title mg-bottom-25">
                                     <h2 class="section-heading-jost-size28 text-pri2-color">Pembayaran</h2>
@@ -165,19 +165,29 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">Rp</span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Username"
-                                        aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" placeholder="Masukkan nominal donasi" aria-label="Nominal Donasi" aria-describedby="basic-addon1" name="nominal_donasi" required>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-10">
                             <div class="widget-contact-services-details">
                                 <div class="sidebar-title">
                                     <h2 class="section-heading-jost-size28 text-pri2-color"
                                         style="margin-bottom: 2rem;">Data Diri</h2>
                                 </div>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="name">Nama</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
+                                        <div class="#" style="margin-top: 2rem;margin-bottom: 2rem;"><a
+                                        class="button-services" href="#">Donasi</a></div>
                             </div>
-
+                                    </form>
+                            </div>
                         </div>
                     </div>
 
