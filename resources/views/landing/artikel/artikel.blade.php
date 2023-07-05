@@ -168,7 +168,9 @@
 
 
                                     <p class="desc-content-box text-decs">
+                                        <div style="color: #525368">
                                        {!! $news->content  !!}
+                                        </div>
                                     </p>
 
                                     <p class="desc-content-box text-decs">
