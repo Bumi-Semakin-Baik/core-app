@@ -78,7 +78,7 @@
                                                         </li>
 
                                                         <li>
-                                                            <a href="#" title="">Blog</a>
+                                                            <a href="{{ route('get.blog') }}" title="">Blog</a>
                                                             <!-- /.sub-menu -->
                                                         </li>
                                                         <li>
@@ -703,7 +703,7 @@
 
                             <div class="item wow fadeInUp">
                                 <div class="blog-item hover-up-style2">
-                                    <img src="{{ Storage::url($card->image) }}" alt="" style="height:100%;width:100%;">
+                                    <img src="{{ Storage::url($card->image) }}" alt="" style="height:100%;width:100%;object-fit:cover;">
                                     <div class="item-overlay">
 
                                     </div>
@@ -728,7 +728,9 @@
                                         </div>
                                         <hr class="" style="width: 100%;">
                                         <h4 class="sub-title">
-                                            {{ $card->created_at->format('d/m/y') }}
+                                            <div style="color: #fff">
+                                                {{ $card->created_at->format('d/m/y') }}
+                                            </div>
                                         </h4>
                                     </div>
                                 </div>
