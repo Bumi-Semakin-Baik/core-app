@@ -24,7 +24,7 @@
                             <ul class="widgets-nav-social">
                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href ="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
@@ -35,115 +35,65 @@
         <!-- /.top -->
 
         <!-- header -->
-        <header id="header" class="header header-style2 bg-color">
-            <div class="container-fluid">
+        <header id="header" class="header bg-color">
+            <div class="container">
                 <div class="row">
-                    <div class="header-wrap">
-                        <div class="col-md-3">
+                    <div class="header-wrap-home1">
+                        <div class="col-md-3 ">
                             <div class="inner-header">
-                                <div class="logo-header">
-                                    <a href="index.html" title="">
-                                        <img src="{{ asset('landing/images/home/bumibaik.jpg') }}" alt="images">
-                                    </a>
-                                </div>
-                                <!-- /#logo -->
+                                <img src="{{ asset('landing/images/home/bumibaik.jpg') }}"
+                                    width="100px" alt="images">
+                                <!-- /logo -->
+
                                 <div class="btn-menu">
                                     <span></span>
                                 </div>
-                                <!-- //mobile menu button -->
+                                <!-- /mobile menu button -->
                             </div>
-
                         </div>
-                        <!-- /.col-md-3 -->
-                        <div class="col-md-6">
+
+                        <div class="col-md-9 text-center">
                             <div class="nav-wrap">
                                 <nav id="mainnav" class="mainnav">
                                     <ul class="menu">
-                                        <li class="menu-item-has-children">
-                                            <a href="index.html" title="">Home</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="index.html" title="">Home 01</a></li>
-                                                <li><a href="home-2.html" title="">Home 02</a></li>
-                                            </ul>
-                                            <!-- /.sub-menu -->
+                                        <li>
+                                            <a href="{{ url('') }}" title="">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="about.html" title="">About</a>
                                             <ul class="sub-menu">
-                                                <li><a href="about.html" title="">About Us</a></li>
-                                                <li><a href="team.html" title="">Team</a></li>
-                                                <li><a href="faq.html" title="">Faq</a></li>
+                                                <li><a href="{{ url('/about') }}" title="">About
+                                                        Us</a></li>
                                             </ul>
                                             <!-- /.sub-menu -->
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="services.html" title="">Services</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="services.html" title="">Services</a></li>
-                                                <li><a href="service-details.html" title="">Service Details</a></li>
-                                            </ul>
+                                        <li>
+                                            <a href="#" title="">Services</a>
+
                                             <!-- /.sub-menu -->
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="case-study.html" title="">Case</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="case-study.html" title="">Case Study</a></li>
-                                                <li><a href="case-details.html" title="">Case Details</a></li>
-                                            </ul>
+
+                                        <li>
+                                            <a href="#" title="">Blog</a>
                                             <!-- /.sub-menu -->
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="blog.html" title="">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html" title="">Blog Standard</a></li>
-                                                <li><a href="blog-detail.html" title="">Blog Detail</a></li>
-                                            </ul>
-                                            <!-- /.sub-menu -->
+                                        <li>
+                                            <a href="#" title="">Contact</a>
                                         </li>
-                                        <li class="current-menu-item">
-                                            <a href="contact.html" title="">Contact</a>
+                                        <li>
+                                            <a href="{{ url('/donate') }}" title="">Donate</a>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
-                        <!-- <div class="col-md-3">
-                            <div class="site-header-right">
-                                <div class="header-inner">
-                                    <div class="search flat-show-search">
-                                        <div class="show-search">
-                                            <a href="#"><i class="fa fa-search"></i></a>
-                                        </div> -->
-                                        <!-- <div class="top-search widgets-input">
-                                            <form action="get" id="searchform-all"
-                                                class="header-search search-form">
-                                                <div class="input-group">
-                                                    <input type="search" id="s"
-                                                        class="search-field"
-                                                        placeholder="Search here" aria-label="Search" />
-                                                        <button class="search-submit" type="submit" title="Search"></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="cart">
-                                        <a href="#" class="cart-btn"><i
-                                                class="fa fa-shopping-cart"></i></a>
-                                    </div>
-                                    <div class="button">
-                                        <a href="contact.html" class="btn">Get A Quote</a>
-                                    </div> -->
-                                </div>
-                            </div>
-                            <!-- header right -->
-                        </div>
                     </div>
-                    <!-- /.header-wrap -->
+                    <!-- header right -->
                 </div>
-                <!-- /.row -->
             </div>
-            <!-- /.container -->
+
         </header>
+        <!-- /header -->
 
         <!-- page title -->
         <div class="page-title">
