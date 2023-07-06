@@ -15,16 +15,20 @@
                 <div class="row">
                     <div class="col md-4">
                         <div class="top-bar-left">
-                            <p class="top-location">2072 Pinnickinick Street, WA 98370</p>
+                            <p class="top-location">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu,
+                                                Kauman), Malang</p>
                         </div>
                     </div>
                     <div class="col md-8">
                         <div class="top-bar-right link-style3">
-                            <a href="#" class="top-mail">info@website.com</a>
+                            <a href="#" class="top-mail">semakinbaikbumi@gmail.com</a>
                             <ul class="widgets-nav-social">
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> -->
+                                <li><a href="https://wa.me/6282130075758" target="_blank" ><i class="fa fa-whatsapp"
+                                    aria-hidden="true"></i></a>
+                                </li>
                                 <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
