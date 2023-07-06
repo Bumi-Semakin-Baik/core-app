@@ -111,11 +111,14 @@ Route::prefix('location')
     ->controller(LocationController::class)
     ->group(function (){
         Route::get('/','index')->name('location');
+        Route::get('/indexDisabled','indexDisabled')->name('indexDisabled');
         Route::get('/add','add');
         Route::post('/store', 'store')->name('store.location');
         Route::delete('/{id}','destroy')->name('delete.location');
         Route::get('/edit/{id}','edit')->name('edit.location');
         Route::put('/edit/{id}','update')->name('update.location');
+        Route::put('/update_enable/{id}','update_enable')->name('update.enable');
+        Route::put('/update_disable/{id}','update_disable')->name('update.disable');
 
     });
 Route::controller(LandingController::class)

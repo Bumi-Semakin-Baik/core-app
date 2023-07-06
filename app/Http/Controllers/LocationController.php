@@ -9,7 +9,12 @@ class LocationController extends Controller
 {
     public function index(){
         return view ('admin.location.index', [
-            'locations' => Location::get('*'),
+            'locations' => Location::get('*')->where('status','=','Enabled'),
+        ]);
+    }
+    public function indexDisabled(){
+        return view ('admin.location.index', [
+            'locations' => Location::get('*')->where('status','=','Disabled'),
         ]);
     }
 
@@ -43,7 +48,6 @@ class LocationController extends Controller
     {
 
         $data = Location::where('id', $id)->first();
-        // dd($product);
         if ($data == null) {
             return redirect()->route('location');
         }
@@ -76,6 +80,30 @@ class LocationController extends Controller
 
         return redirect()->route('location')
         ->with('success', 'Data Berhasil diupdate');
+
+    }
+    public function update_enable($id)
+    {
+        $data = Location::where('id', $id)->first();
+        if ($data == null) {
+            return redirect()->route('location');
+        }
+
+        $data->update(['status'=> 'Enabled']);
+
+        return redirect()->route('indexDisabled');
+
+    }
+    public function update_disable($id)
+    {
+        $data = Location::where('id', $id)->first();
+        if ($data == null) {
+            return redirect()->route('location');
+        }
+
+        $data->update(['status'=> 'Disabled']);
+
+        return redirect()->route('location');
 
     }
 }
