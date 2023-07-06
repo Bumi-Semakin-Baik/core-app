@@ -45,6 +45,8 @@
                                                     </th>
                                                     <th class="nk-tb-col tb-col-sm"><span>ID</span></th>
                                                     <th class="nk-tb-col tb-col-sm"><span>Name</span></th>
+                                                    <th class="nk-tb-col tb-col-sm"><span>Status</span></th>
+                                                    <th class="nk-tb-col tb-col-sm"><span>PIC</span></th>
                                                     <th class="nk-tb-col nk-tb-col-tools">
                                                         <ul class="nk-tb-actions gx-1 my-n1">
                                                             <li class="me-n1">

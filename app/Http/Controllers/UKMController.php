@@ -25,6 +25,8 @@ class UKMController extends Controller
 
         UKM::create([
             'name' =>$request->input('name'),
+            'status' =>$request->input('status'),
+            'pic' =>$request->input('status'),
         ]);
         return redirect()->route('ukm')
         ->with('success', 'UKM succesfully added');
@@ -56,6 +58,8 @@ class UKMController extends Controller
         // dd($request->all());
         $validatedData = $request->validate([
             'name' => 'required',
+            'status' => 'required',
+            'pic' => 'required',
         ]);
 
         $test = UKM::where('id', $id)
