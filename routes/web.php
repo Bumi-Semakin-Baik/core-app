@@ -75,7 +75,7 @@ Route::prefix('company')
         Route::delete('/accounts/{id}','destroy')->name('delete.company');
         Route::get('/projects','getProject');
     });
- 
+
 Route::prefix('donation')
     ->controller(DonationController::class)
     ->group(function (){
@@ -108,6 +108,9 @@ Route::prefix('ukm')
 Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');
+        Route::get('/news/{id}', 'detailNews')->name('detail.news');
+        Route::get('/blog','getBlog')->name('get.blog');
+        Route::get('/blog/{id}','detailNews')->name('detail.blog');
     });
 
 Route::controller(AboutController::class)
@@ -125,7 +128,7 @@ Route::controller(ArtikelController::class)
     ->group(function (){
         Route::get('/artikel','index');
     });
-    
+
 Auth::routes();
 
 Route::get('/confirm-password', function () {

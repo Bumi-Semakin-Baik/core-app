@@ -61,7 +61,8 @@
                                 <nav id="mainnav" class="mainnav">
                                     <ul class="menu">
                                         <li>
-                                            <a href="{{ url('') }}" title="">Home</a>
+                                            <a href="index.html" title="">Home</a>
+                                            <!-- /.sub-menu -->
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="about.html" title="">About</a>
@@ -132,7 +133,7 @@
                         <div class="about-post center bd-radius-50-image">
                             <img class="main-post-about" src="images/home/the-girl-in-the-glasses.jpg" alt="images">
                             <img class="circel-inside" src="{{asset ('landing/images/home/bumibaik.jpg')}}" alt="images">
-                            
+
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -228,7 +229,7 @@
                                         <div class="features-box box-2">
                                             <span class="icon-about-right"></span>
                                             <div class="content-features">
-                                                    <h3 class="section-heading-jost-size20 fw-600">Efficitur velit </h3>    
+                                                    <h3 class="section-heading-jost-size20 fw-600">Efficitur velit </h3>
                                                 <p class="section-desc white">Consectetur adipisicing elised do eiusmod tempor incididunt ut labore</p>
                                             </div>
                                         </div>
