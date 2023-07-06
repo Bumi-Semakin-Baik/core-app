@@ -11,6 +11,7 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\UKMController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
@@ -103,6 +104,18 @@ Route::prefix('ukm')
         Route::delete('/{id}','destroy')->name('delete.ukm');
         Route::get('/edit/{id}','edit')->name('edit.ukm');
         Route::put('/edit/{id}','update')->name('update.ukm');
+
+    });
+
+Route::prefix('location')
+    ->controller(LocationController::class)
+    ->group(function (){
+        Route::get('/','index')->name('location');
+        Route::get('/add','add');
+        Route::post('/store', 'store')->name('store.location');
+        Route::delete('/{id}','destroy')->name('delete.location');
+        Route::get('/edit/{id}','edit')->name('edit.location');
+        Route::put('/edit/{id}','update')->name('update.location');
 
     });
 Route::controller(LandingController::class)
