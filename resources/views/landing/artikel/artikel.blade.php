@@ -150,7 +150,7 @@
                         <div class="post-wrap">
                             <div class="content-blog-detail">
                                 <div class="image-box">
-                                    <div class="image">
+                                    <div class="image" style="text-align: center">
                                         <img src={{  Storage::url($news->image)  }} alt="image">
                                     </div>
                                 </div>
