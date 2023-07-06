@@ -104,6 +104,8 @@ Route::prefix('ukm')
         Route::delete('/{id}','destroy')->name('delete.ukm');
         Route::get('/edit/{id}','edit')->name('edit.ukm');
         Route::put('/edit/{id}','update')->name('update.ukm');
+        Route::put('/update_enable/{id}','update_enable')->name('ukm.enable');
+        Route::put('/update_disable/{id}','update_disable')->name('ukm.disable');
 
     });
 
