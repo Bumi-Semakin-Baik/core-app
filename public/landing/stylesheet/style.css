@@ -1049,6 +1049,7 @@ header.fixed-header {
 
 .hover-up-style2:hover {
     transform: translateY(-2%);
+    
 }
 
 .hover-up-style2 {
@@ -1057,6 +1058,7 @@ header.fixed-header {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    
 }
 
 .over-flow-hidden {
@@ -1357,6 +1359,7 @@ button.btn.btn-outline-primary {
 #mainnav-mobi .menu .current-menu-item > a,
 #mainnav-mobi .menu .current-item > a {
     color: var(--primary-color);
+    
 }
 
 #mainnav .menu>li:last-child a {
@@ -2128,6 +2131,7 @@ article.post .content-post .more-link a:hover {
 
 .flat-case-details .paginate-box .content-features {
     margin-left: 29px;
+    
 }
 
 .flat-case-details .paginate-box a {

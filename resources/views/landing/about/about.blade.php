@@ -15,20 +15,16 @@
                 <div class="row">
                     <div class="col md-4">
                         <div class="top-bar-left">
-                        <p class="top-location">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu,
-                                                Kauman), Malang</p>
+                            <p class="top-location">2072 Pinnickinick Street, WA 98370</p>
                         </div>
                     </div>
                     <div class="col md-8">
                         <div class="top-bar-right link-style3">
-                            <a href="#" class="top-mail">semakinbaikbumi@gmail.com</a>
+                            <a href="#" class="top-mail">info@website.com</a>
                             <ul class="widgets-nav-social">
-                                <!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> -->
-                                <li><a href="https://wa.me/6282130075758" target="_blank" ><i class="fa fa-whatsapp"
-                                    aria-hidden="true"></i></a>
-                                </li>
+                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
@@ -48,7 +44,7 @@
                                 <img src="{{ asset('landing/images/home/bumibaik.jpg') }}"
                                     width="100px" alt="images">
                                 <!-- /logo -->
-
+                                
                                 <div class="btn-menu">
                                     <span></span>
                                 </div>
@@ -61,8 +57,7 @@
                                 <nav id="mainnav" class="mainnav">
                                     <ul class="menu">
                                         <li>
-                                            <a href="index.html" title="">Home</a>
-                                            <!-- /.sub-menu -->
+                                            <a href="{{ url('') }}" title="">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="about.html" title="">About</a>
@@ -133,7 +128,7 @@
                         <div class="about-post center bd-radius-50-image">
                             <img class="main-post-about" src="images/home/the-girl-in-the-glasses.jpg" alt="images">
                             <img class="circel-inside" src="{{asset ('landing/images/home/bumibaik.jpg')}}" alt="images">
-
+                            
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -229,7 +224,7 @@
                                         <div class="features-box box-2">
                                             <span class="icon-about-right"></span>
                                             <div class="content-features">
-                                                    <h3 class="section-heading-jost-size20 fw-600">Efficitur velit </h3>
+                                                    <h3 class="section-heading-jost-size20 fw-600">Efficitur velit </h3>    
                                                 <p class="section-desc white">Consectetur adipisicing elised do eiusmod tempor incididunt ut labore</p>
                                             </div>
                                         </div>
