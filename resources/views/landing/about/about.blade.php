@@ -110,7 +110,7 @@
                                 About Us
                             </div>
                             <div class="page-title-content link-style6">
-                                <span><a class="home" href="index.html">Home</a></span><span class="page-title-content-inner">About Us</span>
+                                <span><a class="home" href="#">Home</a></span><span class="page-title-content-inner">About Us</span>
                             </div>
                         </div>
                     </div>

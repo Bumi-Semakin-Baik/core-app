@@ -102,7 +102,7 @@
                                 Services
                             </div>
                             <div class="section-subtitle">
-                                <span><a class="home" href="index.html">Service</a></span><span class="page-title-content-inner">Home</span>
+                                <span><a class="home" href="#">Service</a></span><span class="page-title-content-inner">Home</span>
                             </div>
                         </div>
                     </div>
@@ -336,4 +336,4 @@
         </section> -->
         <!-- / Our service -->
 
-        <!-- @include('landing.template.footer') -->
+        @include('landing.template.footer')
