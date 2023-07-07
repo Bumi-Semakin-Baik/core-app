@@ -81,7 +81,7 @@
                                             <!-- /.sub-menu -->
                                         </li>
                                         <li>
-                                            <a href="#" title="">Contact</a>
+                                            <a href="{{ url('/contact') }}" title="">Contact</a>
                                         </li>
                                         <li>
                                             <a href="{{ url('/donate') }}" title="">Donate</a>

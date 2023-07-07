@@ -61,15 +61,7 @@
                                 <nav id="mainnav" class="mainnav">
                                     <ul class="menu">
                                         <li>
-                                            <a href="{{ url('') }}" title="">Home</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#" title="">About</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="{{ url('/about') }}" title="">About
-                                                        Us</a></li>
-                                            </ul>
-                                            <!-- /.sub-menu -->
+                                            <a href="{{ url('/about') }}" title="">About</a>
                                         </li>
                                         <li>
                                             <a href="{{ url('/service') }}" title="">Services</a>
@@ -78,14 +70,14 @@
                                         </li>
 
                                         <li>
-                                            <a href="{{ route('get.blog') }}" title="">Blog</a>
+                                            <a href="{{ route('get.blog') }}" title="">Blog List</a>
                                             <!-- /.sub-menu -->
                                         </li>
                                         <li>
                                             <a href="{{ url('/contact') }}" title="">Contact</a>
                                         </li>
                                         <li>
-                                            <a href="{{ url('/donate') }}" title="">Donate</a>
+                                            <a href="{{ url('/donate') }}" title="">Donate List</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -107,10 +99,10 @@
                         <div class="overlay-image"></div>
                         <div class="banner-title">
                             <div class="section-title">
-                                Donate
+                                Services
                             </div>
                             <div class="section-subtitle">
-                                <span><a class="home" href="index.html">Home</a></span><span class="page-title-content-inner">Donate</span>
+                                <span><a class="home" href="index.html">Service</a></span><span class="page-title-content-inner">Home</span>
                             </div>
                         </div>
                     </div>
@@ -129,7 +121,7 @@
                         <div class="themesflat-spacer clearfix" data-desktop="120" data-mobile="60" data-smobile="60"></div>
                     </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="item-three-column mg-bottom-60 wow fadeInUp">
                         <article class="flat-WCU-box grow-up-hover">
                             <div class="WCU-image">
@@ -341,7 +333,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- / Our service -->
 
-        @include('landing.template.footer')
+        <!-- @include('landing.template.footer') -->

@@ -15,6 +15,8 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ServiceControlller;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -146,7 +148,14 @@ Route::controller(ArtikelController::class)
     ->group(function (){
         Route::get('/artikel','index');
     });
-
+Route::controller(ContactController::class)
+    ->group(function (){
+        Route::get('/contact','index');
+    });
+Route::controller(ServiceControlller::class)
+    ->group(function (){
+        Route::get('/service','index');
+    });
 Auth::routes();
 
 Route::get('/confirm-password', function () {
