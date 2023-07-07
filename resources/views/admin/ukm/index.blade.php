@@ -18,6 +18,18 @@
                                                 <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em class="icon ni ni-menu-alt-r"></em></a>
                                                 <div class="toggle-expand-content" data-content="pageMenu">
                                                     <ul class="nk-block-tools g-3">
+                                                        <li>
+                                                            <div class="drodown">
+                                                                <a href="#" class="dropdown-toggle btn btn-white btn-dim btn-outline-light" data-bs-toggle="dropdown"><em class="d-none d-sm-inline icon ni ni-filter-alt"></em><span>Filtered By</span><em class="dd-indc icon ni ni-chevron-right"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a id="filter-all"><span>All</span></a></li>
+                                                                        <li><a id="filter-enabled"><span>Enabled</span></a></li>
+                                                                        <li><a id="filter-disabled"><span>Disabled</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
                                                         <li class="nk-block-tools-opt d-none d-sm-block">
                                                             <a href="{{ url('/ukm/add') }}" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add New UKM Tani</span></a>
                                                         </li>
@@ -45,6 +57,8 @@
                                                     </th>
                                                     <th class="nk-tb-col tb-col-sm"><span>ID</span></th>
                                                     <th class="nk-tb-col tb-col-sm"><span>Name</span></th>
+                                                    <th class="nk-tb-col tb-col-sm"><span>Status</span></th>
+                                                    <th class="nk-tb-col tb-col-sm"><span>PIC</span></th>
                                                     <th class="nk-tb-col nk-tb-col-tools">
                                                         <ul class="nk-tb-actions gx-1 my-n1">
                                                             <li class="me-n1">
@@ -67,44 +81,67 @@
                                             </thead>
 
                                             <tbody>
+                                                <?php $no = 1 ?>
                                                 @foreach ($ukm as $u)
-                                                <tr class="nk-tb-item">
-                                                    <td class="nk-tb-col nk-tb-col-check">
-                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" class="custom-control-input" id="puid1">
-                                                            <label class="custom-control-label" for="puid1"></label>
-                                                        </div>
+                                                @if (request()->get('filter') == $u->status || request()->get('filter') == null)
+                                                    <tr class="nk-tb-item ukm-filter" data-status="{{ $u->status }}">
+                                                        <td class="nk-tb-col nk-tb-col-check">
+                                                            <div class="custom-control custom-control-sm custom-checkbox notext">
+                                                                <input type="checkbox" class="custom-control-input" id="puid1">
+                                                                <label class="custom-control-label" for="puid1"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="nk-tb-col">
+                                                            <span class="tb-lead">{{$no++}}</span>
+                                                        </td>
+                                                        <td class="nk-tb-col">
+                                                            <span class="tb-sub">{{ $u->name }}</span>
+                                                        </td>
+                                                        <td class="nk-tb-col">
+
+                                                            @if($u->status=="Enabled")
+                                                                <form action="{{ route('ukm.disable', $u->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
+                                                                    @csrf
+                                                                    @METHOD('PUT')
+                                                                    <button type="submit" class="btn btn-success" onclick="return confirm('{{ __('Are you sure you want disable this UKM?') }}')">{{$u->status}}</button>
+                                                                </form>
+                                                            @else
+                                                                <form action="{{ route('ukm.enable', $u->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
+                                                                    @csrf
+                                                                    @METHOD('PUT')
+                                                                    <button type="submit" class="btn btn-danger" onclick="return confirm('{{ __('Are you sure you want enable this UKM?') }}')">{{$u->status}}</button>
+                                                                </form>
+                                                            @endif
+
                                                     </td>
-                                                    <td class="nk-tb-col">
-                                                        <span class="tb-lead">{{$u->id}}</span>
-                                                    </td>
-                                                    <td class="nk-tb-col">
-                                                        <span class="tb-sub">{{ $u->name }}</span>
-                                                    </td>
-                                                    <td class="nk-tb-col nk-tb-col-tools">
-                                                        <ul class="nk-tb-actions gx-1 my-n1">
-                                                            <li class="me-n1">
-                                                                <div class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <ul class="link-list-opt no-bdr">
-                                                                            <li><a href="{{ url('ukm/edit', $u->id) }}"><em class="icon ni ni-edit"></em><span>Edit Product</span></a></li>
-                                                                            <li><a href="#"><em class="icon ni ni-eye"></em><span>View Product</span></a></li>
-                                                                            <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Product Orders</span></a></li>
-                                                                            <form action="{{ route('delete.ukm', $u->id) }}" method="POST">
-                                                                            @csrf
-                                                                            @method('DELETE')
-                                                                            {{-- <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Product</span></a></li> --}}
-                                                                            {{-- <input type="submit" class="btn btn-danger" placeholder="Remove Product"/> --}}
-                                                                            <button type="submit" class="btn btn-danger">Remove UKM</button>
-                                                                        </form>
-                                                                        </ul>
+                                                        <td class="nk-tb-col">
+                                                            <span class="tb-sub">{{ $u->pic }}</span>
+                                                        </td>
+                                                        <td class="nk-tb-col nk-tb-col-tools">
+                                                            <ul class="nk-tb-actions gx-1 my-n1">
+                                                                <li class="me-n1">
+                                                                    <div class="dropdown">
+                                                                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                            <ul class="link-list-opt no-bdr">
+                                                                                <li><a href="{{ url('ukm/edit', $u->id) }}"><em class="icon ni ni-edit"></em><span>Edit Product</span></a></li>
+                                                                                <li><a href="#"><em class="icon ni ni-eye"></em><span>View Product</span></a></li>
+                                                                                <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Product Orders</span></a></li>
+                                                                                <form action="{{ route('delete.ukm', $u->id) }}" method="POST">
+                                                                                @csrf
+                                                                                @method('DELETE')
+                                                                                {{-- <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Product</span></a></li> --}}
+                                                                                {{-- <input type="submit" class="btn btn-danger" placeholder="Remove Product"/> --}}
+                                                                                <button type="submit" class="btn btn-danger" onclick="return confirm('Remove this UKM?')">Remove UKM</button>
+                                                                            </form>
+                                                                            </ul>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                </tr><!-- .nk-tb-item -->
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr><!-- .nk-tb-item -->
+                                                @endif
                                                 @endforeach
                                         </tbody>
 
@@ -114,6 +151,25 @@
                                 </div>
 
 @include('admin.template.footer')
+<script>
+$(document).ready(function () {
+    function filterUkm(status) {
+        window.location.href = window.location.origin + window.location.pathname + '?filter=' + status
+    }
+    $('#filter-all').click(function (e) {
+        e.preventDefault();
+        filterUkm('');
+    });
+    $('#filter-enabled').click(function (e) {
+        e.preventDefault();
+        filterUkm('Enabled');
+    });
+    $('#filter-disabled').click(function (e) {
+        e.preventDefault();
+        filterUkm('Disabled');
+    });
+});
+</script>
 
 <div class="modal fade zoom" tabindex="-1" id="modalZoom">
     <div class="modal-dialog" role="document">

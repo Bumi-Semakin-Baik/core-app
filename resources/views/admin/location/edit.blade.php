@@ -13,22 +13,40 @@
     </div>
     <div class="card">
         <div class="card-inner">
-            <form action="{{ route('update.ukm', $ukm->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
-                @csrf
-                @method('PUT')
+            <form action="{{ route('update.location', $location->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
+            @csrf
+            @METHOD('PUT')
                 <div class="row g-gs">
                 <div class="col-md-12">
-
                     <div class="form-group">
                         <label class="form-label" for="fv-subject">Name</label>
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control" id="fv-subject" name="name" value="{{ $ukm->name }}" required>
+                                <input type="text" class="form-control" id="fv-subject" name="name" value="{{ $location->name }}" required>
                             </div>
                     </div>
+                </div>
+                <div class="col-md-12">
                     <div class="form-group">
-                        <label class="form-label" for="fv-subject">PIC</label>
+                        <label class="form-label" for="fv-subject">Description</label>
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control" id="fv-subject" name="pic" required>
+                                <input type="text" class="form-control" id="fv-subject" name="description" value="{{ $location->description }}" required>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="fv-subject">Latitude</label>
+                            <div class="form-control-wrap">
+                                <input type="text" class="form-control" id="fv-subject" name="latitude" value="{{ $location->latitude }}" required>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="fv-subject">Longitude</label>
+                            <div class="form-control-wrap">
+                                <input type="text" class="form-control" id="fv-subject" name="longitude"  value="{{ $location->longitude }}"required>
                             </div>
                     </div>
                 </div>
@@ -43,9 +61,9 @@
                         <label class="form-check-label" for="radio2"></label>
                     </div>
             </div>
-                </div>
+
                     <div class="col-md-12">
-                                <button type="submit" class="btn btn-lg btn-primary"> Update UKM Baru </button>
+                                <button type="submit" class="btn btn-lg btn-primary"> Edit Location </button>
                             </form>
                         </div>
                     </div>
