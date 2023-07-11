@@ -64,7 +64,7 @@
                                             <a href="{{ url('') }}" title="">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="about.html" title="">About</a>
+                                            <a href="#" title="">About</a>
                                             <ul class="sub-menu">
                                                 <li><a href="{{ url('/about') }}" title="">About
                                                         Us</a></li>
@@ -72,17 +72,17 @@
                                             <!-- /.sub-menu -->
                                         </li>
                                         <li>
-                                            <a href="#" title="">Services</a>
+                                            <a href="{{ url('/services') }}" title="">Services</a>
 
                                             <!-- /.sub-menu -->
                                         </li>
 
                                         <li>
-                                            <a href="#" title="">Blog</a>
+                                            <a href="{{ route('get.blog') }}" title="">Blog</a>
                                             <!-- /.sub-menu -->
                                         </li>
                                         <li>
-                                            <a href="#" title="">Contact</a>
+                                            <a href="{{ url('/contact') }}" title="">Contact</a>
                                         </li>
                                         <li>
                                             <a href="{{ url('/donate') }}" title="">Donate</a>

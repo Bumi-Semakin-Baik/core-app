@@ -63,7 +63,7 @@
                                             <a href="{{ url('') }}" title="">Home</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="about.html" title="">About</a>
+                                            <a href="#" title="">About</a>
                                             <ul class="sub-menu">
                                                 <li><a href="{{ url('/about') }}" title="">About
                                                         Us</a></li>
@@ -71,13 +71,13 @@
                                             <!-- /.sub-menu -->
                                         </li>
                                         <li>
-                                            <a href="#" title="">Services</a>
+                                            <a href="{{ url('/services') }}" title="">Services</a>
 
                                             <!-- /.sub-menu -->
                                         </li>
 
                                         <li>
-                                            <a href="#" title="">Blog</a>
+                                            <a href="{{ route('get.blog') }}" title="">Blog</a>
                                             <!-- /.sub-menu -->
                                         </li>
                                         <li>
@@ -142,13 +142,40 @@
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">Rp</span>
+                                        <span class="input-group-text text-success" id="basic-addon1">Rp</span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Masukkan nominal donasi" aria-label="Nominal Donasi" aria-describedby="basic-addon1" name="nominal_donasi" required>
+                                    <input type="number" class="form-control" placeholder="Masukkan nominal donasi" aria-label="Nominal Donasi" aria-describedby="basic-addon1" name="nominal_donasi" required step="1000">
+                                </div>
+                                <br>
+                                <!-- <div class="sidebar-title mg-bottom-25">
+                                    <h2 class="section-heading-jost-size28 text-pri2-color">Metode Pembayaran</h2>
+                             </div> -->
+                             <table border="0" cellpadding="10">
+                                <tr>
+                                    <th><a href="{{ url('/donate') }}" class="btn btn-primary">Pilih Pembayaran</a></th>
+                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/kredit.png') }}" width="80px" height="60px"></th>
+                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/logo-ovo.png') }}" width="80px" height="60px"></th>
+                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/gopay.png') }}" width="80px" height="60px"></th>
+                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/dana.png') }}" width="80px" height="60px"></th>
+                                </tr>
+                             </table>
+                             <br>
+                             <div class="sidebar-title mg-bottom-25">
+                             <form>
+                                    <div class="form-group">
+                                        <label for="name" class="text-success">Nama</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="text-success">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
+                                        <!--     -->
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-10">
+
+                        <!-- <div class="col-md-10">
                             <div class="widget-contact-services-details">
                                 <div class="sidebar-title">
                                     <h2 class="section-heading-jost-size28 text-pri2-color"
@@ -168,13 +195,13 @@
                                     </form>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="30" data-smobile="30">
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="col-md-12">
+                <div class="col-md-8">
+                    <div class="col-md-10">
                         <div class="widget-contact-services-details">
                             <div class="sidebar-title">
                                 <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">

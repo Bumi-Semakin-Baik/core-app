@@ -64,7 +64,7 @@
                                                             <a href="{{ url('') }}" title="">Home</a>
                                                         </li>
                                                         <li class="menu-item-has-children">
-                                                            <a href="about.html" title="">About</a>
+                                                            <a href="#" title="">About</a>
                                                             <ul class="sub-menu">
                                                                 <li><a href="{{ url('/about') }}" title="">About
                                                                         Us</a></li>
