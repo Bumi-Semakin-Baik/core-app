@@ -129,21 +129,21 @@
                     <h1 class="section-heading-jost-size28 text-pri2-color">Yuk donasi kampanye alam</h1>
                     <h1 class="section-heading-jost-size28 text-pri2-color">"The gardening that matters."</h1>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-10">
+                        <div class="col-md-8">
                             <div class="widget-contact-services-details mg-bottom-25">
                                 <div class="sidebar-title mg-bottom-25">
                                     <h2 class="section-heading-jost-size28 text-pri2-color">Pembayaran</h2>
                                 </div>
                                 <div class="">
                                     <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Nominal
-                                        Donasi <span style="color: red;">*</span></h3>
+                                        Donasi (Rp.)<span style="color: red;">*</span></h3>
                                 </div>
                                 <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
+                                    <!-- <div class="input-group-prepend">
                                         <span class="input-group-text text-success" id="basic-addon1">Rp</span>
-                                    </div>
+                                    </div> -->
                                     <input type="number" class="form-control" placeholder="Masukkan nominal donasi" aria-label="Nominal Donasi" aria-describedby="basic-addon1" name="nominal_donasi" required step="1000">
                                 </div>
                                 <br>
@@ -161,6 +161,7 @@
                              </table>
                              <br>
                              <div class="sidebar-title mg-bottom-25">
+                             <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Data Diri <span style="color: red;">*</span></h3>
                              <form>
                                     <div class="form-group">
                                         <label for="name" class="text-success">Nama</label>
@@ -200,8 +201,8 @@
                     <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="30" data-smobile="30">
                     </div>
                 </div>
-                <div class="col-md-8">
-                    <div class="col-md-10">
+                <div class="col-md-4">
+                    <!-- <div class="col-md-10"> -->
                         <div class="widget-contact-services-details">
                             <div class="sidebar-title">
                                 <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">
