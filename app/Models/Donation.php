@@ -18,6 +18,11 @@ class Donation extends Model
         'target',
         'collected',
         'due_date',
-        'is_published'
+        'is_published',
+        'status',
+        'id_ukm',
+        'nama_ukm',
+        'id_location',
+        'nama_lokasi'
     ];
 }

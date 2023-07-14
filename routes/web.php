@@ -83,6 +83,11 @@ Route::prefix('donation')
         Route::get('/manage','getManage');
         Route::get('/add','add');
         Route::post('/store', 'store')->name('store.donation');
+        Route::post('/filtered', 'filter')->name('filter.donation');
+        Route::put('/update_publish/{id}','update_publish')->name('update.publish');
+        Route::put('/update_unpublish/{id}','update_unpublish')->name('update.unpublish');
+        Route::put('/update_enable/{id}','update_enable')->name('update.enable.donation');
+        Route::put('/update_disable/{id}','update_disable')->name('update.disable.donation');
         // Route::delete('/destroy', 'destroy')->name('destroy.donation');
     });
 Route::prefix('newsletter')
