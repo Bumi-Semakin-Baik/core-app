@@ -87,7 +87,7 @@
                                                         <span class="tb-sub">{{ $news->slug }}</span>
                                                     </td>
                                                     <td class="nk-tb-col">
-                                                        <span class="tb-lead">{{ $news->content }}</span>
+                                                        <span class="tb-lead">{{ Str::limit($news->content, 20) }}</span>
                                                     </td>
                                                     <td class="nk-tb-col">
                                                         <span class="tb-sub">{{ $news->author }}</span>
