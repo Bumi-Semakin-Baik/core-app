@@ -49,7 +49,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-1">
+                                            <div class="col-md-2">
                                                 <label class="form-label" for="isPublish">Status</label>
                                                 <div class="form-check">
                                                     <input type="radio" class="form-check-input" id="radio1" name="status" value="Enabled">Enabled

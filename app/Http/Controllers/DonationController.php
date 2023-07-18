@@ -73,11 +73,27 @@ class DonationController extends Controller
     }
 
     public function filter(Request $request){
+        // return view('admin.donation.manage.filteredIndex',[
+        //     'donations' => DB::table('donations')
+        //                             ->select('*')
+        //                             ->orWhere('status','=',$request->status)
+        //                             ->orWhere('is_published','=',$request->is_published)
+        //                             ->orderBy('id','asc')
+        //                             ->get()
+        // ]);
+
+        $status = $request->input('status');
+        $is_published = $request->input('is_published');
+
         return view('admin.donation.manage.filteredIndex',[
             'donations' => DB::table('donations')
                                     ->select('*')
-                                    ->where('status','=',$request->status)
-                                    ->where('is_published','=',$request->is_published)
+                                    ->when ($status, function ($query, $status) {
+                                        return $query->where('status','=', $status);
+                                    })
+                                    ->when ($is_published, function ($query, $is_published) {
+                                        return $query->where('is_published','=', $is_published);
+                                    })
                                     ->orderBy('id','asc')
                                     ->get()
         ]);
