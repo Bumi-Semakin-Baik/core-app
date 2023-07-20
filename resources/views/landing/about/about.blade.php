@@ -110,7 +110,7 @@
                                 About Us
                             </div>
                             <div class="page-title-content link-style6">
-                                <span><a class="home" href="#">Home</a></span><span class="page-title-content-inner">About Us</span>
+                                <span><a class="home" href="#">Home</a></span><span class="page-title-content-inner" style="color: white">About Us</span>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                         <div class="about-content">
                             <div class="about-content-title wow fadeInUp">
                                 <div class="section-subtitle">ABOUT US</div>
-                                <div class="section-title">The Best Choice For your Business.</div>
+                                <div class="section-title judul-home">The Best Choice For your Business.</div>
                                 <div class="section-desc">Lorem Ipsum is simply dummy text of free available market typesetting industry has been the industry's standard dummy text ever. Lorem Ipsum is simply dummy text of free available </div>
                             </div>
                             <div id="about-box" class="about-desc-box">
@@ -253,7 +253,7 @@
                     <div class="col-md-12">
                         <div class="section-title-box">
                             <h4 class="section-subtitle wow fadeInUp">WORK PROCESS</h4>
-                            <h2 class="section-title wow fadeInUp">We Complete Every<br> Step Carefully</h2>
+                            <h2 class="section-title wow fadeInUp judul-home">We Complete Every<br> Step Carefully</h2>
                         </div>
                         <div class="themesflat-spacer clearfix" data-desktop="65" data-mobile="60" data-smobile="60"></div>
                     </div>
@@ -389,7 +389,7 @@
                         <div class="testimonials-content-left">
                             <div class="section-title-box">
                                 <h5 class="section-subtitle">CLIENT TESTIMONIALS</h5>
-                                <h2 class="section-title">What our clients say</h2>
+                                <h2 class="section-title judul-home">What our clients say</h2>
                             </div>
                             <p class="section-desc mg-top-25">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
                         </div>
@@ -720,7 +720,7 @@
                                 <div class="themesflat-spacer clearfix" data-desktop="148" data-mobile="60" data-smobile="60"></div>
                                 <div class="about-content-left themesflat-counter">
                                     <h5 class="section-subtitle">ABOUT US</h5>
-                                    <h2 class="section-title">Nurture The<br>environment</h2>
+                                    <h2 class="section-title ">Nurture The<br>environment</h2>
                                     <p class="section-desc">Lorem Ipsum is simply dummy text of free available market typesetting industry has been the industry's standard dummy</p>
                                     <div class="about-history-box wow fadeInLeft ">
                                         <div class="icon-about">

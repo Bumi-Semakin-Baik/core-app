@@ -102,7 +102,7 @@
                                 Contact
                             </div>
                             <div class="section-subtitle">
-                                <span><a class="home" href="#">Contact</a></span><span class="page-title-content-inner">Home</span>
+                                <span><a class="home" href="#">Contact</a></span><span class="page-title-content-inner" style="color: white">Home</span>
                             </div>
                         </div>
                     </div>

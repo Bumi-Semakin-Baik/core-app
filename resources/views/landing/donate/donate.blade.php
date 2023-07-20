@@ -110,7 +110,7 @@
                                 Donate
                             </div>
                             <div class="section-subtitle">
-                                <span><a class="home" href="index.html">Home</a></span><span class="page-title-content-inner">Donate</span>
+                                <span><a class="home" href="index.html">Home</a></span><span class="page-title-content-inner" style="color: white">Donate</span>
                             </div>
                         </div>
                     </div>
@@ -216,7 +216,7 @@
                                         </div>
                                     </div>
                                     <div class="row" style="margin-top: 0.2rem;">
-                                        <div class="col-md-6" style="padding-left: 20px;">
+                                        <div class="col-md-6" id="jumlah" style="padding-left: 20px;">
                                             <small style="color: #111;"><strong>15.000</strong></small>
                                             <br>
                                             <small style="color: #111;">Pohon terkumpul</small>

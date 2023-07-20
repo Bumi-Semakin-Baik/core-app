@@ -274,8 +274,8 @@
     <!-- features -->
     <br>
     <div class="section-title-box">
-        <h4 class="section-subtitle">TREE FOR LIFE</h4>
-        <h2 class="section-title">Pohon Termonitor<br></h2>
+        <h4 class="section-subtitle judul-home">TREE FOR LIFE</h4>
+        <h2 class="section-title" id="judul1">Pohon Termonitor<br></h2>
     </div>
     <br><br>
     <section class="flat-features">
@@ -286,7 +286,7 @@
                         <div class="features-box">
                             <div class="content-features">
                                 <a href="service-details.html">
-                                    <h2 class="section-title text-center">
+                                    <h2 class="section-title text-center angka-card">
                                         18.174
                                     </h2>
                                 </a>
@@ -302,7 +302,7 @@
                         <div class="features-box">
                             <div class="content-features">
                                 <a href="service-details.html">
-                                    <h2 class="section-title text-center">
+                                    <h2 class="section-title text-center angka-card">
                                         15
                                     </h2>
                                 </a>
@@ -318,7 +318,7 @@
                         <div class="features-box">
                             <div class="content-features">
                                 <a href="service-details.html">
-                                    <h2 class="section-title text-center">
+                                    <h2 class="section-title text-center angka-card">
                                         5
                                     </h2>
                                 </a>
@@ -352,7 +352,7 @@
                     <div class="about-content">
                         <div class="about-content-title wow fadeInUp">
                             <div class="section-subtitle">ABOUT US</div>
-                            <div class="section-title">Kurangi Emisi Karbon Bersama BumiBaik</div>
+                            <div class="section-title judul-home"  >Kurangi Emisi Karbon Bersama BumiBaik</div>
                             <div class="section-desc">BumiBaik membantu setiap orang menghitung emisi karbon, menanam,
                                 dan mengadopsi pohon secara sukarela untuk menyerap emisi karbon sehingga karbon yang
                                 dihasilkan dan karbon yang diserap oleh pohon (Carbon Neutral) menjadi seimbang.
@@ -406,7 +406,7 @@
                 <div class="col-md-12">
                     <div class="section-title-box">
                         <div class="inner-header">
-                        <h2 class="section-title">Program Kami</h2>
+                        <h2 class="section-title judul-home">Program Kami</h2>
                         <br>
                         <h4 class="section-subtitle">Memfasilitasi pengurangan emisi karbon dan
                             penanaman pohon untuk Bumi semakin baik</h4>
@@ -419,7 +419,7 @@
 
                 <div class="item-four-column">
                     <div class="our-services-box hover-up-style2 mg-bottom30 wow fadeInDown">
-                        <div class="our-services-overlay"></div>
+                        <div class="our-services-overlay" id="img-overlay1"></div>
                         <span class="tf-icon icon-size icon-icon-farming-layer"><span class="path1"></span><span
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span></span>
@@ -441,7 +441,7 @@
                 </div>
                 <div class="item-four-column">
                     <div class="our-services-box hover-up-style2 mg-bottom30 wow fadeInDown">
-                        <div class="our-services-overlay"></div>
+                        <div class="our-services-overlay" id="img-overlay2"></div>
                         <span class="tf-icon icon-size icon-icon-farming-layer"><span class="path1"></span><span
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span></span>
@@ -464,7 +464,7 @@
 
                 <div class="item-four-column">
                     <div class="our-services-box hover-up-style2 mg-bottom30 wow fadeInDown">
-                        <div class="our-services-overlay"></div>
+                        <div class="our-services-overlay" id="img-overlay3"></div>
                         <span class="tf-icon icon-size icon-icon-farming-layer"><span class="path1"></span><span
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span></span>
@@ -487,7 +487,7 @@
 
                 <div class="item-four-column">
                     <div class="our-services-box hover-up-style2 wow fadeInLeft">
-                        <div class="our-services-overlay"></div>
+                        <div class="our-services-overlay" id="img-overlay4"></div>
                         <span class="tf-icon icon-size2 icon-Group-7526"><span class="path1"></span><span
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span><span class="path6"></span></span>
@@ -517,7 +517,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title-box">
-                        <h2 class="section-title">Mitra Kami</h2>
+                        <h2 class="section-title judul-home">Mitra Kami</h2>
                         <br>
                     </div>
                 </div>
@@ -589,7 +589,7 @@
             <div class="row">
                 <div class="section-title-box">
                     <h4 class="section-subtitle  wow fadeInUp">DONASI</h4>
-                    <h2 class="section-title  wow fadeInUp">Jumlah Donasi Terkumpul</h2>
+                    <h2 class="section-title  wow fadeInUp judul-home">Jumlah Donasi Terkumpul</h2>
                 </div>
                 <br><br>
                 <!-- <div class="col-md-12">
@@ -896,14 +896,14 @@
                     </div>
                 </div>
             </div> -->
-        
+
     <!-- </section> -->
 
 
 <section class="flat-case-study">
     <div class="section-title-box">
         <div class="section-subtitle">BumiBaik Activity</div>
-            <div class="section-title">Dokumentasi Aktivitas BumiBaik</div>
+            <div class="section-title judul-home">Dokumentasi Aktivitas BumiBaik</div>
                 </div>
                 <div class="container">
                     <div class="row">
@@ -956,7 +956,7 @@
                     </div>
                     </section>
 
-                    
+
                     <!-- <div class="col-md-6">
                         <div class="list-box-profolio wow fadeInUp">
                             <div class="image-profolio">
@@ -1011,7 +1011,7 @@
             <div class="row">
                 <div class="section-title-box">
                     <h4 class="section-subtitle  wow fadeInUp">LATEST NEWS</h4>
-                    <h2 class="section-title  wow fadeInUp">Our Insights & Articles</h2>
+                    <h2 class="section-title  wow fadeInUp judul-home">Our Insights & Articles</h2>
                 </div>
                 <div class="col-md-12">
                     <div class="slide-blog-content">
