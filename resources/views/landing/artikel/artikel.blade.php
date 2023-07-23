@@ -61,10 +61,10 @@
                                                 <nav id="mainnav" class="mainnav">
                                                     <ul class="menu">
                                                         <li>
-                                                            <a href="{{ url('') }}" title="">Home</a>
+                                                            <a href="{{ url('/') }}" title="">Home</a>
                                                         </li>
                                                         <li class="menu-item-has-children">
-                                                            <a href="about.html" title="">About</a>
+                                                            <a href="{{ url('/about') }}" title="">About</a>
                                                             <ul class="sub-menu">
                                                                 <li><a href="{{ url('/about') }}" title="">About
                                                                         Us</a></li>
@@ -74,11 +74,11 @@
                                                             <!-- /.sub-menu -->
                                                         </li>
                                                         <li class="menu-item-has-children">
-                                                            <a href="{{ url('') }}" title="">Services</a>
+                                                            <a href="{{ url('/service') }}" title="">Services</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="{{ url('') }}" title="">Services</a>
+                                                                <li><a href="{{ url('/service') }}" title="">Services</a>
                                                                 </li>
-                                                                <li><a href="{{ url('') }}"
+                                                                <li><a href="{{ url('/service') }}"
                                                                         title="">Service Details</a></li>
                                                             </ul>
                                                             <!-- /.sub-menu -->
@@ -87,15 +87,15 @@
                                                         <li class="menu-item-has-children">
                                                             <a href="{{ route('get.blog') }}" title="">Blog</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="{{ url('') }}" title="">Blog Standard</a>
+                                                                <li><a href="{{ route('get.blog') }}" title="">Blog Standard</a>
                                                                 </li>
-                                                                <li><a href="{{ url('') }}" title="">Blog
+                                                                <li><a href="{{ route('get.blog') }}" title="">Blog
                                                                         Detail</a></li>
                                                             </ul>
                                                             <!-- /.sub-menu -->
                                                         </li>
                                                         <li>
-                                                            <a href="contact.html" title="">Contact</a>
+                                                            <a href="{{ url('/contact') }}" title="">Contact</a>
                                                         </li>
                                                         <li>
                                                             <a href="{{ url('/donate') }}" title="">Donate</a>
