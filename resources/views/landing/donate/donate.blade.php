@@ -37,7 +37,7 @@
             </div>
         </div>
         <!-- /.top -->
-        
+
         <!-- header -->
         <header id="header" class="header bg-color">
             <div class="container">
@@ -130,6 +130,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    @foreach ($donations as $donation)
                     <div class="item-three-column mg-bottom-60 wow fadeInUp">
                         <article class="flat-WCU-box grow-up-hover">
                             <div class="WCU-image">
@@ -138,18 +139,18 @@
                             <div style="padding-left: 18px;">
                                 <div class="content-features">
                                     <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
+                                        <h3 class="section-heading-rubik-size20">{{$donation->title}}</h3>
                                     </a>
 
                                 <div style="margin-top: 1.5rem;">
-                                    <small style="color: #111;">UKM Tani: Nganjuk Pride</small>
+                                    <small style="color: #111;">UKM Tani: {{$donation->nama_ukm}}</small>
                                     <div class="progress" style="width: 100%;margin-top: 0.5rem;">
                                         <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
                                         </div>
                                     </div>
                                     <div class="row" style="margin-top: 0.2rem;">
                                         <div class="col-md-6" style="padding-left: 20px;">
-                                            <small style="color: #111;"><strong>10.000</strong></small>
+                                            <small style="color: #111;"><strong>Rp. {{ number_format("$donation->target",2,',','.')}}</strong></small>
                                             <br>
                                             <small style="color: #111;">Pohon terkumpul</small>
                                         </div>
@@ -160,180 +161,11 @@
                                 </div>
                             </div>
                             <div class="button-read-more link-style2">
-                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
+                                <a href="{{ url('donate',$donation->id) }}" class="read-more btn-read-more">Donasi</a>
                             </div>
                         </article>
                     </div>
-                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
-                        <article class="flat-WCU-box grow-up-hover">
-                            <div class="WCU-image">
-                                <img class="grow-up-hover" src="{{ asset('asset/donate3.jpg') }}" alt="images">
-                            </div>
-                            <div style="padding-left: 18px;">
-                                <div class="content-features">
-                                    <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">Paneling for Planting #3</h3>
-                                    </a>
-
-                                <div style="margin-top: 1.5rem;">
-                                    <small style="color: #111;">UKM Tani: Malang Army</small>
-                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
-                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="margin-top: 0.2rem;">
-                                        <div class="col-md-6" style="padding-left: 20px;">
-                                            <small style="color: #111;"><strong>10.000</strong></small>
-                                            <br>
-                                            <small style="color: #111;">Pohon terkumpul</small>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <small style="color: #111;float: right;"><strong>7</strong> hari lagi</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button-read-more link-style2">
-                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
-                        <article class="flat-WCU-box grow-up-hover">
-                            <div class="WCU-image">
-                                <img class="grow-up-hover" src="{{ asset('asset/donate1.jpg') }}" alt="images">
-                            </div>
-                            <div style="padding-left: 18px;">
-                                <div class="content-features">
-                                    <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">Sedekah Pohon untuk Bumi 2023</h3>
-                                    </a>
-
-                                <div style="margin-top: 1.5rem;">
-                                    <small style="color: #111;">UKM Tani: Sidoarjo Kuat</small>
-                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
-                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="margin-top: 0.2rem;">
-                                        <div class="col-md-6" style="padding-left: 20px;">
-                                            <small style="color: #111;"><strong>15.000</strong></small>
-                                            <br>
-                                            <small style="color: #111;">Pohon terkumpul</small>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <small style="color: #111;float: right;"><strong>3</strong> hari lagi</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button-read-more link-style2">
-                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
-                        <article class="flat-WCU-box grow-up-hover">
-                            <div class="WCU-image">
-                                <img class="grow-up-hover" src="{{ asset('asset/donate3.jpg') }}" alt="images">
-                            </div>
-                            <div style="padding-left: 18px;">
-                                <div class="content-features">
-                                    <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
-                                    </a>
-
-                                <div style="margin-top: 1.5rem;">
-                                    <small style="color: #111;">UKM Tani: Nganjuk Pride</small>
-                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
-                                        <div class="progress-bar" role="progressbar" style="width:75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="margin-top: 0.2rem;">
-                                        <div class="col-md-6" style="padding-left: 20px;">
-                                            <small style="color: #111;"><strong>100.000</strong></small>
-                                            <br>
-                                            <small style="color: #111;">Pohon terkumpul</small>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <small style="color: #111;float: right;"><strong>7</strong> hari lagi</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button-read-more link-style2">
-                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
-                        <article class="flat-WCU-box grow-up-hover">
-                            <div class="WCU-image">
-                                <img class="grow-up-hover" src="{{ asset('asset/donate1.jpg') }}" alt="images">
-                            </div>
-                            <div style="padding-left: 18px;">
-                                <div class="content-features">
-                                    <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
-                                    </a>
-
-                                <div style="margin-top: 1.5rem;">
-                                    <small style="color: #111;">UKM Tani: Nganjuk Pride</small>
-                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
-                                        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40%</div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="margin-top: 0.2rem;">
-                                        <div class="col-md-6" style="padding-left: 20px;">
-                                            <small style="color: #111;"><strong>10.000</strong></small>
-                                            <br>
-                                            <small style="color: #111;">Pohon terkumpul</small>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <small style="color: #111;float: right;"><strong>20</strong> hari lagi</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button-read-more link-style2">
-                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
-                        <article class="flat-WCU-box grow-up-hover">
-                            <div class="WCU-image">
-                                <img class="grow-up-hover" src="{{ asset('asset/donate3.jpg') }}" alt="images">
-                            </div>
-                            <div style="padding-left: 18px;">
-                                <div class="content-features">
-                                    <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
-                                    </a>
-
-                                <div style="margin-top: 1.5rem;">
-                                    <small style="color: #111;">UKM Tani: Nganjuk Pride</small>
-                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
-                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">15%</div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="margin-top: 0.2rem;">
-                                        <div class="col-md-6" style="padding-left: 20px;">
-                                            <small style="color: #111;"><strong>10.000</strong></small>
-                                            <br>
-                                            <small style="color: #111;">Pohon terkumpul</small>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <small style="color: #111;float: right;"><strong>14</strong> hari lagi</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button-read-more link-style2">
-                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
-                            </div>
-                        </article>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="row">
                     <div class="col-md-12">

@@ -127,7 +127,7 @@
                 </div>
                 <div class="col-md-12 text-center" style="margin-bottom: 2rem;">
                     <h1 class="section-heading-jost-size28 text-pri2-color">Yuk donasi kampanye alam</h1>
-                    <h1 class="section-heading-jost-size28 text-pri2-color">"The gardening that matters."</h1>
+                    <h1 class="section-heading-jost-size28 text-pri2-color">"{{$donations->title}}"</h1>
                 </div>
                 <div class="col-md-12">
                     <div class="row">
@@ -150,16 +150,7 @@
                                 <!-- <div class="sidebar-title mg-bottom-25">
                                     <h2 class="section-heading-jost-size28 text-pri2-color">Metode Pembayaran</h2>
                              </div> -->
-                             <table border="0" cellpadding="10">
-                                <tr>
-                                    <th><a href="{{ url('/donate') }}" class="btn btn-primary">Pilih Pembayaran</a></th>
-                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/kredit.png') }}" width="80px" height="60px"></th>
-                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/logo-ovo.png') }}" width="80px" height="60px"></th>
-                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/gopay.png') }}" width="80px" height="60px"></th>
-                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/dana.png') }}" width="80px" height="60px"></th>
-                                </tr>
-                             </table>
-                             <br>
+
                              <div class="sidebar-title mg-bottom-25">
                              <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Data Diri <span style="color: red;">*</span></h3>
                              <form>
@@ -208,7 +199,7 @@
                                 <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">
                                     Total Pembayaran</h2>
                                 <div class="text-center" style="color: #235;font-size: 25px;" class="text-center">
-                                    <strong>Rp250,000,000</strong></div>
+                                    <strong>Rp. {{ number_format("$donations->target",2,',','.')}}</strong></div>
                                 <div class="text-center" style="margin-top: 2rem;margin-bottom: 2rem;"><a
                                         class="button-services" href="#">Donasi</a></div>
                             </div>
