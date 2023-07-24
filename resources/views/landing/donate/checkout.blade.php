@@ -1,5 +1,6 @@
 @include('landing.template.header')
 
+<body>
 <div class="boxed blog">
         <!-- Preloader -->
         <div class="preloader">
@@ -104,11 +105,10 @@
                     <div class="overlay-image"></div>
                     <div class="banner-title">
                         <div class="page-title-heading">
-                            Donate Payment
+                            Donation Checkout
                         </div>
                         <div class="page-title-content link-style6">
-                            <span><a class="home" href="index.html">Home</a></span><span
-                                class="page-title-content-inner">Donate</span>
+                            <span><a class="home" href="index.html">Home</a></span><span class="page-title-content-inner">Donate</span>
                         </div>
                     </div>
                 </div>
@@ -125,102 +125,29 @@
                 <div class="col-md-12">
                     <div class="themesflat-spacer clearfix" data-desktop="117" data-mobile="60" data-smobile="60"></div>
                 </div>
-                <div class="col-md-12 text-center" style="margin-bottom: 2rem;">
-                    <h1 class="section-heading-jost-size28 text-pri2-color">Yuk donasi kampanye alam</h1>
-                    <h1 class="section-heading-jost-size28 text-pri2-color">"{{$donations->title}}"</h1>
-                </div>
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <form action="{{route('store.payment')}}" method="POST">
-                            @csrf
-                            <div class="widget-contact-services-details mg-bottom-25">
-
-                                {{-- <div class="">
-                                    <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Nominal
-                                        Donasi (Rp.)<span style="color: red;">*</span></h3>
-                                </div> --}}
-
-
-
-                                {{-- <div class="input-group mb-3">
-                                    <!-- <div class="input-group-prepend">
-                                        <span class="input-group-text text-success" id="basic-addon1">Rp</span>
-                                    </div> -->
-                                    <input type="number" class="form-control" placeholder="Masukkan nominal donasi" aria-label="Nominal Donasi" aria-describedby="basic-addon1" name="nominal_donasi" required step="1000">
-                                </div> --}}
-                                <br>
-                                <!-- <div class="sidebar-title mg-bottom-25">
-                                    <h2 class="section-heading-jost-size28 text-pri2-color">Metode Pembayaran</h2>
-                             </div> -->
-
-                             <div class="sidebar-title mg-bottom-25">
-                             <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Data Diri <span style="color: red;">*</span></h3>
-                                    <div class="form-group">
-                                        <label for="name" class="text-success">Nama</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama" name="nama" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email" class="text-success">Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Masukkan email" name="email" required>
-                                </div>
-                            </div>
-
-                            <div class="sidebar-title mg-bottom-25">
-                                <h2 class="section-heading-jost-size28 text-pri2-color">Pembayaran</h2>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="name" class="text-success">Nominal Donasi (Rp.)</label>
-                                <input type="text" class="form-control" id="name" placeholder="Masukkan nominal donasi" name="total_price" required>
-                            </div>
-                        </div>
-
-                        <!-- <div class="col-md-10">
-                            <div class="widget-contact-services-details">
-                                <div class="sidebar-title">
-                                    <h2 class="section-heading-jost-size28 text-pri2-color"
-                                        style="margin-bottom: 2rem;">Data Diri</h2>
-                                </div>
-                                <form>
-                                    <div class="form-group">
-                                        <label for="name">Nama</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
-                                        <div class="#" style="margin-top: 2rem;margin-bottom: 2rem;"><a
-                                        class="button-services" href="#">Donasi</a></div>
-                            </div>
-                                    </form>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="30" data-smobile="30">
-                    </div>
-                </div>
                 <div class="col-md-4">
-                    <!-- <div class="col-md-10"> -->
-                        <div class="widget-contact-services-details">
-                            <div class="sidebar-title">
-                                <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">
-                                    Target Donasi</h2>
-                                <div class="text-center" style="color: #235;font-size: 25px;" class="text-center">
-                                    <strong>Rp. {{ number_format("$donations->target",2,',','.')}}</strong>
-                                <br>
-                                <button type="submit" class="btn btn-primary">Donasi</button>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="widget-contact-services-details mg-bottom-25">
+                                <div class="sidebar-title mg-bottom-25">
+                                    <h2 class="section-heading-jost-size28 text-pri2-color">Detail</h2>
                                 </div>
+                                <ul class="widget-sidebar-contact-us text-pri2-color section-heading-rubik-size16">
+                                    <li><span class="">Nama:</span><span class="info-contact-us">{{ $order->nama}}</span></li>
+                                    <li><span class="">Email:</span><span class="info-contact-us">{{ $order->email}}</span></li>
+                                    <li><span class="">Total Donation:</span><span class="info-contact-us">Rp. {{ number_format("$order->total_price",2,',','.')}}</span></li>
+                                </ul>
 
+                                <div class="text-center" style="margin-top: 2rem;margin-bottom: 2rem;">
+                                    <button class="btn btn-primary" id="pay-button">Pay Now</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="30" data-smobile="30"></div>
                 </div>
-                </form>
                 <div class="col-md-12">
-                    <div class="themesflat-spacer clearfix" data-desktop="172" data-mobile="100" data-smobile="60">
-                    </div>
+                    <div class="themesflat-spacer clearfix" data-desktop="172" data-mobile="100" data-smobile="60"></div>
                 </div>
             </div>
         </div>
@@ -233,7 +160,7 @@
         var payButton = document.getElementById('pay-button');
         payButton.addEventListener('click', function () {
           // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
-          window.snap.pay('TRANSACTION_TOKEN_HERE', {
+          window.snap.pay('{{ $snapToken}}', {
             onSuccess: function(result){
               /* You may add your own implementation here */
               alert("payment success!"); console.log(result);

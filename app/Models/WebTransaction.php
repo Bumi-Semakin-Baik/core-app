@@ -9,23 +9,13 @@ class WebTransaction extends Model
 {
     use HasFactory;
 
-    protected $table = "web_transactions";
+    protected $table = "transaction_webs";
+    // sementara masih pakai tabel transaction_webs (untuk testing midtrans tadi), untuk kedepannya rencana bakal pakai web transactions
 
     protected $fillable = [
         'id',
-        'payment_transaction_id',
-        'order_code',
-        'user_id',
-        'date',
-        'tree_type_id',
-        'planting_id',
-        'total',
-        'voucher_id',
-        'voucher_code',
-        'voucher_value',
-        'grand_total',
-        'payment_method',
-        'payment_detail',
-        'status',
+        'nama',
+        'email',
+        'total_price'
     ];
 }
