@@ -22,7 +22,9 @@
 
         <!-- about -->
         <section class="flat-about">
-            
+            <div class="containter">
+                
+            </div>
         </section>
         <!-- flat-testimonials-home2 -->
 

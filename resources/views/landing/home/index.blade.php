@@ -913,8 +913,6 @@
                     <div class="slide-blog-content">
                         <div class="owl-carousel owl-theme">
                             @foreach ($card_news as $card)
-
-
                             <div class="item wow fadeInUp">
                                 <div class="blog-item hover-up-style2">
                                     <img src="{{ Storage::url($card->image) }}" alt="" style="height:100%;width:100%;object-fit:cover;">
