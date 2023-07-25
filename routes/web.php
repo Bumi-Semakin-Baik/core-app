@@ -140,7 +140,6 @@ Route::prefix('location')
         Route::put('/edit/{id}','update')->name('update.location');
         Route::put('/update_enable/{id}','update_enable')->name('update.enable');
         Route::put('/update_disable/{id}','update_disable')->name('update.disable');
-
     });
 Route::controller(LandingController::class)
     ->group(function (){
