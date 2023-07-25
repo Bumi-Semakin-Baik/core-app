@@ -127,52 +127,52 @@
                 </div>
                 <div class="col-md-12 text-center" style="margin-bottom: 2rem;">
                     <h1 class="section-heading-jost-size28 text-pri2-color">Yuk donasi kampanye alam</h1>
-                    <h1 class="section-heading-jost-size28 text-pri2-color">"The gardening that matters."</h1>
+                    <h1 class="section-heading-jost-size28 text-pri2-color">"{{$donations->title}}"</h1>
                 </div>
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-8">
+                            <form action="{{route('store.payment')}}" method="POST">
+                            @csrf
                             <div class="widget-contact-services-details mg-bottom-25">
-                                <div class="sidebar-title mg-bottom-25">
-                                    <h2 class="section-heading-jost-size28 text-pri2-color">Pembayaran</h2>
-                                </div>
-                                <div class="">
+
+                                {{-- <div class="">
                                     <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Nominal
                                         Donasi (Rp.)<span style="color: red;">*</span></h3>
-                                </div>
-                                <div class="input-group mb-3">
+                                </div> --}}
+
+
+
+                                {{-- <div class="input-group mb-3">
                                     <!-- <div class="input-group-prepend">
                                         <span class="input-group-text text-success" id="basic-addon1">Rp</span>
                                     </div> -->
                                     <input type="number" class="form-control" placeholder="Masukkan nominal donasi" aria-label="Nominal Donasi" aria-describedby="basic-addon1" name="nominal_donasi" required step="1000">
-                                </div>
+                                </div> --}}
                                 <br>
                                 <!-- <div class="sidebar-title mg-bottom-25">
                                     <h2 class="section-heading-jost-size28 text-pri2-color">Metode Pembayaran</h2>
                              </div> -->
-                             <table border="0" cellpadding="10">
-                                <tr>
-                                    <th><a href="{{ url('/donate') }}" class="btn btn-primary">Pilih Pembayaran</a></th>
-                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/kredit.png') }}" width="80px" height="60px"></th>
-                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/logo-ovo.png') }}" width="80px" height="60px"></th>
-                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/gopay.png') }}" width="80px" height="60px"></th>
-                                    <th><input="checkbox" value=""><img src="{{ asset('landing/images/pembayaran/dana.png') }}" width="80px" height="60px"></th>
-                                </tr>
-                             </table>
-                             <br>
+
                              <div class="sidebar-title mg-bottom-25">
                              <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Data Diri <span style="color: red;">*</span></h3>
-                             <form>
                                     <div class="form-group">
                                         <label for="name" class="text-success">Nama</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama" required>
+                                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama" name="nama" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="email" class="text-success">Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
-                                        <!--     -->
-                                    </form>
+                                        <input type="email" class="form-control" id="email" placeholder="Masukkan email" name="email" required>
                                 </div>
+                            </div>
+
+                            <div class="sidebar-title mg-bottom-25">
+                                <h2 class="section-heading-jost-size28 text-pri2-color">Pembayaran</h2>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name" class="text-success">Nominal Donasi (Rp.)</label>
+                                <input type="text" class="form-control" id="name" placeholder="Masukkan nominal donasi" name="total_price" required>
                             </div>
                         </div>
 
@@ -206,15 +206,18 @@
                         <div class="widget-contact-services-details">
                             <div class="sidebar-title">
                                 <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">
-                                    Total Pembayaran</h2>
+                                    Target Donasi</h2>
                                 <div class="text-center" style="color: #235;font-size: 25px;" class="text-center">
-                                    <strong>Rp250,000,000</strong></div>
-                                <div class="text-center" style="margin-top: 2rem;margin-bottom: 2rem;"><a
-                                        class="button-services" href="#">Donasi</a></div>
+                                    <strong>Rp. {{ number_format("$donations->target",2,',','.')}}</strong>
+                                <br>
+                                <button type="submit" class="btn btn-primary">Donasi</button>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+                </form>
                 <div class="col-md-12">
                     <div class="themesflat-spacer clearfix" data-desktop="172" data-mobile="100" data-smobile="60">
                     </div>
@@ -224,3 +227,29 @@
     </section>
 
     @include('landing.template.footer')
+
+    <script type="text/javascript">
+        // For example trigger on button clicked, or any time you need
+        var payButton = document.getElementById('pay-button');
+        payButton.addEventListener('click', function () {
+          // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
+          window.snap.pay('TRANSACTION_TOKEN_HERE', {
+            onSuccess: function(result){
+              /* You may add your own implementation here */
+              alert("payment success!"); console.log(result);
+            },
+            onPending: function(result){
+              /* You may add your own implementation here */
+              alert("wating your payment!"); console.log(result);
+            },
+            onError: function(result){
+              /* You may add your own implementation here */
+              alert("payment failed!"); console.log(result);
+            },
+            onClose: function(){
+              /* You may add your own implementation here */
+              alert('you closed the popup without finishing the payment');
+            }
+          })
+        });
+      </script>
