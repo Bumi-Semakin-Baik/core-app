@@ -1,4 +1,4 @@
-@include('landing.template.header')
+@include('landing.template.header2')
 
 <body>
     <div class="boxed blog">
@@ -10,133 +10,7 @@
             </div>
         </div>
 
-        <div class="flat-header-box">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="container">
-                            <div class="row">
-                                <div class="top-header1">
-                                    <div class="top-header-inner">
-                                        <div class="top-bar-left">
-                                            <span class="top-location">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu,
-                                                Kauman), Malang</span>
-                                            <span class="top-mail">semakinbaikbumi@gmail.com </span>
-                                        </div>
-                                        <div class="top-bar-right">
-                                            <ul class="widgets-nav-social">
-                                                <li><a href="#"><i class="fa fa-whatsapp"
-                                                            aria-hidden="true"></i></a>
-                                                </li>
-                                                <li><a href="#"><i class="fa fa-instagram"
-                                                            aria-hidden="true"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- header -->
-                        <header id="header" class="header bg-color">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="header-wrap-home1">
-                                        <div class="col-md-3 ">
-                                            <div class="inner-header">
-                                                <img src="{{ asset('landing/images/home/bumibaik.jpg') }}"
-                                                    width="100px" alt="images">
-                                                <!-- /logo -->
-
-                                                <div class="btn-menu">
-                                                    <span></span>
-                                                </div>
-                                                <!-- /mobile menu button -->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-9 text-center">
-                                            <div class="nav-wrap">
-                                                <nav id="mainnav" class="mainnav">
-                                                    <ul class="menu">
-                                                        <li>
-                                                            <a href="{{ url('/') }}" title="">Home</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children">
-                                                            <a href="{{ url('/about') }}" title="">About</a>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="{{ url('/about') }}" title="">About
-                                                                        Us</a></li>
-                                                                <li><a href="team.html" title="">Team</a></li>
-                                                                <li><a href="faq.html" title="">Faq</a></li>
-                                                            </ul>
-                                                            <!-- /.sub-menu -->
-                                                        </li>
-                                                        <li class="menu-item-has-children">
-                                                            <a href="{{ url('/service') }}" title="">Services</a>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="{{ url('/service') }}" title="">Services</a>
-                                                                </li>
-                                                                <li><a href="{{ url('/service') }}"
-                                                                        title="">Service Details</a></li>
-                                                            </ul>
-                                                            <!-- /.sub-menu -->
-                                                        </li>
-
-                                                        <li class="menu-item-has-children">
-                                                            <a href="{{ route('get.blog') }}" title="">Blog</a>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="{{ route('get.blog') }}" title="">Blog Standard</a>
-                                                                </li>
-                                                                <li><a href="{{ route('get.blog') }}" title="">Blog
-                                                                        Detail</a></li>
-                                                            </ul>
-                                                            <!-- /.sub-menu -->
-                                                        </li>
-                                                        <li>
-                                                            <a href="{{ url('/contact') }}" title="">Contact</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="{{ url('/donate') }}" title="">Donate</a>
-                                                        </li>
-                                                    </ul>
-                                                </nav>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- header right -->
-                                </div>
-                            </div>
-
-                        </header>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-  <!-- page title -->
-  <div class="page-title">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="inner-title">
-                        <div class="overlay-image"></div>
-                        <div class="banner-title">
-                            <div class="page-title-heading">
-                                Blog Details
-                            </div>
-                            <div class="page-title-content link-style6">
-                                <span><a class="home" href="index.html">Home</a></span><span class="page-title-content-inner">Blog Details</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
         <!-- /.page-title -->
 
         <!-- main content -->
@@ -155,13 +29,13 @@
                                     </div>
                                 </div>
                                 <div class="content mg-top-15">
-                                    <span class="content-info"><a href="#" class="user">
+                                    <span class="content-info"><a href="#" class="user" style="color:black">
                                         {{ $news->author }}
-                                    </a><a href="#" class="date">
+                                    </a><a href="#" class="date" style="color:black">
                                         {{ $news->created_at->format('d/m/y') }}
                                     </a></span>
                                         <div class="heading-content-box">
-                                            <a href="blog-detail.html">
+                                            <a href="#" style="color:black">
                                             {{ $news->title }}
                                     </a>
                                 </div>

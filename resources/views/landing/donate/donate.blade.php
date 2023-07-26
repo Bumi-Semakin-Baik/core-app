@@ -1,4 +1,4 @@
-@include('landing.template.header')
+@include('landing.template.header2')
 
 <body>
     <div class="boxed blog">
@@ -10,7 +10,7 @@
         </div>
 
         <!-- top header -->
-        <div class="top-header">
+        {{-- <div class="top-header">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col md-4">
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-        </header>
+        </header> --}}
         <!-- /header -->
 
         <!-- page title -->

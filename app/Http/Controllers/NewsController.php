@@ -38,7 +38,7 @@ public function store(Request $request)
             'title' => 'required',
             'slug' => 'required',
             'content' => 'nullable',
-            'image' => 'nullable',
+            'image' => 'required|mimes:png,jpg,jpeg,bmp|max:1024',
             'author' => 'required',
             'is_publish' => 'nullable|boolean:0,1,true,false'
         ]);
