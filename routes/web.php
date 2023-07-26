@@ -17,6 +17,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServiceControlller;
+use App\Http\Controllers\WebTransactionController;
+use App\Models\WebTransaction;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -92,6 +94,16 @@ Route::prefix('donation')
         Route::put('/update_disable/{id}','update_disable')->name('update.disable.donation');
         // Route::delete('/destroy', 'destroy')->name('destroy.donation');
     });
+
+Route::prefix('payment')
+    ->controller(WebTransactionController::class)
+    ->group(function (){
+        Route::get('/manage','getManage');
+        Route::get('/add','add');
+        Route::post('/store', 'checkout')->name('store.payment');
+        // Route::delete('/destroy', 'destroy')->name('destroy.donation');
+    });
+
 Route::prefix('newsletter')
     ->controller(NewsController::class)
     ->group(function (){
@@ -128,7 +140,6 @@ Route::prefix('location')
         Route::put('/edit/{id}','update')->name('update.location');
         Route::put('/update_enable/{id}','update_enable')->name('update.enable');
         Route::put('/update_disable/{id}','update_disable')->name('update.disable');
-
     });
 Route::controller(LandingController::class)
     ->group(function (){

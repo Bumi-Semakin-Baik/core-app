@@ -70,7 +70,10 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     border: 0;
     outline: 0;
     background: transparent;
+    color: var(--primary-color2);
+
 }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -565,7 +568,7 @@ h6 {
 
 a {
     text-decoration: none;
-    color: var(--primary-color2);
+    color: var(--primary-color3);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -849,7 +852,36 @@ a:focus {
     font-weight: 500;
     letter-spacing: -1px;
     line-height: 58px;
-    color: var(--primary-color5);
+    color: var(--primary-color3);
+}
+
+.judul-home{
+    font-family: 'Jost', sans-serif;
+    font-size: 46px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 58px;
+    color: var(--primary-color);
+}
+
+#judul1{
+    font-family: 'Jost', sans-serif;
+    font-size: 46px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 58px;
+    color: var(--primary-color2);
+}
+
+.angka-card{
+
+    font-family: 'Jost', sans-serif;
+    font-size: 46px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 58px;
+    color: var(--primary-color2);
+
 }
 
 .section-heading-rubik-size12 {
@@ -1049,7 +1081,7 @@ header.fixed-header {
 
 .hover-up-style2:hover {
     transform: translateY(-2%);
-    
+
 }
 
 .hover-up-style2 {
@@ -1058,7 +1090,7 @@ header.fixed-header {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    
+
 }
 
 .over-flow-hidden {
@@ -1359,7 +1391,7 @@ button.btn.btn-outline-primary {
 #mainnav-mobi .menu .current-menu-item > a,
 #mainnav-mobi .menu .current-item > a {
     color: var(--primary-color);
-    
+
 }
 
 #mainnav .menu>li:last-child a {
@@ -1481,7 +1513,7 @@ button.btn.btn-outline-primary {
     position: relative;
     height: 1000px;
     background-size: cover;
-    background-image: url(../images/home/background-slider.jpg);
+    background-image: url(../images/home/background-.jpg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1505,7 +1537,8 @@ button.btn.btn-outline-primary {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--primary-color2);
+    /* background-color: var(--primary-color2); */
+    background-image: url(../images/blog/bg-about.jpg);
     opacity: 0.7;
 }
 
@@ -1517,6 +1550,7 @@ button.btn.btn-outline-primary {
     z-index: 50;
     text-align: center;
     position: absolute;
+    
 }
 
 .page-title-heading {
@@ -2133,7 +2167,7 @@ article.post .content-post .more-link a:hover {
 
 .flat-case-details .paginate-box .content-features {
     margin-left: 29px;
-    
+
 }
 
 .flat-case-details .paginate-box a {
@@ -3153,16 +3187,16 @@ article.post .content-post .more-link a:hover {
     overflow: hidden;
     width: auto;
   }
-  
+
 .carousel {
     display: flex;
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .item {
     flex: 0 0 calc(100% / 3);
   }
-  
+
   .carousel-prev,
   .carousel-next {
     position: absolute;
@@ -3177,30 +3211,30 @@ article.post .content-post .more-link a:hover {
     cursor: pointer;
     opacity: 0.7;
   }
-  
+
   .carousel-prev {
     left: 0;
   }
-  
+
   .carousel-next {
     right: 0;
   }
-  
+
   .carousel-prev:hover,
   .carousel-next:hover {
     opacity: 1;
   }
-  
+
   .carousel-prev:focus,
   .carousel-next:focus {
     outline: none;
   }
-  
+
   .carousel-prev:disabled,
   .carousel-next:disabled {
     opacity: 0.3;
     cursor: not-allowed;
-  } 
+  }
    */
 
 @-webkit-keyframes effect-2 {

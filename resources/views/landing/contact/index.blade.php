@@ -1,5 +1,4 @@
 @include('landing.template.header2')
-
         <!-- page title -->
         <div class="page-title">
             <div class="container-fluid">
@@ -7,11 +6,11 @@
                     <div class="inner-title2">
                         <div class="overlay-image"></div>
                         <div class="banner-title">
-                            <div class="page-title-heading">
-                                About Us
+                            <div class="section-title">
+                                Contact
                             </div>
-                            <div class="page-title-content link-style6">
-                                <span><a class="home" href="#">Home</a></span><span class="page-title-content-inner" style="color: white">About Us</span>
+                            <div class="section-subtitle">
+                                <span><a class="home" href="#">Contact</a></span><span class="page-title-content-inner" style="color: white">Home</span>
                             </div>
                         </div>
                     </div>
@@ -22,9 +21,8 @@
         </div>
         <!-- /.page-title -->
 
-        <!-- about -->
-        <section class="flat-about">
-            
+        <!-- Our services -->
+        <section class="flat-why-choose-us" id="donat">
         </section>
-        <!-- flat-testimonials-home2 -->
-@include('landing.template.footer')
+
+        @include('landing.template.footer')

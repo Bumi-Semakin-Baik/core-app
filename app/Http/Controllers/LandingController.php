@@ -19,8 +19,9 @@ class LandingController extends Controller
     }
 
     public function getBlog(){
-        $news=NewsArticle::orderBy('created_at','desc')->where('is_publish',1)->get();
-        return view('landing.blog.index', compact('news'));
+        $data['card_news'] = NewsArticle::orderBy('created_at','desc')->where('is_publish',1)->get();
+
+        return view('landing.blog.index', $data);
     }
 
 }
