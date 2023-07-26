@@ -52,7 +52,7 @@
                                         <div class="form-file">
                                             <div class="form-group">
                                                 <label class="form-file-label" for="customFile">Choose file</label>
-                                                <input type="file" class="form-file-input" id="customFile" name="image">
+                                                <input type="file" class="form-file-input" id="customFile" name="image" accept="image/*">
                                             </div>
                                         </div>
                                     </div>
