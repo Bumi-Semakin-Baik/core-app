@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 class LandingController extends Controller
 {
     public function index(){
-        $card_news = NewsArticle::orderBy('created_at','desc')->take(5)->where('is_publish', 1)->get();
-        return view ('landing.home.index', compact('card_news'));
+        $news = NewsArticle::orderBy('created_at','desc')->take(5)->where('is_publish', 1)->get();
+        return view ('landing.home.index', compact('news'));
     }
 
     public function detailNews($id){
@@ -19,7 +19,7 @@ class LandingController extends Controller
     }
 
     public function getBlog(){
-        $data['card_news'] = NewsArticle::orderBy('created_at','desc')->where('is_publish',1)->get();
+        $data['news'] = NewsArticle::orderBy('created_at','desc')->where('is_publish',1)->get();
 
         return view('landing.blog.index', $data);
     }
