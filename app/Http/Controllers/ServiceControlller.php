@@ -8,7 +8,7 @@ class ServiceControlller extends Controller
 {
     //
     public function index(){
-        return view ('landing/service/service');
+        return view ('landing/service/index');
     }
 
 }
