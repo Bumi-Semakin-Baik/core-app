@@ -19,8 +19,6 @@
                             Donate Payment
                         </div>
                         <div class="page-title-content link-style6">
-                            <span><a class="home" href="index.html">Home</a></span><span
-                                class="page-title-content-inner">Donate</span>
                         </div>
                     </div>
                 </div>
@@ -70,7 +68,7 @@
                              <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Data Diri <span style="color: red;">*</span></h3>
                                     <div class="form-group">
                                         <label for="name" class="text-success">Nama</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama" name="nama" required>
+                                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama" name="name" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="email" class="text-success">Email</label>
@@ -84,7 +82,7 @@
 
                             <div class="form-group">
                                 <label for="name" class="text-success">Nominal Donasi (Rp.)</label>
-                                <input type="text" class="form-control" id="name" placeholder="Masukkan nominal donasi" name="total_price" required>
+                                <input type="number" class="form-control" id="name" placeholder="Masukkan nominal donasi" name="total_price" required>
                             </div>
                         </div>
 
@@ -120,11 +118,12 @@
                                 <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">
                                     Target Donasi</h2>
                                 <div class="text-center" style="color: #235;font-size: 25px;" class="text-center">
-                                    <strong>Rp. {{ number_format("$donations->target",2,',','.')}}</strong>
+                                    <strong>Rp. {{ number_format("$donations->target")}}</strong>
                                 <br>
-                                <button type="submit" class="btn btn-primary">Donasi</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Donasi</button>
+                                <input type="hidden" value="{{ $donations->id }}" name="idDonate">
+                                <input type="hidden" value="{{ $donations->id_ukm }}" name="idUkm">
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -147,7 +146,7 @@
           // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
           window.snap.pay('TRANSACTION_TOKEN_HERE', {
             onSuccess: function(result){
-              /* You may add your own implementation here */
+           
               alert("payment success!"); console.log(result);
             },
             onPending: function(result){

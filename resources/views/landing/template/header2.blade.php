@@ -14,7 +14,7 @@
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{config('midtrans.client_key')}}"></script>
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{env('MIDTRANS_CLIENT_KEY')}}"></script>
 
     <!-- Boostrap style -->
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/stylesheet/bootstrap.css') }}">
@@ -35,6 +35,7 @@
 
     <!-- anime -->
     <link rel="stylesheet" href="{{ asset('landing/stylesheet/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/leaflet.css') }}">
 
 </head>
 
@@ -53,8 +54,7 @@
                 <div class="row">
                     <div class="col md-4">
                         <div class="top-bar-left">
-                        <p class="top-location" style="color: white;">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu,
-                                                Kauman), Malang</p>
+                        <p class="top-location" style="color: white;">Graha Polinema 4th Floor, Jl. Soekarno Hatta No.9, Malang City, East Java, Indonesia</p>
                         </div>
                     </div>
                     <div class="col md-8">
@@ -99,27 +99,27 @@
                                 <nav id="mainnav" class="mainnav">
                                     <ul class="menu">
                                         <li>
-                                            <a href="{{ url('') }}" title="">Home</a>
+                                            <a href="{{ url('') }}" title="">Beranda</a>
                                         </li>
                                         <li>
-                                            <a href="{{ url('/about') }}" title="">About</a>
+                                            <a href="{{ url('/about') }}" title="">Tentang</a>
                                             <!-- /.sub-menu -->
                                         </li>
                                         <li>
-                                            <a href="{{ url('/service') }}" title="">Services</a>
+                                            <a href="{{ url('/service') }}" title="">Layanan</a>
 
                                             <!-- /.sub-menu -->
                                         </li>
 
                                         <li>
-                                            <a href="{{ route('get.blog') }}" title="">Blog</a>
+                                            <a href="{{ route('get.blog') }}" title="">Berita</a>
                                             <!-- /.sub-menu -->
                                         </li>
                                         <li>
-                                            <a href="{{ url('/contact') }}" title="">Contact</a>
+                                            <a href="{{ url('/contact') }}" title="">Kontak</a>
                                         </li>
                                         <li>
-                                            <a href="{{ url('/donate') }}" title="">Donate</a>
+                                            <a href="{{ url('/donate') }}" title="">Donasi</a>
                                         </li>
                                     </ul>
                                 </nav>

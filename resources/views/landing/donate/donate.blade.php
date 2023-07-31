@@ -1,5 +1,6 @@
 @include('landing.template.header2')
 
+
 <body>
     <div class="boxed blog">
         <!-- Preloader -->
@@ -134,7 +135,7 @@
                     <div class="item-three-column mg-bottom-60 wow fadeInUp">
                         <article class="flat-WCU-box grow-up-hover">
                             <div class="WCU-image">
-                                <img class="grow-up-hover" src="{{ asset('asset/donate1.jpg') }}" alt="images">
+                                <img class="grow-up-hover" src="{{ Storage::url($donation->image) }}" alt="images">
                             </div>
                             <div style="padding-left: 18px;">
                                 <div class="content-features">

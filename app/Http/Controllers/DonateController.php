@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Donation;
+use App\Models\Location;
 use Illuminate\Support\Facades\DB;
 
 class DonateController extends Controller
@@ -20,8 +21,9 @@ class DonateController extends Controller
     }
 
     public function detail($id){
-        $donations  = Donation::find($id);
-        return view('landing.donate.donate-detail', compact('donations'));
+        $data['donations']  = Donation::find($id);
+        $data['location']   = Location::find($data['donations']->id_location);
+        return view('landing.donate.donate-detail', $data);
     }
 
     public function payment($id){

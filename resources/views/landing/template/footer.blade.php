@@ -11,7 +11,7 @@
                      <div class="footer-item">
                          <div class="widgets-about padding-top-listfooter">
                              <p class="heading-jost-20px" style="color: white;">
-                                 About Us
+                                 Tentang Kita
                              </p>
                              <p class="text-decs" style="color: white;">
                                  BumiBaik membantu setiap orang menghitung emisi karbon, menanam, dan mengadopsi pohon
@@ -92,6 +92,7 @@
  <script src="{{ asset('landing/rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js') }}">
  </script>
  <script src="{{ asset('landing/rev-slider/js/extensions/extensionsrevolution.extension.video.min.js') }}"></script>
+ 
 
  </body>
 
