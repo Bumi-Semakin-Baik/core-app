@@ -19,6 +19,7 @@ return new class extends Migration
             $table->bigInteger('user_id')->nullable()->change();
             $table->string("email")->nullable()->after("user_id");
             $table->string("name")->nullable()->after("email");
+            $table->integer('tree_type_id')->nullable()->change();
         });
     }
 
@@ -35,6 +36,7 @@ return new class extends Migration
         Schema::dropColumns("transactions", "name");
         Schema::table('transactions', function (Blueprint $table) {
             $table->bigInteger('user_id')->nullable(false)->change();
+            $table->integer('tree_type_id')->nullable(false)->change();
         });
     }
 };
