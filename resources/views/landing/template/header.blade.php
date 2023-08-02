@@ -14,7 +14,7 @@
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{env('MIDTRANS_CLIENT_KEY')}}"></script>
+    <script type="text/javascript" src="https://app.midtrans.com/snap/snap.js" data-client-key="{{env('MIDTRANS_CLIENT_KEY')}}"></script>
 
     <!-- Boostrap style -->
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/stylesheet/bootstrap.css') }}">
