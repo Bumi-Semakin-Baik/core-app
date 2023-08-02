@@ -24,7 +24,7 @@ class WebTransactionController extends Controller
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = env('MIDTRANS_SERVER_KEY');
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-        \Midtrans\Config::$isProduction = false;
+        \Midtrans\Config::$isProduction = true;
         // Set sanitization on (default)
         \Midtrans\Config::$isSanitized = true;
         // Set 3DS transaction for credit card to true
@@ -47,20 +47,7 @@ class WebTransactionController extends Controller
 
     public function running($id){
         $id = Crypt::decryptString($id);
-
-         // Set your Merchant Server Key
-         \Midtrans\Config::$serverKey = env('MIDTRANS_SERVER_KEY');
-         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-         \Midtrans\Config::$isProduction = false;
-         // Set sanitization on (default)
-         \Midtrans\Config::$isSanitized = true;
-         // Set 3DS transaction for credit card to true
-         \Midtrans\Config::$is3ds = true;
-
-
         $data['donate'] = Transaction::where('order_code', $id)->first();
-        $data['status'] = \Midtrans\Transaction::status($id);
-        
         return view('landing.donate.donate-payment-running', $data);
     }
 
