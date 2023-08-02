@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::table('transactions', function (Blueprint $table) {
             $table->string("type", 20)->default("trx")->nullable(false)->after("id");
+            $table->integer('donate_id')->nullable()->after("order_code");
             $table->bigInteger('user_id')->nullable()->change();
             $table->string("email")->nullable()->after("user_id");
             $table->string("name")->nullable()->after("email");
@@ -28,9 +29,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropColumns("type");
-        Schema::dropColumns("email");
-        Schema::dropColumns("name");
+        Schema::dropColumns("transactions", "type");
+        Schema::dropColumns("transactions", "donate_id");
+        Schema::dropColumns("transactions", "email");
+        Schema::dropColumns("transactions", "name");
         Schema::table('transactions', function (Blueprint $table) {
             $table->bigInteger('user_id')->nullable(false)->change();
         });
