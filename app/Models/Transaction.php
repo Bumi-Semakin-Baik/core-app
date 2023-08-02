@@ -30,6 +30,10 @@ class Transaction extends Model
         'payment_method',
         'payment_detail',
         'status',
+        'email',
+        'name',
+        'type',
+        'donate_id'
     ];
 
     protected $with = ['user', 'voucher'];

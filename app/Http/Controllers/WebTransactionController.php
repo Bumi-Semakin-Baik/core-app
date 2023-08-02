@@ -12,14 +12,20 @@ class WebTransactionController extends Controller
 {
 
     public function checkout(Request $request){
-        // $order = WebTransaction::create($request->all());
-        $order = array(
-            'name' => $request->name,
-            'email' => $request->email,
-            'idDonate' => $request->idDonate,
-            'idUkm' => $request->idUkm,
-            'totalPrice' => $request->total_price
-        );
+        $orderCode = "DONATE-" . date('YmdHis') . "-" . $request->idDonate . "-" . rand(1, 9999);
+
+        $transaction['id'] = (string) Str::uuid();
+        $transaction['type'] = "donate";
+        $transaction['name'] = $request->name;
+        $transaction['email'] = $request->email;
+        $transaction['donate_id'] = $request->idDonate;
+        $transaction['date'] = date("Y-m-d");
+        $transaction['total'] = $request->total_price;
+        $transaction['grand_total'] = $request->total_price;
+        $transaction['order_code'] = $orderCode;
+        $transaction['status'] = "request";
+        Transaction::create($transaction);
+        $transaction['enc_order_code'] = Crypt::encryptString($orderCode);
 
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = env('MIDTRANS_SERVER_KEY');
@@ -32,7 +38,7 @@ class WebTransactionController extends Controller
 
         $params = array(
             'transaction_details' => array(
-                'order_id' => "DONATE-" . date('YmdHis') . "-" . $request->idDonate . "-" . rand(1, 9999),
+                'order_id' => $orderCode,
                 'gross_amount' => $request->total_price,
             ),
             'customer_details' => array(
@@ -42,7 +48,7 @@ class WebTransactionController extends Controller
         );
 
         $snapToken = \Midtrans\Snap::getSnapToken($params);
-        return view('landing.donate.checkout',compact('snapToken', 'order'));
+        return view('landing.donate.checkout',compact('snapToken', 'transaction'));
     }
 
     public function running($id){
