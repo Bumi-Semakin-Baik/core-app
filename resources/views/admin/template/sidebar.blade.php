@@ -86,9 +86,15 @@
                                     </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->
                                 <li class="nk-menu-item">
-                                    <a href="{{ url('/ukm') }}" class="nk-menu-link">
+                                    <a href="{{ url('/ukm?filter=Enabled') }}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-growth-fill"></em></span>
                                         <span class="nk-menu-text">UKM Tani</span>
+                                    </a>
+                                </li><!-- .nk-menu-item -->
+                                <li class="nk-menu-item">
+                                    <a href="{{ url('/location') }}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-growth-fill"></em></span>
+                                        <span class="nk-menu-text">Locations</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
                             </ul><!-- .nk-menu -->

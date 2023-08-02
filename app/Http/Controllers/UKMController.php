@@ -20,11 +20,15 @@ class UKMController extends Controller
         // dd($request->all());
         $validatedData = $request->validate([
             'name' => 'required',
+            'status' => 'required',
+            'pic' => 'required',
         ]);
 
 
         UKM::create([
             'name' =>$request->input('name'),
+            'status' =>$request->input('status'),
+            'pic' =>$request->input('pic'),
         ]);
         return redirect()->route('ukm')
         ->with('success', 'UKM succesfully added');
@@ -56,6 +60,8 @@ class UKMController extends Controller
         // dd($request->all());
         $validatedData = $request->validate([
             'name' => 'required',
+            'status' => 'required',
+            'pic' => 'required',
         ]);
 
         $test = UKM::where('id', $id)
@@ -64,6 +70,30 @@ class UKMController extends Controller
 
         return redirect()->route('ukm')
         ->with('success', 'Data Berhasil diupdate');
+
+    }
+    public function update_enable($id)
+    {
+        $data = UKM::where('id', $id)->first();
+        if ($data == null) {
+            return redirect()->route('ukm');
+        }
+
+        $data->update(['status'=> 'Enabled']);
+
+        return redirect()->route('ukm');
+
+    }
+    public function update_disable($id)
+    {
+        $data = UKM::where('id', $id)->first();
+        if ($data == null) {
+            return redirect()->route('ukm');
+        }
+
+        $data->update(['status'=> 'Disabled']);
+
+        return redirect()->route('ukm');
 
     }
 }

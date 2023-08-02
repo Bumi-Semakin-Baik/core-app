@@ -87,22 +87,22 @@
                                             <label class="form-label" for="isActive">Active Status</label>
                                             <div class="col-md-6">
                                                 <div class="form-check">
-                                                    <input type="radio" class="form-check-input" id="radio1" name="active" value="1" >Active
+                                                    <input type="radio" class="form-check-input" id="radio1" name="is_active" value="1" >Active
                                                     <label class="form-check-label" for="radio1"></label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input type="radio" class="form-check-input" id="radio2" name="active" value="0">Not Active
+                                                    <input type="radio" class="form-check-input" id="radio2" name="is_active" value="0">Not Active
                                                     <label class="form-check-label" for="radio2"></label>
                                                   </div>
                                             </div>
                                             <label class="form-label" for="isActive">Verification</label>
                                             <div class="col-md-6">
                                                 <div class="form-check">
-                                                    <input type="radio" class="form-check-input" id="radio1" name="verify" value="1" >Verified
+                                                    <input type="radio" class="form-check-input" id="radio1" name="is_verified" value="1" >Verified
                                                     <label class="form-check-label" for="radio1"></label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input type="radio" class="form-check-input" id="radio2" name="verify" value="0">Not Verified
+                                                    <input type="radio" class="form-check-input" id="radio2" name="is_verified" value="0">Not Verified
                                                     <label class="form-check-label" for="radio2"></label>
                                                   </div>
                                             </div>

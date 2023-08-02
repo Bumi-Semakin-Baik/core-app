@@ -12,6 +12,8 @@ class UKM extends Model
     protected $table = "ukm";
 
     protected $fillable = [
-        'name'
+        'name',
+        'status',
+        'pic',
     ];
 }

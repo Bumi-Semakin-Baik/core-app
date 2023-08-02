@@ -50,7 +50,7 @@ class CompanyController extends Controller
         }
 
         $photo = $request->file('photo')->store('images', 'public');
-        $verify = $request->input('verify');
+        $verify = $request->input('is_verified');
 
         Partner::create([
             'name' =>$request->input('name'),
@@ -60,7 +60,7 @@ class CompanyController extends Controller
             'latitude' =>$request->input('latitude'),
             'longitude' =>$request->input('longitude'),
             'photo' =>$photo,
-            'is_active' => $request->input('active'),
+            'is_active' => $request->input('is_active'),
             'is_verified' => $verify,
         ]);
         return redirect()->route('company')

@@ -11,9 +11,14 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\UKMController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ServiceControlller;
+use App\Http\Controllers\WebTransactionController;
+use App\Models\WebTransaction;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -75,15 +80,33 @@ Route::prefix('company')
         Route::delete('/accounts/{id}','destroy')->name('delete.company');
         Route::get('/projects','getProject');
     });
- 
+
 Route::prefix('donation')
     ->controller(DonationController::class)
     ->group(function (){
         Route::get('/manage','getManage');
         Route::get('/add','add');
         Route::post('/store', 'store')->name('store.donation');
+        Route::post('/filtered', 'filter')->name('filter.donation');
+        Route::put('/update_publish/{id}','update_publish')->name('update.publish');
+        Route::put('/update_unpublish/{id}','update_unpublish')->name('update.unpublish');
+        Route::put('/update_enable/{id}','update_enable')->name('update.enable.donation');
+        Route::put('/update_disable/{id}','update_disable')->name('update.disable.donation');
         // Route::delete('/destroy', 'destroy')->name('destroy.donation');
     });
+
+Route::prefix('payment')
+    ->controller(WebTransactionController::class)
+    ->group(function (){
+        Route::get('/manage','getManage');
+        Route::get('/add','add');
+        Route::post('/store', 'checkout')->name('store.payment');
+        Route::post('/save-transaction', 'saveTransaction');
+        Route::get('/running/{id}', 'running');
+        Route::post('/get-status', 'getStatus');
+        // Route::delete('/destroy', 'destroy')->name('destroy.donation');
+    });
+
 Route::prefix('newsletter')
     ->controller(NewsController::class)
     ->group(function (){
@@ -103,11 +126,30 @@ Route::prefix('ukm')
         Route::delete('/{id}','destroy')->name('delete.ukm');
         Route::get('/edit/{id}','edit')->name('edit.ukm');
         Route::put('/edit/{id}','update')->name('update.ukm');
+        Route::put('/update_enable/{id}','update_enable')->name('ukm.enable');
+        Route::put('/update_disable/{id}','update_disable')->name('ukm.disable');
 
+    });
+
+Route::prefix('location')
+    ->controller(LocationController::class)
+    ->group(function (){
+        Route::get('/','index')->name('location');
+        Route::get('/indexDisabled','indexDisabled')->name('indexDisabled');
+        Route::get('/add','add');
+        Route::post('/store', 'store')->name('store.location');
+        Route::delete('/{id}','destroy')->name('delete.location');
+        Route::get('/edit/{id}','edit')->name('edit.location');
+        Route::put('/edit/{id}','update')->name('update.location');
+        Route::put('/update_enable/{id}','update_enable')->name('update.enable');
+        Route::put('/update_disable/{id}','update_disable')->name('update.disable');
     });
 Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');
+        Route::get('/news/{id}', 'detailNews')->name('detail.news');
+        Route::get('/blog','getBlog')->name('get.blog');
+        Route::get('/blog/{id}','detailNews')->name('detail.blog');
     });
 
 Route::controller(AboutController::class)
@@ -118,13 +160,21 @@ Route::controller(AboutController::class)
 Route::controller(DonateController::class)
     ->group(function (){
         Route::get('/donate','index');
-
+        Route::get('/donate/{id}', 'detail');
+        Route::get('/donate-payment/{id}', 'payment');
     });
 Route::controller(ArtikelController::class)
     ->group(function (){
         Route::get('/artikel','index');
     });
-    
+Route::controller(ContactController::class)
+    ->group(function (){
+        Route::get('/contact','index');
+    });
+Route::controller(ServiceControlller::class)
+    ->group(function (){
+        Route::get('/service','index');
+    });
 Auth::routes();
 
 Route::get('/confirm-password', function () {

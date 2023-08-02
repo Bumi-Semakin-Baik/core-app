@@ -19,6 +19,20 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
+                            <label class="form-label" for="default-06">Select UKM Tani</label>
+                            <div class="form-control-wrap ">
+                                <div class="form-control-select">
+                                    <select class="form-control" id="default-06" name="id_ukm">
+                                        @foreach ($ukms as $ukm)
+                                            <option value="{{ $ukm->id}}">{{ $ukm->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
                             <label class="form-label" for="fv-subject">Title</label>
                             <div class="form-control-wrap">
                                 <input type="text" class="form-control" id="fv-subject" name="title" required autofocus>
@@ -85,12 +99,52 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-label" for="default-06">Select Location</label>
+                            <div class="form-control-wrap ">
+                                <div class="form-control-select">
+                                    <select class="form-control" id="default-06" name="id_location">
+                                        @foreach ($locations as $location)
+                                            <option value="{{ $location->id}}">{{ $location->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label" for="isPublish">Status</label>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio1" name="status" value="Enabled" >Enabled
+                            <label class="form-check-label" for="radio1"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="status" value="Disabled">Disabled
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label" for="isPublish">Is Published</label>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio1" name="is_published" value="Yes" >Yes
+                            <label class="form-check-label" for="radio1"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="is_published" value="No">No
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                    </div>
+
                     <div class="col-md-12">
                         <div class="form-group">
                             <button type="submit" class="btn btn-lg btn-primary">Add new donation</button>
                         </div>
                     </div>
-                </div>
             </form>
         </div>
     </div>

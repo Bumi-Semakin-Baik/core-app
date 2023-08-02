@@ -80,14 +80,14 @@
                                                     <td class="nk-tb-col tb-col-sm">
                                                         <span class="tb-product">
                                                             <img src="{{ Storage::url('app/public/images') }}.$news" alt="" class="thumb">
-                                                            <span class="title">{{ $news->title }}</span>
+                                                            <span class="title">{{Str::limit($news->title, 40) }}</span>
                                                         </span>
                                                     </td>
                                                     <td class="nk-tb-col">
-                                                        <span class="tb-sub">{{ $news->slug }}</span>
+                                                        <span class="tb-sub">{{ Str::limit($news->slug, 20) }}</span>
                                                     </td>
                                                     <td class="nk-tb-col">
-                                                        <span class="tb-lead">{{ $news->content }}</span>
+                                                        <span class="tb-lead">{{ Str::limit($news->content, 20) }}</span>
                                                     </td>
                                                     <td class="nk-tb-col">
                                                         <span class="tb-sub">{{ $news->author }}</span>
@@ -107,7 +107,7 @@
                                                                             @method('DELETE')
                                                                             {{-- <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Product</span></a></li> --}}
                                                                             {{-- <input type="submit" class="btn btn-danger" placeholder="Remove Product"/> --}}
-                                                                            <button type="submit" class="btn btn-danger">Remove Product</button>
+                                                                            <button type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus berita ini?')" >Remove Product</button>
                                                                         </form>
                                                                         </ul>
                                                                     </div>

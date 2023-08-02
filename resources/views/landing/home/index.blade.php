@@ -1,108 +1,4 @@
 @include('landing.template.header')
-
-<body>
-    <div class="boxed blog">
-
-        <!-- Preloader -->
-        <div class="preloader">
-            <div class="clear-loading loading-effect-2">
-                <span></span>
-            </div>
-        </div>
-
-        <div class="flat-header-box">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="container">
-                            <div class="row">
-                                <div class="top-header1">
-                                    <div class="top-header-inner">
-                                        <div class="top-bar-left">
-                                            <span class="top-location">Gajayana Stadium 3rd Floor (Jl. Tangkuban Perahu,
-                                                Kauman), Malang</span>
-                                            <span class="top-mail">semakinbaikbumi@gmail.com</span>
-                                        </div>
-                                        <div class="top-bar-right">
-                                            <ul class="widgets-nav-social">
-                                            <li><a href="https://wa.me/6282130075758" target="_blank" ><i class="fa fa-whatsapp"
-                                                            aria-hidden="true"></i></a>
-                                                </li>
-                                                <li><a href="https://www.instagram.com/bumi.baik/" target="_blank"><i class="fa fa-instagram"
-                                                            aria-hidden="true"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- header -->
-                        <header id="header" class="header bg-color">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="header-wrap-home1">
-                                        <div class="col-md-3 ">
-                                            <div class="inner-header">
-                                                <img src="{{ asset('landing/images/home/bumibaik.jpg') }}"
-                                                    width="100px" alt="images">
-                                                <!-- /logo -->
-
-                                                <div class="btn-menu">
-                                                    <span></span>
-                                                </div>
-                                                <!-- /mobile menu button -->
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-9 text-center">
-                                            <div class="nav-wrap">
-                                                <nav id="mainnav" class="mainnav">
-                                                    <ul class="menu">
-                                                        <li>
-                                                            <a href="index.html" title="">Home</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children">
-                                                            <a href="about.html" title="">About</a>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="{{ url('/about') }}" title="">About
-                                                                        Us</a></li>
-                                                            </ul>
-                                                            <!-- /.sub-menu -->
-                                                        </li>
-                                                        <li>
-                                                            <a href="services.html" title="">Services</a>
-
-                                                            <!-- /.sub-menu -->
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="blog.html" title="">Blog</a>
-                                                            <!-- /.sub-menu -->
-                                                        </li>
-                                                        <li>
-                                                            <a href="contact.html" title="">Contact</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="{{ url('/donate') }}" title="">Donate</a>
-                                                        </li>
-                                                    </ul>
-                                                </nav>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- header right -->
-                                </div>
-                            </div>
-
-                        </header>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
     <!-- page title -->
     <div class="page-title-home1">
         <div class="container-fluid">
@@ -274,8 +170,8 @@
     <!-- features -->
     <br>
     <div class="section-title-box">
-        <h4 class="section-subtitle">TREE FOR LIFE</h4>
-        <h2 class="section-title">Pohon Termonitor<br></h2>
+        <h4 class="section-subtitle judul-home">TREE FOR LIFE</h4>
+        <h2 class="section-title" id="judul1">Pohon Termonitor<br></h2>
     </div>
     <br><br>
     <section class="flat-features">
@@ -286,7 +182,7 @@
                         <div class="features-box">
                             <div class="content-features">
                                 <a href="service-details.html">
-                                    <h2 class="section-title text-center">
+                                    <h2 class="section-title text-center angka-card">
                                         18.174
                                     </h2>
                                 </a>
@@ -302,7 +198,7 @@
                         <div class="features-box">
                             <div class="content-features">
                                 <a href="service-details.html">
-                                    <h2 class="section-title text-center">
+                                    <h2 class="section-title text-center angka-card">
                                         15
                                     </h2>
                                 </a>
@@ -318,7 +214,7 @@
                         <div class="features-box">
                             <div class="content-features">
                                 <a href="service-details.html">
-                                    <h2 class="section-title text-center">
+                                    <h2 class="section-title text-center angka-card">
                                         5
                                     </h2>
                                 </a>
@@ -352,7 +248,7 @@
                     <div class="about-content">
                         <div class="about-content-title wow fadeInUp">
                             <div class="section-subtitle">ABOUT US</div>
-                            <div class="section-title">Kurangi Emisi Karbon Bersama BumiBaik</div>
+                            <div class="section-title judul-home"  >Kurangi Emisi Karbon Bersama BumiBaik</div>
                             <div class="section-desc">BumiBaik membantu setiap orang menghitung emisi karbon, menanam,
                                 dan mengadopsi pohon secara sukarela untuk menyerap emisi karbon sehingga karbon yang
                                 dihasilkan dan karbon yang diserap oleh pohon (Carbon Neutral) menjadi seimbang.
@@ -406,7 +302,7 @@
                 <div class="col-md-12">
                     <div class="section-title-box">
                         <div class="inner-header">
-                        <h2 class="section-title">Program Kami</h2>
+                        <h2 class="section-title judul-home">Program Kami</h2>
                         <br>
                         <h4 class="section-subtitle">Memfasilitasi pengurangan emisi karbon dan
                             penanaman pohon untuk Bumi semakin baik</h4>
@@ -419,7 +315,7 @@
 
                 <div class="item-four-column">
                     <div class="our-services-box hover-up-style2 mg-bottom30 wow fadeInDown">
-                        <div class="our-services-overlay"></div>
+                        <div class="our-services-overlay" id="img-overlay1"></div>
                         <span class="tf-icon icon-size icon-icon-farming-layer"><span class="path1"></span><span
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span></span>
@@ -441,7 +337,7 @@
                 </div>
                 <div class="item-four-column">
                     <div class="our-services-box hover-up-style2 mg-bottom30 wow fadeInDown">
-                        <div class="our-services-overlay"></div>
+                        <div class="our-services-overlay" id="img-overlay2"></div>
                         <span class="tf-icon icon-size icon-icon-farming-layer"><span class="path1"></span><span
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span></span>
@@ -464,7 +360,7 @@
 
                 <div class="item-four-column">
                     <div class="our-services-box hover-up-style2 mg-bottom30 wow fadeInDown">
-                        <div class="our-services-overlay"></div>
+                        <div class="our-services-overlay" id="img-overlay3"></div>
                         <span class="tf-icon icon-size icon-icon-farming-layer"><span class="path1"></span><span
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span></span>
@@ -487,7 +383,7 @@
 
                 <div class="item-four-column">
                     <div class="our-services-box hover-up-style2 wow fadeInLeft">
-                        <div class="our-services-overlay"></div>
+                        <div class="our-services-overlay" id="img-overlay4"></div>
                         <span class="tf-icon icon-size2 icon-Group-7526"><span class="path1"></span><span
                                 class="path2"></span><span class="path3"></span><span class="path4"></span><span
                                 class="path5"></span><span class="path6"></span></span>
@@ -517,7 +413,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title-box">
-                        <h2 class="section-title">Mitra Kami</h2>
+                        <h2 class="section-title judul-home">Mitra Kami</h2>
                         <br>
                     </div>
                 </div>
@@ -584,10 +480,326 @@
     <br><br>
     <!-- / Our service -->
 
+    <section class="flat-why-choose-us">
+        <div class="container">
+            <div class="row">
+                <div class="section-title-box">
+                    <h4 class="section-subtitle  wow fadeInUp">DONASI</h4>
+                    <h2 class="section-title  wow fadeInUp judul-home">Jumlah Donasi Terkumpul</h2>
+                </div>
+                <br><br>
+                <!-- <div class="col-md-12">
+                    <div class="slide-blog-content">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item wow fadeInUp">
+                                <div class="blog-item hover-up-style2">
+                                    <div class="item-overlay"></div>
+                                    <div class="item-box link">
+                                        <div class="content-info"><a href="blog.html" class="folder">
+                                                Home Gardening
+                                            </a></div>
+                                        <div class="link-style6">
+                                            <div class="content-info margin-top"><a href="blog-detail.html"
+                                                    class="user">
+                                                    By Admin
+                                                </a></div>
+                                            <a href="blog-detail.html" class="section-heading-jost-size20">
+                                                Mauris neque nisiibus non elementum
+                                            </a>
+                                        </div>
+                                        <hr class="line-blog-item">
+                                        <h4 class="sub-title">
+                                            28 JANUARY, 2020
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item wow fadeInUp">
+                                <div class="blog-item background2 hover-up-style2">
+                                    <div class="item-overlay"></div>
+                                    <div class="item-box box-2">
+
+                                        <div class="link-style6">
+                                            <div class="content-info margin-top"><a href="blog-detail.html"
+                                                    class="user">
+                                                    By Admin
+                                                </a></div>
+                                            <a href="blog-detail.html" class="section-heading-jost-size20">
+                                               Aksi nyata MyEco dan BumiBaik
+
+                                            </a>
+                                        </div>
+                                        <hr class="line-blog-item">
+                                        <h4 class="sub-title">
+                                            28 JANUARY, 2020
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item wow fadeInUp">
+                                <div class="blog-item background3 hover-up-style2">
+                                    <div class="item-overlay"></div>
+                                    <div class="item-box box-3">
+                                        <div class="content-info"><a href="blog.html" class="folder folder-3">
+                                                Gardening Ideas
+                                            </a></div>
+                                        <div class="link-style6">
+                                            <div class="content-info margin-top"><a href="blog-detail.html"
+                                                    class="user">
+                                                    By Admin
+                                                </a></div>
+                                            <a href="{{ url('/artikel') }}" class="section-heading-jost-size20">
+                                                Program Cempaka Fondation di Kab. Pasuruan
+                                            </a>
+                                        </div>
+                                        <hr class="line-blog-item">
+                                        <h4 class="sub-title">
+                                            28 JANUARY, 2020
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="60" data-smobile="0">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <div class="col-md-12">
+        <div class="row">
+                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
+                        <article class="flat-WCU-box grow-up-hover">
+                            <div class="WCU-image">
+                                <img class="grow-up-hover" src="{{ asset('asset/donate1.jpg') }}" alt="images">
+                            </div>
+                            <div style="padding-left: 18px;">
+                                <div class="content-features">
+                                    <a href="service-details.html">
+                                        <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
+                                    </a>
+
+                                <div style="margin-top: 1.5rem;">
+                                    <small style="color: #111;">UKM Tani: Nganjuk Pride</small>
+                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 0.2rem;">
+                                        <div class="col-md-6" style="padding-left: 20px;">
+                                            <small style="color: #111;"><strong>Rp. 10.000</strong></small>
+                                            <br>
+                                            <small style="color: #111;">Donasi terkumpul</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <small style="color: #111;float: right;"><strong>7</strong> hari lagi</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="button-read-more link-style2">
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
+                            </div> -->
+                        </article>
+                    </div>
+                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
+                        <article class="flat-WCU-box grow-up-hover">
+                            <div class="WCU-image">
+                                <img class="grow-up-hover" src="{{ asset('asset/donate3.jpg') }}" alt="images">
+                            </div>
+                            <div style="padding-left: 18px;">
+                                <div class="content-features">
+                                    <a href="service-details.html">
+                                        <h3 class="section-heading-rubik-size20">Paneling for Planting #3</h3>
+                                    </a>
+
+                                <div style="margin-top: 1.5rem;">
+                                    <small style="color: #111;">UKM Tani: Malang Army</small>
+                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 0.2rem;">
+                                        <div class="col-md-6" style="padding-left: 20px;">
+                                            <small style="color: #111;"><strong>Rp. 10.000</strong></small>
+                                            <br>
+                                            <small style="color: #111;">Donasi terkumpul</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <small style="color: #111;float: right;"><strong>7</strong> hari lagi</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="button-read-more link-style2">
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
+                            </div> -->
+                        </article>
+                    </div>
+                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
+                        <article class="flat-WCU-box grow-up-hover">
+                            <div class="WCU-image">
+                                <img class="grow-up-hover" src="{{ asset('asset/donate1.jpg') }}" alt="images">
+                            </div>
+                            <div style="padding-left: 18px;">
+                                <div class="content-features">
+                                    <a href="service-details.html">
+                                        <h3 class="section-heading-rubik-size20">Sedekah Pohon untuk Bumi 2023</h3>
+                                    </a>
+
+                                <div style="margin-top: 1.5rem;">
+                                    <small style="color: #111;">UKM Tani: Sidoarjo Kuat</small>
+                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 0.2rem;">
+                                        <div class="col-md-6" style="padding-left: 20px;">
+                                            <small style="color: #111;"><strong>Rp. 15.000</strong></small>
+                                            <br>
+                                            <small style="color: #111;">Donasi terkumpul</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <small style="color: #111;float: right;"><strong>3</strong> hari lagi</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="button-read-more link-style2">
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
+                            </div> -->
+                        </article>
+                    </div>
+                    </div>
+                    </div>
+                         <div class="row">
+                            <div class="col-md-12 text-center">
+                                 <a href="{{ url('/donate') }}" class="btn btn-primary">Lihat Semua</a>
+                                     </div>
+                                      </div>
+                            </div>
+                        </div>
+                    </section>
+                    <br><br><br><br><br>
+                    <!-- <div class="item-three-column mg-bottom-60 wow fadeInUp">
+                        <article class="flat-WCU-box grow-up-hover">
+                            <div class="WCU-image">
+                                <img class="grow-up-hover" src="{{ asset('asset/donate3.jpg') }}" alt="images">
+                            </div>
+                            <div style="padding-left: 18px;">
+                                <div class="content-features">
+                                    <a href="service-details.html">
+                                        <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
+                                    </a>
+
+                                <div style="margin-top: 1.5rem;">
+                                    <small style="color: #111;">UKM Tani: Nganjuk Pride</small>
+                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
+                                        <div class="progress-bar" role="progressbar" style="width:75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 0.2rem;">
+                                        <div class="col-md-6" style="padding-left: 20px;">
+                                            <small style="color: #111;"><strong>100.000</strong></small>
+                                            <br>
+                                            <small style="color: #111;">Pohon terkumpul</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <small style="color: #111;float: right;"><strong>7</strong> hari lagi</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-read-more link-style2">
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
+                        <article class="flat-WCU-box grow-up-hover">
+                            <div class="WCU-image">
+                                <img class="grow-up-hover" src="{{ asset('asset/donate1.jpg') }}" alt="images">
+                            </div>
+                            <div style="padding-left: 18px;">
+                                <div class="content-features">
+                                    <a href="service-details.html">
+                                        <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
+                                    </a>
+
+                                <div style="margin-top: 1.5rem;">
+                                    <small style="color: #111;">UKM Tani: Nganjuk Pride</small>
+                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
+                                        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40%</div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 0.2rem;">
+                                        <div class="col-md-6" style="padding-left: 20px;">
+                                            <small style="color: #111;"><strong>10.000</strong></small>
+                                            <br>
+                                            <small style="color: #111;">Pohon terkumpul</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <small style="color: #111;float: right;"><strong>20</strong> hari lagi</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-read-more link-style2">
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
+                        <article class="flat-WCU-box grow-up-hover">
+                            <div class="WCU-image">
+                                <img class="grow-up-hover" src="{{ asset('asset/donate3.jpg') }}" alt="images">
+                            </div>
+                            <div style="padding-left: 18px;">
+                                <div class="content-features">
+                                    <a href="service-details.html">
+                                        <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
+                                    </a>
+
+                                <div style="margin-top: 1.5rem;">
+                                    <small style="color: #111;">UKM Tani: Nganjuk Pride</small>
+                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">15%</div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 0.2rem;">
+                                        <div class="col-md-6" style="padding-left: 20px;">
+                                            <small style="color: #111;"><strong>10.000</strong></small>
+                                            <br>
+                                            <small style="color: #111;">Pohon terkumpul</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <small style="color: #111;float: right;"><strong>14</strong> hari lagi</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-read-more link-style2">
+                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
+                            </div>
+                        </article>
+                    </div>
+                </div> -->
+                <!-- <div class="row">
+                    <div class="col-md-12">
+                        <div class="themesflat-spacer clearfix" data-desktop="120" data-mobile="100" data-smobile="100"></div>
+                    </div>
+                </div>
+            </div> -->
+
+    <!-- </section> -->
+
+
 <section class="flat-case-study">
     <div class="section-title-box">
         <div class="section-subtitle">BumiBaik Activity</div>
-            <div class="section-title">Dokumentasi Aktivitas BumiBaik</div>
+            <div class="section-title judul-home">Dokumentasi Aktivitas BumiBaik</div>
                 </div>
                 <div class="container">
                     <div class="row">
@@ -639,6 +851,8 @@
                         <div class="themesflat-spacer clearfix" data-desktop="30" data-mobile="30" data-smobile="30"></div>
                     </div>
                     </section>
+
+
                     <!-- <div class="col-md-6">
                         <div class="list-box-profolio wow fadeInUp">
                             <div class="image-profolio">
@@ -693,79 +907,47 @@
             <div class="row">
                 <div class="section-title-box">
                     <h4 class="section-subtitle  wow fadeInUp">LATEST NEWS</h4>
-                    <h2 class="section-title  wow fadeInUp">Our Insights & Articles</h2>
+                    <h2 class="section-title  wow fadeInUp judul-home">Our Insights & Articles</h2>
                 </div>
                 <div class="col-md-12">
                     <div class="slide-blog-content">
                         <div class="owl-carousel owl-theme">
+                            @foreach ($news as $card)
                             <div class="item wow fadeInUp">
                                 <div class="blog-item hover-up-style2">
-                                    <div class="item-overlay"></div>
+                                    <img src="{{ Storage::url($card->image) }}" alt="" style="height:100%;width:100%;object-fit:cover;">
+                                    <div class="item-overlay">
+
+                                    </div>
+
                                     <div class="item-box link">
                                         <!-- <div class="content-info"><a href="blog.html" class="folder">
-                                                Home Gardening
-                                            </a></div> -->
+                                            Home Gardening
+                                        </a></div> -->
                                         <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
-                                                    class="user">
-                                                    By Admin
-                                                </a></div>
-                                            <a href="blog-detail.html" class="section-heading-jost-size20">
-                                                Mauris neque nisiibus non elementum
-                                            </a>
-                                        </div>
-                                        <hr class="line-blog-item">
-                                        <h4 class="sub-title">
-                                            28 JANUARY, 2020
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item wow fadeInUp">
-                                <div class="blog-item background2 hover-up-style2">
-                                    <div class="item-overlay"></div>
-                                    <div class="item-box box-2">
+                                            {{-- <div class="img-wrapper" style="height:150px;width:100%;">
+                                            </div> --}}
+                                            <div class="content-info" style="margin-top:-175px;">
+                                                <a href="{{route('detail.news', $card->id)}}" class="user">
+                                                    {{ $card->author }}
 
-                                        <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
-                                                    class="user">
-                                                    By Admin
-                                                </a></div>
-                                            <a href="blog-detail.html" class="section-heading-jost-size20">
-                                               Aksi nyata MyEco dan BumiBaik
-
+                                                </a>
+                                            </div>
+                                            <a href="{{route('detail.news', $card->id)}}" class="section-heading-jost-size20">
+                                                {{-- {{ $card->title }} --}}
+                                                {{ Str::limit($card->title, 25) }}
                                             </a>
                                         </div>
-                                        <hr class="line-blog-item">
+                                        <hr class="" style="width: 100%;">
                                         <h4 class="sub-title">
-                                            28 JANUARY, 2020
+                                            <div style="color: #fff">
+                                                {{ $card->created_at->format('d/m/y') }}
+                                            </div>
                                         </h4>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item wow fadeInUp">
-                                <div class="blog-item background3 hover-up-style2">
-                                    <div class="item-overlay"></div>
-                                    <div class="item-box box-3">
-                                        <!-- <div class="content-info"><a href="blog.html" class="folder folder-3">
-                                                Gardening Ideas
-                                            </a></div> -->
-                                        <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
-                                                    class="user">
-                                                    By Admin
-                                                </a></div>
-                                            <a href="{{ url('/artikel') }}" class="section-heading-jost-size20">
-                                                Program Cempaka Fondation di Kab. Pasuruan
-                                            </a>
-                                        </div>
-                                        <hr class="line-blog-item">
-                                        <h4 class="sub-title">
-                                            28 JANUARY, 2020
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
