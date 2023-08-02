@@ -32,9 +32,9 @@ class DonationController extends Controller
     public function store(Request $request){
         $validatedData = $request->validate([
             'id_ukm' => 'required',
-            'title' => 'required | max:255',
-            'image' => 'required | max:255',
-            'description' => 'required | max:255',
+            'title' => 'required',
+            'image' => 'required | max:1024',
+            'description' => 'required',
             'target' => 'required',
             'due_date' => 'required',
             'id_location' => 'required'

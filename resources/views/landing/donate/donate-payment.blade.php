@@ -16,7 +16,7 @@
                     <div class="overlay-image"></div>
                     <div class="banner-title">
                         <div class="page-title-heading">
-                            Donate Payment
+                            Pembayaran Donasi
                         </div>
                         <div class="page-title-content link-style6">
                         </div>

@@ -102,6 +102,8 @@ Route::prefix('payment')
         Route::get('/add','add');
         Route::post('/store', 'checkout')->name('store.payment');
         Route::post('/save-transaction', 'saveTransaction');
+        Route::get('/running/{id}', 'running');
+        Route::post('/get-status', 'getStatus');
         // Route::delete('/destroy', 'destroy')->name('destroy.donation');
     });
 

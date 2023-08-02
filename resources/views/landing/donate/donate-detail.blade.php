@@ -81,7 +81,7 @@
                             <div class="widget-contact-services-details">
                                 <div class="sidebar-title">
                                     <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">Maps</h2>
-                                    <div id="map" style="width: 100%; height: 500px;"></div>
+                                    <div id="map" style="width: 100%; height: 250px;"></div>
                                 </div>
                             </div>
 
@@ -91,15 +91,15 @@
                     <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="30" data-smobile="30"></div>
                 </div>
                 <div class="col-md-8">
-                    <article class="content-service-details">
-                        <div class="card" style="background: red;">
-                            <div class="post-service-details bd-radius-8-image mg-bottom-45">
-                                <img style="max-height: 500px;"  src="{{ Storage::url($donations->image) }}" alt="imagess">
-                            </div>
+                    <div class="widget-contact-services-details">
+                        <div class="post-service-details bd-radius-8-image mg-bottom-45 text-center">
+                            <img style="max-height: 500px;"  src="{{ Storage::url($donations->image) }}" alt="imagess">
                         </div>
                         <h2 class="section-heading-jost-size34 text-pri2-color mg-bottom30">{{ $donations->title}}</h2>
-                        <p class="section-desc mg-bottom-20">{{ $donations->description}}</p>
-                    </article>
+                        <span class="mg-bottom-20">{{ $donations->description}}</span>
+                    </div>
+                    {{-- <article class="content-service-details">
+                    </article> --}}
                 </div>
                 <div class="col-md-12">
                     <div class="themesflat-spacer clearfix" data-desktop="172" data-mobile="100" data-smobile="60"></div>
@@ -110,7 +110,17 @@
 
 
     <script src="{{ asset("js/leaflet.js") }}"></script>
-    <script>
-        var map = L.map('map').setView([-7.74372166005374, 112.65620317884478], 13);
-    </script>
     @include('landing.template.footer')
+    <script>
+        $(document).ready(function() {
+          // Initialize the Leaflet map
+          var map = L.map('map').setView([{{ $location->latitude }}, {{ $location->longitude }}], 13);
+      
+          // Add the tile layer (you can use other tile providers as well)
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+      
+          // Add a marker to the map
+          L.marker([{{ $location->latitude }}, {{ $location->longitude }}]).addTo(map)
+        });
+      </script>
+   

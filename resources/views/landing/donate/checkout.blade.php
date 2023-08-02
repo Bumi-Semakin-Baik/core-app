@@ -72,12 +72,13 @@
                     name: "{{ $order['name'] }}",
                     email: "{{ $order['email'] }}",
                     totalPrice: "{{ $order['totalPrice'] }}",
+                    donateId: "{{ $order['idDonate'] }}",
                     orderCode: result.orderId,
                     status: result.transaction_status,
                     methodType: result.payment_type,
                 },
                 success: function(res){
-                    console.log(res)
+                    window.location.href = "{{ url('payment/running') . '/'  }}" + res;
                 }
             });
               alert("payment success!"); console.log(result);
@@ -93,12 +94,13 @@
                     name: "{{ $order['name'] }}",
                     email: "{{ $order['email'] }}",
                     totalPrice: "{{ $order['totalPrice'] }}",
+                    donateId: "{{ $order['idDonate'] }}",
                     orderCode: result.order_id,
                     status: result.transaction_status,
                     methodType: result.payment_type,
                 },
                 success: function(res){
-                    console.log(res)
+                    window.location.href = "{{ url('payment/running') . '/'  }}" + res;
                 }
             });
             },
@@ -112,18 +114,18 @@
                     name: "{{ $order['name'] }}",
                     email: "{{ $order['email'] }}",
                     totalPrice: "{{ $order['totalPrice'] }}",
+                    donateId: "{{ $order['idDonate'] }}",
                     orderCode: result.orderId,
                     status: result.transaction_status,
                     methodType: result.payment_type,
                 },
                 success: function(res){
-                    console.log(res)
+                    window.location.href = "{{ url('payment/running') . '/'  }}" + res;
                 }
             });
             },
             onClose: function(){
               /* You may add your own implementation here */
-              alert('you closed the popup without finishing the payment');
             }
           })
         });
