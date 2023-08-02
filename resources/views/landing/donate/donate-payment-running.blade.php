@@ -42,7 +42,7 @@
                             <div class="col-md-12 text-center" id="status_transaction" style="margin-top: 2rem; margin-bottom: 2rem;">
                                 @if ($donate->status == "success")
                                     <button type="button" class="btn btn-success">{{ strtoupper($donate->status) }}</button>
-                                @elseif($donate->status == "pending")
+                                @elseif($donate->status == "pending" || $donate->status == "request")
                                     <button type="button" class="btn btn-warning">{{ strtoupper($donate->status) }}</button>
                                 @else
                                     <button type="button" class="btn btn-danger">{{ strtoupper($donate->status) }}</button>
@@ -70,7 +70,7 @@
 <script>
     $(document).ready(function(){
         var status = "{{ $donate->status }}"
-        if(status == "pending" ){
+        if(status == "pending" || statu == "request" ){
             var interval = setInterval(function(){
                 $.ajax({
                     url: "{{ url('payment/get-status') }}",
@@ -84,8 +84,8 @@
                             $('#status_transaction').html(`<button type="button" class="btn btn-success">SUCCESS</button>`);
                             window.location.href = "{{ url('payment/running') . '/'  }}" + res;
                             clearInterval(interval);
-                        }else if(res == "pending"){
-                            $('#status_transaction').html(`<button type="button" class="btn btn-warning">PENDING</button>`);
+                        }else if(res == "pending" || res == "request"){
+                            $('#status_transaction').html(`<button type="button" class="btn btn-warning">${res.toUpperCase()}</button>`);
                         }else {
                             clearInterval(interval);
                             $('#status_transaction').html(`<button type="button" class="btn btn-danger">${res.toUpperCase()}</button>`);
