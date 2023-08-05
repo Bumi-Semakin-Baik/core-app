@@ -80,6 +80,7 @@
                                     <div class="form-group">
                                         <label for="email" class="text-success">Email</label>
                                         <input type="email" class="form-control" id="email" placeholder="Masukkan email" name="email" required>
+                                        <small id="emailHelp" class="form-text text-muted" style="font-size: 14px">*Email diperlukan untuk pelaporan kegiatan acara.</small>
                                 </div>
                             </div>
 
