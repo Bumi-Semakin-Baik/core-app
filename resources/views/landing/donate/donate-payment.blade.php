@@ -1,5 +1,12 @@
 @include('landing.template.header2')
 
+@php
+    $target = $donations->target;
+    $collected = $donations->collected;
+
+    $progress = $collected != 0 ? ($collected / $target) * 100: 0;
+@endphp
+
 <div class="boxed blog">
         <!-- Preloader -->
         <div class="preloader">
@@ -8,7 +15,7 @@
             </div>
         </div>
 
-        
+
     <div class="page-title">
         <div class="container-fluid">
             <div class="row">
@@ -120,6 +127,10 @@
                                 <div class="text-center" style="color: #235;font-size: 25px;" class="text-center">
                                     <strong>Rp. {{ number_format("$donations->target")}}</strong>
                                 <br>
+                                <div class="progress" style="width: 100%;margin-top: 0.5rem;">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ $progress }}%;" aria-valuenow="{{ $progress }}" aria-valuemin="0" aria-valuemax="100">{{ $progress }}%</div>
+                                </div>
+
                                 <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Donasi</button>
                                 <input type="hidden" value="{{ $donations->id }}" name="idDonate">
                                 <input type="hidden" value="{{ $donations->id_ukm }}" name="idUkm">
@@ -146,7 +157,7 @@
           // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
           window.snap.pay('TRANSACTION_TOKEN_HERE', {
             onSuccess: function(result){
-           
+
               alert("payment success!"); console.log(result);
             },
             onPending: function(result){
