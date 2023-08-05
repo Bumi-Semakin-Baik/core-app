@@ -590,7 +590,7 @@
                             </div>
                             <div style="padding-left: 18px;">
                                 <div class="content-features">
-                                    <a href="{{ url('donate',$donation->id) }}">
+                                    <a href="service-details.html">
                                         <h3 class="section-heading-rubik-size20">{{$donation->title}}</h3>
                                     </a>
 
