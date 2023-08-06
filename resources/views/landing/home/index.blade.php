@@ -76,7 +76,7 @@
                                             data-start="800" data-splitin="none" data-splitout="none"
                                             data-responsive_offset="on">
                                             <img class="img-slide wow jackInTheBox" data-wow-delay="2500ms" data-wow-duration="2s"
-                                                width="full" src="{{ asset('landing/images/home/woman1.png') }}"
+                                                width="full" src="{{ asset('landing/images/home/woman2.png') }}"
                                                 alt="images">
                                         </div>
                                     </li>
@@ -150,7 +150,7 @@
                                             data-responsive_offset="on">
                                             <img class="img-slide wow jackInTheBox" data-wow-delay="2500ms"
                                                 data-wow-duration="2s"
-                                                src="{{ asset('landing/images/home/woman2.png') }}" alt="images">
+                                                src="{{ asset('landing/images/home/ciwi1.png') }}" alt="images">
                                         </div>
                                     </li>
                                     <li data-transition="random">
@@ -219,7 +219,7 @@
                                             data-start="800" data-splitin="none" data-splitout="none"
                                             data-responsive_offset="on">
                                             <img class="img-slide wow jackInTheBox" data-wow-delay="2500ms" data-wow-duration="2s"
-                                                width="full" src="{{ asset('landing/images/home/header2.png') }}"
+                                                width="full" src="{{ asset('landing/images/home/ciwi2.png') }}"
                                                 alt="images">
                                         </div>
                                     </li>
