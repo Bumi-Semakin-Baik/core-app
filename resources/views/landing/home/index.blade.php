@@ -153,11 +153,83 @@
                                                 src="{{ asset('landing/images/home/woman2.png') }}" alt="images">
                                         </div>
                                     </li>
+                                    <li data-transition="random">
+                                        <!-- Main Image -->
+                                        <!-- Layers -->
+                                        <div class="tp-caption tp-resizeme text-one"
+                                            data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']"
+                                            data-y="['middle','middle','middle','middle']"
+                                            data-voffset="['-274','-50','-50','-50']"
+                                            data-fontsize="['16','16','16','16']" data-lineheight="['20','0','0','0']"
+                                            data-width="full" data-height="none" data-whitespace="normal"
+                                            data-transform_idle="o:1;"
+                                            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                            data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                            data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
+                                            data-start="700" data-splitin="none" data-splitout="none"
+                                            data-responsive_offset="on">
+                                            <!-- <h3 class="sub-title">MARKETS & RESOURCES</h3> -->
+                                        </div>
+
+                                        <div class="tp-caption tp-resizeme text-two"
+                                            data-x="['left','left','left','center']"
+                                            data-hoffset="['-2','-2','5','0']"
+                                            data-y="['middle','middle','middle','middle']"
+                                            data-voffset="['-130','-165', '-15','-15']"
+                                            data-fontsize="['60','70','50','60']"
+                                            data-lineheight="['70','80','64','48']" data-width="full"
+                                            data-height="none" data-whitespace="normal" data-transform_idle="o:1;"
+                                            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                            data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                            data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
+                                            data-start="700" data-splitin="none" data-splitout="none"
+                                            data-responsive_offset="on">
+                                            <div class="title-box">
+                                                <h2 class="title-slider text-pri2-color">Zero emission<br>
+                                                    day bersama<br>BumiBaik</h2>
+                                            </div>
+                                        </div>
+
+                                        <div class="tp-caption btn-text btn-linear hv-linear-gradient"
+                                            data-x="['left','left','left','center']"
+                                            data-hoffset="['-3','-3','5','0']"
+                                            data-y="['middle','middle','middle','middle']"
+                                            data-voffset="['48','40','180','280']" data-width="full"
+                                            data-height="none" data-whitespace="normal" data-transform_idle="o:1;"
+                                            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                            data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                            data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
+                                            data-start="700" data-splitin="none" data-splitout="none"
+                                            data-responsive_offset="on">
+                                            <div class="button-box">
+                                                <div class="button res-btn-slider">
+                                                    <a href="https://play.google.com/store/apps/details?id=com.bumibaik.bumibaik_app" target="_blank" class="btn btn-left">Download App</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tp-caption tp-resizeme image-slider text-right "
+                                            data-x="['right','right','right','right']"
+                                            data-hoffset="['-29','-29','-150','-29']" 
+                                            data-y="['center','center','center','center']"
+                                            data-voffset="['-88','-88','60','-88']" data-width="full"
+                                            data-height="none" data-whitespace="normal" data-transform_idle="o:1;"
+                                            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                            data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                            data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
+                                            data-start="800" data-splitin="none" data-splitout="none"
+                                            data-responsive_offset="on">
+                                            <img class="img-slide wow jackInTheBox" data-wow-delay="2500ms" data-wow-duration="2s"
+                                                width="full" src="{{ asset('landing/images/home/header2.png') }}"
+                                                alt="images">
+                                        </div>
+                                    </li>
+                                    </div>
                                     <!-- /End Slide 1 -->
                                 </ul>
                             </div>
                         </div>
                     </div>
+                </div>
                     <!-- flat-slider -->
                 </div>
 
