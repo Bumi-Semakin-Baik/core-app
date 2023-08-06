@@ -13,6 +13,11 @@
     </div>
     <div class="card">
         <div class="card-inner">
+            @if(count($errors) > 0)
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-danger">{{ $error }}</div>
+                @endforeach
+            @endif
             <form action="{{ route('store.news') }}" method="POST" enctype="multipart/form-data" class="form-validate">
             @csrf
                 <div class="row g-gs">
@@ -52,7 +57,7 @@
                                         <div class="form-file">
                                             <div class="form-group">
                                                 <label class="form-file-label" for="customFile">Choose file</label>
-                                                <input type="file" class="form-file-input" id="customFile" name="image">
+                                                <input type="file" class="form-file-input" id="customFile" name="image" accept="image/*">
                                             </div>
                                         </div>
                                     </div>
