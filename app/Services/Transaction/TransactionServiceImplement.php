@@ -4,6 +4,7 @@ namespace App\Services\Transaction;
 
 use App\Constants\PaymentStatus;
 use App\Helpers\Converter;
+use App\Repositories\Donation\DonationRepository;
 use LaravelEasyRepository\Service;
 use App\Repositories\Transaction\TransactionRepository;
 use App\Repositories\Tree\TreeRepository;
@@ -27,6 +28,7 @@ class TransactionServiceImplement extends Service implements TransactionService
         $treeRepository,
         $userTreeRepository,
         $userCarbonOffsetRepository,
+        $donateRepository,
         $user,
         $midtrans;
 
@@ -40,12 +42,14 @@ class TransactionServiceImplement extends Service implements TransactionService
         TreeRepository $treeRepository,
         UserTreeRepository $userTreeRepository,
         UserCarbonOffsetRepository $userCarbonOffsetRepository,
+        DonationRepository $donateRepository,
         Snap $midtrans
     ) {
         $this->mainRepository = $mainRepository;
         $this->treeRepository = $treeRepository;
         $this->userTreeRepository = $userTreeRepository;
         $this->userCarbonOffsetRepository = $userCarbonOffsetRepository;
+        $this->donateRepository = $donateRepository;
         $this->midtrans = $midtrans;
         $this->user = auth('api')->user();
     }
@@ -161,6 +165,13 @@ class TransactionServiceImplement extends Service implements TransactionService
                 return false;
             }
             if (!$this->userCarbonOffsetRepository->deleteByTransactionID($tr->id)) {
+                DB::rollBack();
+                return false;
+            }
+        }
+
+        if ($tr->type == 'donate') {
+            if ($this->donateRepository->sumCollection($tr->donate_id, $tr->grand_total)) {
                 DB::rollBack();
                 return false;
             }
