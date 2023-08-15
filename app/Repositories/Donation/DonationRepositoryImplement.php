@@ -26,9 +26,9 @@ class DonationRepositoryImplement extends Eloquent implements DonationRepository
     {
         // get donation
         $donation = $this->model->find($donation_id);
-        $updateDonate['collected'] = $donation->collected + $donation;
+        $updateDonate['collected'] = floatval($donation->collected) + $donation;
 
-        $this->model->update($updateDonate);
+        $this->model->where('id', $donation_id)->update($updateDonate);
 
         return true;
     }
