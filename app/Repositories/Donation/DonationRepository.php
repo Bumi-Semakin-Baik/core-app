@@ -11,7 +11,7 @@ interface DonationRepository extends Repository
      * Get Project using user_id
      *
      * @param Integer $user_id
-     * @param float $donate
+     * @param int $donate
      * @return bool
      */
     public function sumCollection($donation_id, $donate);
