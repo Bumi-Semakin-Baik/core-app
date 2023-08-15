@@ -170,7 +170,7 @@ class TransactionServiceImplement extends Service implements TransactionService
             }
         }
 
-        if ($tr->type == 'donate') {
+        if ($tr->type == 'donate' && $data['transaction_status'] == PaymentStatus::SUCCESS) {
             if (!$this->donateRepository->sumCollection($tr->donate_id, $tr->grand_total)) {
                 DB::rollBack();
                 return false;
