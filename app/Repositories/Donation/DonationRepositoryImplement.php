@@ -7,7 +7,7 @@ use App\Models\Donation;
 use App\Repositories\Donation\DonationRepository;
 use Illuminate\Support\Facades\DB;
 
-class ProjectRepositoryImplement extends Eloquent implements DonationRepository
+class DonateRepositoryImplement extends Eloquent implements DonationRepository
 {
 
     /**
