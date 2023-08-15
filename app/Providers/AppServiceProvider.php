@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use App\Repositories\Donation\DonationRepository;
-use App\Repositories\Project\DonateRepositoryImplement;
+use App\Repositories\Donation\DonateRepositoryImplement;
 use Illuminate\Support\ServiceProvider;
 use App\Services\Project\ProjectService;
 use App\Repositories\Tree\TreeRepository;

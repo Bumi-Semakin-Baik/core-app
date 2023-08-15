@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Project;
+namespace App\Repositories\Donation;
 
 use LaravelEasyRepository\Implementations\Eloquent;
 use App\Models\Donation;
