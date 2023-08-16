@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropColumns('plant_number');
-        Schema::dropColumns('condition');
+        Schema::dropColumns('trees', 'plant_number');
+        Schema::dropColumns('trees', 'condition');
     }
 };
