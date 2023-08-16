@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\Donation\DonationRepository;
+use App\Repositories\Donation\DonationRepositoryImplement;
 use Illuminate\Support\ServiceProvider;
 use App\Services\Project\ProjectService;
 use App\Repositories\Tree\TreeRepository;
@@ -39,6 +41,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(UserCarbonOffsetRepository::class, UserCarbonOffsetRepositoryImplement::class);
         $this->app->bind(UserTreeRepository::class, UserTreeRepositoryImplement::class);
         $this->app->bind(ProjectRepository::class, ProjectRepositoryImplement::class);
+        $this->app->bind(DonationRepository::class, DonationRepositoryImplement::class);
     }
 
     /**
