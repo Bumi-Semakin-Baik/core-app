@@ -14,8 +14,13 @@ class WebTransaction extends Model
 
     protected $fillable = [
         'id',
-        'nama',
+        'name',
         'email',
-        'total_price'
+        'total_price',
+        'order_code',
+        'status',
+        'method_type',
+        'method_img',
+        'manual_book'
     ];
 }

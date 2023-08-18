@@ -1064,7 +1064,7 @@ header.fixed-header {
 }
 
 .grow-up-hover:hover img {
-    transform: scale(0.8);
+    transform: scale(1.5);
 }
 
 .hover-up {

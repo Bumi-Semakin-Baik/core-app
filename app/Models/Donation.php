@@ -17,6 +17,7 @@ class Donation extends Model
         'description',
         'target',
         'collected',
+        'planting_date',
         'due_date',
         'is_published',
         'status',
