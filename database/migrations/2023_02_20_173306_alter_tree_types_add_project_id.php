@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropColumns('project_id');
+        Schema::dropColumns("tree_types", 'project_id');
     }
 };

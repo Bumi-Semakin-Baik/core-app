@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropColumns('is_adopted');
+        Schema::dropColumns("tree_types", 'is_adopted');
     }
 };
