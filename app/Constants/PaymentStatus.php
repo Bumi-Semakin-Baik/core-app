@@ -9,6 +9,7 @@ class PaymentStatus
 
     // Done Status
     public const SUCCESS = 'success';
+    public const SETTLEMENT = 'settlement';
 
     // Pending Status
     public const PENDING = 'pending';
