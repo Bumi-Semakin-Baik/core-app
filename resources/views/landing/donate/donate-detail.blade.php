@@ -22,7 +22,7 @@
         </div>
 
         <!-- top header -->
-        
+
     <div class="page-title">
         <div class="container-fluid">
             <div class="row">
@@ -56,8 +56,8 @@
                 <div class="col-md-12" style="margin-bottom: 2rem;">
                     <div class="progress" style="width: 100%;margin-top: 0.5rem;">
                         <div class="progress-bar" role="progressbar" style="width: {{ $progress }}%;" aria-valuenow="{{ $progress }}" aria-valuemin="0" aria-valuemax="100">{{ $progress }}%</div>
-                        </div>
                     </div>
+                </div>
                 </div>
                 <div class="col-md-4">
                     <div class="row">
@@ -115,12 +115,12 @@
         $(document).ready(function() {
           // Initialize the Leaflet map
           var map = L.map('map').setView([{{ $location->latitude }}, {{ $location->longitude }}], 13);
-      
+
           // Add the tile layer (you can use other tile providers as well)
           L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-      
+
           // Add a marker to the map
           L.marker([{{ $location->latitude }}, {{ $location->longitude }}]).addTo(map)
         });
       </script>
-   
+
