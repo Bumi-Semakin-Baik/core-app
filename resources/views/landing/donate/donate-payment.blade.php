@@ -47,6 +47,8 @@
                     <h1 class="section-heading-jost-size28 text-pri2-color">"{{$donations->title}}"</h1>
                 </div>
                 <div class="col-md-12">
+                    <a href="{{ url()->previous() }}" class="btn btn-danger"> < </a>
+
                     <div class="row">
                         <div class="col-md-8">
                             <form action="{{route('store.payment')}}" method="POST">
