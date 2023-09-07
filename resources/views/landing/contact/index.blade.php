@@ -25,14 +25,14 @@
                     <div class="col-md-4 wow fadeInUp">
                         <div class="contact-left">
                             <h3 class="section-subtitle mg-bottom-22">GET IN TOUCH</h3>
-                            <h2 class="section-title mg-bottom-15">We want to share our locationto find us easily.</h2>
-                            <p class="section-desc mg-bottom-60">Lorem ipsum dolor sit amet, conset etur sadipscing elitr, sed diam noket numy eirmod tempor </p>
+                            <h2 class="section-title judul-home">We want to share our location to find us easily.</h2>
+                            <p class="section-desc">Lorem ipsum dolor sit amet, conset etur sadipscing elitr, sed diam noket numy eirmod tempor </p>
                             <div class="address-box mg-bottom30">
                                 <div class="contact-location icon-map"></div>
                                 <div class="info text-pri2-color">
                                         <h3 class="section-heading-jost-size20">
                                             Our Address</h3>
-                                    <p class="desc-box text-pri2-color">2 St, Loskia sripur, amukara.</p>
+                                    <p class="desc-box text-pri2-color">Graha Polinema 4th Floor, Jl. Soekarno Hatta No.9, Malang City, East Java, Indonesia</p>
                                 </div>
                             </div>
                             <div class="address-box mg-bottom30">
@@ -40,7 +40,7 @@
                                 <div class="info text-pri2-color">
                                         <h3 class="section-heading-jost-size20">
                                             Our Phone</h3>
-                                    <p class="desc-box text-pri2-color">000 2324 39493</p>
+                                    <p class="desc-box text-pri2-color">0821-3007-5758</p>
                                 </div>
                             </div>
                             <div class="address-box">
@@ -48,7 +48,7 @@
                                 <div class="info text-pri2-color">
                                         <h3 class="section-heading-jost-size20">
                                             Our Email</h3>
-                                    <p class="desc-box text-pri2-color">name@website.com</p>
+                                    <p class="desc-box text-pri2-color">semakinbaikbumi@gmail.com</p>
                                 </div>
                             </div>
                         </div>
