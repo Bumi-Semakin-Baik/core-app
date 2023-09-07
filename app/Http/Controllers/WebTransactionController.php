@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Models\WebTransaction;
+use App\Models\EmailUser;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 
@@ -25,12 +26,16 @@ class WebTransactionController extends Controller
         $transaction['order_code'] = $orderCode;
         $transaction['status'] = "request";
         Transaction::create($transaction);
+        EmailUser::create([
+                'email' => $transaction['email'],
+                'name' => $transaction['name'],
+        ]);
         $transaction['enc_order_code'] = Crypt::encryptString($orderCode);
 
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = env('MIDTRANS_SERVER_KEY');
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-        \Midtrans\Config::$isProduction = true;
+        \Midtrans\Config::$isProduction = false;
         // Set sanitization on (default)
         \Midtrans\Config::$isSanitized = true;
         // Set 3DS transaction for credit card to true
