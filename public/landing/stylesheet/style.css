@@ -1219,6 +1219,28 @@ header.fixed-header {
     padding-left: 16px;
 }
 
+.widgets1 {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    margin-left: 30px;
+    display: -webkit-flex;
+    line-height: 53px;
+    padding-left: 16px;
+    position: absolute;
+   
+}
+
+.widgets2 {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    line-height: 53px;
+    padding-left: 16px;
+    position: absolute;
+}
+
 .top-header .fa {
     font-size: 15px;
     padding-left: 21px;
@@ -2511,7 +2533,16 @@ article.post .content-post .more-link a:hover {
 .footer {
     position: relative;
     height: auto;
-    background-color: var(--primary-color2);
+    /* background-color: var(--primary-color2); */
+    background-image: url(../images/home/sincerely.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer1 {
+    position: relative;
+    height: auto;
+    /* background-color: var(--primary-color2); */
     background-image: url(../images/home/sincerely.jpg);
     background-repeat: no-repeat;
     background-size: cover;
