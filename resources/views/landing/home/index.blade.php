@@ -209,7 +209,7 @@
                                         </div>
                                         <div class="tp-caption tp-resizeme image-slider text-right "
                                             data-x="['right','right','right','right']"
-                                            data-hoffset="['-29','-29','-150','-29']" 
+                                            data-hoffset="['-29','-29','-150','-29']"
                                             data-y="['center','center','center','center']"
                                             data-voffset="['-88','-88','60','-88']" data-width="full"
                                             data-height="none" data-whitespace="normal" data-transform_idle="o:1;"
@@ -242,8 +242,8 @@
     <!-- features -->
     <br>
     <div class="section-title-box">
-        <h4 class="section-subtitle judul-home">TREE FOR LIFE</h4>
-        <h2 class="section-title" id="judul1">Pohon Termonitor<br></h2>
+        <h4 class="section-subtitle wow fadeInUp">TREE FOR LIFE</h4>
+        <h2 class="section-title judul-home">Pohon Termonitor<br></h2>
     </div>
     <br><br>
     <section class="flat-features">
@@ -703,7 +703,7 @@ s                                           @else
                     </div>
                          <div class="row">
                             <div class="col-md-12 text-center">
-                                 <a href="{{ url('/donate') }}" class="btn btn-primary">Lihat Semua</a>
+                                 <a href="{{ url('/donate') }}" class="btn btn-primary" style="color: white">Lihat Semua</a>
                                      </div>
                                       </div>
                             </div>
