@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="section-title-box">
                         <h4 class="section-subtitle  wow fadeInUp">LATEST NEWS</h4>
-                        <h2 class="section-title  wow fadeInUp">Our Insights & Articles</h2>
+                        <h2 class="section-title  wow fadeInUp judul-home">Our Insights & Articles</h2>
                     </div>
                     <div class="col-md-12">
                         <div class="row">
