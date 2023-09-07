@@ -22,11 +22,11 @@
          <section class="flat-contact-page">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 wow fadeInUp">
+                    <div class="col-md-5 wow fadeInUp">
                         <div class="contact-left">
-                            <h3 class="section-subtitle mg-bottom-22">GET IN TOUCH</h3>
+                            <!-- <h3 class="section-subtitle mg-bottom-22">GET IN TOUCH</h3>
                             <h2 class="section-title judul-home">We want to share our location to find us easily.</h2>
-                            <p class="section-desc">Lorem ipsum dolor sit amet, conset etur sadipscing elitr, sed diam noket numy eirmod tempor </p>
+                            <p class="section-desc">Lorem ipsum dolor sit amet, conset etur sadipscing elitr, sed diam noket numy eirmod tempor </p> -->
                             <div class="address-box mg-bottom30">
                                 <div class="contact-location icon-map"></div>
                                 <div class="info text-pri2-color">
@@ -54,9 +54,10 @@
                         </div>
                         <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="30" data-smobile="30"></div>
                     </div>
-                    <div class="col-md-8 wow fadeInUp">
+                    <div class="col-md-7 wow fadeInUp">
                         <div class="contact-right">
-                            <form method="post" class="form-contact-right" id="contactform" action="./contact/contact-process.php" accept-charset="utf-8" novalidate="novalidate">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15806.01923904875!2d112.6169084!3d-7.9466703!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882742cd7191f%3A0x56a5edb7ccb2769b!2sGraha%20Polinema!5e0!3m2!1sid!2sid!4v1694072492602!5m2!1sid!2sid" width="770" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <!-- <form method="post" class="form-contact-right" id="contactform" action="./contact/contact-process.php" accept-charset="utf-8" novalidate="novalidate">
                                 <div class="input-row">
                                     <div class="input-name">
                                         <label for="name" class="heading-features">Name (required)</label>
@@ -90,9 +91,7 @@
                                 <div class="button">
                                     <button type="submit" class=" btn btn-left">Send message</button>
                                 </div>
-                            </form>
-                            <br>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15806.01923904875!2d112.6169084!3d-7.9466703!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882742cd7191f%3A0x56a5edb7ccb2769b!2sGraha%20Polinema!5e0!3m2!1sid!2sid!4v1694067722653!5m2!1sid!2sid" width="770" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </form> -->
                         </div>
                     </div>
                 </div>

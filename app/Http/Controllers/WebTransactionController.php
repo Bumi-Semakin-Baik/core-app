@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Models\WebTransaction;
+use App\Models\EmailUser;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
@@ -30,6 +31,10 @@ class WebTransactionController extends Controller
         $transaction['order_code'] = $orderCode;
         $transaction['status'] = "request";
         Transaction::create($transaction);
+        EmailUser::create([
+                'email' => $transaction['email'],
+                'name' => $transaction['name'],
+        ]);
         $transaction['enc_order_code'] = Crypt::encryptString($orderCode);
 
         // Set your Merchant Server Key
