@@ -209,7 +209,7 @@
                                         </div>
                                         <div class="tp-caption tp-resizeme image-slider text-right "
                                             data-x="['right','right','right','right']"
-                                            data-hoffset="['-29','-29','-150','-29']" 
+                                            data-hoffset="['-29','-29','-150','-29']"
                                             data-y="['center','center','center','center']"
                                             data-voffset="['-88','-88','60','-88']" data-width="full"
                                             data-height="none" data-whitespace="normal" data-transform_idle="o:1;"
