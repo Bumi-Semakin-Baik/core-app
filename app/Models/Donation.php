@@ -20,6 +20,7 @@ class Donation extends Model
         'planting_date',
         'due_date',
         'is_published',
+        'is_bingkaikarya',
         'status',
         'id_ukm',
         'nama_ukm',
