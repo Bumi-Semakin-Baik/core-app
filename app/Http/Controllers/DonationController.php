@@ -67,6 +67,7 @@ class DonationController extends Controller
             'nama_lokasi' => $nama_location,
             'status' =>$request->input('status'),
             'is_published' =>$request->input('is_published'),
+            'is_bingkaikarya' =>$request->input('is_bingkaikarya'),
         ]);
 
         return redirect('donation/manage')->with('success', 'Donation successfully added');
