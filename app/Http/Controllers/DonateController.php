@@ -28,6 +28,11 @@ class DonateController extends Controller
 
     public function payment($id){
         $donations  = Donation::find($id);
-        return view('landing.donate.donate-payment', compact('donations'));
+        if($donations->is_bingkaikarya == 'Yes'){
+            return view('landing.donate.donate-payment-bingkai-karya', compact('donations'));
+        }
+        else{
+            return view('landing.donate.donate-payment', compact('donations'));
+        }
     }
 }

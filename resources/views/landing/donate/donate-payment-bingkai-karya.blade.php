@@ -43,14 +43,13 @@
                     <div class="themesflat-spacer clearfix" data-desktop="117" data-mobile="60" data-smobile="60"></div>
                 </div>
                 <div class="col-md-12 text-center" style="margin-bottom: 2rem;">
-                    <h1 class="section-heading-jost-size28 text-pri2-color">Yuk donasi kampanye alam</h1>
                     <h1 class="section-heading-jost-size28 text-pri2-color">"{{$donations->title}}"</h1>
                 </div>
                 <div class="col-md-12">
                     <a href="{{ url()->previous() }}" class="btn btn-success"> < Kembali </a>
 
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <form action="{{route('store.payment')}}" method="POST">
                             @csrf
                             <div class="widget-contact-services-details mg-bottom-25">
@@ -91,9 +90,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="name" class="text-success">Nominal Donasi (Rp.)</label>
-                                <input type="number" class="form-control" id="name" placeholder="Masukkan nominal donasi" name="total_price" required>
+                                <label for="name" class="text-success">Nominal Pembayaran (Rp.)</label>
+                                <input type="number" class="form-control" id="name" placeholder="Masukkan nominal pembayaran" name="total_price" required>
                             </div>
+
+                            <button type="submit" class="btn btn-primary w-100" style="margin-top: 15px;">Bayar</button>
                         </div>
 
                         <!-- <div class="col-md-10">
@@ -119,27 +120,6 @@
                     </div> -->
 
                     <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="30" data-smobile="30">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- <div class="col-md-10"> -->
-                        <div class="widget-contact-services-details">
-                            <div class="sidebar-title">
-                                <h2 class="section-heading-jost-size28 text-pri2-color" style="margin-bottom: 2rem;">
-                                    Target Donasi</h2>
-                                <div class="text-center" style="color: #235;font-size: 25px;" class="text-center">
-                                    <strong>Rp. {{ number_format("$donations->target")}}</strong>
-                                <br>
-                                <div class="progress" style="width: 100%;margin-top: 0.5rem;">
-                                    <div class="progress-bar" role="progressbar" style="width: {{ $progress }}%;" aria-valuenow="{{ $progress }}" aria-valuemin="0" aria-valuemax="100">{{ $progress }}%</div>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Donasi</button>
-                                <input type="hidden" value="{{ $donations->id }}" name="idDonate">
-                                <input type="hidden" value="{{ $donations->id_ukm }}" name="idUkm">
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 </form>
