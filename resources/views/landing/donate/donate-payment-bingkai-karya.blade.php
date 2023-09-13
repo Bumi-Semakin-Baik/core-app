@@ -23,7 +23,7 @@
                     <div class="overlay-image"></div>
                     <div class="banner-title">
                         <div class="page-title-heading">
-                            Pembayaran Donasi
+                            Pembayaran
                         </div>
                         <div class="page-title-content link-style6">
                         </div>
@@ -54,9 +54,9 @@
                             @csrf
                             <div class="widget-contact-services-details mg-bottom-25">
 
-                                
+
                                 <br>
-                                
+
 
                              <div class="sidebar-title mg-bottom-25">
                              <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Data Diri <span style="color: red;">*</span></h3>
@@ -83,7 +83,7 @@
                             <button type="submit" class="btn btn-primary w-100" style="margin-top: 15px;">Bayar</button>
                         </div>
 
-                        
+
 
                     <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="30" data-smobile="30">
                     </div>
