@@ -111,8 +111,8 @@
                                                         <span class="tb-product">
                                                             <img src="{{ asset('storage/'. $donation->image)}}" alt="{{ asset('storage/'. $donation->image)}} }}" class="thumb">
                                                             <div class="user-info">
-                                                                <span class="tb-lead">{{$donation->title}} <span class="dot dot-success d-md-none ms-1"></span></span>
-                                                                <span>{{$donation->description}}</span>
+                                                                <span class="tb-lead">{{Str::limit($donation->title, 20)}}<span class="dot dot-success d-md-none ms-1"></span></span>
+                                                                <span>{{Str::limit($donation->description, 20)}}</span>
                                                             </div>
                                                         </span>
                                                     </td>

@@ -12,6 +12,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\UKMController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\VoucherController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
@@ -144,6 +145,16 @@ Route::prefix('location')
         Route::put('/update_enable/{id}','update_enable')->name('update.enable');
         Route::put('/update_disable/{id}','update_disable')->name('update.disable');
     });
+
+Route::prefix('voucher')
+    ->controller(VoucherController::class)
+    ->group(function (){
+        Route::get('/','index')->name('voucher');
+        Route::get('/add','add');
+        Route::post('/store', 'store')->name('store.voucher');
+        Route::delete('/{id}','destroy')->name('delete.voucher');
+    });
+
 Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');
