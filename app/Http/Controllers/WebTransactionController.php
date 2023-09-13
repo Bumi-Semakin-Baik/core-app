@@ -17,7 +17,8 @@ use PHPMailer\PHPMailer\Exception;
 class WebTransactionController extends Controller
 {
 
-    public function checkout(Request $request){
+    public function checkout(Request $request)
+    {
         $orderCode = "DONATE-" . date('YmdHis') . "-" . $request->idDonate . "-" . rand(1, 9999);
 
         $transaction['id'] = (string) Str::uuid();
@@ -32,15 +33,15 @@ class WebTransactionController extends Controller
         $transaction['status'] = "request";
         Transaction::create($transaction);
         EmailUser::create([
-                'email' => $transaction['email'],
-                'name' => $transaction['name'],
+            'email' => $transaction['email'],
+            'name' => $transaction['name'],
         ]);
         $transaction['enc_order_code'] = Crypt::encryptString($orderCode);
 
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = env('MIDTRANS_SERVER_KEY');
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-        \Midtrans\Config::$isProduction = false;
+        \Midtrans\Config::$isProduction = true;
         // Set sanitization on (default)
         \Midtrans\Config::$isSanitized = true;
         // Set 3DS transaction for credit card to true
@@ -84,16 +85,18 @@ class WebTransactionController extends Controller
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
-        return view('landing.donate.checkout',compact('snapToken', 'transaction'));
+        return view('landing.donate.checkout', compact('snapToken', 'transaction'));
     }
 
-    public function running($id){
+    public function running($id)
+    {
         $id = Crypt::decryptString($id);
         $data['donate'] = Transaction::where('order_code', $id)->first();
         return view('landing.donate.donate-payment-running', $data);
     }
 
-    public function saveTransaction(Request $request){
+    public function saveTransaction(Request $request)
+    {
         $transaction['id'] = (string) Str::uuid();
         $transaction['type'] = "donate";
         $transaction['name'] = $request->name;
@@ -108,16 +111,17 @@ class WebTransactionController extends Controller
         $transaction['status'] = $request->status;
 
         $transExist = Transaction::where('order_code', $request->orderCode)->first();
-        if(!$transExist){
+        if (!$transExist) {
             Transaction::create($transaction);
-        }else{
+        } else {
             Transaction::where('id', $transExist->id)->update($transaction);
         }
 
         return Crypt::encryptString($request->orderCode);
     }
 
-    public function getStatus(Request $req){
+    public function getStatus(Request $req)
+    {
         $transaction = Transaction::find($req->id);
         return $transaction->status;
     }
