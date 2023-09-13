@@ -26,13 +26,32 @@ class VoucherController extends Controller
             return preg_match('/^\S*$/u', $value);
 
         });
-        
-        $validatedData = $request->validate([
+
+
+        $validator = Validator::make($request->all(),[
             'code' => 'required|without_spaces',
             'nama_voucher' => 'required',
             'potongan' => 'required',
             'owner' => 'required'
+        ]
+    );
+    if($validator->fails()){
+        return back()->withErrors([
+            'code' => 'Code tidak boleh ada spasi',
         ]);
+    }
+
+    //     $validatedData = $request->validate([
+    //         'code' => 'required|without_spaces',
+    //         'nama_voucher' => 'required',
+    //         'potongan' => 'required',
+    //         'owner' => 'required'
+    //     ]
+    //     // [
+    //     //     'code.without_spaces' =>'Code Voucher tidak boleh ada spasi'
+    //     // ]
+    // );
+
 
 
         VoucherWeb::create([

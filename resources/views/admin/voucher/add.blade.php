@@ -2,6 +2,7 @@
 @include('admin.template.sidebar')
 @include('admin.template.topbar')
 
+
 <div class="nk-block nk-block-lg">
     <div class="nk-block-head">
         <div class="nk-block-head-content">
@@ -13,6 +14,14 @@
     </div>
     <div class="card">
         <div class="card-inner">
+            @if(count($errors) > 0)
+                @foreach($errors->all() as $error)
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ $error}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endforeach
+            @endif
             <form action="{{ route('store.voucher') }}" method="POST" enctype="multipart/form-data" class="form-validate">
             @csrf
                 <div class="row g-gs">
