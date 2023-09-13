@@ -8,6 +8,11 @@ use App\Models\WebTransaction;
 use App\Models\EmailUser;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 
 class WebTransactionController extends Controller
 {
@@ -53,6 +58,32 @@ class WebTransactionController extends Controller
         );
 
         $snapToken = \Midtrans\Snap::getSnapToken($params);
+        $mail = new PHPMailer(true);
+        try {
+            //Server settings
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'write email here';                     //SMTP username
+            $mail->Password   = 'write password here';                               //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+            //Recipients
+            $mail->setFrom('write email here', 'BumiBaik');
+            $mail->addAddress($request->email);
+
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = 'Donasi anda telah berhasil masuk';
+            $mail->Body    = 'Terima kasih donasi anda telah berhasil terkumpulkan. Anda akan mendapatkan email dari detail kegiatan ini.';
+
+            $mail->send();
+            echo 'Message has been sent';
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
         return view('landing.donate.checkout',compact('snapToken', 'transaction'));
     }
 
@@ -71,11 +102,11 @@ class WebTransactionController extends Controller
         $transaction['date'] = date("Y-m-d");
         $transaction['total'] = $request->totalPrice;
         $transaction['grand_total'] = $request->totalPrice;
-        $transaction['payment_method'] = $request->methodType; 
+        $transaction['payment_method'] = $request->methodType;
         $transaction['order_code'] = $request->orderCode;
         $transaction['method_type'] = $request->methodType;
         $transaction['status'] = $request->status;
-        
+
         $transExist = Transaction::where('order_code', $request->orderCode)->first();
         if(!$transExist){
             Transaction::create($transaction);
