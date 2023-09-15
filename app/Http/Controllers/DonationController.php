@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Donation;
 use App\Models\UKM;
 use App\Models\Location;
+use App\Models\PlantingPartner;
 use Illuminate\Support\Facades\DB;
 
 class DonationController extends Controller
@@ -25,7 +26,8 @@ class DonationController extends Controller
     public function add(){
         return view ('admin.donation.manage.add',[
             'ukms' => UKM::get('*'),
-            'locations'=> Location::get('*')->where('status','=','Enabled')
+            'locations'=> Location::get('*')->where('status','=','Enabled'),
+            'partners'=> PlantingPartner::get('*')
         ]);
     }
 
@@ -37,9 +39,10 @@ class DonationController extends Controller
             'description' => 'required',
             'target' => 'required',
             'due_date' => 'required',
-            'id_location' => 'required'
+            'id_location' => 'required',
+            'id_mitra' => 'required',
         ]);
-
+        
         if($request->file('image')){
             $validatedData['image'] = $request->file('image')->store('donation-images','public');
         }
@@ -55,6 +58,12 @@ class DonationController extends Controller
                             ->pluck('name')
                             ->first();
 
+        $nama_partner = DB::table('planting_partners')
+                        ->where('id', $request->input('id_mitra'))
+                        ->pluck('name')
+                        ->first();
+        // dd($nama_partner);
+
         Donation::create([
             'title' => $request->input('title'),
             'image' => $image,
@@ -65,10 +74,13 @@ class DonationController extends Controller
             'nama_ukm' => $nama_ukm,
             'id_location' => $request->input('id_location'),
             'nama_lokasi' => $nama_location,
+            'id_mitra' => $request->input('id_mitra'),
+            'nama_mitra' => $nama_partner,
             'status' =>$request->input('status'),
             'is_published' =>$request->input('is_published'),
             'is_bingkaikarya' =>$request->input('is_bingkaikarya'),
         ]);
+        
 
         return redirect('donation/manage')->with('success', 'Donation successfully added');
     }

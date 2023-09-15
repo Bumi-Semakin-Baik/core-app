@@ -25,6 +25,8 @@ class Donation extends Model
         'id_ukm',
         'nama_ukm',
         'id_location',
-        'nama_lokasi'
+        'nama_lokasi',
+        'id_mitra',
+        'nama_mitra'
     ];
 }

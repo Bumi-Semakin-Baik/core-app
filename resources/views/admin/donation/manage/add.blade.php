@@ -116,6 +116,21 @@
                         </div>
                     </div>
 
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-label" for="default-06">Select Donation Partners</label>
+                            <div class="form-control-wrap ">
+                                <div class="form-control-select">
+                                    <select class="form-control" id="default-06" name="id_mitra">
+                                        @foreach ($partners as $partners)
+                                            <option value="{{ $partners->id }}">{{ $partners->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-md-2">
                         <label class="form-label" for="isPublish">Status</label>
                         <div class="form-check">
