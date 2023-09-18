@@ -39,11 +39,12 @@
                             </div>
                         </th>
                         <th class="nk-tb-col"><span class="sub-text">User</span></th>
+                        <th class="nk-tb-col"><span class="sub-text">Action</span></th>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($plantingpartner as $plantingpartners)
+                    @foreach ($plantingpartner as $planting)
                     <tr class="nk-tb-item">
                         <td class="nk-tb-col nk-tb-col-check">
                             <div class="custom-control custom-control-sm custom-checkbox notext">
@@ -57,7 +58,7 @@
                                     <span>AB</span>
                                 </div>
                                 <div class="user-info">
-                                    <span class="tb-lead">{{ $plantingpartners->name }}</span>
+                                    <span class="tb-lead">{{ $planting->name }}</span>
 
                                 </div>
                             </div>
@@ -92,7 +93,7 @@
                                                 {{-- <li><a href="{{ route('edit.plantingpartner', $plantingpartner->id) }}"><em class="icon ni ni-repeat"></em><span>Update User</span></a></li> --}}
                                                 <li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>
                                                 <li><a href="#"><em class="icon ni ni-shield-off"></em><span>Reset 2FA</span></a></li>
-                                                <form action="{{ route('delete.plantingpartner', $plantingpartners->id) }}" method="POST">
+                                                <form action="{{ route('delete.plantingpartner', $planting->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">Remove Account</button>
