@@ -75,10 +75,8 @@
                                 <h2 class="section-heading-jost-size28 text-pri2-color">Pembayaran</h2>
                             </div>
 
-                            <div class="form-group">
-                                <label for="name" class="text-success">Nominal Pembayaran (Rp.)</label>
-                                <input type="number" class="form-control" id="name" placeholder="Masukkan nominal pembayaran" name="total_price" required>
-                            </div>
+                            <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Nominal: Rp. {{ number_format("$donations->target")}}</h3>
+                            <input type="hidden" class="form-control" id="name" placeholder="Masukkan nominal donasi" name="total_price" value="{{ $donations->target}}">
 
                             <button type="submit" class="btn btn-primary w-100" style="margin-top: 15px;">Bayar</button>
                         </div>

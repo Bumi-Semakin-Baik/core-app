@@ -13,8 +13,9 @@
     </div>
     <div class="card">
         <div class="card-inner">
-            <form action="{{ route('store.donation')}}" class="form-validate" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('update.donation', $donation->id)}}" class="form-validate" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div class="row g-gs">
 
                     <div class="col-md-12">
@@ -24,7 +25,7 @@
                                 <div class="form-control-select">
                                     <select class="form-control" id="default-06" name="id_ukm">
                                         @foreach ($ukms as $ukm)
-                                            <option value="{{ $ukm->id}}">{{ $ukm->name}}</option>
+                                            <option value="{{ $ukm->id, $ukm->name}}" name="id_ukm">{{ $ukm->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -35,7 +36,7 @@
                         <div class="form-group">
                             <label class="form-label" for="fv-subject">Title</label>
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control" id="fv-subject" name="title" required autofocus>
+                                <input type="text" class="form-control" id="fv-subject" name="title" value="{{ $donation->title }}" required autofocus>
                             </div>
                         </div>
                     </div>
@@ -57,7 +58,7 @@
                                 <div class="form-icon form-icon-left">
                                     Rp
                                 </div>
-                                <input type="text" class="form-control" id="default-03" placeholder="Input placeholder" name="target">
+                                <input type="text" class="form-control" id="default-03" placeholder="Input placeholder" name="target" value="{{ $donation->target }}">
                             </div>
                         </div>
                     </div>
@@ -69,7 +70,7 @@
                                         {{-- <div class="input-group-prepend">
                                             <span class="input-group-text" id="fv-phone">+62</span>
                                         </div> --}}
-                                    <input type="date" class="form-control" required name="due_date">
+                                    <input type="date" class="form-control" required name="due_date" value="{{ $donation->due_date }}">
                                 </div>
                             </div>
                         </div>
@@ -95,7 +96,7 @@
                             <div class="card">
                                 <div class="card-inner">
                                     <!-- Create the editor container -->
-                                    <textarea class="form-control form-control-sm" id="cf-default-textarea" placeholder="Write your message" name="description"></textarea>
+                                    <textarea class="form-control form-control-sm" id="cf-default-textarea" placeholder="Write your message" name="description" value="{{ $donation->description }}"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +170,7 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-lg btn-primary">Add new donation</button>
+                            <button type="submit" class="btn btn-lg btn-primary">Update donation</button>
                         </div>
                     </div>
             </form>

@@ -18,6 +18,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServiceControlller;
 use App\Http\Controllers\WebTransactionController;
+use App\Http\Controllers\PlantingController;
 use App\Models\WebTransaction;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -84,15 +85,17 @@ Route::prefix('company')
 Route::prefix('donation')
     ->controller(DonationController::class)
     ->group(function (){
-        Route::get('/manage','getManage');
-        Route::get('/add','add');
-        Route::post('/store', 'store')->name('store.donation');
+        Route::get('/manage','getManage')->name('get.manage');
+        Route::get('/manage/add','add');
+        Route::post('/manage/store', 'store')->name('store.donation');
+        Route::get('/manage/edit/{id}','edit')->name('edit.donation');
+        Route::put('/manage/edit/{id}','update')->name('update.donation');
         Route::post('/filtered', 'filter')->name('filter.donation');
         Route::put('/update_publish/{id}','update_publish')->name('update.publish');
         Route::put('/update_unpublish/{id}','update_unpublish')->name('update.unpublish');
         Route::put('/update_enable/{id}','update_enable')->name('update.enable.donation');
         Route::put('/update_disable/{id}','update_disable')->name('update.disable.donation');
-        // Route::delete('/destroy', 'destroy')->name('destroy.donation');
+        Route::delete('/manage/{id}', 'destroy')->name('destroy.donation');
     });
 
 Route::prefix('payment')
@@ -117,6 +120,16 @@ Route::prefix('newsletter')
         Route::post('/store', 'store')->name('store.news');
         Route::delete('/{id}','destroy')->name('delete.news');
     });
+Route::prefix('plantingpartner')
+    ->controller(PlantingController::class)
+    ->group(function (){
+        Route::get('/','index')->name('plantingpartner');
+        Route::get('/add','add');
+        Route::get('/edit/{id}','edit')->name('');
+        Route::put('/edit/{id}','update')->name('');
+        Route::post('/store', 'store')->name('store.partner');
+        Route::delete('/{id}','destroy')->name('delete.plantingpartner');
+});
 Route::prefix('ukm')
     ->controller(UKMController::class)
     ->group(function (){
