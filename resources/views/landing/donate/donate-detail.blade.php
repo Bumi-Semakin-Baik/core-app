@@ -73,7 +73,7 @@
                                     <!-- <li><span class="">Lokasi:</span><span class="info-contact-us">Kabupaten Pasuruan</span></li> -->
                                     <li><span class="">Batas Donasi:</span><span class="info-contact-us">{{ date_format(date_create($donations->due_date), 'Y-m-d')}}</span></li>
                                     <li><span class="">Penanaman:</span><span class="info-contact-us">{{ $donations->planting_date? date_format(date_create($donations->planting_date), 'Y-m-d') : "-" }}</span></li>
-                                    <li><span class="">Mitra Penanaman:</span><span class="info-contact-us">{{$donations->nama_mitra}}</span></li>
+                                    <li><span class="">Mitra Penanaman:</span><span class="info-contact-us">{{ $donations->nama_mitra }}</span></li>
                                 </ul>
                                 <div class="text-center" style="margin-top: 2rem;margin-bottom: 2rem;"><a class="button-services" href="{{ url('donate-payment',$donations->id) }}">Donasi Sekarang</a></div>
                             </div>

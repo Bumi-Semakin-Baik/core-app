@@ -82,7 +82,47 @@ class DonationController extends Controller
         ]);
         
 
+
         return redirect('donation/manage')->with('success', 'Donation successfully added');
+    }
+
+    public function edit($id){
+        $data = Donation::whereId($id)->first();
+        // dd($data);
+        return view ('admin.donation.manage.edit',[
+            'donation' => $data,
+            'ukms' => UKM::get('*'),
+            'locations'=> Location::get('*')->where('status','=','Enabled'),
+            'partners'=> PlantingPartner::get('*')
+
+        ]);
+}
+public function update(Request $request, $id)
+{
+
+                // $test = Donation::find($id);
+                // $test->update($request->all());
+        // // dd($request->all());
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'image' => 'required | max:1024',
+            'description' => 'required',
+            'target' => 'required',
+            'due_date' => 'required',
+            'id_ukm' => 'required',
+            'nama_ukm' => 'required',
+            'id_location' => 'required',
+            'nama_lokasi' => 'required',
+            'id_mitra' => 'required',
+            'nama_mitra' => 'required',
+        ]);
+    //    dd($validatedData);
+    $test = Donation::where('id', $id)
+    ->update($validatedData);
+
+        return redirect()->route('get.manage')
+        ->with('success', 'Data Berhasil diupdate');
+
     }
 
     public function filter(Request $request){
@@ -112,9 +152,16 @@ class DonationController extends Controller
         ]);
     }
 
-    public function destroy(Donation $donation){
-        Donation::destroy($donation->id);
-        return redirect('donation/manage')->with('success', 'Donation successfully deleted');
+    public function destroy(Donation $donation, $id){
+        $data = Donation::where('id', $id)->first();
+        // dd($product);
+        if ($data == null) {
+            return redirect()->route('get.manage');
+        }
+
+        $data->delete();
+
+        return redirect()->route('get.manage');
     }
     public function update_publish($id)
     {
