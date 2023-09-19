@@ -42,7 +42,7 @@ class DonationController extends Controller
             'id_location' => 'required',
             'id_mitra' => 'required',
         ]);
-
+        
         if($request->file('image')){
             $validatedData['image'] = $request->file('image')->store('donation-images','public');
         }
@@ -80,6 +80,7 @@ class DonationController extends Controller
             'is_published' =>$request->input('is_published'),
             'is_bingkaikarya' =>$request->input('is_bingkaikarya'),
         ]);
+        
 
 
         return redirect('donation/manage')->with('success', 'Donation successfully added');
