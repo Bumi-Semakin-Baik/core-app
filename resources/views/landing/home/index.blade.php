@@ -242,8 +242,8 @@
     <!-- features -->
     <br>
     <div class="section-title-box">
-        <h4 class="section-subtitle judul-home">TREE FOR LIFE</h4>
-        <h2 class="section-title" id="judul1">Pohon Termonitor<br></h2>
+        <h4 class="section-subtitle wow fadeInUp">TREE FOR LIFE</h4>
+        <h2 class="section-title judul-home">Pohon Termonitor<br></h2>
     </div>
     <br><br>
     <section class="flat-features">
@@ -662,7 +662,7 @@
                             </div>
                             <div style="padding-left: 18px;">
                                 <div class="content-features">
-                                    <a href="service-details.html">
+                                    <a href="{{ url('donate',$donation->id) }}">
                                         <h3 class="section-heading-rubik-size20">{{$donation->title}}</h3>
                                     </a>
 
@@ -703,7 +703,7 @@ s                                           @else
                     </div>
                          <div class="row">
                             <div class="col-md-12 text-center">
-                                 <a href="{{ url('/donate') }}" class="btn btn-primary">Lihat Semua</a>
+                                 <a href="{{ url('/donate') }}" class="btn btn-primary" style="color: white">Lihat Semua</a>
                                      </div>
                                       </div>
                             </div>

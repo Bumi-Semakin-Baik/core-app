@@ -116,6 +116,21 @@
                         </div>
                     </div>
 
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-label" for="default-06">Select Donation Partners</label>
+                            <div class="form-control-wrap ">
+                                <div class="form-control-select">
+                                    <select class="form-control" id="default-06" name="id_mitra">
+                                        @foreach ($partners as $partners)
+                                            <option value="{{ $partners->id }}">{{ $partners->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-md-2">
                         <label class="form-label" for="isPublish">Status</label>
                         <div class="form-check">
@@ -136,6 +151,18 @@
                         </div>
                         <div class="form-check">
                             <input type="radio" class="form-check-input" id="radio2" name="is_published" value="No">No
+                            <label class="form-check-label" for="radio2"></label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label" for="is_bingkaikarya">Is Bingkai Karya</label>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio1" name="is_bingkaikarya" value="Yes">Bingkai Karya
+                            <label class="form-check-label" for="radio1"></label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="is_bingkaikarya" value="No" checked>No
                             <label class="form-check-label" for="radio2"></label>
                         </div>
                     </div>

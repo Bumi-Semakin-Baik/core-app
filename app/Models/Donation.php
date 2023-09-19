@@ -20,10 +20,13 @@ class Donation extends Model
         'planting_date',
         'due_date',
         'is_published',
+        'is_bingkaikarya',
         'status',
         'id_ukm',
         'nama_ukm',
         'id_location',
-        'nama_lokasi'
+        'nama_lokasi',
+        'id_mitra',
+        'nama_mitra'
     ];
 }

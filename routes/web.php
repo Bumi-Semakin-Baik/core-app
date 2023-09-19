@@ -19,6 +19,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServiceControlller;
 use App\Http\Controllers\WebTransactionController;
+use App\Http\Controllers\PlantingController;
 use App\Models\WebTransaction;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -118,6 +119,16 @@ Route::prefix('newsletter')
         Route::post('/store', 'store')->name('store.news');
         Route::delete('/{id}','destroy')->name('delete.news');
     });
+Route::prefix('plantingpartner')
+    ->controller(PlantingController::class)
+    ->group(function (){
+        Route::get('/','index')->name('plantingpartner');
+        Route::get('/add','add');
+        Route::get('/edit/{id}','edit')->name('');
+        Route::put('/edit/{id}','update')->name('');
+        Route::post('/store', 'store')->name('store.partner');
+        Route::delete('/{id}','destroy')->name('delete.plantingpartner');
+});
 Route::prefix('ukm')
     ->controller(UKMController::class)
     ->group(function (){

@@ -25,7 +25,7 @@ class DonationRepositoryImplement extends Eloquent implements DonationRepository
     public function sumCollection($donation_id, $donation_val)
     {
         // get donation
-        $donation = $this->model->find($donation_id)->first();
+        $donation = $this->model->where('id', $donation_id)->first();
         $updateDonate['collected'] = $donation->collected + $donation_val;
 
         $this->update($donation_id, $updateDonate);
