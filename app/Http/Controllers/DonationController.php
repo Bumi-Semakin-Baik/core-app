@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Donation;
 use App\Models\UKM;
 use App\Models\Location;
+use App\Models\PlantingPartner;
 use Illuminate\Support\Facades\DB;
 
 class DonationController extends Controller
@@ -25,7 +26,8 @@ class DonationController extends Controller
     public function add(){
         return view ('admin.donation.manage.add',[
             'ukms' => UKM::get('*'),
-            'locations'=> Location::get('*')->where('status','=','Enabled')
+            'locations'=> Location::get('*')->where('status','=','Enabled'),
+            'partners'=> PlantingPartner::get('*')
         ]);
     }
 
@@ -37,9 +39,10 @@ class DonationController extends Controller
             'description' => 'required',
             'target' => 'required',
             'due_date' => 'required',
-            'id_location' => 'required'
+            'id_location' => 'required',
+            'id_mitra' => 'required',
         ]);
-
+        
         if($request->file('image')){
             $validatedData['image'] = $request->file('image')->store('donation-images','public');
         }
@@ -55,6 +58,12 @@ class DonationController extends Controller
                             ->pluck('name')
                             ->first();
 
+        $nama_partner = DB::table('planting_partners')
+                        ->where('id', $request->input('id_mitra'))
+                        ->pluck('name')
+                        ->first();
+        // dd($nama_partner);
+
         Donation::create([
             'title' => $request->input('title'),
             'image' => $image,
@@ -65,12 +74,55 @@ class DonationController extends Controller
             'nama_ukm' => $nama_ukm,
             'id_location' => $request->input('id_location'),
             'nama_lokasi' => $nama_location,
+            'id_mitra' => $request->input('id_mitra'),
+            'nama_mitra' => $nama_partner,
             'status' =>$request->input('status'),
             'is_published' =>$request->input('is_published'),
             'is_bingkaikarya' =>$request->input('is_bingkaikarya'),
         ]);
+        
+
 
         return redirect('donation/manage')->with('success', 'Donation successfully added');
+    }
+
+    public function edit($id){
+        $data = Donation::whereId($id)->first();
+        // dd($data);
+        return view ('admin.donation.manage.edit',[
+            'donation' => $data,
+            'ukms' => UKM::get('*'),
+            'locations'=> Location::get('*')->where('status','=','Enabled'),
+            'partners'=> PlantingPartner::get('*')
+
+        ]);
+}
+public function update(Request $request, $id)
+{
+
+                // $test = Donation::find($id);
+                // $test->update($request->all());
+        // // dd($request->all());
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'image' => 'required | max:1024',
+            'description' => 'required',
+            'target' => 'required',
+            'due_date' => 'required',
+            'id_ukm' => 'required',
+            'nama_ukm' => 'required',
+            'id_location' => 'required',
+            'nama_lokasi' => 'required',
+            'id_mitra' => 'required',
+            'nama_mitra' => 'required',
+        ]);
+    //    dd($validatedData);
+    $test = Donation::where('id', $id)
+    ->update($validatedData);
+
+        return redirect()->route('get.manage')
+        ->with('success', 'Data Berhasil diupdate');
+
     }
 
     public function filter(Request $request){
@@ -100,9 +152,16 @@ class DonationController extends Controller
         ]);
     }
 
-    public function destroy(Donation $donation){
-        Donation::destroy($donation->id);
-        return redirect('donation/manage')->with('success', 'Donation successfully deleted');
+    public function destroy(Donation $donation, $id){
+        $data = Donation::where('id', $id)->first();
+        // dd($product);
+        if ($data == null) {
+            return redirect()->route('get.manage');
+        }
+
+        $data->delete();
+
+        return redirect()->route('get.manage');
     }
     public function update_publish($id)
     {

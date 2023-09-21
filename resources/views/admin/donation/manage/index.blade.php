@@ -19,7 +19,7 @@
                                                 <div class="toggle-expand-content" data-content="pageMenu">
                                                     <ul class="nk-block-tools g-3">
                                                         <li class="nk-block-tools-opt d-none d-sm-block">
-                                                            <a href="{{ url('/donation/add') }}" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add Donation</span></a>
+                                                            <a href="{{ url('/donation/manage/add') }}" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add Donation</span></a>
                                                         </li>
                                                         <li class="nk-block-tools-opt d-block d-sm-none">
                                                             <a href="#" class="btn btn-icon btn-primary"><em class="icon ni ni-plus"></em></a>
@@ -173,14 +173,14 @@
                                                                     <div class="dropdown-menu dropdown-menu-end">
                                                                         <ul class="link-list-opt no-bdr">
                                                                             <li><a href="#"><em class="icon ni ni-eye"></em><span>View Donation</span></a></li>
-                                                                            <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit Donation</span></a></li>
-                                                                            {{-- <li>
-                                                                            <form action="{{ route('destroy.donation',$donation->id) }}"" method="post">
+                                                                            <li><a href="{{ route('edit.donation', $donation->id) }}"><em class="icon ni ni-edit"></em><span>Edit Donation</span></a></li>
+
+                                                                            <form action="{{ route('destroy.donation', $donation->id) }}" method="POST">
                                                                             @csrf
-                                                                            @method('delete')
-                                                                            <button onclick="return confirm('Are you sure you want to delete this donation?')"><em class="icon ni ni-trash"></em><span>Remove Donation</span></button>
+                                                                            @method('DELETE')
+                                                                            <button onclick="return confirm('Are you sure you want to delete this donation?')" class="btn btn-danger">Remove Donation</button>
                                                                             </form>
-                                                                            </li> --}}
+
                                                                         </ul>
                                                                     </div>
                                                                 </div>
