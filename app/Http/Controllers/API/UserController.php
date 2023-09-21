@@ -73,6 +73,7 @@ class UserController extends Controller
             'email' => $request->email,
             'telp' => Formatter::IDTel($request->telp),
             'email_verified_at' => now(),
+            'gender' => $request->gender,
             'password' => bcrypt($request->password)
         ]);
 

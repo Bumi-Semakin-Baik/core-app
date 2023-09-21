@@ -44,7 +44,11 @@ class RegisterRequest extends FormRequest
                 "string",
                 "min:8",
                 "same:password"
-            ]
+            ],
+            "gender" => [
+                "string",
+                "in:None,Male,Female"
+            ],
         ];
     }
 
@@ -74,7 +78,9 @@ class RegisterRequest extends FormRequest
             "password_confirm.required" => "Konfirmasi password harus diisi",
             "password_confirm.string" => "Konfirmasi password harus berupa string",
             "password_confirm.min" => "Konfirmasi password minimal 8 karakter",
-            "password_confirm.same" => "Konfirmasi password tidak sama"
+            "password_confirm.same" => "Konfirmasi password tidak sama",
+            "gender.string" => "Jenis kelamin harus berupa string",
+            "gender.in" => "Jenis kelamin tidak valid",
         ];
     }
 
