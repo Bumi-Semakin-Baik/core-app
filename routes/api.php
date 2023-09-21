@@ -6,6 +6,7 @@ use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\API\TreeController;
 use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\CarbonController;
+use App\Http\Controllers\API\DonationController;
 use App\Http\Controllers\API\NotificationController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\ProjectController;
@@ -163,4 +164,14 @@ Route::prefix('notifications')
     ->controller(NotificationController::class)
     ->group(function () {
         Route::post("payment", 'payment');
+    });
+
+    /**
+ * Donations
+ */
+Route::prefix('donations')
+    ->controller(DonationController::class)
+    ->group(function () {
+        Route::get("/", 'index');
+        Route::get("/{id}", 'get_detail_donation');
     });
