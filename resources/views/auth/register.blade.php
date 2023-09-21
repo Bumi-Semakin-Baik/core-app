@@ -30,15 +30,15 @@
                                 <div class="brand-logo pb-5">
                                     <a href="html/index.html" class="logo-link">
                                         <img class="logo-light logo-img logo-img-lg" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                                        <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                                        <img class="logo-dark logo-img logo-img-lg" src="{{ asset('landing/images/home/BumiBaik.png') }}"> 
                                     </a>
                                 </div>
                                 <div class="nk-block-head">
                                     <div class="nk-block-head-content">
                                         <h5 class="nk-block-title">Register</h5>
-                                        <div class="nk-block-des">
+                                        <!-- <div class="nk-block-des">
                                             <p>Create New Dashlite Account</p>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div><!-- .nk-block-head -->
                                 <form method="POST" action="{{ route('register') }}">
@@ -104,7 +104,7 @@
                                     <div class="form-group">
                                         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
                                     </div>
-                                </form><!-- form -->
+                                <!-- </form>form
                                 <div class="form-note-s2 pt-4"> Already have an account ? <a href="{{ url('login') }}"><strong>Sign in instead</strong></a>
                                 </div>
                                 <div class="text-center pt-4 pb-3">
@@ -114,7 +114,7 @@
                                     <li class="nav-item"><a class="nav-link" href="#">Facebook</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#">Google</a></li>
                                 </ul>
-                            </div><!-- .nk-block -->
+                            </div>.nk-block
                             <div class="nk-block nk-auth-footer">
                                 <div class="nk-block-between">
                                     <ul class="nav nav-sm">
@@ -158,14 +158,16 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                    </ul><!-- nav -->
-                                </div>
-                                <div class="mt-3">
-                                    <p>&copy; 2023 DashLite. All Rights Reserved.</p>
-                                </div>
+                                    </ul>
+                                </div> -->
+                                <!-- <div class="mt-3">
+                                    <p>&copy; 2023 BumiBaik. All Rights Reserved.</p>
+                                </div> -->
                             </div><!-- nk-block -->
                         </div><!-- nk-split-content -->
-                        <div class="nk-split-content nk-split-stretch bg-abstract"></div><!-- nk-split-content -->
+                        <div class="nk-split-content nk-split-stretch bg-abstract">
+                        <img src="{{ asset('landing/images/home/Regsiter.jpg') }}" alt="">
+                        </div><!-- nk-split-content -->
                     </div><!-- nk-split -->
                 </div>
                 <!-- wrap @e -->

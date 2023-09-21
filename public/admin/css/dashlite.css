@@ -2055,7 +2055,7 @@ progress {
 .form-control:focus, .dual-listbox .dual-listbox__search:focus, div.dataTables_wrapper div.dataTables_filter input:focus {
   color: #3c4d62;
   background-color: #fff;
-  border-color: #854fff;
+  border-color: #23e42a;
   outline: 0;
   box-shadow: 0 0 0 3px rgba(133, 79, 255, 0.1);
 }
@@ -2691,7 +2691,7 @@ div.dataTables_wrapper div.dataTables_filter .input-group.has-validation > .form
   width: 100%;
   margin-top: 0.25rem;
   font-size: 0.875em;
-  color: #e85347;
+  /* color: #e85347; */
 }
 
 .invalid-tooltip {
@@ -2716,7 +2716,7 @@ div.dataTables_wrapper div.dataTables_filter .input-group.has-validation > .form
 }
 
 .was-validated .form-control:invalid, .was-validated .dual-listbox .dual-listbox__search:invalid, .dual-listbox .was-validated .dual-listbox__search:invalid, .was-validated div.dataTables_wrapper div.dataTables_filter input:invalid, div.dataTables_wrapper div.dataTables_filter .was-validated input:invalid, .form-control.is-invalid, .dual-listbox .is-invalid.dual-listbox__search, div.dataTables_wrapper div.dataTables_filter input.is-invalid {
-  border-color: #e85347;
+  /* border-color: #e85347; */
   padding-right: 2.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23e85347'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23e85347' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -2724,8 +2724,8 @@ div.dataTables_wrapper div.dataTables_filter .input-group.has-validation > .form
   background-size: 1.0625rem 1.0625rem;
 }
 .was-validated .form-control:invalid:focus, .was-validated .dual-listbox .dual-listbox__search:invalid:focus, .dual-listbox .was-validated .dual-listbox__search:invalid:focus, .was-validated div.dataTables_wrapper div.dataTables_filter input:invalid:focus, div.dataTables_wrapper div.dataTables_filter .was-validated input:invalid:focus, .form-control.is-invalid:focus, .dual-listbox .is-invalid.dual-listbox__search:focus, div.dataTables_wrapper div.dataTables_filter input.is-invalid:focus {
-  border-color: #e85347;
-  box-shadow: 0 0 0 0.2rem rgba(232, 83, 71, 0.25);
+  /* border-color: #e85347; */
+  /* box-shadow: 0 0 0 0.2rem rgba(232, 83, 71, 0.25); */
 }
 
 .was-validated textarea.form-control:invalid, .was-validated .dual-listbox textarea.dual-listbox__search:invalid, .dual-listbox .was-validated textarea.dual-listbox__search:invalid, textarea.form-control.is-invalid, .dual-listbox textarea.is-invalid.dual-listbox__search {
@@ -3586,7 +3586,7 @@ div.dataTables_wrapper div.dataTables_filter .input-group.has-validation > .form
   --bs-dropdown-link-hover-color: #fff;
   --bs-dropdown-divider-bg: #e5e9f2;
   --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.15);
-  --bs-dropdown-link-active-color: #854fff;
+  --bs-dropdown-link-active-color: green ;
   --bs-dropdown-link-active-bg: #dbdfea;
   --bs-dropdown-link-disabled-color: #adb5bd;
   --bs-dropdown-header-color: #adb5bd;
@@ -29283,7 +29283,7 @@ body.nav-shown {
   opacity: 1;
 }
 .logo-img {
-  max-height: 36px;
+  max-height: 120px;
   margin-right: 10px;
 }
 .logo-img-lg {
@@ -29902,13 +29902,14 @@ body.nav-shown {
   text-transform: none;
   line-height: 1.25rem;
   border-radius: 6px;
+  background-image: url(../images/home/news.png);
 }
 .nk-menu-link:hover, .active > .nk-menu-link {
   color: #9769ff;
   background: #fff;
 }
 .is-light .nk-menu-link:hover, .is-light .active > .nk-menu-link {
-  background: #ebeef2;
+  background: greenyellow;
 }
 .is-dark .nk-menu-link:hover, .is-dark .active > .nk-menu-link {
   background: #182536;
@@ -29961,10 +29962,21 @@ body.nav-shown {
   line-height: 1;
   flex-grow: 0;
   flex-shrink: 0;
-  color: #8094ae;
+  color: green;
+}
+
+.nk-menu-item.news {
+  font-weight: normal;
+  letter-spacing: normal;
+  width: 36px;
+  line-height: 1;
+  flex-grow: 0;
+  flex-shrink: 0;
+  color: green;
+  background-image: url(../images/home/news.png);
 }
 .is-theme .nk-menu-icon {
-  color: #b799ff;
+  color: greenyellow;
 }
 .nk-menu-icon svg, .nk-menu-icon img {
   width: 36px;
@@ -29977,7 +29989,7 @@ body.nav-shown {
   transition: color 0.4s, background-color 0.4s;
 }
 .nk-menu-link:hover .nk-menu-icon, .nk-menu-item.active > .nk-menu-link .nk-menu-icon, .nk-menu-item.current-menu > .nk-menu-link .nk-menu-icon {
-  color: #9769ff;
+  color: green;
 }
 .is-theme .nk-menu-link:hover .nk-menu-icon, .is-theme .nk-menu-item.active > .nk-menu-link .nk-menu-icon, .is-theme .nk-menu-item.current-menu > .nk-menu-link .nk-menu-icon {
   color: #fff;
@@ -29991,6 +30003,7 @@ body.nav-shown {
 .nk-menu-text {
   flex-grow: 1;
   display: inline-block;
+  color: black;
 }
 .nk-menu-badge {
   border-radius: 3px;
