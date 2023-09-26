@@ -3310,9 +3310,9 @@ div.dataTables_wrapper div.dataTables_filter .input-group.has-validation > .form
   --bs-dropdown-divider-margin-y: 12px;
   --bs-dropdown-box-shadow: 0 3px 12px 1px rgba(58, 34, 114, 0.15);
   --bs-dropdown-link-color: #364a63;
-  --bs-dropdown-link-hover-color: #854fff;
+  --bs-dropdown-link-hover-color: green;
   --bs-dropdown-link-hover-bg: #ebeef2;
-  --bs-dropdown-link-active-color: #854fff;
+  --bs-dropdown-link-active-color: green
   --bs-dropdown-link-active-bg: #dbdfea;
   --bs-dropdown-link-disabled-color: #ebeef2;
   --bs-dropdown-item-padding-x: 14px;
@@ -4618,7 +4618,7 @@ div.dataTables_wrapper div.dataTables_filter .input-group.has-validation > .form
   --bs-pagination-focus-bg: #e9ecef;
   --bs-pagination-focus-box-shadow: none;
   --bs-pagination-active-color: #fff;
-  --bs-pagination-active-bg: #854fff;
+  --bs-pagination-active-bg: green;
   --bs-pagination-active-border-color: #854fff;
   --bs-pagination-disabled-color: #dbdfea;
   --bs-pagination-disabled-bg: #fff;
@@ -31138,7 +31138,7 @@ li {
   position: relative;
 }
 .link-list a:hover {
-  color: #854fff;
+  color: green;
 }
 .link-list a .icon {
   font-size: 1.125rem;
@@ -35046,7 +35046,7 @@ button.close {
 }
 .nk-tb-list .tb-lead, .nk-tb-list .tb-amount {
   font-weight: 500;
-  color: #364a63;
+  color: green;
   display: block;
   line-height: 1.4;
 }
@@ -35136,7 +35136,7 @@ button.close {
 .nk-tb-head .nk-tb-col {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: #8094ae;
+  color: green;
   font-size: 0.9em;
   border-bottom: 1px solid rgba(219, 223, 234, 0.9);
 }

@@ -35,15 +35,39 @@
         </div>
     </div>
     <!-- /.page-title -->
+    <section class="flat-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="themesflat-spacer clearfix" data-desktop="121" data-mobile="60" data-smobile="60">
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center" style="margin-bottom: 2rem;">
+                    <h1 class="section-heading-jost-size28 text-pri2-color">"{{$donations->title}}"</h1>
+                </div>
+                    <div class="col-lg-6">
+                        <div class="about-post center bd-radius-50-image">
+                            <img class="img-fluid" src="{{ asset('landing/images/home/daun2.jpg') }} " alt="images">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="about-content-title wow fadeInUp">
+                                <!-- <div class="section-subtitle">ABOUT US</div> -->
+                                <div class="section-title judul-home" >Detail Donate</div>
+                                <div class="section-desc">BumiBaik membantu setiap orang menghitung emisi karbon, menanam,
+                                    dan mengadopsi pohon secara sukarela untuk menyerap emisi karbon sehingga karbon yang
+                                    dihasilkan dan karbon yang diserap oleh pohon (Carbon Neutral) menjadi seimbang.
+                                    BumiBaik memberikan informasi dan edukasi tentang dampak emisi karbon terhadap
+                                    lingkungan dan isu perubahan iklim </div>
+                            </div>
+                </section>
 
     <section class="flat-service-details">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="themesflat-spacer clearfix" data-desktop="117" data-mobile="60" data-smobile="60"></div>
-                </div>
-                <div class="col-md-12 text-center" style="margin-bottom: 2rem;">
-                    <h1 class="section-heading-jost-size28 text-pri2-color">"{{$donations->title}}"</h1>
                 </div>
                 <div class="col-md-12">
                     <a href="{{ url()->previous() }}" class="btn btn-success"> < Kembali </a>
@@ -53,11 +77,6 @@
                             <form action="{{route('store.payment')}}" method="POST">
                             @csrf
                             <div class="widget-contact-services-details mg-bottom-25">
-
-
-                                <br>
-
-
                              <div class="sidebar-title mg-bottom-25">
                              <h3 style="color: #0F4229;" class="section-heading-jost-size20 item-1">Data Diri <span style="color: red;">*</span></h3>
                                     <div class="form-group">
