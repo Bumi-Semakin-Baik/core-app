@@ -23,6 +23,48 @@ class DonationController extends Controller
                                     ->get()
         ]);
     }
+    public function getTransaction(){
+        return view('admin.donation.transactions.index',[
+            'donations' => DB::table('donations')
+                                    ->select('*')
+                                    ->where('status','=','Enabled')
+                                    ->orderBy('is_published','asc')
+                                    ->get()
+        ]);
+    }
+
+    public function getDetail($id){
+        return view('admin.donation.transactions.indexdetail',[
+            'transactions' => DB::table('transactions')
+                                    ->select('transactions.order_code', 'transactions.donate_id', 'donations.title',
+                                    'transactions.email', 'transactions.name', 'transactions.date', 'transactions.grand_total', 'transactions.status')
+                                    ->leftJoin('donations','transactions.donate_id','=','donations.id')
+                                    ->where('transactions.donate_id','=',$id)
+                                    ->get(),
+            'total_pending' => DB::table('transactions')
+                            ->where('donate_id','=', $id)
+                            ->where('status','=','request')
+                            ->orWhere('status','=','pending')
+                            ->count(),
+
+            'total_failed' => DB::table('transactions')
+                            ->where('status','=','expired')
+                            ->orWhere('status','=','failed')
+                            ->where('donate_id','=', $id)
+                            ->count(),
+
+            'total_success' => DB::table('transactions')
+                            ->where('status','=','success')
+                            ->where('donate_id','=', $id)
+                            ->count(),
+
+            'total_paid' => DB::table('transactions')
+                            ->where('donate_id','=', $id)
+                            ->where('status','=','success')
+                            ->sum('grand_total'),
+        ]);
+    }
+
     public function add(){
         return view ('admin.donation.manage.add',[
             'ukms' => UKM::get('*'),
@@ -42,7 +84,7 @@ class DonationController extends Controller
             'id_location' => 'required',
             'id_mitra' => 'required',
         ]);
-        
+
         if($request->file('image')){
             $validatedData['image'] = $request->file('image')->store('donation-images','public');
         }
@@ -80,7 +122,7 @@ class DonationController extends Controller
             'is_published' =>$request->input('is_published'),
             'is_bingkaikarya' =>$request->input('is_bingkaikarya'),
         ]);
-        
+
 
         return redirect('donation/manage')->with('success', 'Donation successfully added');
     }

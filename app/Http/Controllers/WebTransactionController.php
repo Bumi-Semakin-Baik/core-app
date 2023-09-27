@@ -8,55 +8,126 @@ use App\Models\WebTransaction;
 use App\Models\EmailUser;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 
 class WebTransactionController extends Controller
 {
 
+    // public function checkout(Request $request)
+    // {
+    //     $orderCode = "DONATE-" . date('YmdHis') . "-" . $request->idDonate . "-" . rand(1, 9999);
+
+    //     $transaction['id'] = (string) Str::uuid();
+    //     $transaction['type'] = "donate";
+    //     $transaction['name'] = $request->name;
+    //     $transaction['email'] = $request->email;
+    //     $transaction['donate_id'] = $request->idDonate;
+    //     $transaction['date'] = date("Y-m-d");
+    //     $transaction['total'] = $request->total_price;
+    //     $transaction['grand_total'] = $request->total_price;
+    //     $transaction['order_code'] = $orderCode;
+    //     $transaction['status'] = "request";
+    //     Transaction::create($transaction);
+    //     EmailUser::create([
+    //         'email' => $transaction['email'],
+    //         'name' => $transaction['name'],
+    //     ]);
+    //     $transaction['enc_order_code'] = Crypt::encryptString($orderCode);
+
+    //     // Set your Merchant Server Key
+    //     \Midtrans\Config::$serverKey = env('MIDTRANS_SERVER_KEY');
+    //     // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
+    //     \Midtrans\Config::$isProduction = false;
+    //     // Set sanitization on (default)
+    //     \Midtrans\Config::$isSanitized = true;
+    //     // Set 3DS transaction for credit card to true
+    //     \Midtrans\Config::$is3ds = true;
+
+    //     $params = array(
+    //         'transaction_details' => array(
+    //             'order_id' => $orderCode,
+    //             'gross_amount' => $request->total_price,
+    //         ),
+    //         'customer_details' => array(
+    //             'first_name' => $request->name,
+    //             'email' => $request->email,
+    //         ),
+    //     );
+
+    //     $snapToken = \Midtrans\Snap::getSnapToken($params);
+
+    //     $user_email = $request->email;
+    //     $this->send_email($user_email);
+
+    //     return view('landing.donate.checkout',compact('snapToken', 'transaction'));
+    // }
+
     public function checkout(Request $request)
     {
-        $orderCode = "DONATE-" . date('YmdHis') . "-" . $request->idDonate . "-" . rand(1, 9999);
+        $mail = new PHPMailer(true);
+        try {
+            //Server settings
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp-mail.outlook.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'thorrickx@outlook.com';                     //SMTP username
+            $mail->Password   = 'nmNVsdWQj64GDPA';                               //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-        $transaction['id'] = (string) Str::uuid();
-        $transaction['type'] = "donate";
-        $transaction['name'] = $request->name;
-        $transaction['email'] = $request->email;
-        $transaction['donate_id'] = $request->idDonate;
-        $transaction['date'] = date("Y-m-d");
-        $transaction['total'] = $request->total_price;
-        $transaction['grand_total'] = $request->total_price;
-        $transaction['order_code'] = $orderCode;
-        $transaction['status'] = "request";
-        Transaction::create($transaction);
-        EmailUser::create([
-            'email' => $transaction['email'],
-            'name' => $transaction['name'],
-        ]);
-        $transaction['enc_order_code'] = Crypt::encryptString($orderCode);
+            //Recipients
+            $mail->setFrom('thorrickx@outlook.com', 'BumiBaik');
+            $mail->addAddress($request->email);
 
-        // Set your Merchant Server Key
-        \Midtrans\Config::$serverKey = env('MIDTRANS_SERVER_KEY');
-        // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-        \Midtrans\Config::$isProduction = true;
-        // Set sanitization on (default)
-        \Midtrans\Config::$isSanitized = true;
-        // Set 3DS transaction for credit card to true
-        \Midtrans\Config::$is3ds = true;
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = 'Donasi anda telah berhasil masuk';
+            $mail->Body    = 'Terima kasih donasi anda telah berhasil terkumpulkan. Anda akan mendapatkan email dari detail kegiatan ini.';
 
-        $params = array(
-            'transaction_details' => array(
-                'order_id' => $orderCode,
-                'gross_amount' => $request->total_price,
-            ),
-            'customer_details' => array(
-                'first_name' => $request->name,
-                'email' => $request->email,
-            ),
-        );
+            $mail->send();
+            echo 'Message has been sent';
 
-        $snapToken = \Midtrans\Snap::getSnapToken($params);
-        return view('landing.donate.checkout',compact('snapToken', 'transaction'));
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+
+        return view('landing.donate.checkout');
     }
+
+    public function send_email($user_email){
+        $mail = new PHPMailer(true);
+        try {
+            //Server settings
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'thorickx555@gmail.com';                     //SMTP username
+            $mail->Password   = 'NEWAQmykCRMb3a5';                               //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+            //Recipients
+            $mail->setFrom('thorickx555@gmail.com', 'BumiBaik');
+            $mail->addAddress($user_email);
+
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = 'Donasi anda telah berhasil masuk';
+            $mail->Body    = 'Terima kasih donasi anda telah berhasil terkumpulkan. Anda akan mendapatkan email dari detail kegiatan ini.';
+
+            $mail->send();
+            echo 'Message has been sent';
+
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+    }
+
 
     public function running($id)
     {

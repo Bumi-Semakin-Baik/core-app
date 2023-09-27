@@ -71,7 +71,13 @@
                                         <span class="nk-menu-text">Newsletter</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
-                                <li class="nk-menu-item has-sub">
+                                <li class="nk-menu-item">
+                                    <a href="{{ url('donation/manage') }}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-growth-fill"></em></span>
+                                        <span class="nk-menu-text">Donation</span>
+                                    </a>
+                                </li><!-- .nk-menu-item -->
+                                {{-- <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-tile-thumb-fill"></em></span>
                                         <span class="nk-menu-text">Donation</span>
@@ -81,10 +87,10 @@
                                             <a href="{{ url('donation/manage') }}" class="nk-menu-link"><span class="nk-menu-text">Manage</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="{{ url('donation/transactions') }}" class="nk-menu-link"><span class="nk-menu-text">Transactions</span></a>
+                                            <a href="{{ url('donation/transaction') }}" class="nk-menu-link"><span class="nk-menu-text">Transactions</span></a>
                                         </li>
                                     </ul><!-- .nk-menu-sub -->
-                                </li><!-- .nk-menu-item -->
+                                </li><!-- .nk-menu-item --> --}}
                                 <li class="nk-menu-item">
                                     <a href="{{ url('/ukm?filter=Enabled') }}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-growth-fill"></em></span>
@@ -103,7 +109,7 @@
                                         <span class="nk-menu-text">Vouchers</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
-                                
+
                                 <li class="nk-menu-item">
                                     <a href="{{ url('plantingpartner') }}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-growth-fill"></em></span>
