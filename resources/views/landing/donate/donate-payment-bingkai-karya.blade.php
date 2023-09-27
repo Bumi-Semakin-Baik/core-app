@@ -54,12 +54,8 @@
                         <div class="about-content">
                             <div class="about-content-title wow fadeInUp">
                                 <!-- <div class="section-subtitle">ABOUT US</div> -->
-                                <div class="section-title judul-home" >Detail Donate</div>
-                                <div class="section-desc">BumiBaik membantu setiap orang menghitung emisi karbon, menanam,
-                                    dan mengadopsi pohon secara sukarela untuk menyerap emisi karbon sehingga karbon yang
-                                    dihasilkan dan karbon yang diserap oleh pohon (Carbon Neutral) menjadi seimbang.
-                                    BumiBaik memberikan informasi dan edukasi tentang dampak emisi karbon terhadap
-                                    lingkungan dan isu perubahan iklim </div>
+                                <div class="section-title judul-home" >"{{$donations->title}}"</div>
+                                <div class="section-desc">{{ $donations->description}}</div>
                             </div>
                 </section>
 

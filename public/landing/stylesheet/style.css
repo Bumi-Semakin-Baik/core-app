@@ -471,7 +471,7 @@ h6 {
 }
 
 .bd-radius-50-image img {
-    border-radius: 50%;
+    border-radius: 0%;
 }
 
 .mg-left-15 {

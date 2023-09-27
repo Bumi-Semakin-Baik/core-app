@@ -35,6 +35,31 @@
         </div>
     </div>
     <!-- /.page-title -->
+    <section class="flat-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="themesflat-spacer clearfix" data-desktop="121" data-mobile="60" data-smobile="60">
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center" style="margin-bottom: 2rem;">
+                    <h1 class="section-heading-jost-size28 text-pri2-color">Yuk donasi kampanye alam</h1>
+                    <!-- <h1 class="section-heading-jost-size28 text-pri2-color">"{{$donations->title}}"</h1> -->
+                </div>
+                </div>
+                    <div class="col-lg-6">
+                        <div class="about-post center bd-radius-50-image">
+                            <img class="img-fluid" src="{{ asset('landing/images/home/daun2.jpg') }} " alt="images">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="about-content-title wow fadeInUp">
+                                <!-- <div class="section-subtitle">ABOUT US</div> -->
+                                <div class="section-title judul-home" >"{{$donations->title}}"</div>
+                                <div class="section-desc">{{ $donations->description}}</div>
+                            </div>
+                </section>
 
     <section class="flat-service-details">
         <div class="container">
@@ -42,10 +67,10 @@
                 <div class="col-md-12">
                     <div class="themesflat-spacer clearfix" data-desktop="117" data-mobile="60" data-smobile="60"></div>
                 </div>
-                <div class="col-md-12 text-center" style="margin-bottom: 2rem;">
+                <!-- <div class="col-md-12 text-center" style="margin-bottom: 2rem;">
                     <h1 class="section-heading-jost-size28 text-pri2-color">Yuk donasi kampanye alam</h1>
                     <h1 class="section-heading-jost-size28 text-pri2-color">"{{$donations->title}}"</h1>
-                </div>
+                </div> -->
                 <div class="col-md-12">
                     <a href="{{ url()->previous() }}" class="btn btn-success"> < Kembali </a>
 
