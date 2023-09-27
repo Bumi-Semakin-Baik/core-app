@@ -57,7 +57,7 @@
                                 <div class="form-icon form-icon-left">
                                     Rp
                                 </div>
-                                <input type="text" class="form-control" id="default-03" placeholder="Input placeholder" name="target">
+                                <input type="text" class="form-control" id="target" placeholder="Input placeholder" name="target" onkeypress="return number(event)">
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,19 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label" for="fv-phone">Planting Date</label>
+                            <div class="form-control-wrap">
+                                <div class="input-group">
+                                        {{-- <div class="input-group-prepend">
+                                            <span class="input-group-text" id="fv-phone">+62</span>
+                                        </div> --}}
+                                    <input type="date" class="form-control" required name="planting_date">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     {{-- <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-label" for="fv-message">Message</label>
@@ -124,6 +136,21 @@
                                     <select class="form-control" id="default-06" name="id_mitra">
                                         @foreach ($partners as $partners)
                                             <option value="{{ $partners->id }}">{{ $partners->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-label" for="default-06">Select Tree Type</label>
+                            <div class="form-control-wrap ">
+                                <div class="form-control-select">
+                                    <select class="form-control" id="default-06" name="id_tree">
+                                        @foreach ($treetype as $t)
+                                            <option value="{{ $t->id }}">{{ $t->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>

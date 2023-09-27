@@ -11,7 +11,8 @@ class PlantingPartner extends Model
 
     protected $fillable = [
         'id',
-        'name'
+        'name',
+        'status'
     ];
 
     use HasFactory;

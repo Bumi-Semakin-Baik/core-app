@@ -19,6 +19,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServiceControlller;
 use App\Http\Controllers\WebTransactionController;
 use App\Http\Controllers\PlantingController;
+use App\Http\Controllers\TreetypeController;
 use App\Models\WebTransaction;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -125,10 +126,24 @@ Route::prefix('plantingpartner')
     ->group(function (){
         Route::get('/','index')->name('plantingpartner');
         Route::get('/add','add');
-        Route::get('/edit/{id}','edit')->name('');
-        Route::put('/edit/{id}','update')->name('');
+        Route::get('/edit/{id}','edit')->name('edit.plantingpartner');
+        Route::put('/edit/{id}','update')->name('update.plantingpartner');
         Route::post('/store', 'store')->name('store.partner');
         Route::delete('/{id}','destroy')->name('delete.plantingpartner');
+        Route::put('/update_enable/{id}','update_enable')->name('plantingpartner.enable');
+        Route::put('/update_disable/{id}','update_disable')->name('plantingpartner.disable');
+});
+Route::prefix('treetype')
+    ->controller(TreetypeController::class)
+    ->group(function (){
+        Route::get('/','index')->name('treetype');
+        Route::get('/add','add');
+        Route::get('/edit/{id}','edit')->name('edit.treetype');
+        Route::put('/edit/{id}','update')->name('update.treetype');
+        Route::post('/store', 'store')->name('store.treetype');
+        Route::delete('/{id}','destroy')->name('delete.treetype');
+        Route::put('/update_enable/{id}','update_enable')->name('enable.treetype');
+        Route::put('/update_disable/{id}','update_disable')->name('disable.treetype');
 });
 Route::prefix('ukm')
     ->controller(UKMController::class)

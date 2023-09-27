@@ -18,8 +18,9 @@
                     <div class="alert alert-danger">{{ $error }}</div>
                 @endforeach
             @endif
-            <form action="{{ route('store.partner') }}" method="POST" enctype="multipart/form-data" class="form-validate">
+            <form action="{{ route('update.plantingpartner', $plantingpartner->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
             @csrf
+            @method('PUT')
                 <div class="row g-gs">
                 <div class="col-md-12">
 
@@ -42,7 +43,7 @@
                     </div>
             </div>
                                     <div class="col-md-12">
-                                <button type="submit" class="btn btn-lg btn-primary"> Add Planting Partner </button>
+                                <button type="submit" class="btn btn-lg btn-primary"> Update Planting Partner </button>
                                     </div>
                             </form>
                         </div>

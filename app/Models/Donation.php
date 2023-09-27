@@ -10,7 +10,7 @@ class Donation extends Model
     use HasFactory;
 
     protected $table = "donations";
-
+    protected $primaryKey="id";
     protected $fillable = [
         'title',
         'image',
@@ -19,6 +19,7 @@ class Donation extends Model
         'collected',
         'planting_date',
         'due_date',
+        'planting_date',
         'is_published',
         'is_bingkaikarya',
         'status',
@@ -27,6 +28,8 @@ class Donation extends Model
         'id_location',
         'nama_lokasi',
         'id_mitra',
-        'nama_mitra'
+        'nama_mitra',
+        'id_tree',
+        'tree_name'
     ];
 }

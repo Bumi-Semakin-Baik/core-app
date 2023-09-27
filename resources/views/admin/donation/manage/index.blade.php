@@ -109,7 +109,7 @@
                                                     </td>
                                                     <td class="nk-tb-col tb-col-sm">
                                                         <span class="tb-product">
-                                                            <img src="{{ asset('storage/'. $donation->image)}}" alt="{{ asset('storage/'. $donation->image)}} }}" class="thumb">
+                                                            <img src="{{ asset('storage/'. $donation->image)}}" alt="{{ asset('storage/'. $donation->image)}}" class="thumb">
                                                             <div class="user-info">
                                                                 <span class="tb-lead">{{$donation->title}} <span class="dot dot-success d-md-none ms-1"></span></span>
                                                                 <span>{{$donation->description}}</span>

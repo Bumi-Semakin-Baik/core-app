@@ -7,6 +7,7 @@ use App\Models\Donation;
 use App\Models\UKM;
 use App\Models\Location;
 use App\Models\PlantingPartner;
+use App\Models\TreeType;
 use Illuminate\Support\Facades\DB;
 
 class DonationController extends Controller
@@ -27,7 +28,8 @@ class DonationController extends Controller
         return view ('admin.donation.manage.add',[
             'ukms' => UKM::get('*'),
             'locations'=> Location::get('*')->where('status','=','Enabled'),
-            'partners'=> PlantingPartner::get('*')
+            'partners'=> PlantingPartner::get('*'),
+            'treetype'=> TreeType::get('*')
         ]);
     }
 
@@ -41,6 +43,7 @@ class DonationController extends Controller
             'due_date' => 'required',
             'id_location' => 'required',
             'id_mitra' => 'required',
+            'id_tree' => 'required'
         ]);
 
         if($request->file('image')){
@@ -62,6 +65,11 @@ class DonationController extends Controller
                         ->where('id', $request->input('id_mitra'))
                         ->pluck('name')
                         ->first();
+
+        $tree_name = DB::table('tree_types')
+                        ->where('id', $request->input('id_tree'))
+                        ->pluck('name')
+                        ->first();
         // dd($nama_partner);
 
         Donation::create([
@@ -70,12 +78,15 @@ class DonationController extends Controller
             'description' =>$request->input('description'),
             'target' => $request->input('target'),
             'due_date' => $request->input('due_date'),
+            'planting_date' => $request->input('planting_date'),
             'id_ukm' => $request->input('id_ukm'),
             'nama_ukm' => $nama_ukm,
             'id_location' => $request->input('id_location'),
             'nama_lokasi' => $nama_location,
             'id_mitra' => $request->input('id_mitra'),
             'nama_mitra' => $nama_partner,
+            'id_tree' => $request->input('id_tree'),
+            'tree_name' => $tree_name,
             'status' =>$request->input('status'),
             'is_published' =>$request->input('is_published'),
             'is_bingkaikarya' =>$request->input('is_bingkaikarya'),
@@ -92,11 +103,13 @@ class DonationController extends Controller
             'donation' => $data,
             'ukms' => UKM::get('*'),
             'locations'=> Location::get('*')->where('status','=','Enabled'),
-            'partners'=> PlantingPartner::get('*')
+            'partners'=> PlantingPartner::get('*'),
+            'treetype'=> TreeType::get('*')
+
 
         ]);
 }
-public function update(Request $request, $id)
+    public function update(Request $request, $id)
 {
 
                 // $test = Donation::find($id);
@@ -108,16 +121,55 @@ public function update(Request $request, $id)
             'description' => 'required',
             'target' => 'required',
             'due_date' => 'required',
+            'planting_date' => 'required',
             'id_ukm' => 'required',
-            'nama_ukm' => 'required',
             'id_location' => 'required',
-            'nama_lokasi' => 'required',
             'id_mitra' => 'required',
-            'nama_mitra' => 'required',
+            'id_tree' => 'required'
         ]);
     //    dd($validatedData);
+    $image = $request->file('image')->store('donation-images','public');
+
+    $nama_ukm = DB::table('ukm')
+        ->where('id',$request->input('id_ukm'))
+        ->pluck('name')
+        ->first();
+
+    $nama_location = DB::table('locations')
+        ->where('id',$request->input('id_location'))
+        ->pluck('name')
+        ->first();
+
+    $nama_partner = DB::table('planting_partners')
+        ->where('id', $request->input('id_mitra'))
+        ->pluck('name')
+        ->first();
+
+    $tree_name = DB::table('tree_types')
+        ->where('id', $request->input('id_tree'))
+        ->pluck('name')
+        ->first();
+
     $test = Donation::where('id', $id)
-    ->update($validatedData);
+    ->update([
+        'title' => $request->input('title'),
+        'image' => $image,
+        'description' =>$request->input('description'),
+        'target' => $request->input('target'),
+        'due_date' => $request->input('due_date'),
+        'planting_date' => $request->input('planting_date'),
+        'id_ukm' => $request->input('id_ukm'),
+        'nama_ukm' => $nama_ukm,
+        'id_location' => $request->input('id_location'),
+        'nama_lokasi' => $nama_location,
+        'id_mitra' => $request->input('id_mitra'),
+        'nama_mitra' => $nama_partner,
+        'id_tree' => $request->input('id_tree'),
+        'tree_name' => $tree_name,
+        'status' =>$request->input('status'),
+        'is_published' =>$request->input('is_published'),
+        'is_bingkaikarya' =>$request->input('is_bingkaikarya'),
+    ]);
 
         return redirect()->route('get.manage')
         ->with('success', 'Data Berhasil diupdate');
