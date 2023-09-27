@@ -60,7 +60,6 @@
                                 </div>
                                 <div class="user-info">
                                     <span class="tb-lead">{{ $planting->name }}</span>
-
                                 </div>
                             </div>
                         </td>
