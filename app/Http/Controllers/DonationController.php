@@ -28,8 +28,8 @@ class DonationController extends Controller
         return view ('admin.donation.manage.add',[
             'ukms' => UKM::get('*'),
             'locations'=> Location::get('*')->where('status','=','Enabled'),
-            'partners'=> PlantingPartner::get('*'),
-            'treetype'=> TreeType::get('*')
+            'partners'=> PlantingPartner::get('*')->where('status','=','Enabled'),
+            'treetype'=> TreeType::get('*')->where('is_adopted','=','1')
         ]);
     }
 
@@ -45,7 +45,7 @@ class DonationController extends Controller
             'id_mitra' => 'required',
             'id_tree' => 'required'
         ]);
-        
+
         if($request->file('image')){
             $validatedData['image'] = $request->file('image')->store('donation-images','public');
         }
@@ -91,7 +91,7 @@ class DonationController extends Controller
             'is_published' =>$request->input('is_published'),
             'is_bingkaikarya' =>$request->input('is_bingkaikarya'),
         ]);
-        
+
 
 
         return redirect('donation/manage')->with('success', 'Donation successfully added');
@@ -104,8 +104,8 @@ class DonationController extends Controller
             'donation' => $data,
             'ukms' => UKM::get('*'),
             'locations'=> Location::get('*')->where('status','=','Enabled'),
-            'partners'=> PlantingPartner::get('*'),
-            'treetype'=> TreeType::get('*')
+            'partners'=> PlantingPartner::get('*')->where('status','=','Enabled'),
+            'treetype'=> TreeType::get('*')->where('is_adopted','=','1')
 
 
         ]);
