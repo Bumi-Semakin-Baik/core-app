@@ -119,7 +119,7 @@
                                 <label for="name" class="text-success">Nominal Donasi (Rp.)</label>
                                 <input type="number" class="form-control" id="name" placeholder="Masukkan nominal donasi" name="total_price" required>
                             </div>
-                            <small id="emailHelp" class="form-text text-muted" style="font-size: 14px">*Minimal donasi Rp. 10.000 untuk pembayaran melalui bank transfer.</small>
+                            <small id="emailHelp" class="form-text text-muted" style="font-size: 14px">*Minimal donasi Rp. 20.000 untuk pembayaran melalui bank transfer.</small>
                         </div>
 
                         <!-- <div class="col-md-10">
