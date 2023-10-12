@@ -30,6 +30,7 @@ class Donation extends Model
         'id_mitra',
         'nama_mitra',
         'id_tree',
-        'tree_name'
+        'tree_name',
+        'qr_code'
     ];
 }

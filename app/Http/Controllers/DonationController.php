@@ -8,6 +8,8 @@ use App\Models\UKM;
 use App\Models\Location;
 use App\Models\PlantingPartner;
 use App\Models\TreeType;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 
 class DonationController extends Controller
@@ -43,7 +45,7 @@ class DonationController extends Controller
             'due_date' => 'required',
             'id_location' => 'required',
             'id_mitra' => 'required',
-            'id_tree' => 'required'
+            'id_tree' => 'required',
         ]);
 
         if($request->file('image')){
@@ -66,13 +68,15 @@ class DonationController extends Controller
                         ->pluck('name')
                         ->first();
 
-        $tree_name = DB::table('tree_types')
+                        $tree_name = DB::table('tree_types')
                         ->where('id', $request->input('id_tree'))
                         ->pluck('name')
                         ->first();
-        // dd($nama_partner);
 
-        Donation::create([
+
+
+
+      $donasi =  Donation::create([
             'title' => $request->input('title'),
             'image' => $image,
             'description' =>$request->input('description'),
@@ -89,10 +93,18 @@ class DonationController extends Controller
             'tree_name' => $tree_name,
             'status' =>$request->input('status'),
             'is_published' =>$request->input('is_published'),
-            'is_bingkaikarya' =>$request->input('is_bingkaikarya'),
-        ]);
+            'is_bingkaikarya' =>$request->input('is_bingkaikarya'),]);
 
-
+        $qr_name = 'bumibaik.com/donate/'.$donasi->id;
+        $qr_code = QrCode::format('png')->size(500)->generate($qr_name);
+        $output_file = '/img/qr-code/donation/'.$donasi->id.'.png';
+        Storage::disk('public')->put($output_file, $qr_code);
+        // dd($nama_partner);
+        Donation::where('id', $donasi->id)
+        ->update([
+            'id' => $donasi->id,
+            'qr_code' => $output_file
+            ]);
 
         return redirect('donation/manage')->with('success', 'Donation successfully added');
     }
@@ -261,6 +273,11 @@ class DonationController extends Controller
         $data->update(['status'=> 'Disabled']);
 
         return redirect('donation/manage');
+    }
+    public function qr_download($id){
+        $data = Donation::where('id', $id)->first();
+        $pathToFile = public_path('donations/qr_code/{id}');
+        return Response::download($pathToFile);
     }
 
 }
