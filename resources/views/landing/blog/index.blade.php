@@ -18,9 +18,7 @@
 
             </div>
         </div>
-        <!-- /.page-title -->
-
-        <!-- about -->
+        
         <section class="flat-blog-home01">
             <div class="container">
                 <div class="row">
@@ -40,9 +38,6 @@
                                     </div>
 
                                     <div class="item-box link">
-                                        <!-- <div class="content-info"><a href="blog.html" class="folder">
-                                            Home Gardening
-                                        </a></div> -->
                                         <div class="link-style6">
                                             {{-- <div class="img-wrapper" style="height:150px;width:100%;">
                                             </div> --}}
@@ -75,8 +70,7 @@
                 </div>
             </div>
         </section>
-        <!-- /blog -->
+       
 
-        <!-- flat-testimonials-home2 -->
-
+       
         @include('landing.template.footer')
