@@ -3,7 +3,7 @@
                 <div class="nk-footer">
                     <div class="container-fluid">
                         <div class="nk-footer-wrap">
-                            <div class="nk-footer-copyright"> &copy; 2023 DashLite. Template by <a href="https://softnio.com" target="_blank">Softnio</a>
+                            <div class="nk-footer-copyright"> &copy; BumiBaik.com<a href="https://bumibaik.com" target="_blank"></a>
                             </div>
                             <div class="nk-footer-links">
                                 <ul class="nav nav-sm">
@@ -35,7 +35,7 @@
                                         </div>
                                     </li>
                                     <li class="nav-item">
-                                        <a data-bs-toggle="modal" href="#region" class="nav-link"><em class="icon ni ni-globe"></em><span class="ms-1">Select Region</span></a>
+                                        <a data-bs-toggle="modal" href="#region" class="nav-link text-success"><em class="icon ni ni-globe"></em><span class="ms-1">Select Region</span></a>
                                     </li>
                                 </ul>
                             </div>

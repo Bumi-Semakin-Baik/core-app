@@ -267,9 +267,9 @@
                                                         <div class="nk-tb-col"><span>Amount</span></div>
                                                         <div class="nk-tb-col"><span class="d-none d-sm-inline">Status</span></div>
                                                     </div>
-                                                    <div class="nk-tb-item">
+                                                    <div class="nk-tb-item text-success">
                                                         <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95954</a></span>
+                                                            <span class="tb-lead"><a href="#" class="text-success">#95954</a></span>
                                                         </div>
                                                         <div class="nk-tb-col tb-col-sm">
                                                             <div class="user-card">
@@ -291,9 +291,9 @@
                                                             <span class="badge badge-dot badge-dot-xs bg-success">Paid</span>
                                                         </div>
                                                     </div>
-                                                    <div class="nk-tb-item">
+                                                    <div class="nk-tb-item text-success">
                                                         <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95850</a></span>
+                                                            <span class="tb-lead"><a href="#" class="text-success">#95850</a></span>
                                                         </div>
                                                         <div class="nk-tb-col tb-col-sm">
                                                             <div class="user-card">
@@ -315,9 +315,9 @@
                                                             <span class="badge badge-dot badge-dot-xs bg-danger">Cancelled</span>
                                                         </div>
                                                     </div>
-                                                    <div class="nk-tb-item">
+                                                    <div class="nk-tb-item text-success">
                                                         <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95812</a></span>
+                                                            <span class="tb-lead"><a href="#" class="text-success">#95812</a></span>
                                                         </div>
                                                         <div class="nk-tb-col tb-col-sm">
                                                             <div class="user-card">
@@ -339,9 +339,9 @@
                                                             <span class="badge badge-dot badge-dot-xs bg-success">Paid</span>
                                                         </div>
                                                     </div>
-                                                    <div class="nk-tb-item">
+                                                    <div class="nk-tb-item text-success">
                                                         <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95256</a></span>
+                                                            <span class="tb-lead"><a href="#" class="text-success">#95256</a></span>
                                                         </div>
                                                         <div class="nk-tb-col tb-col-sm">
                                                             <div class="user-card">
@@ -363,9 +363,9 @@
                                                             <span class="badge badge-dot badge-dot-xs bg-success">Paid</span>
                                                         </div>
                                                     </div>
-                                                    <div class="nk-tb-item">
+                                                    <div class="nk-tb-item text-success">
                                                         <div class="nk-tb-col">
-                                                            <span class="tb-lead"><a href="#">#95135</a></span>
+                                                            <span class="tb-lead"><a href="#" class="text-success">#95135</a></span>
                                                         </div>
                                                         <div class="nk-tb-col tb-col-sm">
                                                             <div class="user-card">

@@ -24,9 +24,6 @@
                         <div class="top-bar-right link-style3">
                             <a href="#" class="top-mail">semakinbaikbumi@gmail.com</a>
                             <ul class="widgets-nav-social">
-                                <!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> -->
                                 <li><a href="https://wa.me/6282130075758" target="_blank" ><i class="fa fa-whatsapp"
                                     aria-hidden="true"></i></a>
                                 </li>
