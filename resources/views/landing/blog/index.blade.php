@@ -18,9 +18,7 @@
 
             </div>
         </div>
-        <!-- /.page-title -->
-
-        <!-- about -->
+        
         <section class="flat-blog-home01">
             <div class="container">
                 <div class="row">
@@ -70,8 +68,7 @@
                 </div>
             </div>
         </section>
-        <!-- /blog -->
+       
 
-        <!-- flat-testimonials-home2 -->
-
+       
         @include('landing.template.footer')

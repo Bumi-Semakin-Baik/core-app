@@ -327,43 +327,7 @@
                                 BumiBaik memberikan informasi dan edukasi tentang dampak emisi karbon terhadap
                                 lingkungan dan isu perubahan iklim </div>
                         </div>
-                        <!-- <div id="about-box" class="about-desc-box">
-                            <div class="about-desc">
-                                <div class="about-box-nd1 wow fadeInLeft">
-                                    <span class="tf-icon icon-Group-660"></span>
-                                    <div class="inner-box">
-                                        <a href="services.html">
-                                            <h3 class="section-heading-jost-size20 item-1">
-                                                Best Ui Designer</h3>
-                                        </a>
-                                        <p class="section-desc">Lorem Ipsum is simply</p>
-                                    </div>
-                                </div>
-                                <div class="about-box-nd1 wow fadeInLeft">
-                                    <span class="tf-icon icon-Group-661"></span>
-                                    <div class="inner-box">
-                                        <a href="services.html">
-                                            <h3 class="section-heading-jost-size20 item-2">
-                                                Counter In Work.</h3>
-                                        </a>
-                                        <p class="section-desc">
-                                            Lorem Ipsum is simply</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="image-desc">
-                                <img class="image"
-                                    src="{{ asset('landing/images/home/box-flowers-green-garden.jpg') }}"
-                                    alt="images">
-                            </div>
-                        </div>
-                        <div class="button hover-up">
-                            <a href="contact.html" class="btn2">Get A Quote</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+                       
     </section>
     <!-- /about -->
 
@@ -560,86 +524,7 @@
                     <h2 class="section-title  wow fadeInUp judul-home">Jumlah Donasi Terkumpul</h2>
                 </div>
                 <br><br>
-                <!-- <div class="col-md-12">
-                    <div class="slide-blog-content">
-                        <div class="owl-carousel owl-theme">
-                            <div class="item wow fadeInUp">
-                                <div class="blog-item hover-up-style2">
-                                    <div class="item-overlay"></div>
-                                    <div class="item-box link">
-                                        <div class="content-info"><a href="blog.html" class="folder">
-                                                Home Gardening
-                                            </a></div>
-                                        <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
-                                                    class="user">
-                                                    By Admin
-                                                </a></div>
-                                            <a href="blog-detail.html" class="section-heading-jost-size20">
-                                                Mauris neque nisiibus non elementum
-                                            </a>
-                                        </div>
-                                        <hr class="line-blog-item">
-                                        <h4 class="sub-title">
-                                            28 JANUARY, 2020
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item wow fadeInUp">
-                                <div class="blog-item background2 hover-up-style2">
-                                    <div class="item-overlay"></div>
-                                    <div class="item-box box-2">
-
-                                        <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
-                                                    class="user">
-                                                    By Admin
-                                                </a></div>
-                                            <a href="blog-detail.html" class="section-heading-jost-size20">
-                                               Aksi nyata MyEco dan BumiBaik
-
-                                            </a>
-                                        </div>
-                                        <hr class="line-blog-item">
-                                        <h4 class="sub-title">
-                                            28 JANUARY, 2020
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item wow fadeInUp">
-                                <div class="blog-item background3 hover-up-style2">
-                                    <div class="item-overlay"></div>
-                                    <div class="item-box box-3">
-                                        <div class="content-info"><a href="blog.html" class="folder folder-3">
-                                                Gardening Ideas
-                                            </a></div>
-                                        <div class="link-style6">
-                                            <div class="content-info margin-top"><a href="blog-detail.html"
-                                                    class="user">
-                                                    By Admin
-                                                </a></div>
-                                            <a href="{{ url('/artikel') }}" class="section-heading-jost-size20">
-                                                Program Cempaka Fondation di Kab. Pasuruan
-                                            </a>
-                                        </div>
-                                        <hr class="line-blog-item">
-                                        <h4 class="sub-title">
-                                            28 JANUARY, 2020
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="60" data-smobile="0">
-                    </div>
-                </div>
-            </div>
-        </div> -->
+               
     <div class="col-md-12">
         <div class="row">
 
@@ -710,118 +595,7 @@ s                                           @else
                         </div>
                     </section>
                     <br><br><br><br><br>
-                    <!-- <div class="item-three-column mg-bottom-60 wow fadeInUp">
-                        <article class="flat-WCU-box grow-up-hover">
-                            <div class="WCU-image">
-                                <img class="grow-up-hover" src="{{ asset('asset/donate3.jpg') }}" alt="images">
-                            </div>
-                            <div style="padding-left: 18px;">
-                                <div class="content-features">
-                                    <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
-                                    </a>
-
-                                <div style="margin-top: 1.5rem;">
-                                    <small style="color: #111;">UKM Tani: Nganjuk Pride</small>
-                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
-                                        <div class="progress-bar" role="progressbar" style="width:75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="margin-top: 0.2rem;">
-                                        <div class="col-md-6" style="padding-left: 20px;">
-                                            <small style="color: #111;"><strong>100.000</strong></small>
-                                            <br>
-                                            <small style="color: #111;">Pohon terkumpul</small>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <small style="color: #111;float: right;"><strong>7</strong> hari lagi</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button-read-more link-style2">
-                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
-                        <article class="flat-WCU-box grow-up-hover">
-                            <div class="WCU-image">
-                                <img class="grow-up-hover" src="{{ asset('asset/donate1.jpg') }}" alt="images">
-                            </div>
-                            <div style="padding-left: 18px;">
-                                <div class="content-features">
-                                    <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
-                                    </a>
-
-                                <div style="margin-top: 1.5rem;">
-                                    <small style="color: #111;">UKM Tani: Nganjuk Pride</small>
-                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
-                                        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40%</div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="margin-top: 0.2rem;">
-                                        <div class="col-md-6" style="padding-left: 20px;">
-                                            <small style="color: #111;"><strong>10.000</strong></small>
-                                            <br>
-                                            <small style="color: #111;">Pohon terkumpul</small>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <small style="color: #111;float: right;"><strong>20</strong> hari lagi</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button-read-more link-style2">
-                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="item-three-column mg-bottom-60 wow fadeInUp">
-                        <article class="flat-WCU-box grow-up-hover">
-                            <div class="WCU-image">
-                                <img class="grow-up-hover" src="{{ asset('asset/donate3.jpg') }}" alt="images">
-                            </div>
-                            <div style="padding-left: 18px;">
-                                <div class="content-features">
-                                    <a href="service-details.html">
-                                        <h3 class="section-heading-rubik-size20">Tumbuh Bersama Untuk Bedono</h3>
-                                    </a>
-
-                                <div style="margin-top: 1.5rem;">
-                                    <small style="color: #111;">UKM Tani: Nganjuk Pride</small>
-                                    <div class="progress" style="width: 100%;margin-top: 0.5rem;">
-                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">15%</div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="margin-top: 0.2rem;">
-                                        <div class="col-md-6" style="padding-left: 20px;">
-                                            <small style="color: #111;"><strong>10.000</strong></small>
-                                            <br>
-                                            <small style="color: #111;">Pohon terkumpul</small>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <small style="color: #111;float: right;"><strong>14</strong> hari lagi</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button-read-more link-style2">
-                                <a href="{{ url('donate/2') }}" class="read-more btn-read-more">Donasi</a>
-                            </div>
-                        </article>
-                    </div>
-                </div> -->
-                <!-- <div class="row">
-                    <div class="col-md-12">
-                        <div class="themesflat-spacer clearfix" data-desktop="120" data-mobile="100" data-smobile="100"></div>
-                    </div>
-                </div>
-            </div> -->
-
-    <!-- </section> -->
-
+                   
 
 <section class="flat-case-study">
     <div class="section-title-box">
@@ -838,18 +612,7 @@ s                                           @else
                             <div class="image-profolio bd-radius-8-image">
                                 <img src="{{ asset('landing/images/activity/Meet.jpg') }}" alt="images">
                                 <div class="profolio-show active">
-                                    <!-- <div class="profolio-info">
-                                        <div class="info"> -->
-                                            <!-- <a href="case-details.html">
-                                                <h3 class="section-heading-jost-size20">
-                                                    Finished Work</h3>
-                                            </a>
-                                            <p class="desc-box">Dummy text of free available</p> -->
-                                        <!-- </div> -->
-                                        <!-- <div class="button-next">
-                                            <a class="profolio-btn" href="case-details.html"></a>
-                                        </div> -->
-                                    <!-- </div> -->
+                                   
                                 </div>
                             </div>
                         </div>
@@ -860,73 +623,13 @@ s                                           @else
                             <div class="image-profolio bd-radius-8-image">
                                 <img src="{{ asset('landing/images/activity/Myeco.JPG') }}" alt="images">
                                 <div class="profolio-show active">
-                                    <!-- <div class="profolio-info">
-                                        <div class="info">
-                                            <a href="case-details.html">
-                                                <h3 class="section-heading-jost-size20">
-                                                    Finished Work</h3>
-                                            </a>
-                                            <p class="desc-box">Dummy text of free available</p>
-                                        </div>
-                                        <div class="button-next">
-                                            <a class="profolio-btn" href="case-details.html"></a>
-                                        </div>
-                                    </div> -->
+                                   
                                 </div>
                             </div>
                         </div>
                         <div class="themesflat-spacer clearfix" data-desktop="30" data-mobile="30" data-smobile="30"></div>
                     </div>
                     </section>
-
-
-                    <!-- <div class="col-md-6">
-                        <div class="list-box-profolio wow fadeInUp">
-                            <div class="image-profolio">
-                                <img src="images/case-study/plant-tree.jpg" alt="images">
-                                <div class="profolio-show">
-                                    <div class="profolio-info">
-                                        <div class="info">
-                                            <a href="case-details.html">
-                                                <h3 class="section-heading-jost-size20">
-                                                    Finished Work</h3>
-                                            </a>
-                                            <p class="desc-box">Dummy text of free available</p>
-                                        </div>
-                                        <div class="button-next">
-                                            <a class="profolio-btn" href="case-details.html"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="themesflat-spacer clearfix" data-desktop="30" data-mobile="30" data-smobile="30"></div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="list-box-profolio wow fadeInUp">
-                            <div class="image-profolio">
-                                <img src="images/case-study/plant-tree2.jpg" alt="images">
-                                <div class="profolio-show">
-                                    <div class="profolio-info">
-                                        <div class="info">
-                                            <a href="case-details.html">
-                                                <h3 class="section-heading-jost-size20">
-                                                    Finished Work</h3>
-                                            </a>
-                                            <p class="desc-box">Dummy text of free available</p>
-                                        </div>
-                                        <div class="button-next">
-                                            <a class="profolio-btn" href="case-details.html"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="themesflat-spacer clearfix" data-desktop="30" data-mobile="30" data-smobile="30"></div>
-                    </div> -->
-    <!-- Our team -->
-
-    <!-- /Contact -->
 
     <!-- blog -->
     <section class="flat-blog-home01">
@@ -948,9 +651,7 @@ s                                           @else
                                     </div>
 
                                     <div class="item-box link">
-                                        <!-- <div class="content-info"><a href="blog.html" class="folder">
-                                            Home Gardening
-                                        </a></div> -->
+                                        
                                         <div class="link-style6">
                                             {{-- <div class="img-wrapper" style="height:150px;width:100%;">
                                             </div> --}}

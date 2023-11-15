@@ -1,6 +1,6 @@
 @include('landing.template.header2')
 
-        <!-- page title -->
+       
         <div class="page-title">
             <div class="container-fluid">
                 <div class="row">
@@ -20,9 +20,9 @@
 
             </div>
         </div>
-        <!-- /.page-title -->
+       
 
-        <!-- about -->
+       
         <section class="flat-about">
             <div class="container">
                 <div class="row">
@@ -48,5 +48,5 @@
                             </div>
                             
         </section>
-        <!-- flat-testimonials-home2 -->
+   
 @include('landing.template.footer')

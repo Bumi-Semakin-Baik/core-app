@@ -54,7 +54,6 @@
                     <div class="col-md-7 wow fadeInUp">
                         <div class="contact-right">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15806.01923904875!2d112.6169084!3d-7.9466703!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882742cd7191f%3A0x56a5edb7ccb2769b!2sGraha%20Polinema!5e0!3m2!1sid!2sid!4v1694072492602!5m2!1sid!2sid" width="770" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                           
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,7 @@
     <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="./images/favicon.png">
+    <link rel="shortcut icon" href="{{ asset('landing/images/home/bumibaik.jpg') }}">
     <!-- Page Title  -->
     <title>Login | DashLite Admin Template</title>
     <!-- StyleSheets  -->
@@ -32,7 +32,7 @@
                                 <div class="brand-logo pb-5">
                                     <a href="html/index.html" class="logo-link">
                                         <img class="logo-light logo-img logo-img-lg" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                                        <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                                        <img class="logo-dark logo-img logo-img-lg" src="{{ asset('landing/images/home/BumiBaik.png') }}"> 
                                     </a>
                                     @if ($errors->any())
                                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -48,9 +48,9 @@
                                 <div class="nk-block-head">
                                     <div class="nk-block-head-content">
                                         <h5 class="nk-block-title">Sign-In</h5>
-                                        <div class="nk-block-des">
+                                        <!-- <div class="nk-block-des">
                                             <p>Access the DashLite panel using your email and passcode.</p>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div><!-- .nk-block-head -->
                                 <form method="POST" action="{{ route('login') }}">
@@ -58,21 +58,21 @@
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="email">{{ __('Email Address') }}</label>
-                                            <a class="link link-primary link-sm" tabindex="-1" href="#">Need Help?</a>
+                                            <!-- <a class="link link-primary link-sm" tabindex="-1" href="#">Need Help?</a> -->
                                         </div>
                                         <div class="form-control-wrap">
                                             <input type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" id="email" placeholder="Enter your email address or username" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                            @error('email')
+                                            <!-- @error('email')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
-                                            @enderror
+                                            @enderror -->
                                         </div>
                                     </div><!-- .form-group -->
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="password">{{ __('Password') }}</label>
-                                            <a class="link link-primary link-sm" tabindex="-1" href="html/pages/auths/auth-reset-v3.html">Forgot Code?</a>
+                                            <!-- <a class="link link-primary link-sm" tabindex="-1" href="html/pages/auths/auth-reset-v3.html">Forgot Code?</a> -->
                                         </div>
                                         <div class="form-control-wrap">
                                             <a tabindex="-1" href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
@@ -80,20 +80,20 @@
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                             </a>
                                             <input type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" id="password" placeholder="Enter your passcode"  name="password" required autocomplete="current-password">
-                                            @error('password')
+                                            <!-- @error('password')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
-                                            @enderror
+                                            @enderror -->
                                         </div>
                                     </div><!-- .form-group -->
                                     <div class="form-group">
-                                        <button class="btn btn-lg btn-primary btn-block" type ="submit">
+                                        <button class="btn btn-lg btn-primary btn-block" style="color: white">
                                         {{ __('Login') }}
                                         </button>
                                     </div>
 
-                                </form><!-- form -->
+                                <!-- </form>form
                                 <div class="form-note-s2 pt-4"> New on our platform? <a href="{{url('register')}}">Create an account</a>
                                 </div>
                                 <div class="text-center pt-4 pb-3">
@@ -105,8 +105,8 @@
                                 </ul>
                                 <div class="text-center mt-5">
                                     <span class="fw-500">I don't have an account? <a href="#">Try 15 days free</a></span>
-                                </div>
-                            </div><!-- .nk-block -->
+                                </div> -->
+                            <!-- </div>.nk-block
                             <div class="nk-block nk-auth-footer">
                                 <div class="nk-block-between">
                                     <ul class="nav nav-sm">
@@ -150,14 +150,16 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                    </ul><!-- .nav -->
-                                </div>
-                                <div class="mt-3">
-                                    <p>&copy; 2023 DashLite. All Rights Reserved.</p>
-                                </div>
+                                    </ul>.nav
+                                </div> -->
+                                <!-- <div class="mt-3">
+                                    <p>&copy; 2023 BumiBaik. All Rights Reserved.</p>
+                                </div> -->
                             </div><!-- .nk-block -->
                         </div><!-- .nk-split-content -->
-                        <div class="nk-split-content nk-split-stretch bg-abstract"></div><!-- .nk-split-content -->
+                        <div class="nk-split-content nk-split-stretch bg-abstract">
+                        <img src="{{ asset('landing/images/home/Login5.jpg') }}" alt="">
+                        </div><!-- .nk-split-content -->
                     </div><!-- .nk-split -->
                 </div>
                 <!-- wrap @e -->
