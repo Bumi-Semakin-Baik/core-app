@@ -46,43 +46,7 @@
                                     BumiBaik memberikan informasi dan edukasi tentang dampak emisi karbon terhadap
                                     lingkungan dan isu perubahan iklim </div>
                             </div>
-                            <!-- <div id="about-box" class="about-desc-box">
-                                <div class="about-desc">
-                                    <div class="about-box-nd1 wow fadeInLeft">
-                                        <span class="tf-icon icon-Group-660"></span>
-                                        <div class="inner-box">
-                                            <a href="services.html">
-                                                <h3 class="section-heading-jost-size20 item-1">
-                                                    Best Ui Designer</h3>
-                                            </a>
-                                            <p class="section-desc">Lorem Ipsum is simply</p>
-                                        </div>
-                                    </div>
-                                    <div class="about-box-nd1 wow fadeInLeft">
-                                        <span class="tf-icon icon-Group-661"></span>
-                                        <div class="inner-box">
-                                            <a href="services.html">
-                                                <h3 class="section-heading-jost-size20 item-2">
-                                                    Counter In Work.</h3>
-                                            </a>
-                                            <p class="section-desc">
-                                                Lorem Ipsum is simply</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="image-desc">
-                                    <img class="image"
-                                        src="{{ asset('landing/images/home/box-flowers-green-garden.jpg') }}"
-                                        alt="images">
-                                </div>
-                            </div>
-                            <div class="button hover-up">
-                                <a href="contact.html" class="btn2">Get A Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+                            
         </section>
         <!-- flat-testimonials-home2 -->
 @include('landing.template.footer')

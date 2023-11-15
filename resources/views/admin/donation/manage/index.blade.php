@@ -112,7 +112,7 @@
                                                             <img src="{{ asset('storage/'. $donation->image)}}" alt="{{ asset('storage/'. $donation->image)}}" class="thumb">
                                                             <div class="user-info">
                                                                 <span class="tb-lead">{{$donation->title}} <span class="dot dot-success d-md-none ms-1"></span></span>
-                                                                <span>{{$donation->description}}</span>
+                                                                <span>{{ Str::limit($donation->description, 15) }}</span>
                                                             </div>
                                                         </span>
                                                     </td>
@@ -123,7 +123,7 @@
                                                         <span class="tb-lead">Rp. {{ number_format("$donation->target",2,',','.')}}</span>
                                                     </td>
                                                     <td class="nk-tb-col">
-                                                        <span class="tb-sub">{{ $donation->due_date}}</span>
+                                                        <span class="tb-sub">{{ \Carbon\Carbon::parse($donation->due_date)->format('j F, Y') }}</span>
                                                     </td>
                                                     <td class="nk-tb-col">
 

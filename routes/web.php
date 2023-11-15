@@ -35,9 +35,6 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/haloo', function () {
     $c = 3 > 7;
@@ -47,17 +44,10 @@ Route::get('/haloo', function () {
 
 Route::get('/qrcode', [QrController::class, 'index']);
 Route::get('/qrcode-convert', [QrController::class, 'convert']);
-// Route::get('/dashboard', function () {
-    //     return view('dashboard');
-    // });
+
 
 Route::get('', [UserController::class, 'index']);
 
-
-// Route::controller(RegisterController::class)
-//     ->group(function (){
-//         Route::get('/register','viewRegister');
-//         });
 
 Route::prefix('dashboard')
     ->controller(DashboardController::class)

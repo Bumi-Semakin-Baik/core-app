@@ -24,9 +24,6 @@
                 <div class="row">
                     <div class="col-md-5 wow fadeInUp">
                         <div class="contact-left">
-                            <!-- <h3 class="section-subtitle mg-bottom-22">GET IN TOUCH</h3>
-                            <h2 class="section-title judul-home">We want to share our location to find us easily.</h2>
-                            <p class="section-desc">Lorem ipsum dolor sit amet, conset etur sadipscing elitr, sed diam noket numy eirmod tempor </p> -->
                             <div class="address-box mg-bottom30">
                                 <div class="contact-location icon-map"></div>
                                 <div class="info text-pri2-color">
@@ -57,41 +54,7 @@
                     <div class="col-md-7 wow fadeInUp">
                         <div class="contact-right">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15806.01923904875!2d112.6169084!3d-7.9466703!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882742cd7191f%3A0x56a5edb7ccb2769b!2sGraha%20Polinema!5e0!3m2!1sid!2sid!4v1694072492602!5m2!1sid!2sid" width="770" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <!-- <form method="post" class="form-contact-right" id="contactform" action="./contact/contact-process.php" accept-charset="utf-8" novalidate="novalidate">
-                                <div class="input-row">
-                                    <div class="input-name">
-                                        <label for="name" class="heading-features">Name (required)</label>
-                                        <input id="name" name="name" class="input-contact" type="text" placeholder="Full Name" required>
-                                    </div>
-                                    <div class="input-phone">
-                                        <label for="phone" class="heading-features">Phone (optional)</label>
-                                        <input id="phone" name="phone" class="input-contact" type="text" placeholder="Phone Number" required>
-                                    </div>
-
-                                </div>
-                                <div class="input-row">
-                                    <div class="input-email">
-                                        <label id="email" class="heading-features">Email address (required)</label>
-                                        <input type="email" name="email" class="input-contact" placeholder="Email Address" required>
-                                    </div>
-                                    <div class="input-services">
-                                        <label for="services" class="heading-features">Services (required)</label>
-                                        <select class="input-contact input-select" name="services" id="services">
-														<option value="0">Choose services</option>
-														<option value="1">Gettree</option>
-														<option value="2">Gettree</option>
-														<option value="3">Gettree</option>	
-													</select>
-                                    </div>
-                                </div>
-                                <div class="input-message">
-                                    <label for="message" class="heading-features">Your message*</label>
-                                    <textarea name="message" class="input-contact-message" id="message" placeholder="Your Message"></textarea>
-                                </div>
-                                <div class="button">
-                                    <button type="submit" class=" btn btn-left">Send message</button>
-                                </div>
-                            </form> -->
+                           
                         </div>
                     </div>
                 </div>

@@ -66,9 +66,7 @@
                             <label class="form-label" for="fv-phone">Due Date</label>
                             <div class="form-control-wrap">
                                 <div class="input-group">
-                                        {{-- <div class="input-group-prepend">
-                                            <span class="input-group-text" id="fv-phone">+62</span>
-                                        </div> --}}
+
                                     <input type="date" class="form-control" required name="due_date">
                                 </div>
                             </div>
@@ -79,30 +77,18 @@
                             <label class="form-label" for="fv-phone">Planting Date</label>
                             <div class="form-control-wrap">
                                 <div class="input-group">
-                                        {{-- <div class="input-group-prepend">
-                                            <span class="input-group-text" id="fv-phone">+62</span>
-                                        </div> --}}
+
                                     <input type="date" class="form-control" required name="planting_date">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="col-md-12">
-                        <div class="form-group">
-                            <label class="form-label" for="fv-message">Message</label>
-                            <div class="form-control-wrap">
-                                <textarea class="form-control form-control-sm" id="fv-message" name="fv-message" placeholder="Write your message" required></textarea>
-                            </div>
-                        </div>
-                    </div> --}}
+
                     <div class="nk-block nk-block-lg">
                         <div class="nk-block-head">
                             <div class="nk-block-head-content">
                                 <label class="form-label" for="fv-phone">Description</label>
-                                {{-- <h4 class="title nk-block-title">News</h4> --}}
-                                {{-- <div class="nk-block-des">
-                                    <p>A basic demostration of quilljs rich text editor.</p>
-                                </div> --}}
+                                
                             </div>
                             <div class="card">
                                 <div class="card-inner">

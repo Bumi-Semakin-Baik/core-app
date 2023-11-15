@@ -10,13 +10,9 @@ use Illuminate\Http\Request;
 class PlantingController extends Controller
 {
     public function index(){
-        // $planting = PlantingPartner::all();
         return view('admin.plantingpartner.index', [
             'planting' => PlantingPartner::get('*'),
         ]);
-        // return view ('admin.plantingpartner.index', [
-        //             'plantingpartner' => PlantingPartner::get('*'),
-        //         ]);
     }
     public function add(){
         return view ('admin.plantingpartner.add');

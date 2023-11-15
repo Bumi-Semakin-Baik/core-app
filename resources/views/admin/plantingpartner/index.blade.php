@@ -106,9 +106,7 @@
                                                 <li><a href="#"><em class="icon ni ni-focus"></em><span>Quick View</span></a></li>
                                                 <li><a href="#"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
                                                 <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Activities</span></a></li>
-                                                <li class="divider"></li>
-                                                {{-- <li><a href="{{ route('edit.plantingpartner', $plantingpartner->id) }}"><em class="icon ni ni-repeat"></em><span>Update User</span></a></li> --}}
-                                                <li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>
+                                                <li class="divider"></li><li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>
                                                 <li><a href="#"><em class="icon ni ni-shield-off"></em><span>Reset 2FA</span></a></li>
                                                 <li><a href="{{ route('edit.plantingpartner', $planting->id) }}"><em class="icon ni ni-edit"></em><span>Edit Partner</span></a></li>
                                                 <form action="{{ route('delete.plantingpartner', $planting->id) }}" method="POST">

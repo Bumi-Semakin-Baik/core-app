@@ -10,13 +10,9 @@ use Illuminate\Http\Request;
 class TreetypeController extends Controller
 {
     public function index(){
-        // $planting = PlantingPartner::all();
         return view('admin.treetype.index', [
             'treetype' => TreeType::get('*'),
         ]);
-        // return view ('admin.plantingpartner.index', [
-        //             'plantingpartner' => PlantingPartner::get('*'),
-        //         ]);
     }
     public function add(){
         return view ('admin.treetype.add');

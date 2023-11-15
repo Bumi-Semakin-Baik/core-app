@@ -97,9 +97,9 @@ class DonationController extends Controller
 
         $qr_name = 'bumibaik.com/donate/'.$donasi->id;
         $qr_code = QrCode::format('png')->size(500)->generate($qr_name);
-        $output_file = '/img/qr-code/donation/'.$donasi->id.'.png';
+        $output_file = '/img/qr-code/donation/'.$donasi->title.'.png';
         Storage::disk('public')->put($output_file, $qr_code);
-        // dd($nama_partner);
+        
         Donation::where('id', $donasi->id)
         ->update([
             'id' => $donasi->id,
@@ -111,7 +111,6 @@ class DonationController extends Controller
 
     public function edit($id){
         $data = Donation::whereId($id)->first();
-        // dd($data);
         return view ('admin.donation.manage.edit',[
             'donation' => $data,
             'ukms' => UKM::get('*'),
@@ -125,9 +124,6 @@ class DonationController extends Controller
     public function update(Request $request, $id)
 {
 
-                // $test = Donation::find($id);
-                // $test->update($request->all());
-        // // dd($request->all());
         $validatedData = $request->validate([
             'title' => 'required',
             'image' => 'required | max:1024',
@@ -140,7 +136,6 @@ class DonationController extends Controller
             'id_mitra' => 'required',
             'id_tree' => 'required'
         ]);
-    //    dd($validatedData);
     $image = $request->file('image')->store('donation-images','public');
 
     $nama_ukm = DB::table('ukm')
@@ -190,14 +185,7 @@ class DonationController extends Controller
     }
 
     public function filter(Request $request){
-        // return view('admin.donation.manage.filteredIndex',[
-        //     'donations' => DB::table('donations')
-        //                             ->select('*')
-        //                             ->orWhere('status','=',$request->status)
-        //                             ->orWhere('is_published','=',$request->is_published)
-        //                             ->orderBy('id','asc')
-        //                             ->get()
-        // ]);
+
 
         $status = $request->input('status');
         $is_published = $request->input('is_published');

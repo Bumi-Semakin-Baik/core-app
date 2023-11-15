@@ -122,8 +122,6 @@
                                                                             <form action="{{ route('delete.location', $location->id) }}" method="POST">
                                                                             @csrf
                                                                             @method('DELETE')
-                                                                            {{-- <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Product</span></a></li> --}}
-                                                                            {{-- <input type="submit" class="btn btn-danger" placeholder="Remove Product"/> --}}
                                                                             <button type="submit" class="btn btn-danger">Remove Location</button>
                                                                         </form>
                                                                         </ul>
