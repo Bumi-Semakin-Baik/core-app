@@ -19465,6 +19465,7 @@ div.dataTables_wrapper div.dataTables_length .input-group-lg > select,
 
 .ni-activity-round-fill:before {
   content: "\e904";
+  
 }
 
 .ni-meter:before {
@@ -29963,6 +29964,10 @@ body.nav-shown {
   flex-grow: 0;
   flex-shrink: 0;
   color: green;
+}
+.icon-partner {
+  background-image: url('https://api.iconify.design/ic/baseline-home.svg?color=green');
+  background-repeat: no-repeat;
 }
 
 .nk-menu-item.news {
