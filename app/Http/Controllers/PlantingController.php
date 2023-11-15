@@ -10,10 +10,9 @@ use Illuminate\Http\Request;
 class PlantingController extends Controller
 {
     public function index(){
-        $planting = PlantingPartner::all();
-        return view ('admin.plantingpartner.index', [
-                    'plantingpartner' => PlantingPartner::get('*'),
-                ]);
+        return view('admin.plantingpartner.index', [
+            'planting' => PlantingPartner::get('*'),
+        ]);
     }
     public function add(){
         return view ('admin.plantingpartner.add');
@@ -22,19 +21,21 @@ class PlantingController extends Controller
         $data = PlantingPartner::whereId($id)->first();
         // dd($data);
         return view ('admin.plantingpartner.edit',[
-            'news' => $data,
+            'plantingpartner' => $data,
         ]);
     }
 public function store(Request $request)
     {
         $validatedData = Validator::make($request->all(), [
             'name' => 'required',
+            'status' => 'required'
         ]);
 
         PlantingPartner::create([
-            'name' =>$request->input('partnername'),
+            'name' =>$request->input('name'),
+            'status' => $request->input('status')
         ]);
-        return view('admin.plantingpartner.index')
+        return redirect('/plantingpartner')
         ->with('success','partner successfully added');
         ;
 
@@ -45,14 +46,18 @@ public function store(Request $request)
         // dd($request->all());
         $validatedData = $request->validate([
             'name' => 'required',
+            'status' => 'required'
         ]);
     //    dd($validatedData);
 
         $test = PlantingPartner::where('id', $id)
-        ->update($validatedData);
+        ->update([
+            'name' => $request->input('name'),
+            'status' => $request->input('status')
+        ]);
 
 
-        return redirect()->route('news')
+        return redirect('/plantingpartner')
         ->with('success', 'Data Berhasil diupdate');
 
     }
@@ -68,6 +73,30 @@ public function store(Request $request)
         $data->delete();
 
         return redirect()->route('plantingpartner');
+    }
+    public function update_enable($id)
+    {
+        $data = PlantingPartner::where('id', $id)->first();
+        if ($data == null) {
+            return redirect()->route('plantingpartner');
+        }
+
+        $data->update(['status'=> 'Enabled']);
+
+        return redirect()->route('plantingpartner');
+
+    }
+    public function update_disable($id)
+    {
+        $data = PlantingPartner::where('id', $id)->first();
+        if ($data == null) {
+            return redirect()->route('plantingpartner');
+        }
+
+        $data->update(['status'=> 'Disabled']);
+
+        return redirect()->route('plantingpartner');
+
     }
 
 }

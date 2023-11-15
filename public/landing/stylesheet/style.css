@@ -471,7 +471,7 @@ h6 {
 }
 
 .bd-radius-50-image img {
-    border-radius: 50%;
+    border-radius: 0%;
 }
 
 .mg-left-15 {
@@ -1263,6 +1263,8 @@ header.fixed-header {
     line-height: 100px;
 }
 
+
+
 #header .site-header-right {
     float: right;
     display: flex;
@@ -1946,7 +1948,7 @@ article.article-4 {
     padding-left: 24px;
 }
 
-.content-blog-detail .input-yourname,
+/*      .content-blog-detail .input-yourname,
 .input-youremail,
 .input-yourmessage {
     letter-spacing: 0.9px;

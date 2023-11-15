@@ -26,12 +26,23 @@
                     <div class="form-group">
                         <label class="form-label" for="fv-subject">Name</label>
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control" id="fv-subject" name="partnername" required>
+                                <input type="text" class="form-control" id="fv-subject" name="name" required>
                             </div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="isPublish">Status</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="radio1" name="status" value="Enabled" >Enabled
+                        <label class="form-check-label" for="radio1"></label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="radio2" name="status" value="Disabled">Disabled
+                        <label class="form-check-label" for="radio2"></label>
+                    </div>
+            </div>
                                     <div class="col-md-12">
-                                <button type="submit" class="btn btn-lg btn-primary"> Tambahkan Berita </button>
+                                <button type="submit" class="btn btn-lg btn-primary"> Add Planting Partner </button>
                                     </div>
                             </form>
                         </div>

@@ -39,12 +39,13 @@
                             </div>
                         </th>
                         <th class="nk-tb-col"><span class="sub-text">User</span></th>
+                        <th class="nk-tb-col"><span class="sub-text">Status</span></th>
                         <th class="nk-tb-col"><span class="sub-text">Action</span></th>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($plantingpartner as $planting)
+                    @foreach ($planting as $planting)
                     <tr class="nk-tb-item">
                         <td class="nk-tb-col nk-tb-col-check">
                             <div class="custom-control custom-control-sm custom-checkbox notext">
@@ -62,6 +63,23 @@
                                 </div>
                             </div>
                         </td>
+                        <td class="nk-tb-col">
+
+                            @if($planting->status=="Enabled")
+                                <form action="{{ route('plantingpartner.disable', $planting->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
+                                    @csrf
+                                    @METHOD('PUT')
+                                    <button type="submit" class="btn btn-success" onclick="return confirm('{{ __('Are you sure you want disable this UKM?') }}')">{{$planting->status}}</button>
+                                </form>
+                            @else
+                                <form action="{{ route('plantingpartner.enable', $planting->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
+                                    @csrf
+                                    @METHOD('PUT')
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('{{ __('Are you sure you want enable this UKM?') }}')">{{$planting->status}}</button>
+                                </form>
+                            @endif
+
+                    </td>
 
                         <td class="nk-tb-col nk-tb-col-tools">
                             <ul class="nk-tb-actions gx-1">
@@ -88,10 +106,9 @@
                                                 <li><a href="#"><em class="icon ni ni-focus"></em><span>Quick View</span></a></li>
                                                 <li><a href="#"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
                                                 <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Activities</span></a></li>
-                                                <li class="divider"></li>
-                                                {{-- <li><a href="{{ route('edit.plantingpartner', $plantingpartner->id) }}"><em class="icon ni ni-repeat"></em><span>Update User</span></a></li> --}}
-                                                <li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>
+                                                <li class="divider"></li><li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>
                                                 <li><a href="#"><em class="icon ni ni-shield-off"></em><span>Reset 2FA</span></a></li>
+                                                <li><a href="{{ route('edit.plantingpartner', $planting->id) }}"><em class="icon ni ni-edit"></em><span>Edit Partner</span></a></li>
                                                 <form action="{{ route('delete.plantingpartner', $planting->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
@@ -112,5 +129,3 @@
     </div><!-- .card-preview -->
 </div> <!-- nk-block -->
 @include('admin.template.footer')
-
-

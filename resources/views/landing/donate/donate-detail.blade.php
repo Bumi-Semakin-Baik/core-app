@@ -67,9 +67,9 @@
                                     <h2 class="section-heading-jost-size28 text-pri2-color">Detail</h2>
                                 </div>
                                 <ul class="widget-sidebar-contact-us text-pri2-color section-heading-rubik-size16">
-                                    <li><span class="">UKM Tani:</span><span class="info-contact-us">{{ $donations->nama_ukm}}</span></li>
+                                    <li><span class="">Kelompok Tani Hutan Hijau Lestari</span><span class="info-contact-us">{{ $donations->nama_ukm}}</span></li>
                                     <li><span class="">Lokasi:</span><span class="info-contact-us">{{ $donations->nama_lokasi}}</span></li>
-                                    <li><span class="">Jenis Pohon:</span><span class="info-contact-us">-</span></li>
+                                    <li><span class="">Jenis Pohon:</span><span class="info-contact-us">{{$donations->tree_name}}</span></li>
                                     <!-- <li><span class="">Lokasi:</span><span class="info-contact-us">Kabupaten Pasuruan</span></li> -->
                                     <li><span class="">Batas Donasi:</span><span class="info-contact-us">{{ date_format(date_create($donations->due_date), 'Y-m-d')}}</span></li>
                                     <li><span class="">Penanaman:</span><span class="info-contact-us">{{ $donations->planting_date? date_format(date_create($donations->planting_date), 'Y-m-d') : "-" }}</span></li>

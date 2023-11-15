@@ -27,7 +27,6 @@ class NewsController extends Controller
 }
     public function edit($id){
         $data = NewsArticle::whereId($id)->first();
-        // dd($data);
         return view ('admin.news.edit',[
             'news' => $data,
         ]);
@@ -49,7 +48,7 @@ public function store(Request $request)
             ])->onlyInput('image');
         } else {
             $image = $request->file('image')->store('images/newsletter', 'public');
-        // $image->move(public_path('images').$image);
+
 
 
         NewsArticle::create([
@@ -72,7 +71,6 @@ public function store(Request $request)
 
     public function update(Request $request, $id)
     {
-        // dd($request->all());
         $validatedData = $request->validate([
             'title' => 'required',
             'slug' => 'required',
@@ -81,7 +79,6 @@ public function store(Request $request)
             'author' => 'required',
             'is_publish' => 'nullable|boolean: 0, 1, true, false'
         ]);
-    //    dd($validatedData);
 
         $test = NewsArticle::where('id', $id)
         ->update($validatedData);
@@ -95,7 +92,6 @@ public function store(Request $request)
     {
 
         $data = NewsArticle::where('id', $id)->first();
-        // dd($product);
         if ($data == null) {
             return redirect()->route('news');
         }

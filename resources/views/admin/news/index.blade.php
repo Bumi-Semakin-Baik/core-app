@@ -105,8 +105,6 @@
                                                                             <form action="{{ route('delete.news', $news->id) }}" method="POST">
                                                                             @csrf
                                                                             @method('DELETE')
-                                                                            {{-- <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Product</span></a></li> --}}
-                                                                            {{-- <input type="submit" class="btn btn-danger" placeholder="Remove Product"/> --}}
                                                                             <button type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus berita ini?')" >Remove Product</button>
                                                                         </form>
                                                                         </ul>

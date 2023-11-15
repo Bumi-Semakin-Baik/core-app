@@ -57,7 +57,7 @@
                                 <div class="form-icon form-icon-left">
                                     Rp
                                 </div>
-                                <input type="text" class="form-control" id="default-03" placeholder="Input placeholder" name="target">
+                                <input type="text" class="form-control" id="target" placeholder="Input placeholder" name="target" onkeypress="return number(event)">
                             </div>
                         </div>
                     </div>
@@ -66,40 +66,43 @@
                             <label class="form-label" for="fv-phone">Due Date</label>
                             <div class="form-control-wrap">
                                 <div class="input-group">
-                                        {{-- <div class="input-group-prepend">
-                                            <span class="input-group-text" id="fv-phone">+62</span>
-                                        </div> --}}
+
                                     <input type="date" class="form-control" required name="due_date">
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    {{-- <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-label" for="fv-message">Message</label>
+                            <label class="form-label" for="fv-phone">Planting Date</label>
                             <div class="form-control-wrap">
-                                <textarea class="form-control form-control-sm" id="fv-message" name="fv-message" placeholder="Write your message" required></textarea>
-                            </div>
-                        </div>
-                    </div> --}}
-                    <div class="nk-block nk-block-lg">
-                        <div class="nk-block-head">
-                            <div class="nk-block-head-content">
-                                <label class="form-label" for="fv-phone">Description</label>
-                                {{-- <h4 class="title nk-block-title">News</h4> --}}
-                                {{-- <div class="nk-block-des">
-                                    <p>A basic demostration of quilljs rich text editor.</p>
-                                </div> --}}
-                            </div>
-                            <div class="card">
-                                <div class="card-inner">
-                                    <!-- Create the editor container -->
-                                    <textarea class="form-control form-control-sm" id="cf-default-textarea" placeholder="Write your message" name="description"></textarea>
+                                <div class="input-group">
+
+                                    <input type="date" class="form-control" required name="planting_date">
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="nk-block nk-block-lg">
+                        <div class="nk-block-head">
+                            <div class="nk-block-head-content">
+                                <label class="form-label" for="fv-phone">Description</label>
+                                
+                            </div>
+                            <div class="card">
+                                <div class="card-inner">
+                                    <!-- Create the editor container -->
+                                    {{-- <div class="quill-basic"> --}}
+                                        {{-- <label>Masukkan Teks</label> --}}
+                                        {{-- <textarea type="text" class="form-control" cols="30" rows="10" name="content" required></textarea> --}}
+                                        {{-- </div> --}}
+                                    <input id="body" value="Editor content goes here" name="description" type="hidden" name="body">
+                                    <trix-editor input="body"></trix-editor>
+                                </div>
+                            </div>
+                    </div>
+                                </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
@@ -124,6 +127,21 @@
                                     <select class="form-control" id="default-06" name="id_mitra">
                                         @foreach ($partners as $partners)
                                             <option value="{{ $partners->id }}">{{ $partners->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-label" for="default-06">Select Tree Type</label>
+                            <div class="form-control-wrap ">
+                                <div class="form-control-select">
+                                    <select class="form-control" id="default-06" name="id_tree">
+                                        @foreach ($treetype as $t)
+                                            <option value="{{ $t->id }}">{{ $t->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
