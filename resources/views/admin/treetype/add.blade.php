@@ -18,7 +18,7 @@
                     <div class="alert alert-danger">{{ $error }}</div>
                 @endforeach
             @endif
-            <form action="{{ route('store.partner') }}" method="POST" enctype="multipart/form-data" class="form-validate">
+            <form action="{{ route('store.treetype') }}" method="POST" enctype="multipart/form-data" class="form-validate">
             @csrf
                 <div class="row g-gs">
                 <div class="col-md-12">
@@ -30,19 +30,28 @@
                             </div>
                     </div>
                 </div>
+                <div class="col-md-12">
+
+                    <div class="form-group">
+                        <label class="form-label" for="fv-subject">Description</label>
+                            <div class="form-control-wrap">
+                                <textarea type="text" class="form-control" id="fv-subject" name="description" required></textarea>
+                            </div>
+                    </div>
+                </div>
                 <div class="col-md-6">
-                    <label class="form-label" for="isPublish">Status</label>
+                    <label class="form-label" for="isAdopted">Is_adopted</label>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" id="radio1" name="status" value="Enabled" >Enabled
+                        <input type="radio" class="form-check-input" id="radio1" name="is_adopted" value="0" >Disabled
                         <label class="form-check-label" for="radio1"></label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" id="radio2" name="status" value="Disabled">Disabled
+                        <input type="radio" class="form-check-input" id="radio2" name="is_adopted" value="1">Enabled
                         <label class="form-check-label" for="radio2"></label>
                     </div>
             </div>
                                     <div class="col-md-12">
-                                <button type="submit" class="btn btn-lg btn-primary"> Add Planting Partner </button>
+                                <button type="submit" class="btn btn-lg btn-primary"> Add Tree </button>
                                     </div>
                             </form>
                         </div>

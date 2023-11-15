@@ -39,8 +39,6 @@
 
                                     <div class="item-box link">
                                         <div class="link-style6">
-                                            {{-- <div class="img-wrapper" style="height:150px;width:100%;">
-                                            </div> --}}
                                             <div class="content-info" style="margin-top:-175px;">
                                                 <a href="{{route('detail.news', $card->id)}}" class="user">
                                                     {{ $card->author }}
@@ -48,7 +46,7 @@
                                                 </a>
                                             </div>
                                             <a href="{{route('detail.news', $card->id)}}" class="section-heading-jost-size20">
-                                                {{-- {{ $card->title }} --}}
+                                                
                                                 {{ Str::limit($card->title, 25) }}
                                             </a>
                                         </div>

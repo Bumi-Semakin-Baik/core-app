@@ -174,13 +174,7 @@
                                                                         <ul class="link-list-opt no-bdr">
                                                                             <li><a href="#"><em class="icon ni ni-eye"></em><span>View Donation</span></a></li>
                                                                             <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit Donation</span></a></li>
-                                                                            {{-- <li>
-                                                                            <form action="{{ route('destroy.donation',$donation->id) }}"" method="post">
-                                                                            @csrf
-                                                                            @method('delete')
-                                                                            <button onclick="return confirm('Are you sure you want to delete this donation?')"><em class="icon ni ni-trash"></em><span>Remove Donation</span></button>
-                                                                            </form>
-                                                                            </li> --}}
+                                                                            
                                                                         </ul>
                                                                     </div>
                                                                 </div>

@@ -19,7 +19,7 @@
                                                 <div class="toggle-expand-content" data-content="pageMenu">
                                                     <ul class="nk-block-tools g-3">
                                                                                                                 <li class="nk-block-tools-opt d-none d-sm-block">
-                                                            <a href="{{ url('plantingpartner/add') }}" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Tambahkan Account</span></a>
+                                                            <a href="{{ url('treetype/add') }}" class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add Tree</span></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -38,14 +38,15 @@
                                 <label class="custom-control-label" for="uid"></label>
                             </div>
                         </th>
-                        <th class="nk-tb-col"><span class="sub-text">User</span></th>
-                        <th class="nk-tb-col"><span class="sub-text">Status</span></th>
+                        <th class="nk-tb-col"><span class="sub-text">Name</span></th>
+                        <th class="nk-tb-col"><span class="sub-text">Description</span></th>
+                        <th class="nk-tb-col"><span class="sub-text">Is_adopted</span></th>
                         <th class="nk-tb-col"><span class="sub-text">Action</span></th>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($planting as $planting)
+                    @foreach ($treetype as $t)
                     <tr class="nk-tb-item">
                         <td class="nk-tb-col nk-tb-col-check">
                             <div class="custom-control custom-control-sm custom-checkbox notext">
@@ -54,28 +55,24 @@
                             </div>
                         </td>
                         <td class="nk-tb-col">
-                            <div class="user-card">
-                                <div class="user-avatar bg-dim-primary d-none d-sm-flex">
-                                    <span>AB</span>
-                                </div>
-                                <div class="user-info">
-                                    <span class="tb-lead">{{ $planting->name }}</span>
-                                </div>
-                            </div>
+                            <span class="tb-sub">{{ $t->name }}</span>
+                        </td>
+                        <td class="nk-tb-col">
+                            <span class="tb-sub">{{ $t->description }}</span>
                         </td>
                         <td class="nk-tb-col">
 
-                            @if($planting->status=="Enabled")
-                                <form action="{{ route('plantingpartner.disable', $planting->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
+                            @if($t->is_adopted=="1")
+                                <form action="{{ route('disable.treetype', $t->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
                                     @csrf
                                     @METHOD('PUT')
-                                    <button type="submit" class="btn btn-success" onclick="return confirm('{{ __('Are you sure you want disable this UKM?') }}')">{{$planting->status}}</button>
+                                    <button type="submit" class="btn btn-success" onclick="return confirm('{{ __('Are you sure you want disable this UKM?') }}')">{{$t->status}}</button>
                                 </form>
                             @else
-                                <form action="{{ route('plantingpartner.enable', $planting->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
+                                <form action="{{ route('enable.treetype', $t->id) }}" method="POST" enctype="multipart/form-data" class="form-validate">
                                     @csrf
                                     @METHOD('PUT')
-                                    <button type="submit" class="btn btn-danger" onclick="return confirm('{{ __('Are you sure you want enable this UKM?') }}')">{{$planting->status}}</button>
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('{{ __('Are you sure you want enable this UKM?') }}')">{{$t->status}}</button>
                                 </form>
                             @endif
 
@@ -108,11 +105,11 @@
                                                 <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Activities</span></a></li>
                                                 <li class="divider"></li><li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>
                                                 <li><a href="#"><em class="icon ni ni-shield-off"></em><span>Reset 2FA</span></a></li>
-                                                <li><a href="{{ route('edit.plantingpartner', $planting->id) }}"><em class="icon ni ni-edit"></em><span>Edit Partner</span></a></li>
-                                                <form action="{{ route('delete.plantingpartner', $planting->id) }}" method="POST">
+                                                <li><a href="{{ route('edit.treetype', $t->id) }}"><em class="icon ni ni-edit"></em><span>Edit Tree</span></a></li>
+                                                <form action="{{ route('delete.treetype', $t->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger">Remove Account</button>
+                                                    <button type="submit" class="btn btn-danger">Remove Tree</button>
                                                 </form>
                                             </ul>
                                         </div>
@@ -129,3 +126,5 @@
     </div><!-- .card-preview -->
 </div> <!-- nk-block -->
 @include('admin.template.footer')
+
+

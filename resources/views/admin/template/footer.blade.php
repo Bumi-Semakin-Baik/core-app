@@ -179,12 +179,19 @@
     <link rel="stylesheet" href="{{ asset('admin/css/editors/quill.css') }}">
     <script src="{{ asset('admin/js/libs/editors/quill.js') }}"></script>
     <script src="{{ asset('admin/js/editors.js') }}"></script>
+    <script src="{{ asset('admin/js/autoNumeric.min.js') }}"></script>
     <script>
         $('#customFile').change(function () {
             var i = $(this).prev('label').clone();
             var file = $('#customFile')[0].files[0].name;
             $(this).prev('label').text(file);
         });
+    </script>
+    <script>
+        new AutoNumeric('#target',{
+            decimalPlaces : '0',
+            unformatOnSubmit : true
+        })
     </script>
 </body>
 
