@@ -66,11 +66,6 @@
                             <label class="form-label" for="fv-phone">Berita</label>
                             <div class="card">
                                 <div class="card-inner">
-                                    <!-- Create the editor container -->
-                                    {{-- <div class="quill-basic"> --}}
-                                        {{-- <label>Masukkan Teks</label> --}}
-                                        {{-- <textarea type="text" class="form-control" cols="30" rows="10" name="content" required></textarea> --}}
-                                        {{-- </div> --}}
                                     <input id="body" value="Editor content goes here" type="hidden" name="body">
                                     <trix-editor input="body"></trix-editor>
                                 </div>

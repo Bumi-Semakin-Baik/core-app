@@ -7,6 +7,9 @@ use App\Models\Donation;
 use App\Models\UKM;
 use App\Models\Location;
 use App\Models\PlantingPartner;
+use App\Models\TreeType;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 
 class DonationController extends Controller
@@ -27,7 +30,8 @@ class DonationController extends Controller
         return view ('admin.donation.manage.add',[
             'ukms' => UKM::get('*'),
             'locations'=> Location::get('*')->where('status','=','Enabled'),
-            'partners'=> PlantingPartner::get('*')
+            'partners'=> PlantingPartner::get('*')->where('status','=','Enabled'),
+            'treetype'=> TreeType::get('*')->where('is_adopted','=','1')
         ]);
     }
 
@@ -41,8 +45,9 @@ class DonationController extends Controller
             'due_date' => 'required',
             'id_location' => 'required',
             'id_mitra' => 'required',
+            'id_tree' => 'required',
         ]);
-        
+
         if($request->file('image')){
             $validatedData['image'] = $request->file('image')->store('donation-images','public');
         }
@@ -62,63 +67,117 @@ class DonationController extends Controller
                         ->where('id', $request->input('id_mitra'))
                         ->pluck('name')
                         ->first();
-        // dd($nama_partner);
 
-        Donation::create([
+                        $tree_name = DB::table('tree_types')
+                        ->where('id', $request->input('id_tree'))
+                        ->pluck('name')
+                        ->first();
+
+
+
+
+      $donasi =  Donation::create([
             'title' => $request->input('title'),
             'image' => $image,
             'description' =>$request->input('description'),
             'target' => $request->input('target'),
             'due_date' => $request->input('due_date'),
+            'planting_date' => $request->input('planting_date'),
             'id_ukm' => $request->input('id_ukm'),
             'nama_ukm' => $nama_ukm,
             'id_location' => $request->input('id_location'),
             'nama_lokasi' => $nama_location,
             'id_mitra' => $request->input('id_mitra'),
             'nama_mitra' => $nama_partner,
+            'id_tree' => $request->input('id_tree'),
+            'tree_name' => $tree_name,
             'status' =>$request->input('status'),
             'is_published' =>$request->input('is_published'),
-            'is_bingkaikarya' =>$request->input('is_bingkaikarya'),
-        ]);
-        
+            'is_bingkaikarya' =>$request->input('is_bingkaikarya'),]);
 
+        $qr_name = 'bumibaik.com/donate/'.$donasi->id;
+        $qr_code = QrCode::format('png')->size(500)->generate($qr_name);
+        $output_file = '/img/qr-code/donation/'.$donasi->title.'.png';
+        Storage::disk('public')->put($output_file, $qr_code);
+        
+        Donation::where('id', $donasi->id)
+        ->update([
+            'id' => $donasi->id,
+            'qr_code' => $output_file
+            ]);
 
         return redirect('donation/manage')->with('success', 'Donation successfully added');
     }
 
     public function edit($id){
         $data = Donation::whereId($id)->first();
-        // dd($data);
         return view ('admin.donation.manage.edit',[
             'donation' => $data,
             'ukms' => UKM::get('*'),
             'locations'=> Location::get('*')->where('status','=','Enabled'),
-            'partners'=> PlantingPartner::get('*')
+            'partners'=> PlantingPartner::get('*')->where('status','=','Enabled'),
+            'treetype'=> TreeType::get('*')->where('is_adopted','=','1')
+
 
         ]);
 }
-public function update(Request $request, $id)
+    public function update(Request $request, $id)
 {
 
-                // $test = Donation::find($id);
-                // $test->update($request->all());
-        // // dd($request->all());
         $validatedData = $request->validate([
             'title' => 'required',
             'image' => 'required | max:1024',
             'description' => 'required',
             'target' => 'required',
             'due_date' => 'required',
+            'planting_date' => 'required',
             'id_ukm' => 'required',
-            'nama_ukm' => 'required',
             'id_location' => 'required',
-            'nama_lokasi' => 'required',
             'id_mitra' => 'required',
-            'nama_mitra' => 'required',
+            'id_tree' => 'required'
         ]);
-    //    dd($validatedData);
+    $image = $request->file('image')->store('donation-images','public');
+
+    $nama_ukm = DB::table('ukm')
+        ->where('id',$request->input('id_ukm'))
+        ->pluck('name')
+        ->first();
+
+    $nama_location = DB::table('locations')
+        ->where('id',$request->input('id_location'))
+        ->pluck('name')
+        ->first();
+
+    $nama_partner = DB::table('planting_partners')
+        ->where('id', $request->input('id_mitra'))
+        ->pluck('name')
+        ->first();
+
+    $tree_name = DB::table('tree_types')
+        ->where('id', $request->input('id_tree'))
+        ->pluck('name')
+        ->first();
+
     $test = Donation::where('id', $id)
-    ->update($validatedData);
+    ->update([
+        'title' => $request->input('title'),
+        'image' => $image,
+        'description' =>$request->input('description'),
+        'target' => $request->input('target'),
+        'due_date' => $request->input('due_date'),
+        'planting_date' => $request->input('planting_date'),
+        'id_ukm' => $request->input('id_ukm'),
+        'nama_ukm' => $nama_ukm,
+        'id_location' => $request->input('id_location'),
+        'nama_lokasi' => $nama_location,
+        'id_mitra' => $request->input('id_mitra'),
+        'nama_mitra' => $nama_partner,
+        'id_tree' => $request->input('id_tree'),
+        'tree_name' => $tree_name,
+        'status' =>$request->input('status'),
+        'is_published' =>$request->input('is_published'),
+        'is_bingkaikarya' =>$request->input('is_bingkaikarya'),
+    ]);
 
         return redirect()->route('get.manage')
         ->with('success', 'Data Berhasil diupdate');
@@ -126,14 +185,7 @@ public function update(Request $request, $id)
     }
 
     public function filter(Request $request){
-        // return view('admin.donation.manage.filteredIndex',[
-        //     'donations' => DB::table('donations')
-        //                             ->select('*')
-        //                             ->orWhere('status','=',$request->status)
-        //                             ->orWhere('is_published','=',$request->is_published)
-        //                             ->orderBy('id','asc')
-        //                             ->get()
-        // ]);
+
 
         $status = $request->input('status');
         $is_published = $request->input('is_published');
@@ -209,6 +261,11 @@ public function update(Request $request, $id)
         $data->update(['status'=> 'Disabled']);
 
         return redirect('donation/manage');
+    }
+    public function qr_download($id){
+        $data = Donation::where('id', $id)->first();
+        $pathToFile = public_path('donations/qr_code/{id}');
+        return Response::download($pathToFile);
     }
 
 }
