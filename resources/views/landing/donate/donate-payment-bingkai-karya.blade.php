@@ -47,7 +47,7 @@
                 </div>
                     <div class="col-lg-6">
                         <div class="about-post center bd-radius-50-image">
-                            <img class="img-fluid" src="{{ asset('landing/images/home/daun2.jpg') }} " alt="images">
+                            <img class="img-fluid" src="{{ Storage::url($donations->image) }}" alt="images">
                         </div>
                     </div>
                     <div class="col-lg-6">

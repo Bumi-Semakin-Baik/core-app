@@ -15,13 +15,18 @@ class DonationController extends Controller
         $donations->where('status', 'Enabled');
         $donations->select(
             'id', 'title', 'image',
-            'nama_ukm', 'nama_lokasi', 'nama_mitra'
+            'nama_ukm', 'nama_lokasi', 'nama_mitra', 'target', 'collected'
         );
 
         $list = $donations->get();
-        $index = 0;
-        foreach ($list as $item) {
+        for ($index = 0; $index < count($list); $index++) {
+            $target = $list[$index]->target;
+            $collected = $list[$index]->collected;
+            $target = $list[$index]->target;
+            $collected = $list[$index]->collected;
+
             $list[$index]->new_image = Storage::url($list[$index]->image);
+            $list[$index]->progress = $collected != 0 ? (double)number_format(($collected / $target) * 100, 2, '.', ','): 0;
         }
 
         return response()->json([
@@ -36,6 +41,10 @@ class DonationController extends Controller
     }
 
     private function _responseDonationDetail($donation){
+        
+        $target = $donation->target;
+        $collected = $donation->collected;
+        
         $data = [
             'id'    => $donation->id,
             'title' => $donation->title,
@@ -48,6 +57,9 @@ class DonationController extends Controller
             'nama_lokasi' => $donation->nama_lokasi,
             'planting_date' => $donation->planting_date,
             'nama_mitra' => $donation->nama_mitra,
+            'target' => $donation->target,
+            'collected' => $donation->collected,
+            'progress' => $collected != 0 ? (double)number_format(($collected / $target) * 100, 2, '.', ','): 0,
         ];
 
         return response()->json([
