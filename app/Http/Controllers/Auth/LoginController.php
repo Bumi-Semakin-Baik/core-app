@@ -60,8 +60,9 @@ class LoginController extends Controller
 
         $login = Auth::attempt($credentials);
         if (!$login) {
-            return Redirect::back()
-            ->withErrors($credentials);
+            return back()->withErrors([
+                'email'&'password'=> 'Email atau Password anda salah'
+            ]);
         }
 
         $user = Auth::user();

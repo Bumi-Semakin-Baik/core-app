@@ -93,11 +93,16 @@
                             <div class="card">
                                 <div class="card-inner">
                                     <!-- Create the editor container -->
-                                    <textarea class="form-control form-control-sm" id="cf-default-textarea" placeholder="Write your message" name="description"></textarea>
+                                    {{-- <div class="quill-basic"> --}}
+                                        {{-- <label>Masukkan Teks</label> --}}
+                                        {{-- <textarea type="text" class="form-control" cols="30" rows="10" name="content" required></textarea> --}}
+                                        {{-- </div> --}}
+                                    <input id="body" value="Editor content goes here" name="description" type="hidden" name="body">
+                                    <trix-editor input="body"></trix-editor>
                                 </div>
                             </div>
-                        </div>
                     </div>
+                                </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
