@@ -15,7 +15,7 @@ class DonationController extends Controller
         $donations->where('status', 'Enabled');
         $donations->select(
             'id', 'title', 'image',
-            'nama_ukm', 'nama_lokasi', 'nama_mitra', 'target', 'collected'
+            'nama_ukm', 'nama_lokasi', 'nama_mitra', 'target', 'collected', 'due_date'
         );
 
         $list = $donations->get();
@@ -59,6 +59,7 @@ class DonationController extends Controller
             'nama_mitra' => $donation->nama_mitra,
             'target' => $donation->target,
             'collected' => $donation->collected,
+            'due_date' => $donation->due_date,
             'progress' => $collected != 0 ? (double)number_format(($collected / $target) * 100, 2, '.', ','): 0,
         ];
 
