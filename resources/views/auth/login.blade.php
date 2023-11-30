@@ -11,7 +11,7 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="{{ asset('landing/images/home/bumibaik.jpg') }}">
     <!-- Page Title  -->
-    <title>Login | DashLite Admin Template</title>
+    <title>Login | BumiBaik</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ asset('admin/css/dashlite.css') }}">
     <link id="skin-default" rel="stylesheet" href="{{ asset('admin/css/theme.css') }}">
@@ -32,7 +32,7 @@
                                 <div class="brand-logo pb-5">
                                     <a href="html/index.html" class="logo-link">
                                         <img class="logo-light logo-img logo-img-lg" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                                        <img class="logo-dark logo-img logo-img-lg" src="{{ asset('landing/images/home/BumiBaik.png') }}"> 
+                                        <img class="logo-dark logo-img logo-img-lg" src="{{ asset('landing/images/home/BumiBaik.png') }}">
                                     </a>
                                     @if ($errors->any())
                                     <div class="alert alert-danger alert-dismissible fade show" role="alert">

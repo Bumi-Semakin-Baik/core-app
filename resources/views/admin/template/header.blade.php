@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="./images/favicon.png">
+    <link rel="shortcut icon" href="{{ asset('landing/images/home/bumibaik.jpg') }}">
     <!-- Page Title  -->
-    <title>Default Dashboard | DashLite Admin Template</title>
+    <title>BumiBaik</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ asset('admin/css/dashlite.css') }}">
     <link id="skin-default" rel="stylesheet" href="{{ asset('admin/css/theme.css') }}">
