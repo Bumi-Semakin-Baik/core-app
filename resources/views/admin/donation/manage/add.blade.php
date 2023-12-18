@@ -97,10 +97,19 @@
                                         {{-- <label>Masukkan Teks</label> --}}
                                         {{-- <textarea type="text" class="form-control" cols="30" rows="10" name="content" required></textarea> --}}
                                         {{-- </div> --}}
-                                        @verbatim
+
+                                       
+                                        <div>
+                                            <input id="text" value="Editor content goes here" name="description" type="hidden">
+                                            <trix-editor input="text"></trix-editor>
+                                        </div>
+                                        
+                                       <!-- <div>
                                         <input id="body" value="Editor content goes here" name="description" type="hidden" name="body">
                                         <trix-editor input="body"></trix-editor>
-                                        @endverbatim
+                                    </div> -->
+                                        
+                                       
                                     </div>
                             </div>
                     </div>
