@@ -61,6 +61,7 @@ Route::controller(UserController::class)
     ->group(
         function () {
             Route::get('/', 'detail');
+            Route::get('/detail_distribute_trees', 'getDetailDistributeTrees');
             Route::put('/', 'update');
             Route::put('/edit_password', 'edit_password');
         }
