@@ -220,4 +220,15 @@ class UserController extends Controller
             "data" => $user
         ]);
     }
+
+    public function getDetailDistributeTrees(){
+        $user = User::select(
+            'corporate_carbon', 'corporate_tree_distribution_image', 'corporate_tree_distribution_document'
+        )->where('id', auth('api')->user()->id)->first();
+
+        return response()->json([
+            "message" => ResponseMessage::SUCCESS_RETRIEVE,
+            "data" => $user
+        ]);
+    }
 }
