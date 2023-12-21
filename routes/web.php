@@ -20,6 +20,7 @@ use App\Http\Controllers\ServiceControlller;
 use App\Http\Controllers\WebTransactionController;
 use App\Http\Controllers\PlantingController;
 use App\Http\Controllers\TreetypeController;
+use App\Http\Controllers\TagController;
 use App\Models\WebTransaction;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -162,6 +163,14 @@ Route::prefix('location')
         Route::put('/update_enable/{id}','update_enable')->name('update.enable');
         Route::put('/update_disable/{id}','update_disable')->name('update.disable');
     });
+
+Route::prefix('tag')
+    ->controller(TagController::class)
+    ->group(function (){
+        Route::get('/','add')->name('tag');
+        Route::post('/print','print')->name('print');
+    });
+
 Route::controller(LandingController::class)
     ->group(function (){
         Route::get('/','index');

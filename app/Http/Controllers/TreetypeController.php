@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 
 class TreetypeController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+}
     public function index(){
         return view('admin.treetype.index', [
             'treetype' => TreeType::get('*'),
