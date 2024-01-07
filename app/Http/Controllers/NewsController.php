@@ -19,7 +19,7 @@ class NewsController extends Controller
 
     public function index(){
         return view ('admin.news.index', [
-            'news' => NewsArticle::get('*'),
+            'news' => NewsArticle::orderBy('created_at','desc')->get('*'),
         ]);
 }
     public function add(){

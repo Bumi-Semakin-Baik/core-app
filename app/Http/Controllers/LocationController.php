@@ -7,6 +7,9 @@ use App\Models\Location;
 
 class LocationController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+}
     public function index(){
         return view ('admin.location.index', [
             'locations' => Location::get('*')->where('status','=','Enabled'),
