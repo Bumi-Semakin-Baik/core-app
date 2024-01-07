@@ -59,7 +59,7 @@
                     </div>
                     <div class="col md-8">
                         <div class="top-bar-right link-style3">
-                            <a href="#" class="top-mail">semakinbaikbumi@gmail.com</a>
+                            <a href="mailto:business@bumibaik.com" class="top-mail">business@bumibaik.com</a>
                             <ul class="widgets-nav-social text-white">
                                 <li><a href="https://wa.me/6282130075758"  target="_blank"><i style="color: white !important;" class="fa fa-whatsapp"
                                     aria-hidden="true"></i></a>

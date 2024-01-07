@@ -97,7 +97,7 @@
                             <img style="max-height: 500px;"  src="{{ Storage::url($donations->image) }}" alt="imagess">
                         </div>
                         <h2 class="section-heading-jost-size34 text-pri2-color mg-bottom30">{{ $donations->title}}</h2>
-                        <span class="mg-bottom-20">{{ $donations->description}}</span>
+                        <span class="mg-bottom-20">{!! $donations->description !!}</span>
                     </div>
                     {{-- <article class="content-service-details">
                     </article> --}}

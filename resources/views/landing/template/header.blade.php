@@ -58,7 +58,7 @@
                                     <div class="top-header-inner">
                                         <div class="top-bar-left">
                                             <span class="top-location">Graha Polinema 4th Floor, Jl. Soekarno Hatta No.9, Malang City, East Java, Indonesia</span>
-                                            <span class="top-mail">semakinbaikbumi@gmail.com</span>
+                                           <a href="mailto:business@bumibaik.com"><span class="top-mail">business@bumibaik.com</span></a>
                                         </div>
                                         <div class="top-bar-right">
                                             <ul class="widgets-nav-social">
