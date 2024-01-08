@@ -45,7 +45,7 @@
                                 <div class="info text-pri2-color">
                                         <h3 class="section-heading-jost-size20">
                                             Our Email</h3>
-                                    <p class="desc-box text-pri2-color">semakinbaikbumi@gmail.com</p>
+                                    <p class="desc-box text-pri2-color">business@bumibaik.com</p>
                                 </div>
                             </div>
                         </div>
