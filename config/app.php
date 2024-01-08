@@ -197,6 +197,8 @@ return [
 
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+
+
     ],
 
     /*

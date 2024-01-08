@@ -22,7 +22,7 @@ class QrController extends Controller{
         }
     }
     public function convert(){
-        for($x = 1; $x <= 500; $x++){
+        for($x = 1; $x <= 5; $x++){
             $newImg = new Imagick();
             $newImg->readImage(public_path('SOLINI_1-5000/1-500/BB2023SOL'.$x.'.pdf'));
             $saveImagePath = public_path('SOLINI_1-5000/1-500/BB2023SOL'.$x.'.png');
